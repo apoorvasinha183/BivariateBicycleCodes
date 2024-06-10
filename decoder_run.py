@@ -6,9 +6,9 @@ import pickle
 from scipy.sparse import coo_matrix
 
 # number of Monte Carlo trials
-num_trials = 50000
+num_trials = 10000
 
-error_rate = 0.003
+error_rate = 0.005
 
 
 # code parameters and number of syndrome cycles

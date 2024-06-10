@@ -33,7 +33,7 @@ def rank2(A):
 
 
 # depolarizing noise model 
-error_rate = 0.01
+error_rate = 0.001
 error_rate_init = error_rate
 error_rate_idle = error_rate
 error_rate_cnot = error_rate
