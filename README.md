@@ -1,3 +1,12 @@
+MODIFICATIONS :
+This codebase allows for Qubit based defects to be generated on top of the normal Bicycle Codes and allows for circuit level noise simulations. There are custom superoperators for single qubit spot defects like ABC/ AB:BC . 
+
+The Blender Folder Contains the script to generate code as per your liking with a 3D representation in Blender. Simply run the "BivariateBicycleCodeLayout.py" to generate the Planar Layout of the BB Code. 
+
+For Code Capacity set the  CIRCUIT_LEVEL_NOISE variable to False . This will turn off the CNOT errors. 
+
+All the experiments in order if you want to generate the data from scratch (see the details from the base code below if you want to reuse the data )
+##### README FROM THE BASE CODE
 Simulation software used to generate data reported on Figure 3 of [BCGMRY]
 
 The simulation software consists of two python scripts:
