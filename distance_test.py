@@ -2,6 +2,8 @@ import numpy as np
 from mip import Model, xsum, minimize, BINARY
 from bposd.css import css_code
 from ldpc import mod2
+from ldpc.codes import rep_code
+from bposd.hgp import hgp
 # computes the minimum Hamming weight of a binary vector x such that 
 # stab @ x = 0 mod 2
 # logicOp @ x = 1 mod 2
@@ -53,7 +55,9 @@ def distance_test(stab,logicOp):
 	model.optimize()
 
 	opt_val = sum([x[i].x for i in range(n)])
-	return int(opt_val)
+	#print("x is ",[x[i].x for i in range(n)])
+	outVal = np.array([x[i].x for i in range(n)]).astype(int)
+	return int(opt_val),outVal
 
 
 # Code families to test
@@ -99,6 +103,14 @@ BT = np.transpose(B)
 hx = np.hstack((A,B))
 hz = np.hstack((BT,AT))
 # Killing Qubits (Delete Columns)
+Surface = False
+if Surface:
+	d = 13
+	chain = rep_code(d)
+	surface = hgp(h1=chain,h2=chain,compute_distance = True)
+	hx = surface.hx
+	hz= surface.hz
+	surface.test()
 turnOffQubits = [0] # Qubits which are defective(This is RANDOM)
 HIGH = 1
 LOW=0
@@ -107,7 +119,7 @@ LOW=0
 #TRIAL 3: First Principles
 ALL_THREE = False
 TWO_AT_A_TIME = False
-SPELL_IT_OUT = False #Read out the defective stabilizers
+SPELL_IT_OUT = True #Read out the defective stabilizers
 for defects in turnOffQubits:
 	print("Defect Deteced")
 	# Find all rows where the turnOffQubits are high.To figure out the connectivity
@@ -153,6 +165,9 @@ for defects in turnOffQubits:
 		#hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
 	replace_x = rows_to_be_deleted_x[0]
 	replace_z = rows_to_be_deleted_z[0]
+	if ALL_THREE:#Only for surface cODE!
+		hx[replace_x] = np.sum(hx[rows_to_be_deleted_x],axis=0)
+		hz[replace_z] = np.sum(hz[rows_to_be_deleted_z],axis=0)
 	print("To be deleted ",rows_to_be_deleted_x)
 	hxBAD = hx[rows_to_be_deleted_x]
 	hzBAD = hz[rows_to_be_deleted_z]
@@ -180,11 +195,12 @@ for defects in turnOffQubits:
 
 	#hx = hx[:,1:] 
 	#hz = hz[:,1:]
+
 # Find out where the code has gone bad
 print("Matrix shape X is ",hx.shape)
 print("Matrix shape Z is ",hz.shape)
-mat_check = ((hz@hx.T %2)+(hx@hz.T %2))%2
-length,breadth = mat_check.shape
+#mat_check = ((hz@hx.T %2)+(hx@hz.T %2))%2
+#length,breadth = mat_check.shape
 #for i in range(length):
 #	print(mat_check[i])
 print("Bad matrix above")
@@ -233,12 +249,53 @@ ALL_3 = True
 print(" cHECKING THE X logical operators")
 if GAUGE:
 	if ALL_3:
-		hxBAD = np.sum(hxBAD,axis=0)
-		hzBAD = np.sum(hzBAD,axis=0)
+		#hxBAD = hxBAD[0]
+		#hxBAD = np.sum(hxBAD,axis=0)
+		#hzBAD = np.sum(hzBAD,axis=0)
+		#hzBAD = hzBAD[0]
 		XGaugeCheck = hxBAD @ qcode.lz.T%2
-		Xfail = np.where(XGaugeCheck == HIGH)
+		Xfail = np.unique(np.where(XGaugeCheck == HIGH)[1])
 		ZGaugeCheck = hzBAD @ qcode.lx.T%2
-		Zfail = np.where(ZGaugeCheck == HIGH)
+		Zfail = np.unique(np.where(ZGaugeCheck == HIGH)[1])
+		lxrepair = qcode.lx.copy()
+		lzrepair = qcode.lz.copy()
+		lxrepair = np.delete(lxrepair,Xfail,axis=0)
+		lzrepair = np.delete(lzrepair,Zfail,axis=0)
+		print("After deleting the rank becomes ",mod2.rank(lxrepair@lzrepair.T %2))
+		DEBUG = True
+		if DEBUG:
+			FIXER_UPPER =Zfail[-1]
+			print("Common link is ",FIXER_UPPER)
+			Xfail = Xfail[:-1]
+			Zfail = Zfail[:-1]
+			lX = qcode.lx.copy()
+			lZ= qcode.lz.copy()
+			for badplaces in Xfail:
+				print("Badplace being fixed ",badplaces)
+				lZ[badplaces] = (lZ[badplaces]+lZ[FIXER_UPPER]) %2
+			#lX = np.delete(lX,FIXER_UPPER,axis = 0)
+			for badplaces in Zfail:
+				print("Badplace being fixed Z",badplaces)
+				lX[badplaces] =(lX[badplaces]+lX[FIXER_UPPER])%2
+
+			#lZ = np.delete(lZ,FIXER_UPPER,axis = 0)
+			# Try again
+			XGaugeCheck = hxBAD @ lZ.T%2
+			Xfail = np.where(XGaugeCheck == HIGH)[1]
+			ZGaugeCheck = hzBAD @ lX.T%2
+			Zfail = np.where(ZGaugeCheck == HIGH)[1]
+			lxrepair = lX.copy()
+			lzrepair = lZ.copy()
+			lxrepair = np.delete(lxrepair,Xfail,axis=0)
+			lzrepair = np.delete(lzrepair,Zfail,axis=0)
+			print("After deleting the rank becomes ",mod2.rank(lxrepair@lzrepair.T %2))
+			print("Hx check")
+			# GAUGE FIXED
+			qcode.K = mod2.rank(lxrepair@lzrepair.T %2)
+			qcode.lx= lxrepair
+			qcode.lz= lzrepair
+			qcode.test()
+
 	else:
 		hxBAD[0] = hxBAD[0] + hxBAD[2]
 		hxBAD[1] = hxBAD[1] + hxBAD[2]
@@ -267,25 +324,28 @@ if GAUGE:
 	print("Gauge Check fails at ",np.unique(Zfail))
 	totalGaugeSpace = set(np.unique(Xfail)) |  set(np.unique(Zfail))
 	print("This is going to go ",totalGaugeSpace)
-	lzNew = qcode.lz.copy()
-	lxNew = qcode.lx.copy()
-	nonCommuters = list(totalGaugeSpace)
-	#Delete the gaugeable things
-	lzNew = np.delete(lzNew,nonCommuters,axis=0)
-	lxNew = np.delete(lxNew,nonCommuters,axis=0)
-	newK = qcode.K - len(nonCommuters)
-	# Create the superopertaor 
-	#hxSuper = np.sum(hxBAD,axis=0)%2
-	hxSuper = hxBAD
-	print("Super shape is ",hxBAD.shape)
-	#hzSuper = np.sum(hzBAD,axis=0)%2
-	hzSuper = hzBAD
-	#qcode.hx = np.vstack((hx,hxSuper))
-	#HZsUPER = np.sum(hzBAD,axis=0)%2
-	#qcode.hz = np.vstack((hz,hzSuper))
-	qcode.lx = lxNew
-	qcode.lz = lzNew
-	qcode.test()
+	# Fail Correction
+	FAIL_SAFE = False
+	if FAIL_SAFE:
+		lzNew = qcode.lz.copy()
+		lxNew = qcode.lx.copy()
+		nonCommuters = list(totalGaugeSpace)
+		#Delete the gaugeable things
+		lzNew = np.delete(lzNew,nonCommuters,axis=0)
+		lxNew = np.delete(lxNew,nonCommuters,axis=0)
+		newK = qcode.K - len(nonCommuters)
+		# Create the superopertaor 
+		#hxSuper = np.sum(hxBAD,axis=0)%2
+		hxSuper = hxBAD
+		print("Super shape is ",hxBAD.shape)
+		#hzSuper = np.sum(hzBAD,axis=0)%2
+		hzSuper = hzBAD
+		#qcode.hx = np.vstack((hx,hxSuper))
+		#HZsUPER = np.sum(hzBAD,axis=0)%2
+		#qcode.hz = np.vstack((hz,hzSuper))
+		qcode.lx = lxNew
+		qcode.lz = lzNew
+		qcode.test()
 #Turn off the logical orders
 #turnOffDim = 
 print("Print the Z logical check operators")
@@ -308,13 +368,20 @@ qubitiz = []
 
 DISABLE = True
 if not DISABLE:
+	k = qcode.K
+	N = qcode.N
+	dim = (k,N)
+	hxSmall = np.zeros(dim,dtype=int)
+	hzSmall = np.zeros(dim,dtype=int)
 	for i in range(k):
-		w1 = distance_test(hx,lx[i,:])
-		w2 = distance_test(hz,lz[i,:])
+		w1,hxSmalli = distance_test(hx,lx[i,:])
+		w2,hzSmalli = distance_test(hz,lz[i,:])
 		print('Logical qubitX=',i,'Distance=',w1)
 		print('Logical qubitZ=',i,'Distance=',w1)
 		qubitix.append(w1)
 		qubitiz.append(w2)
+		hxSmall[i] = hxSmalli
+		hzSmall[i] =  hzSmalli
 		d = min(d,w1,w2)
 
 print('Code parameters: n,k,d=',n,k,d)
@@ -333,3 +400,5 @@ broken_rows_z_DEBUG = np.sum(broken_rows_z_DEBUG,axis=0)
 broken_rows_z_DEBUG = broken_rows_z_DEBUG%2
 print("X weights ",np.sum(broken_rows_x_DEBUG))
 print("Z weights ",np.sum(broken_rows_z_DEBUG))
+print(" Sanity Checks")
+#print(mod2.rank(hxSmall@hzSmall.T%2))

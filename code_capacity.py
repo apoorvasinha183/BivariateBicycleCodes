@@ -263,7 +263,7 @@ if __name__ == "__main__":
     print("Monte-carlo obsevred distances in the range of BB-12 = ",mc_12," BB-break = ",mc_bike," BB-6 = ",mc_6," Alternate repair = ",mc_repair)
     # plotting facilities
     plt.plot(phyError,logError_noDamage_12,label="Gross(12)")
-    #plt.plot(phyError,logError_noDamage_6,label="[[72,12,6]]")   
+    plt.plot(phyError,logError_noDamage_6,label="[[72,12,6]]")   
     #plt.plot(phyError,logError_surface,label="surface")  
     plt.plot(phyError,logError_damagedBike,label="DamagedGross")  
     plt.plot(phyError,logError_damagedBike_repair,label =" AlternateRepairCode")
@@ -271,13 +271,13 @@ if __name__ == "__main__":
     #plt.plot(phyError,list(6*np.array(phyError)),label ='Threshold Line_6',linestyle='dashed')
     plt.xlabel('Input Physical Error Rate')
     plt.ylabel('Logical/Word error rate')
-    plt.ylim(bottom=1e-7)
+    #plt.ylim(bottom=1e-7)
     plt.legend(fontsize='large')   # Set the font size of the legend
     plt.legend(title='Legend')
     plt.yscale('log')
     plt.xscale('log')
     plt.legend(loc='lower right')  
-    plt.savefig("FinalResults_OneSided_lowCF.png")
+    plt.savefig("FinalResults_OneSided_GottesmannThreshold.png")
     plt.title("CodeCapacity")
     plt.show()    
 
