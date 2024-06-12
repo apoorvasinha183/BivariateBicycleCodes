@@ -33,7 +33,7 @@ def rank2(A):
 
 
 # depolarizing noise model 
-error_rate = 0.01
+error_rate = 0.014
 error_rate_init = error_rate
 error_rate_idle = error_rate
 error_rate_cnot = error_rate
@@ -556,6 +556,7 @@ for supp in HXdict:
 	HX.append(coo_matrix(new_column))
 	HdecX.append(coo_matrix(new_column_short))
 	channel_probsX.append(np.sum([ProbX[i] for i in HXdict[supp]]))
+print("Channel Probabilities look like ",len(channel_probsX))
 print('Done.')
 HX = hstack(HX)
 HdecX = hstack(HdecX)

@@ -1,7 +1,7 @@
 import numpy as np
 from mip import Model, xsum, minimize, BINARY
 from bposd.css import css_code
-
+from ldpc import mod2
 # computes the minimum Hamming weight of a binary vector x such that 
 # stab @ x = 0 mod 2
 # logicOp @ x = 1 mod 2
@@ -106,9 +106,10 @@ LOW=0
 #TRAIL 2: AB,BC,CA
 #TRIAL 3: First Principles
 ALL_THREE = False
-TWO_AT_A_TIME = True
+TWO_AT_A_TIME = False
 SPELL_IT_OUT = False #Read out the defective stabilizers
 for defects in turnOffQubits:
+	print("Defect Deteced")
 	# Find all rows where the turnOffQubits are high.To figure out the connectivity
 	# X-Z syndromes
 	
@@ -137,21 +138,32 @@ for defects in turnOffQubits:
 	if TWO_AT_A_TIME:
 		# HARD CODE RN [0,1,2]
 		# AB
-		#hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
+		hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
 		hz[rows_to_be_deleted_z[0]] = (hz_old[rows_to_be_deleted_z[1]]+hz_old[rows_to_be_deleted_z[2]])%2
 		# BC
-		#hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
+		hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
 		hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
 		# CA
 		#hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
 		#hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
 		hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
+		hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
 		# Delete the extra row
 		#hx = np.delete(hx,rows_to_be_deleted_x[2],axis=0)
 		#hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
 	replace_x = rows_to_be_deleted_x[0]
 	replace_z = rows_to_be_deleted_z[0]
 	print("To be deleted ",rows_to_be_deleted_x)
+	hxBAD = hx[rows_to_be_deleted_x]
+	hzBAD = hz[rows_to_be_deleted_z]
+	##### GAUGE APPROACH ##########
+	hx = np.delete(hx,rows_to_be_deleted_x,axis=0)
+	hz = np.delete(hz,rows_to_be_deleted_z,axis=0)
+
+	##### GAUGE APPROACH ##########
+	
+	#for rows in rows_to_be_deleted_x:
+	#		hx = np.delete(hx,rows,axis = 0 )
 	#hx = np.delete(hx,rows_to_be_deleted_x[1:],axis = 0 )
 	#hz = np.delete(hz,rows_to_be_deleted_z[1:],axis = 0 )
 	#hx[:,defects] =LOW
@@ -161,18 +173,22 @@ for defects in turnOffQubits:
 	# Now kill the qubit
 	hx = np.delete(hx,defects,axis=1)
 	hz = np.delete(hz,defects,axis=1)
+	hxBAD = np.delete(hxBAD,defects,axis=1)
+	hzBAD = np.delete(hzBAD,defects,axis=1)
 	#hx[:,defects] = LOW
 	#hz[:,defects] = LOW
 
 	#hx = hx[:,1:] 
 	#hz = hz[:,1:]
 # Find out where the code has gone bad
-print("Matrix shape is ",hx.shape)
+print("Matrix shape X is ",hx.shape)
+print("Matrix shape Z is ",hz.shape)
 mat_check = ((hz@hx.T %2)+(hx@hz.T %2))%2
 length,breadth = mat_check.shape
-for i in range(length):
-	print(mat_check[i])
+#for i in range(length):
+#	print(mat_check[i])
 print("Bad matrix above")
+
 #	hz[:,defects] = 0
 # Killing Measurements (Delete Rows FROM one row !)
 turnOffMeasurement = 0
@@ -191,7 +207,96 @@ lz = qcode.lz
 lx = qcode.lx
 k = lz.shape[0]
 
+print("Here we print all the logical operators X")
+minX = 1000000000
+minZ = 1000000000
+for rows in lx:
+	print(rows)
+	xweight = np.sum(rows)
+	print(" This operator weighs ",xweight)
+	readOut = np.where(rows == HIGH)
+	print("This X operator reads ",readOut)
+	minX = min(minX,xweight)
+print("Now the Z operators")	
+for rows in lz:
+	print(rows)
+	zweight = np.sum(rows)
+	print(" This operator weighs ",zweight)
+	readOut = np.where(rows == HIGH)
+	print("This Z operator reads ",readOut)
+	minZ = min(minZ,zweight)
+print("The lightest X operator is ",minX," and the lightest Z operator is ",minZ)	
+GAUGE = True
+##### GAUGE CHECK(IF NOT USING SUPERSTABILIZERS) #######
+ALL_3 = True
 
+print(" cHECKING THE X logical operators")
+if GAUGE:
+	if ALL_3:
+		hxBAD = np.sum(hxBAD,axis=0)
+		hzBAD = np.sum(hzBAD,axis=0)
+		XGaugeCheck = hxBAD @ qcode.lz.T%2
+		Xfail = np.where(XGaugeCheck == HIGH)
+		ZGaugeCheck = hzBAD @ qcode.lx.T%2
+		Zfail = np.where(ZGaugeCheck == HIGH)
+	else:
+		hxBAD[0] = hxBAD[0] + hxBAD[2]
+		hxBAD[1] = hxBAD[1] + hxBAD[2]
+		hxBAD = np.delete(hxBAD,2,axis=0)	
+		hzBAD[0] = hzBAD[0] + hzBAD[2]
+		hzBAD[1] = hzBAD[1] + hzBAD[2]
+		hzBAD = np.delete(hzBAD,2,axis=0)
+		XGaugeCheck = hxBAD @ qcode.lz.T%2
+		Xfail = np.where(XGaugeCheck == HIGH)[1]
+		ZGaugeCheck = hzBAD @ qcode.lx.T%2
+		Zfail = np.where(ZGaugeCheck == HIGH)[1]
+	#print("Hxbas shappe is ",hxBAD.shape)
+	#XGaugeCheck = hxBAD @ qcode.lz.T%2
+	print("XGaugeCheck returns ",XGaugeCheck)
+	#Read out the columns where the value is high
+	#Xfail = np.where(XGaugeCheck == HIGH)[1]
+	#Xfail = np.where(XGaugeCheck == HIGH)
+	print("Gauge Check X fails at ",np.unique(Xfail))
+	print(" Checking the Z logical operators ")
+	#hzBAD = np.sum(hzBAD,axis=0)
+	#ZGaugeCheck = hzBAD @ qcode.lx.T%2
+	print("ZGaugeCheck returns ",ZGaugeCheck)
+	#Read out the columns where the value is high
+	#Zfail = np.where(ZGaugeCheck == HIGH)[1]
+	#Zfail = np.where(ZGaugeCheck == HIGH)
+	print("Gauge Check fails at ",np.unique(Zfail))
+	totalGaugeSpace = set(np.unique(Xfail)) |  set(np.unique(Zfail))
+	print("This is going to go ",totalGaugeSpace)
+	lzNew = qcode.lz.copy()
+	lxNew = qcode.lx.copy()
+	nonCommuters = list(totalGaugeSpace)
+	#Delete the gaugeable things
+	lzNew = np.delete(lzNew,nonCommuters,axis=0)
+	lxNew = np.delete(lxNew,nonCommuters,axis=0)
+	newK = qcode.K - len(nonCommuters)
+	# Create the superopertaor 
+	#hxSuper = np.sum(hxBAD,axis=0)%2
+	hxSuper = hxBAD
+	print("Super shape is ",hxBAD.shape)
+	#hzSuper = np.sum(hzBAD,axis=0)%2
+	hzSuper = hzBAD
+	#qcode.hx = np.vstack((hx,hxSuper))
+	#HZsUPER = np.sum(hzBAD,axis=0)%2
+	#qcode.hz = np.vstack((hz,hzSuper))
+	qcode.lx = lxNew
+	qcode.lz = lzNew
+	qcode.test()
+#Turn off the logical orders
+#turnOffDim = 
+print("Print the Z logical check operators")
+print("Logical Check")
+## X_L^2 = Z_L^2 = I
+x_chk = qcode.lx @ qcode.lz.T %2
+z_chk = qcode.lz @ qcode.lx.T %2
+print("Logical shape is ",qcode.lx.shape)
+print("X identity is ",(x_chk))
+print("Z identity is ",(z_chk))
+##### GAUGE CHECK(IF NOT USING SUPERSTABILIZERS) #######
 print('Computing code distance...')
 # We compute the distance only for Z-type logical operators (the distance for X-type logical operators is the same)
 # by solving an integer linear program (ILP). The ILP looks for a minimum weight Pauli Z-type operator which has an even overlap with each X-check 
@@ -200,9 +305,8 @@ print('Computing code distance...')
 d = n
 qubitix = []
 qubitiz = []
-#TODO: When css is destroyed does hx,hz separation make no mathematical sense? Use the collated l and H operator in that case
-#TODO: Turning off checks makes no difference??
-DISABLE =  False
+
+DISABLE = True
 if not DISABLE:
 	for i in range(k):
 		w1 = distance_test(hx,lx[i,:])
@@ -214,7 +318,7 @@ if not DISABLE:
 		d = min(d,w1,w2)
 
 print('Code parameters: n,k,d=',n,k,d)
-print("hx is ",hx)
+#print("hx is ",hx)
 print("All X distances are as follows ",qubitix)
 print("All Z distances are as follows ",qubitiz)
 qcode.test()

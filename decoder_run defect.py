@@ -8,7 +8,7 @@ from scipy.sparse import coo_matrix
 # number of Monte Carlo trials
 num_trials = 10000
 
-error_rate = 0.009
+error_rate = 0.01
 
 
 # code parameters and number of syndrome cycles
@@ -327,7 +327,6 @@ def simulate_circuitX(C):
 
 
 # begin decoding
-
 bpdX=bposd_decoder(
     HdecX,#the parity check matrix
     channel_probs=channel_probsX, #assign error_rate to each qubit. This will override "error_rate" input variable
