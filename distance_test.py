@@ -102,6 +102,8 @@ AT = np.transpose(A)
 BT = np.transpose(B)
 hx = np.hstack((A,B))
 hz = np.hstack((BT,AT))
+print("hx rank is ",mod2.rank(hx))
+print("hz rank is ",mod2.rank(hz))
 # Killing Qubits (Delete Columns)
 Surface = False
 if Surface:

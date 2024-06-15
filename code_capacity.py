@@ -109,8 +109,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
                 hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
             hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
             # CA
-            if symmetry:
-                hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
+            #hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
             #hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
             hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
             if symmetry:
@@ -148,11 +147,17 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
         #hx = hx[:,1:] 
         #hz = hz[:,1:]
     Q_New = css_code(hx,hz)
+    
     return Q_New
 
-def bposd_decode(qCode,type='css',perr=0.01,nTrials = 10000):
+def bposd_decode(qCode,type='z',perr=0.01,nTrials = 100000):
     #Runs Roffee's BP-OSD Decoder to infer the syndrome
-    HdecX = qCode.hz
+    if type == 'z':
+        HdecX = qCode.hz
+        logicalX = qCode.lz
+    else:
+        HdecX = qCode.hx
+        logicalX = qCode.lx    
     channel_probsX = perr
     K = qCode.K
     # Declare the Decoder(Re-using what the Gross Code uses)
@@ -183,7 +188,7 @@ def bposd_decode(qCode,type='css',perr=0.01,nTrials = 10000):
         synX = HdecX @ errX %2
         bpdX.decode(synX)
         res_X = (errX+bpdX.osdw_decoding)%2
-        if (qCode.lz@res_X %2).any():
+        if (logicalX@res_X %2).any():
             error = error + 1
             minWt = min(minWt,np.sum(res_X))
     
@@ -209,7 +214,7 @@ def bposd_decode(qCode,type='css',perr=0.01,nTrials = 10000):
 
                 
 if __name__ == "__main__":
-    phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12,0.13,0.14,0.15,0.16,0.17,0.18,0.19,0.2]
+    phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12]
     logError_noDamage_12 = []
     logError_noDamage_6 = []
     logError_surface = []
@@ -250,9 +255,9 @@ if __name__ == "__main__":
         mc_6 = min(m,mc_6)
         eSOTA,m = bposd_decode(surface,perr=err)
         surf = min(m,surf)
-        eBreak,m = bposd_decode(QBreak,perr=err)
+        eBreak,m = bposd_decode(QBreak,perr=err,type='x')
         mc_bike = min(m,mc_bike)
-        eRepair,m = bposd_decode(QBreak2,perr=err)
+        eRepair,m = bposd_decode(QBreak2,perr=err,type='x')
         mc_repair = min(m,mc_repair)
         #eSOTA = 1- (1-eSOTA)**d
         logError_noDamage_12.append(eBig)
@@ -267,7 +272,7 @@ if __name__ == "__main__":
     #plt.plot(phyError,logError_surface,label="surface")  
     plt.plot(phyError,logError_damagedBike,label="DamagedGross")  
     plt.plot(phyError,logError_damagedBike_repair,label =" AlternateRepairCode")
-    plt.plot(phyError,list(12*np.array(phyError)),label ='PseudoLineThreshold Line_12',linestyle='dashed')
+    plt.plot(phyError,list(np.clip(12*np.array(phyError),None,1)),label ='PseudoLineThreshold Line_12',linestyle='dashed')
     #plt.plot(phyError,list(6*np.array(phyError)),label ='Threshold Line_6',linestyle='dashed')
     plt.xlabel('Input Physical Error Rate')
     plt.ylabel('Logical/Word error rate')
@@ -277,7 +282,7 @@ if __name__ == "__main__":
     plt.yscale('log')
     plt.xscale('log')
     plt.legend(loc='lower right')  
-    plt.savefig("FinalResults_OneSided_GottesmannThreshold.png")
+    plt.savefig("FinalResults_X_Error.png")
     plt.title("CodeCapacity")
     plt.show()    
 
