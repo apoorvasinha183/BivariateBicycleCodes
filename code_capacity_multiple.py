@@ -97,8 +97,11 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False):
                 print("StabZ is ",stab_Z_read)
         rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
         rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
-        np.random.shuffle(rows_to_be_deleted_x)
-        np.random.shuffle(rows_to_be_deleted_z)
+        # This is importnat. To understand relative orientation
+        RAND = False
+        if RAND:
+            np.random.shuffle(rows_to_be_deleted_x)
+            np.random.shuffle(rows_to_be_deleted_z)
         # Save the first column because we will replace it with the superstabilizer
         hx_old = hx.copy()
         hz_old = hz.copy()
@@ -236,13 +239,20 @@ def bposd_decode(qCode,type='z',perr=0.01,nTrials = 100):
                 
 if __name__ == "__main__":
     args = sys.argv[1:]
+    
     if args[0] == "-type":
         type = args[1]
     else:
         type= 'z'
+    if args[2] == "-dmg":
+        snd = args[3]
+    else:
+        snd = 5        
     print("Simulation of type errors "+ type)
+    print("Error place ",snd)
     nTrails = 10000
-    damageQubits = [0,133]
+    damageQubits = [0]
+    damageQubits.append(int(snd))
     phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12]
     #phyError =[0.09]
     logError_noDamage_12 = []
@@ -336,9 +346,15 @@ if __name__ == "__main__":
     plt.xscale('log')
     plt.legend(loc='upper left')  
     if type == 'x':
-        fn = "FinalResults_X_Error_discussion_multiple_all.png"
+        fn = "FinalResults_X_Error_experiment_"
+        for defects in damageQubits:
+            fn += str(defects)+"|"
+        fn += ".png"    
     else:
-        fn = "FinalResults_Z_Error_discussion_multiple_all.png"
+        fn = "FinalResults_Z_Error_experiment_"
+        for defects in damageQubits:
+            fn += str(defects)+"|"
+        fn += ".png"   
     plt.savefig(fn)
     plt.title("CodeCapacity")
     #plt.show()    
