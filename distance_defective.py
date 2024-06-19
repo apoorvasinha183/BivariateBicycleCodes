@@ -2,7 +2,7 @@ import numpy as np
 from mip import Model, xsum, minimize, BINARY
 from bposd.css import css_code
 from ldpc import mod2
-from ldpc.codes import rep_code
+from ldpc.codes import rep_code,ring_code
 from bposd.hgp import hgp
 from tqdm import tqdm
 # computes the minimum Hamming weight of a binary vector x such that 
@@ -108,8 +108,9 @@ print("hz rank is ",mod2.rank(hz))
 # Killing Qubits (Delete Columns)
 Surface = False
 if Surface:
-	d = 15
-	chain = rep_code(d)
+	d = 9
+	#chain = rep_code(d)
+	chain = ring_code(d)
 	surface = hgp(h1=chain,h2=chain,compute_distance = True)
 	#hx = surface.hx
 	#hz= surface.hz
@@ -122,7 +123,7 @@ LOW=0
 #TRIAL 3: First Principles
 ALL_THREE = False
 TWO_AT_A_TIME = False
-SPELL_IT_OUT = True #Read out the defective stabilizers
+SPELL_IT_OUT = False #Read out the defective stabilizers
 for defects in turnOffQubits:
 	print("Defect Deteced")
 	# Find all rows where the turnOffQubits are high.To figure out the connectivity
@@ -212,7 +213,7 @@ print("Bad matrix above")
 # Killing Measurements (Delete Rows FROM one row !)
 mmtkill= True
 if mmtkill:
-	turnOffMeasurement = [0,36]
+	turnOffMeasurement = [0]
 	hz[turnOffMeasurement,:] = 0
 #hz[turnOffMeasurement,:] = 0
 #Check the matrix 
@@ -377,7 +378,8 @@ if Surface:
 	hz1 = qcode.hz
 	hx1 = qcode.hx
 	# Kill 1 qubit
-	hz1[0,:] = 0 * hz1[0,:]
+	qubittokill = [0,72]
+	hz1[qubittokill,:] = 0 * hz1[qubittokill,:]
 	qcode = css_code(hx1,hz1)
 	qcode.test()
 	# Kill 1 parity qubit here
@@ -392,20 +394,20 @@ if not DISABLE:
 	lx = qcode.lx.copy()
 	lz = qcode.lz.copy()
 	for i in range(k):
-		w1,hxSmalli = distance_test(hx,lx[i,:])
+		#w1,hxSmalli = distance_test(hx,lx[i,:])
 		w2,hzSmalli = distance_test(hz,lz[i,:])
-		print('Logical qubitX=',i,'Distance=',w1)
+		#print('Logical qubitX=',i,'Distance=',w1)
 		print('Logical qubitZ=',i,'Distance=',w2)
-		qubitix.append(w1)
+		#qubitix.append(w1)
 		qubitiz.append(w2)
-		hxSmall[i] = hxSmalli
+		#hxSmall[i] = hxSmalli
 		hzSmall[i] =  hzSmalli
 		w1 = 10000
 		d = min(d,w1,w2)
 
 print('Code parameters: n,k,d=',n,k,d)
 #print("hx is ",hx)
-print("All X distances are as follows ",qubitix)
+#print("All X distances are as follows ",qubitix)
 print("All Z distances are as follows ",qubitiz)
 qcode.test()
 print("k is ",lz.shape)
@@ -425,17 +427,18 @@ if GAUGE:
 EXPERIMENT = False
 if EXPERIMENT:
 	print("Simulating killing parity qubits on small Code")
-	Surface = True
+	#Surface = True
 	if Surface:
-		d = 13
-		chain = rep_code(d)
+		d = 9
+		#chain = rep_code(d)
+		chain = ring_code(d)
 		qcode = hgp(h1=chain,h2=chain,compute_distance = True)
 		#hx = surface.hx
 		#hz= surface.hz
 		#surface.test()
 	kmax = -1000
 	nTrials = 10000
-	nKill = 1
+	nKill = 2
 	# Choose nKill parity to kill .The first WLOG can be 0 . For a first Order check sample randomly
 	# Small Code
 	nChoose = int(qcode.N/2) 

@@ -1,0 +1,120 @@
+Simulation of type errors x
+Defect Deteced
+SANITY CHECK  False
+To be deleted  [ 4  5 54]
+Defect Deteced
+SANITY CHECK  False
+To be deleted  [ 4  5 54]
+[[144,12,12]]
+At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  144
+[[72,12,6]]
+At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  72
+Asymmetric Repair
+At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  143
+Symmetric Repair
+At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  143
+[[144,12,12]]
+At a Physical error rate of  0.005  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  144
+[[72,12,6]]
+At a Physical error rate of  0.005  ,the net logical error rate is  0.00015  effective error rate  0.00015  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.005  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  143
+Symmetric Repair
+At a Physical error rate of  0.005  ,the net logical error rate is  1e-05  effective error rate  1e-05  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.01  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  144
+[[72,12,6]]
+At a Physical error rate of  0.01  ,the net logical error rate is  0.00133  effective error rate  0.00133  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.01  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  143
+Symmetric Repair
+At a Physical error rate of  0.01  ,the net logical error rate is  4e-05  effective error rate  4e-05  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.02  ,the net logical error rate is  7e-05  effective error rate  7e-05  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.02  ,the net logical error rate is  0.0108  effective error rate  0.0108  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.02  ,the net logical error rate is  7e-05  effective error rate  7e-05  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.02  ,the net logical error rate is  0.0004  effective error rate  0.0004  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00139  effective error rate  0.00139  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.03  ,the net logical error rate is  0.03661  effective error rate  0.03661  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00125  effective error rate  0.00125  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00219  effective error rate  0.00219  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.04  ,the net logical error rate is  0.00929  effective error rate  0.00929  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.04  ,the net logical error rate is  0.08586  effective error rate  0.08586  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.04  ,the net logical error rate is  0.00864  effective error rate  0.00864  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.04  ,the net logical error rate is  0.01198  effective error rate  0.01198  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.05  ,the net logical error rate is  0.03509  effective error rate  0.03509  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.05  ,the net logical error rate is  0.15684  effective error rate  0.15684  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.05  ,the net logical error rate is  0.03202  effective error rate  0.03202  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.05  ,the net logical error rate is  0.04075  effective error rate  0.04075  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.06  ,the net logical error rate is  0.09263  effective error rate  0.09263  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.06  ,the net logical error rate is  0.24704  effective error rate  0.24704  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.06  ,the net logical error rate is  0.08752  effective error rate  0.08752  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.06  ,the net logical error rate is  0.10626  effective error rate  0.10626  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.07  ,the net logical error rate is  0.1889  effective error rate  0.1889  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.07  ,the net logical error rate is  0.35308  effective error rate  0.35308  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.07  ,the net logical error rate is  0.18085  effective error rate  0.18085  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.07  ,the net logical error rate is  0.20527  effective error rate  0.20527  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.08  ,the net logical error rate is  0.3227  effective error rate  0.3227  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.08  ,the net logical error rate is  0.46383  effective error rate  0.46383  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.08  ,the net logical error rate is  0.31011  effective error rate  0.31011  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.08  ,the net logical error rate is  0.34353  effective error rate  0.34353  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.09  ,the net logical error rate is  0.46663  effective error rate  0.46663  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.09  ,the net logical error rate is  0.56595  effective error rate  0.56595  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.09  ,the net logical error rate is  0.45343  effective error rate  0.45343  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.09  ,the net logical error rate is  0.49112  effective error rate  0.49112  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.1  ,the net logical error rate is  0.60891  effective error rate  0.60891  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.1  ,the net logical error rate is  0.65923  effective error rate  0.65923  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.1  ,the net logical error rate is  0.59837  effective error rate  0.59837  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.1  ,the net logical error rate is  0.63138  effective error rate  0.63138  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.11  ,the net logical error rate is  0.73446  effective error rate  0.73446  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.11  ,the net logical error rate is  0.74426  effective error rate  0.74426  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.11  ,the net logical error rate is  0.72189  effective error rate  0.72189  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.11  ,the net logical error rate is  0.75149  effective error rate  0.75149  minimum bad weight was  5
+[[144,12,12]]
+At a Physical error rate of  0.12  ,the net logical error rate is  0.82964  effective error rate  0.82964  minimum bad weight was  12
+[[72,12,6]]
+At a Physical error rate of  0.12  ,the net logical error rate is  0.80697  effective error rate  0.80697  minimum bad weight was  6
+Asymmetric Repair
+At a Physical error rate of  0.12  ,the net logical error rate is  0.81917  effective error rate  0.81917  minimum bad weight was  12
+Symmetric Repair
+At a Physical error rate of  0.12  ,the net logical error rate is  0.84075  effective error rate  0.84075  minimum bad weight was  5
+Monte-carlo obsevred distances in the range of BB-12 =  12  BB-break =  12  BB-6 =  6  Alternate repair =  5

@@ -60,14 +60,15 @@ def bivariate_parity_generator_bicycle(ell = 12,m=6,a1=3,a2=1,a3=2,b1=3,b2=1,b3=
     hz0 = np.hstack((BT,AT))
     return hx0,hz0
 
-def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
+def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False):
     # Turns off the qubits at specified positions and recalculates the parity matrix
     # TODO: Extend it to multpile qubits
-    hxq = Q.hx
-    hzq = Q.hz
+    hxq = Q.hx.copy()
+    hzq = Q.hz.copy()
     Q_New = css_code(hxq,hzq)
+    Flip = False
     for defects in turnOffQubits:
-        print("Defect Deteced")
+        print("Defect Deteced at ",defects)
         # Find all rows where the turnOffQubits are high.To figure out the connectivity
         # X-Z syndromes
         ALL_THREE = False
@@ -96,6 +97,8 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
                 print("StabZ is ",stab_Z_read)
         rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
         rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
+        np.random.shuffle(rows_to_be_deleted_x)
+        np.random.shuffle(rows_to_be_deleted_z)
         # Save the first column because we will replace it with the superstabilizer
         hx_old = hx.copy()
         hz_old = hz.copy()
@@ -104,15 +107,24 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
             # AB
             if symmetry:
                 hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
-            hz[rows_to_be_deleted_z[0]] = (hz_old[rows_to_be_deleted_z[1]]+hz_old[rows_to_be_deleted_z[2]])%2
+            if Flip:
+                hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
+            else:    
+                hz[rows_to_be_deleted_z[0]] = (hz_old[rows_to_be_deleted_z[1]]+hz_old[rows_to_be_deleted_z[2]])%2
             # BC
             if symmetry:
                 hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
-            hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
+            if Flip:
+                hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
+            else:
+                hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
             # CA
             #hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
             #hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
-            hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
+            if Flip:
+                hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
+            else:
+                hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
             if symmetry:
                 hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
             # Delete the extra row
@@ -121,8 +133,8 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
         replace_x = rows_to_be_deleted_x[0]
         replace_z = rows_to_be_deleted_z[0]
         print("To be deleted ",rows_to_be_deleted_x)
-        hxBAD = hx[rows_to_be_deleted_x]
-        hzBAD = hz[rows_to_be_deleted_z]
+        #hxBAD = hx[rows_to_be_deleted_x]
+        #hzBAD = hz[rows_to_be_deleted_z]
         ##### GAUGE APPROACH ##########
         #hx = np.delete(hx,rows_to_be_deleted_x,axis=0)
         #hz = np.delete(hz,rows_to_be_deleted_z,axis=0)
@@ -138,25 +150,33 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False):
         #hx[replace_x] = np.sum(broken_rows_x,axis=0) %2
         #hz[replace_z] = np.sum(broken_rows_z,axis=0) %2
         # Now kill the qubit
-        hx = np.delete(hx,defects,axis=1)
-        hz = np.delete(hz,defects,axis=1)
-        hxBAD = np.delete(hxBAD,defects,axis=1)
-        hzBAD = np.delete(hzBAD,defects,axis=1)
+        #hx = np.delete(hx,defects,axis=1)
+        #hz = np.delete(hz,defects,axis=1)
+        #hxBAD = np.delete(hxBAD,defects,axis=1)
+        #hzBAD = np.delete(hzBAD,defects,axis=1)
         #hx[:,defects] = LOW
         #hz[:,defects] = LOW
 
         #hx = hx[:,1:] 
         #hz = hz[:,1:]
+        if alterning:
+            Flip = not Flip
+    # Deleted at the end because the numbering goes out of sync
+    hx = np.delete(hx,turnOffQubits,axis=1)
+    hz = np.delete(hz,turnOffQubits,axis=1)
     Q_New = css_code(hx,hz)
-    
+    Q_New.test()
     return Q_New
 
 def bposd_decode(qCode,type='z',perr=0.01,nTrials = 100):
     #Runs Roffee's BP-OSD Decoder to infer the syndrome
+    print("The type I see is ",type)
     if type == 'z':
+        print("Z type")
         HdecX = qCode.hz
         logicalX = qCode.lz
     else:
+        print("X type")
         HdecX = qCode.hx
         logicalX = qCode.lx    
     channel_probsX = perr
@@ -183,7 +203,7 @@ def bposd_decode(qCode,type='z',perr=0.01,nTrials = 100):
     # This is a logical error if this doesn't commute with a lz/lX operator
     error = 0
     minWt = qCode.N # This is for a sanity test
-    for i in tqdm(range(nTrials)):
+    for i in range(nTrials):
         errX,_ = generateError(perr,qCode)
         #print("ERRx")
         synX = HdecX @ errX %2
@@ -221,17 +241,21 @@ if __name__ == "__main__":
     else:
         type= 'z'
     print("Simulation of type errors "+ type)
-    nTrails = 100000
+    nTrails = 10000
+    damageQubits = [0,133]
     phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12]
+    #phyError =[0.09]
     logError_noDamage_12 = []
     logError_noDamage_6 = []
     logError_surface = []
     logError_damagedBike = []
     logError_damagedBike_repair = []
+    logError_XZ_repair = []
     mc_12 = 100000
     mc_6 = 100000
     mc_bike = 100000
     mc_repair = 1000000
+    mc_alternate = 100000000
     surf = 10000 
     # Gross CODE
     HX,HZ = bivariate_parity_generator_bicycle()
@@ -244,30 +268,40 @@ if __name__ == "__main__":
     HX,HZ = bivariate_parity_generator_bicycle(ell=ell,m=m,a1=a1,a2=a2,a3=a3,b1=b1,b2=b2,b3=b3)
     Qcode_mini = css_code(HX,HZ)
     # Surface Code (distance 12) --> FOR SANITY TEST
-    d = 12
-    chain = rep_code(d)
-    surface = hgp(h1=chain,h2=chain,compute_distance = True)
+    #d = 12
+    #chain = rep_code(d)
+    #surface = hgp(h1=chain,h2=chain,compute_distance = True)
     #surface.test()
     # Things start to break!
     H1,Z1 = bivariate_parity_generator_bicycle()
     QnewGross = css_code(H1,Z1)
-    QBreak = damage_qubit(QnewGross)
+    print("Stitched asymmetrically")
+    QBreak = damage_qubit(QnewGross,turnOffQubits=damageQubits,alterning=False)
+    # Multiple stitches alternate between X/Z
+    H4,Z4 = bivariate_parity_generator_bicycle()
+    QnewGross3 = css_code(H4,Z4)
+    print("Stitched asymmetrically but in X/Z fashion")
+    QBreak3 = damage_qubit(QnewGross3,turnOffQubits=damageQubits,alterning=True)
     # SeparateStitching rules
     H2,Z2 = bivariate_parity_generator_bicycle()
     QnewGross2 = css_code(H2,Z2)
-    QBreak2 = damage_qubit(QnewGross2,symmetry=True)
-    for err in phyError:
+    print("Stitched symmetrically")
+    QBreak2 = damage_qubit(QnewGross2,turnOffQubits=damageQubits,symmetry=True)
+    for err in tqdm(phyError):
         print("[[144,12,12]]")
-        eBig,m = bposd_decode(Qcode_Gross,perr=err,nTrials=nTrails)
+        eBig,m = bposd_decode(Qcode_Gross,perr=err,type=type,nTrials=nTrails)
         mc_12 = min(m,mc_12)
-        print("[[72,12,6]]")
-        eSmall,m = bposd_decode(Qcode_mini,perr=err,nTrials=nTrails)
-        mc_6 = min(m,mc_6)
+        #print("[[72,12,6]]")
+        #eSmall,m = bposd_decode(Qcode_mini,perr=err,nTrials=nTrails)
+        #mc_6 = min(m,mc_6)
         #eSOTA,m = bposd_decode(surface,perr=err,nTrials=nTrails)
         #surf = min(m,surf)
-        print("Asymmetric Repair")
+        print("Asymmetric Repair ZZ")
         eBreak,m = bposd_decode(QBreak,perr=err,type=type,nTrials=nTrails)
         mc_bike = min(m,mc_bike)
+        print("Asymmetric Repair ZX")
+        eBreak3,m = bposd_decode(QBreak3,perr=err,type=type,nTrials=nTrails)
+        mc_alternate = min(m,mc_alternate)
         print("Symmetric Repair")
         eRepair,m = bposd_decode(QBreak2,perr=err,type=type,nTrials=nTrails)
         mc_repair = min(m,mc_repair)
@@ -275,22 +309,23 @@ if __name__ == "__main__":
         
         logError_noDamage_12.append(eBig)
         
-        logError_noDamage_6.append(eSmall)
+        #logError_noDamage_6.append(eSmall)
         #print("Surface")
         #logError_surface.append(eSOTA)
-        
+        logError_XZ_repair.append(eBreak3)
         logError_damagedBike.append(eBreak)
         
         logError_damagedBike_repair.append(eRepair)
-    print("Monte-carlo obsevred distances in the range of BB-12 = ",mc_12," BB-break = ",mc_bike," BB-6 = ",mc_6," Alternate repair = ",mc_repair)
+    print("Monte-carlo obsevred distances in the range of BB-12 = ",mc_12," BB-break = ",mc_bike," XZ repair = ",mc_alternate," Alternate repair = ",mc_repair)
     # plotting facilities
     plt.plot(phyError,logError_noDamage_12,label="Gross(12)")
-    plt.plot(phyError,logError_noDamage_6,label="[[72,12,6]]")   
+    #plt.plot(phyError,logError_noDamage_6,label="[[72,12,6]]")   
     #plt.plot(phyError,logError_surface,label="surface")  
-    plt.plot(phyError,logError_damagedBike,label="DamagedGross")  
+    plt.plot(phyError,logError_damagedBike,label="DamagedGrossZZ")  
+    plt.plot(phyError,logError_XZ_repair,label="DamagedGrossXZ")
     plt.plot(phyError,logError_damagedBike_repair,label =" AlternateRepairCode")
     #plt.plot(phyError,list(np.clip(12*np.array(phyError),None,1)),label ='PseudoLineThreshold Line_12',linestyle='dashed')
-    plt.plot(phyError,1-(1-np.array(phyError))**12,label ='PseudoLineThreshold Line_12',linestyle='dashed') # Better definition of threshold
+    #plt.plot(phyError,1-(1-np.array(phyError))**12,label ='PseudoLineThreshold Line_12',linestyle='dashed') # Better definition of threshold
     #plt.plot(phyError,list(6*np.array(phyError)),label ='Threshold Line_6',linestyle='dashed')
     plt.xlabel('Input Physical Error Rate')
     plt.ylabel('Logical error rate') # If you use block error rate ,change the threshold line
@@ -301,9 +336,9 @@ if __name__ == "__main__":
     plt.xscale('log')
     plt.legend(loc='upper left')  
     if type == 'x':
-        fn = "FinalResults_X_Error_discussion_high.png"
+        fn = "FinalResults_X_Error_discussion_multiple_all.png"
     else:
-        fn = "FinalResults_Z_Error_discussion_high.png"
+        fn = "FinalResults_Z_Error_discussion_multiple_all.png"
     plt.savefig(fn)
     plt.title("CodeCapacity")
     #plt.show()    
