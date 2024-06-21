@@ -250,10 +250,10 @@ if __name__ == "__main__":
         snd = 5        
     print("Simulation of type errors "+ type)
     print("Error place ",snd)
-    nTrails = 10000
+    nTrails = 100000
     damageQubits = [0]
     damageQubits.append(int(snd))
-    phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12]
+    phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11]
     #phyError =[0.09]
     logError_noDamage_12 = []
     logError_noDamage_6 = []

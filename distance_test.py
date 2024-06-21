@@ -2,7 +2,7 @@ import numpy as np
 from mip import Model, xsum, minimize, BINARY
 from bposd.css import css_code
 from ldpc import mod2
-from ldpc.codes import rep_code
+from ldpc.codes import rep_code,ring_code
 from bposd.hgp import hgp
 from tqdm import tqdm
 # computes the minimum Hamming weight of a binary vector x such that 
@@ -425,21 +425,24 @@ if GAUGE:
 EXPERIMENT = False
 if EXPERIMENT:
 	print("Simulating killing parity qubits on small Code")
-	Surface = True
+	Surface = False
 	if Surface:
-		d = 13
-		chain = rep_code(d)
+		d = 9
+		chain = ring_code(d)
+		#chain = rep_code(d)
 		qcode = hgp(h1=chain,h2=chain,compute_distance = True)
 		#hx = surface.hx
 		#hz= surface.hz
 		#surface.test()
-	kmax = -1000
+	kmax = qcode.K +1 
 	nTrials = 10000
-	nKill = 1
+	nKill = 3
 	# Choose nKill parity to kill .The first WLOG can be 0 . For a first Order check sample randomly
 	# Small Code
 	nChoose = int(qcode.N/2) 
 	#signature = []
+	flip = 0
+	bad_places = []
 	for i in tqdm(range(nTrials)):
 		signature =[]
 		turnOfflines = np.random.choice(np.arange(1,nChoose),size=nKill-1,replace= False)
@@ -449,7 +452,7 @@ if EXPERIMENT:
 		for lines in turnOfflines:
 			# Do a 50-50 coin toss 
 			choose = np.random.rand()
-			if choose > 0.5:
+			if choose > 1:
 				hx[lines,:] = 0 * hx[lines,:]
 				signature.append('x')
 			else:
@@ -457,10 +460,18 @@ if EXPERIMENT:
 				signature.append('z')
 		qCodeNew = css_code(hx,hz)
 		k_sample = qCodeNew.K
-		if k_sample > kmax:
-			print("Present max is ",k_sample)
-			print("The bad configurqation is ",turnOfflines)
-			print("Error signature is ",signature)
-			#signature = []
+		if k_sample >= kmax:
+			flip += 1
+			#print("Present max is ",k_sample)
+			#print("The bad configurqation is ",turnOfflines)
+			#print("Error signature is ",signature)
+			signature = []
+			bad_places.append(turnOfflines[0])
 			kmax = k_sample
-	print("Maximum qubits is ",kmax)			
+	print("Maximum qubits is ",kmax)	
+	print("Total number of flips in 10000 : ",flip)		
+	print("code test")
+	qcode.test()
+	bad_places = np.unique(bad_places)
+	print(" Bad turn off locations are ",len(bad_places))
+

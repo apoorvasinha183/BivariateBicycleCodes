@@ -57,7 +57,7 @@ At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effecti
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.001  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  142
+At a Physical error rate of  0.001  ,the net logical error rate is  1e-05  effective error rate  1e-05  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
@@ -73,7 +73,7 @@ At a Physical error rate of  0.005  ,the net logical error rate is  0.0  effecti
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.005  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  142
+At a Physical error rate of  0.005  ,the net logical error rate is  6e-05  effective error rate  6e-05  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
@@ -89,181 +89,165 @@ At a Physical error rate of  0.01  ,the net logical error rate is  0.0  effectiv
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.01  ,the net logical error rate is  0.0004  effective error rate  0.0004  minimum bad weight was  4
+At a Physical error rate of  0.01  ,the net logical error rate is  0.00044  effective error rate  0.00044  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.02  ,the net logical error rate is  0.0001  effective error rate  0.0001  minimum bad weight was  20
+At a Physical error rate of  0.02  ,the net logical error rate is  9e-05  effective error rate  9e-05  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.02  ,the net logical error rate is  0.0  effective error rate  0.0  minimum bad weight was  142
+At a Physical error rate of  0.02  ,the net logical error rate is  7e-05  effective error rate  7e-05  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.02  ,the net logical error rate is  0.0001  effective error rate  0.0001  minimum bad weight was  20
+At a Physical error rate of  0.02  ,the net logical error rate is  9e-05  effective error rate  9e-05  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.02  ,the net logical error rate is  0.0021  effective error rate  0.0021  minimum bad weight was  4
+At a Physical error rate of  0.02  ,the net logical error rate is  0.00176  effective error rate  0.00176  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.03  ,the net logical error rate is  0.0018  effective error rate  0.0018  minimum bad weight was  12
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00121  effective error rate  0.00121  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.03  ,the net logical error rate is  0.0011  effective error rate  0.0011  minimum bad weight was  14
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00105  effective error rate  0.00105  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.03  ,the net logical error rate is  0.0016  effective error rate  0.0016  minimum bad weight was  11
+At a Physical error rate of  0.03  ,the net logical error rate is  0.0014  effective error rate  0.0014  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.03  ,the net logical error rate is  0.0057  effective error rate  0.0057  minimum bad weight was  4
+At a Physical error rate of  0.03  ,the net logical error rate is  0.00584  effective error rate  0.00584  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.04  ,the net logical error rate is  0.0078  effective error rate  0.0078  minimum bad weight was  12
+At a Physical error rate of  0.04  ,the net logical error rate is  0.00945  effective error rate  0.00945  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.04  ,the net logical error rate is  0.0081  effective error rate  0.0081  minimum bad weight was  12
+At a Physical error rate of  0.04  ,the net logical error rate is  0.00792  effective error rate  0.00792  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.04  ,the net logical error rate is  0.0104  effective error rate  0.0104  minimum bad weight was  11
+At a Physical error rate of  0.04  ,the net logical error rate is  0.00902  effective error rate  0.00902  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.04  ,the net logical error rate is  0.0161  effective error rate  0.0161  minimum bad weight was  4
+At a Physical error rate of  0.04  ,the net logical error rate is  0.0197  effective error rate  0.0197  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.05  ,the net logical error rate is  0.0343  effective error rate  0.0343  minimum bad weight was  12
+At a Physical error rate of  0.05  ,the net logical error rate is  0.03597  effective error rate  0.03597  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.05  ,the net logical error rate is  0.0296  effective error rate  0.0296  minimum bad weight was  12
+At a Physical error rate of  0.05  ,the net logical error rate is  0.03156  effective error rate  0.03156  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.05  ,the net logical error rate is  0.0319  effective error rate  0.0319  minimum bad weight was  11
+At a Physical error rate of  0.05  ,the net logical error rate is  0.03617  effective error rate  0.03617  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.05  ,the net logical error rate is  0.0516  effective error rate  0.0516  minimum bad weight was  4
+At a Physical error rate of  0.05  ,the net logical error rate is  0.05394  effective error rate  0.05394  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.06  ,the net logical error rate is  0.092  effective error rate  0.092  minimum bad weight was  12
+At a Physical error rate of  0.06  ,the net logical error rate is  0.09394  effective error rate  0.09394  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.06  ,the net logical error rate is  0.0793  effective error rate  0.0793  minimum bad weight was  12
+At a Physical error rate of  0.06  ,the net logical error rate is  0.08111  effective error rate  0.08111  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.06  ,the net logical error rate is  0.0932  effective error rate  0.0932  minimum bad weight was  11
+At a Physical error rate of  0.06  ,the net logical error rate is  0.09212  effective error rate  0.09212  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.06  ,the net logical error rate is  0.125  effective error rate  0.125  minimum bad weight was  4
+At a Physical error rate of  0.06  ,the net logical error rate is  0.12357  effective error rate  0.12357  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.07  ,the net logical error rate is  0.1881  effective error rate  0.1881  minimum bad weight was  12
+At a Physical error rate of  0.07  ,the net logical error rate is  0.19015  effective error rate  0.19015  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.07  ,the net logical error rate is  0.1696  effective error rate  0.1696  minimum bad weight was  12
+At a Physical error rate of  0.07  ,the net logical error rate is  0.1708  effective error rate  0.1708  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.07  ,the net logical error rate is  0.1893  effective error rate  0.1893  minimum bad weight was  11
+At a Physical error rate of  0.07  ,the net logical error rate is  0.1913  effective error rate  0.1913  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.07  ,the net logical error rate is  0.2421  effective error rate  0.2421  minimum bad weight was  4
+At a Physical error rate of  0.07  ,the net logical error rate is  0.22867  effective error rate  0.22867  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.08  ,the net logical error rate is  0.3181  effective error rate  0.3181  minimum bad weight was  12
+At a Physical error rate of  0.08  ,the net logical error rate is  0.31987  effective error rate  0.31987  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.08  ,the net logical error rate is  0.2859  effective error rate  0.2859  minimum bad weight was  12
+At a Physical error rate of  0.08  ,the net logical error rate is  0.29489  effective error rate  0.29489  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.08  ,the net logical error rate is  0.3191  effective error rate  0.3191  minimum bad weight was  11
+At a Physical error rate of  0.08  ,the net logical error rate is  0.3216  effective error rate  0.3216  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.08  ,the net logical error rate is  0.3662  effective error rate  0.3662  minimum bad weight was  4
+At a Physical error rate of  0.08  ,the net logical error rate is  0.36736  effective error rate  0.36736  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.09  ,the net logical error rate is  0.4723  effective error rate  0.4723  minimum bad weight was  12
+At a Physical error rate of  0.09  ,the net logical error rate is  0.46775  effective error rate  0.46775  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.09  ,the net logical error rate is  0.4337  effective error rate  0.4337  minimum bad weight was  12
+At a Physical error rate of  0.09  ,the net logical error rate is  0.44043  effective error rate  0.44043  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.09  ,the net logical error rate is  0.4728  effective error rate  0.4728  minimum bad weight was  11
+At a Physical error rate of  0.09  ,the net logical error rate is  0.46875  effective error rate  0.46875  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.09  ,the net logical error rate is  0.5174  effective error rate  0.5174  minimum bad weight was  4
+At a Physical error rate of  0.09  ,the net logical error rate is  0.51831  effective error rate  0.51831  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.1  ,the net logical error rate is  0.6017  effective error rate  0.6017  minimum bad weight was  12
+At a Physical error rate of  0.1  ,the net logical error rate is  0.61219  effective error rate  0.61219  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.1  ,the net logical error rate is  0.5806  effective error rate  0.5806  minimum bad weight was  12
+At a Physical error rate of  0.1  ,the net logical error rate is  0.57892  effective error rate  0.57892  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.1  ,the net logical error rate is  0.6112  effective error rate  0.6112  minimum bad weight was  11
+At a Physical error rate of  0.1  ,the net logical error rate is  0.60989  effective error rate  0.60989  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.1  ,the net logical error rate is  0.6574  effective error rate  0.6574  minimum bad weight was  4
+At a Physical error rate of  0.1  ,the net logical error rate is  0.65712  effective error rate  0.65712  minimum bad weight was  4
 [[144,12,12]]
 The type I see is  x
 X type
-At a Physical error rate of  0.11  ,the net logical error rate is  0.7343  effective error rate  0.7343  minimum bad weight was  12
+At a Physical error rate of  0.11  ,the net logical error rate is  0.73169  effective error rate  0.73169  minimum bad weight was  12
 Asymmetric Repair ZZ
 The type I see is  x
 X type
-At a Physical error rate of  0.11  ,the net logical error rate is  0.7091  effective error rate  0.7091  minimum bad weight was  12
+At a Physical error rate of  0.11  ,the net logical error rate is  0.70806  effective error rate  0.70806  minimum bad weight was  12
 Asymmetric Repair ZX
 The type I see is  x
 X type
-At a Physical error rate of  0.11  ,the net logical error rate is  0.7402  effective error rate  0.7402  minimum bad weight was  11
+At a Physical error rate of  0.11  ,the net logical error rate is  0.73488  effective error rate  0.73488  minimum bad weight was  11
 Symmetric Repair
 The type I see is  x
 X type
-At a Physical error rate of  0.11  ,the net logical error rate is  0.764  effective error rate  0.764  minimum bad weight was  4
-[[144,12,12]]
-The type I see is  x
-X type
-At a Physical error rate of  0.12  ,the net logical error rate is  0.8335  effective error rate  0.8335  minimum bad weight was  12
-Asymmetric Repair ZZ
-The type I see is  x
-X type
-At a Physical error rate of  0.12  ,the net logical error rate is  0.8108  effective error rate  0.8108  minimum bad weight was  12
-Asymmetric Repair ZX
-The type I see is  x
-X type
-At a Physical error rate of  0.12  ,the net logical error rate is  0.8199  effective error rate  0.8199  minimum bad weight was  11
-Symmetric Repair
-The type I see is  x
-X type
-At a Physical error rate of  0.12  ,the net logical error rate is  0.8614  effective error rate  0.8614  minimum bad weight was  4
+At a Physical error rate of  0.11  ,the net logical error rate is  0.77045  effective error rate  0.77045  minimum bad weight was  4
 Monte-carlo obsevred distances in the range of BB-12 =  12  BB-break =  12  XZ repair =  11  Alternate repair =  4
