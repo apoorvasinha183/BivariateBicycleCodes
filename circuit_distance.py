@@ -9,14 +9,14 @@ import pickle
 num_trials = 100000
 
 # error rate 
-p = 0.003
+p = 0.009
 
 
 # code parameters
 n = 144
 k = 12
 d = 12
-num_cycles = 1
+num_cycles = 12
 
 
 # load code parameters and decoding matrices

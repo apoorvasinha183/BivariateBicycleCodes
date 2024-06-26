@@ -257,10 +257,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
         hz = Q.hz.copy()
         hx = Q.hx.copy()
         #Delete bad columns in z 
-        #hz = np.delete(hz,turnOffQubits,axis=0)
-        
-        for badlines in turnOffQubits:
-            hz[badlines] = 0*hz[badlines]
+        hz = np.delete(hz,turnOffQubits,axis=0)
         Q_New = css_code(hx,hz)
         return Q_New
 #hz[turnOffMeasurement,:] = 0
@@ -268,7 +265,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
 qcode_1=css_code(hx,hz)
 patchQubits = [3,60,66,76,77,126]
 #patchQubits = []
-QdamageZ6_1 = damage_qubit(qcode_1,turnOffQubits=patchQubits,alterning=False)
+QdamageZ6_1 = damage_qubit(qcode_1,turnOffQubits=patchQubits,alterning=True)
 qcode = damage_qubit(QdamageZ6_1,turnOffQubits=[0,36],type="parity")
 print("N is ",qcode.N)
 print("K is ",qcode.K)
@@ -424,7 +421,7 @@ d = n
 qubitix = []
 qubitiz = []
 
-DISABLE = True
+DISABLE = False
 if Surface:
 	qcode = surface
 	hz1 = qcode.hz
@@ -476,7 +473,7 @@ if GAUGE:
 	print("Z weights ",np.sum(broken_rows_z_DEBUG))
 	print(" Sanity Checks")
 #print(mod2.rank(hxSmall@hzSmall.T%2))
-EXPERIMENT = True
+EXPERIMENT = False
 if EXPERIMENT:
 	print("Simulating killing parity qubits on  Code")
 	Surface = False
@@ -488,13 +485,9 @@ if EXPERIMENT:
 		#hx = surface.hx
 		#hz= surface.hz
 		#surface.test()
-	# kill measurement qubit 0
-	qcode_2 = qcode_1
-	# Kill parity 0
-	qcode = damage_qubit(qcode_2,turnOffQubits=[0],type="parity")
 	kmax = qcode.K +1 
 	nTrials = 10000
-	nKill = 1
+	nKill = 3
 	# Choose nKill parity to kill .The first WLOG can be 0 . For a first Order check sample randomly
 	# Small Code
 	nChoose = int(qcode.N/2) 
@@ -503,8 +496,8 @@ if EXPERIMENT:
 	bad_places = []
 	for i in tqdm(range(nTrials)):
 		signature =[]
-		turnOfflines = np.random.choice(np.arange(0,nChoose),size=nKill,replace= False)
-		#turnOfflines = np.append(turnOfflines,0)
+		turnOfflines = np.random.choice(np.arange(1,nChoose),size=nKill-1,replace= False)
+		turnOfflines = np.append(turnOfflines,0)
 		hx = qcode.hx.copy()
 		hz = qcode.hz.copy()
 		for lines in turnOfflines:

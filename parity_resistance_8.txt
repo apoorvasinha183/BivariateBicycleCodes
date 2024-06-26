@@ -1,0 +1,9 @@
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[756,16,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[756,16,nan]]
+There are a total of  70876  unique error combinations.

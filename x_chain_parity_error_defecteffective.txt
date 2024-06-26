@@ -1,0 +1,215 @@
+Simulation of type errors x
+Error place  112
+Stitched asymmetrically
+SANITY CHECK  False
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+To be deleted  [28 34 37]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+Stitched asymmetrically but in X/Z fashion
+SANITY CHECK  False
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+To be deleted  [28 34 37]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+Stitched symmetrically
+SANITY CHECK  False
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+To be deleted  [28 34 37]
+<Unnamed CSS code>, (5,10)-[[142,14,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[142,14,nan]]
+1 parity defect added
+2 parity defects added(Non Intrusive)
+2 parity defects added( Intrusive)
+SANITY CHECK  False
+To be deleted  [ 1  2 57]
+SANITY CHECK  False
+To be deleted  [42 64 65]
+SANITY CHECK  False
+To be deleted  [48 70 71]
+SANITY CHECK  False
+To be deleted  [ 1 64 70]
+SANITY CHECK  False
+To be deleted  [ 2 65 71]
+SANITY CHECK  False
+To be deleted  [42 48 57]
+<Unnamed CSS code>, (4,28)-[[138,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,28)-[[138,12,nan]]
+ All Qubits of same parity used for fix(may fail)
+Testing this code-Fix1 
+<Unnamed CSS code>, (4,28)-[[138,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,28)-[[138,12,nan]]
+SANITY CHECK  False
+To be deleted  [ 1  2 57]
+SANITY CHECK  False
+To be deleted  [42 64 65]
+SANITY CHECK  False
+To be deleted  [48 70 71]
+SANITY CHECK  False
+To be deleted  [ 1 42 70]
+SANITY CHECK  False
+To be deleted  [ 1  2 64 71]
+SANITY CHECK  False
+To be deleted  [48 57 64]
+<Unnamed CSS code>, (5,15)-[[138,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,15)-[[138,12,nan]]
+  Qubits of alternating parity used for fix(may fail)
+Testing this code-Fix2 
+<Unnamed CSS code>, (5,15)-[[138,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,15)-[[138,12,nan]]
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+[[144,12,12]]
+Asymmetric Repair ZZ
+Asymmetric Repair ZX
+Symmetric Repair
+1 parity loss
+2 parity losses but not bad
+2 parity losses but sensitive
+2 parity bad fix 1
+2 parity bad fix 2
+Monte-carlo obsevred distances in the range of BB-12 =  12  BB-break =  12  XZ repair =  11  Alternate repair =  5  One Bad Parity =  12  Two NoniNTRUSIVE Pairites =   12  Two bad parities bad =  6  Bad parity Fix 1 =  12  Bad Parity Fix 2 =  9

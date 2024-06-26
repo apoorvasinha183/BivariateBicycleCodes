@@ -1,0 +1,96 @@
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[72,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[72,12,nan]]
+Error resitsance on 
+There are a total of  595  unique error combinations.
+Every sample obtained.
+Maximum qubits is  13
+Total number of flips in 10000 :  8
+code test
+ Bad turn off locations are  8
+We tried the following number of unique combinations  595
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[90,8,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[90,8,nan]]
+Error resitsance on 
+There are a total of  946  unique error combinations.
+Every sample obtained.
+Maximum qubits is  10
+Total number of flips in 10000 :  96
+code test
+ Bad turn off locations are  96
+We tried the following number of unique combinations  946
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[108,8,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[108,8,nan]]
+Error resitsance on 
+There are a total of  1378  unique error combinations.
+Every sample obtained.
+Maximum qubits is  10
+Total number of flips in 10000 :  55
+code test
+ Bad turn off locations are  55
+We tried the following number of unique combinations  1378
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[144,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[144,12,nan]]
+Error resitsance on 
+There are a total of  2485  unique error combinations.
+Every sample obtained.
+Maximum qubits is  13
+Total number of flips in 10000 :  137
+code test
+ Bad turn off locations are  137
+We tried the following number of unique combinations  2485
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[288,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[288,12,nan]]
+Error resitsance on 
+There are a total of  10153  unique error combinations.
+Every sample obtained.
+Maximum qubits is  14
+Total number of flips in 10000 :  113
+code test
+ Bad turn off locations are  113
+We tried the following number of unique combinations  10153
+Error Resistance Check on Code for  3  parity qubits
+<Unnamed CSS code>, (3,6)-[[360,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[360,12,nan]]
+Error resitsance on 
+There are a total of  15931  unique error combinations.
+Every sample obtained.
+Maximum qubits is  14
+Total number of flips in 10000 :  393
+code test
+ Bad turn off locations are  393
+We tried the following number of unique combinations  15931
