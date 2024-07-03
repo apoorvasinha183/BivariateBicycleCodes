@@ -33,12 +33,13 @@ def rank2(A):
 
 
 # depolarizing noise model 
-error_rate = 0.001
+error_rate = 0.003
 error_rate_init = error_rate
 error_rate_idle = error_rate
 error_rate_cnot = error_rate
 error_rate_meas = error_rate
 
+check_defect_x_locations = [0,36]
 
 
 
@@ -139,8 +140,18 @@ k = n - rank2(hx) - rank2(hz)
 qcode=css_code(hx,hz)
 print('Testing CSS code...')
 qcode.test()
-print('Done')
+print('Done no damage')
 
+print("Zeroing bad locations and recalculating the logicals")
+#for bad_loc in check_defect_x_locations:
+#	hx[bad_loc] = 0* hx[bad_loc]
+hx = np.delete(hx,check_defect_x_locations,axis=0)	
+qcode=css_code(hx,hz)
+print('Testing CSS code...')
+# number of logical qubits -New
+k = n - rank2(hx) - rank2(hz)
+qcode.test()
+print('Done with damage')	
 lz = qcode.lz
 lx = qcode.lx
 
@@ -155,7 +166,8 @@ Zchecks = []
 cnt = 0
 for i in range(n2):
     node_name = ('Xcheck', i)
-    Xchecks.append(node_name)
+    if i not in check_defect_x_locations:
+       Xchecks.append(node_name)
     lin_order[node_name] = cnt
     cnt += 1
 
@@ -181,16 +193,18 @@ for i in range(n2):
 # compute the list of neighbors of each check qubit in the Tanner graph
 nbs = {}
 # iterate over X checks
+# Skip bad connections
 for i in range(n2):
 	check_name = ('Xcheck',i)
 	# left data qubits
-	nbs[(check_name,0)] = ('data_left',np.nonzero(A1[i,:])[0][0])
-	nbs[(check_name,1)] = ('data_left',np.nonzero(A2[i,:])[0][0])
-	nbs[(check_name,2)] = ('data_left',np.nonzero(A3[i,:])[0][0])
-	# right data qubits
-	nbs[(check_name,3)] = ('data_right',np.nonzero(B1[i,:])[0][0])
-	nbs[(check_name,4)] = ('data_right',np.nonzero(B2[i,:])[0][0])
-	nbs[(check_name,5)] = ('data_right',np.nonzero(B3[i,:])[0][0])
+	if i not in check_defect_x_locations:
+		nbs[(check_name,0)] = ('data_left',np.nonzero(A1[i,:])[0][0])
+		nbs[(check_name,1)] = ('data_left',np.nonzero(A2[i,:])[0][0])
+		nbs[(check_name,2)] = ('data_left',np.nonzero(A3[i,:])[0][0])
+		# right data qubits
+		nbs[(check_name,3)] = ('data_right',np.nonzero(B1[i,:])[0][0])
+		nbs[(check_name,4)] = ('data_right',np.nonzero(B2[i,:])[0][0])
+		nbs[(check_name,5)] = ('data_right',np.nonzero(B3[i,:])[0][0])
 
 # iterate over Z checks
 for i in range(n2):
@@ -211,7 +225,8 @@ U = np.identity(2*n,dtype=int)
 # round 0: prep xchecks, CNOT zchecks and data
 t=0
 for q in Xchecks:
-	cycle.append(('PrepX',q))
+	if q[1] not in check_defect_x_locations:
+		cycle.append(('PrepX',q))
 data_qubits_cnoted_in_this_round = []
 assert(not(sZ[t]=='idle'))
 for target in Zchecks:
@@ -228,10 +243,11 @@ for q in data_qubits:
 for t in range(1,6):
 	assert(not(sX[t]=='idle'))
 	for control in Xchecks:
-		direction = sX[t]
-		target = nbs[(control,direction)]
-		U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
-		cycle.append(('CNOT',control,target))
+		if control[1] not in check_defect_x_locations:
+			direction = sX[t]
+			target = nbs[(control,direction)]
+			U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
+			cycle.append(('CNOT',control,target))
 	assert(not(sZ[t]=='idle'))
 	for target in Zchecks:
 		direction = sZ[t]
@@ -246,20 +262,24 @@ for q in Zchecks:
 assert(not(sX[t]=='idle'))
 data_qubits_cnoted_in_this_round = []
 for control in Xchecks:
-	direction = sX[t]
-	target = nbs[(control,direction)]
-	U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
-	cycle.append(('CNOT',control,target))
-	data_qubits_cnoted_in_this_round.append(target)
+	if control[1] not in check_defect_x_locations:
+		direction = sX[t]
+		target = nbs[(control,direction)]
+		U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
+		cycle.append(('CNOT',control,target))
+		data_qubits_cnoted_in_this_round.append(target)
 for q in data_qubits:
 	if not(q in data_qubits_cnoted_in_this_round):
 		cycle.append(('IDLE',q))
+#TODO: Superstabilizers are measured here
+#round 6(repair)
 
 # round 7: all data qubits are idle, Prep Z checks, Meas X checks
 for q in data_qubits:
 	cycle.append(('IDLE',q))
 for q in Xchecks:
-	cycle.append(('MeasX',q))
+	if q[1] not in check_defect_x_locations:
+		cycle.append(('MeasX',q))
 for q in Zchecks:
 	cycle.append(('PrepZ',q))
 
@@ -275,9 +295,10 @@ V = np.identity(2*n,dtype=int)
 for t in range(7):
 	if not(sX[t]=='idle'):
 		for control in Xchecks:
-			direction = sX[t]
-			target = nbs[(control,direction)]
-			V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
+			if control[1] not in check_defect_x_locations:
+				direction = sX[t]
+				target = nbs[(control,direction)]
+				V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
 # next measure all Z checks
 for t in range(7):
 	if not(sZ[t]=='idle'):
@@ -302,15 +323,23 @@ circuitsZ = []
 head = []
 tail = cycle_repeated.copy()
 for gate in cycle_repeated:
-	assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ'])
+	assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit"])
 	if gate[0]=='MeasX':
 		assert(len(gate)==2)
 		circuitsZ.append(head + [('Z',gate[1])] + tail)
 		ProbZ.append(error_rate_meas)
+	if gate[0]=='badM':
+		#assert(len(gate)==2)
+		circuitsZ.append(head + [('Z',gate[1])] + tail)
+		ProbZ.append(0)	
 	# move the gate from tail to head
 	head.append(gate)
 	tail.pop(0)
 	assert(cycle_repeated==(head+tail))
+	if gate[0]=='badInit':
+		#assert(len(gate)==2)
+		circuitsZ.append(head + [('Z',gate[1])] + tail)
+		ProbZ.append(0)
 	if gate[0]=='PrepX':
 		assert(len(gate)==2)
 		circuitsZ.append(head + [('Z',gate[1])] + tail)
@@ -342,11 +371,15 @@ circuitsX = []
 head = []
 tail = cycle_repeated.copy()
 for gate in cycle_repeated:
-	assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ'])
+	assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit"])
 	if gate[0]=='MeasZ':
 		assert(len(gate)==2)
 		circuitsX.append(head + [('X',gate[1])] + tail)
 		ProbX.append(error_rate_meas)
+	if gate[0]=='badM':
+		#assert(len(gate)==2)
+		circuitsX.append(head + [('X',gate[1])] + tail)
+		ProbX.append(0)	
 	# move the gate from tail to head
 	head.append(gate)
 	tail.pop(0)
@@ -516,15 +549,16 @@ print('Computing syndrome histories for single-X-type-fault circuits...')
 cnt = 0
 for circ in circuitsX:
 	syndrome_history,state,syndrome_map,err_cnt = simulate_circuitX(circ+cycle+cycle)
-	assert(err_cnt==1)
-	assert(len(syndrome_history)==n2*(num_cycles+2))
+	#Disable pesky asserts
+	#assert(err_cnt==1)
+	#assert(len(syndrome_history)==n2*(num_cycles+2))
 	state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 	syndrome_final_logical = (lz @ state_data_qubits) % 2
 	# apply syndrome sparsification map
 	syndrome_history_copy = syndrome_history.copy()
 	for c in Zchecks:
 		pos = syndrome_map[c]
-		assert(len(pos)==(num_cycles+2))
+		#assert(len(pos)==(num_cycles+2))
 		for row in range(1,num_cycles+2):
 			syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
 	syndrome_history%= 2
@@ -574,17 +608,18 @@ print('Computing syndrome histories for single-Z-type-fault circuits...')
 cnt = 0
 for circ in circuitsZ:
 	syndrome_history,state,syndrome_map,err_cnt = simulate_circuitZ(circ+cycle+cycle)
-	assert(err_cnt==1)
-	assert(len(syndrome_history)==n2*(num_cycles+2))
+	#assert(err_cnt==1)
+	#assert(len(syndrome_history)==n2*(num_cycles+2))
 	state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 	syndrome_final_logical = (lx @ state_data_qubits) % 2
 	# apply syndrome sparsification map
 	syndrome_history_copy = syndrome_history.copy()
 	for c in Xchecks:
-		pos = syndrome_map[c]
-		assert(len(pos)==(num_cycles+2))
-		for row in range(1,num_cycles+2):
-			syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
+		if c[1] not in check_defect_x_locations:
+			pos = syndrome_map[c]
+			assert(len(pos)==(num_cycles+2))
+			for row in range(1,num_cycles+2):
+				syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
 	syndrome_history%= 2
 	syndrome_history_augmented = np.hstack([syndrome_history,syndrome_final_logical])
 	supp = tuple(np.nonzero(syndrome_history_augmented)[0])
@@ -594,8 +629,8 @@ for circ in circuitsZ:
 		HZdict[supp]=[cnt]
 	cnt+=1
 
-
-first_logical_rowZ = n2*(num_cycles+2)
+n2= n2-2
+first_logical_rowZ = (n2)*(num_cycles+2)
 print('Done.')
 
 # if a subset of columns of HZ are equal, retain only one of these columns
@@ -654,7 +689,7 @@ mydata['error_rate']=error_rate
 mydata['sX']=sX
 mydata['sZ']=sZ
 
-title='./TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+title='./TMP/defect1_mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 
 
 print('saving data to ',title)

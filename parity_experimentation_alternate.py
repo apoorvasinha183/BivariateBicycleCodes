@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 from ldpc.codes import rep_code
 from bposd.hgp import hgp
 from math import comb
+from itertools import combinations
 # Create a method to return dictionaries based retrieval of code and code
 def code_dict(name="gross"):
     """
@@ -95,7 +96,9 @@ def bivariate_parity_generator_bicycle(codeParams):
 
 # The main method would MC sample upto 3 errors for each code 
 if __name__ == "__main__":
+    
     #codes = ["d6","d10-90","d10-108","gross","d18","d24","d34"]
+    #codes =["d34"]
     codes = ["d6","d10-90","d10-108","gross","d18","d24"]
     nKill = 2
     for code in codes:
@@ -103,7 +106,7 @@ if __name__ == "__main__":
         Q = bivariate_parity_generator_bicycle(code_dict(name=code))
         print("Error Resistance Check on Code for ",nKill, " parity qubits")
         Q.test()
-        print("Error resitsance on ")
+        #print("Error resitsance on ")
         kmax = Q.K +1 
         nTrials = 100000
         #nKill = 1
@@ -117,9 +120,16 @@ if __name__ == "__main__":
         #0 is fixed so we see how many unique combos we need first
         exhaustiveTrialNum = comb(nChoose-1,nKill-1)
         print("There are a total of ",exhaustiveTrialNum," unique error combinations.")
+        EXHAUST = True
+        # Explicitly find the combinations and iterate
+        rangeToTurnOff = np.arange(1,nChoose)
+        all_combos = list(combinations(rangeToTurnOff.tolist(),nKill-1))
         for i in tqdm(range(nTrials)):
             signature =[]
-            turnOfflines = np.random.choice(np.arange(1,nChoose),size=nKill-1,replace= False)
+            if EXHAUST:
+                turnOfflines = np.array(all_combos[i])
+            else:
+                turnOfflines = np.random.choice(np.arange(1,nChoose),size=nKill-1,replace= False)
             trail.append(tuple(turnOfflines.tolist()))
             turnOfflines = np.append(turnOfflines,0)
             hx = Q.hx.copy()
@@ -142,7 +152,7 @@ if __name__ == "__main__":
                 #print("Error signature is ",signature)
                 signature = []
                 bad_places.append(tuple(turnOfflines.tolist()))
-                kmax = k_sample
+                #kmax = k_sample
             #Check if the number of trials is that much that we actually sampled the full size 
             if check_unique_unordered_tuples(trail) >= exhaustiveTrialNum:
                 print("Every sample obtained.")

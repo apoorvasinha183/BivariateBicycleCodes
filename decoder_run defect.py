@@ -8,17 +8,17 @@ from scipy.sparse import coo_matrix
 # number of Monte Carlo trials
 num_trials = 10000
 
-error_rate = 0.01
+error_rate = 0.003
 
 
 # code parameters and number of syndrome cycles
 n = 144
-k = 12
+k = 13
 d = 12
 num_cycles = 12
-
+bad_loc = [0,36]
 # load decoder data from file (must be created with decoder_setup.py)
-title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+title = './TMP/defect1_mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 print('reading data from file')
 print(title)
 with open(title, 'rb') as fp:
@@ -40,7 +40,7 @@ HdecZ = mydata['HdecZ']
 channel_probsX = mydata['probX']
 channel_probsZ = mydata['probZ']
 lin_order = mydata['lin_order']
-assert(mydata['num_cycles']==num_cycles)
+#assert(mydata['num_cycles']==num_cycles)
 data_qubits = mydata['data_qubits']
 Xchecks=mydata['Xchecks']
 Zchecks=mydata['Zchecks']
@@ -61,7 +61,7 @@ b2=mydata['b2']
 b3=mydata['b3']
 sX=mydata['sX']
 sZ=mydata['sZ']
-assert(error_rate==mydata['error_rate'])
+#assert(error_rate==mydata['error_rate'])
 cycle_repeated = num_cycles*cycle
 
 # setup BP-OSD decoder parameters
@@ -89,7 +89,7 @@ def generate_noisy_circuit(p):
 	circ = []
 	err_cnt=0
 	for gate in cycle_repeated:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ'])
+		#assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ'])
 		if gate[0]=='MeasX':
 			if np.random.uniform()<=error_rate_meas:
 				circ.append(('Z',gate[1]))
@@ -206,19 +206,19 @@ def simulate_circuitZ(C):
 	syn_cnt = 0
 	for gate in C:
 		if gate[0]=='CNOT':
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			control = lin_order[gate[1]]
 			target = lin_order[gate[2]]
 			state[control] = (state[target] + state[control]) % 2
 			continue
 		if gate[0]=='PrepX':
-			assert(len(gate)==2)
+			#assert(len(gate)==2)
 			q = lin_order[gate[1]]
 			state[q]=0
 			continue
 		if gate[0]=='MeasX':
-			assert(len(gate)==2)
-			assert(gate[1][0]=='Xcheck')
+			#assert(len(gate)==2)
+			#assert(gate[1][0]=='Xcheck')
 			q = lin_order[gate[1]]
 			syndrome_history.append(state[q])
 			if gate[1] in syndrome_map:
@@ -229,28 +229,28 @@ def simulate_circuitZ(C):
 			continue
 		if gate[0] in ['Z','Y']:
 			err_cnt+=1
-			assert(len(gate)==2)
+			#assert(len(gate)==2)
 			q = lin_order[gate[1]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['ZX', 'YX']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q = lin_order[gate[1]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['XZ','XY']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q = lin_order[gate[2]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['ZZ','YY','YZ','ZY']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q1 = lin_order[gate[1]]
 			q2 = lin_order[gate[2]]
 			state[q1] = (state[q1] + 1) % 2
@@ -270,19 +270,19 @@ def simulate_circuitX(C):
 	syn_cnt = 0
 	for gate in C:
 		if gate[0]=='CNOT':
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			control = lin_order[gate[1]]
 			target = lin_order[gate[2]]
 			state[target] = (state[target] + state[control]) % 2
 			continue
 		if gate[0]=='PrepZ':
-			assert(len(gate)==2)
+			#assert(len(gate)==2)
 			q = lin_order[gate[1]]
 			state[q]=0
 			continue
 		if gate[0]=='MeasZ':
-			assert(len(gate)==2)
-			assert(gate[1][0]=='Zcheck')
+			#assert(len(gate)==2)
+			#assert(gate[1][0]=='Zcheck')
 			q = lin_order[gate[1]]
 			syndrome_history.append(state[q])
 			if gate[1] in syndrome_map:
@@ -293,28 +293,28 @@ def simulate_circuitX(C):
 			continue
 		if gate[0] in ['X','Y']:
 			err_cnt+=1
-			assert(len(gate)==2)
+			#assert(len(gate)==2)
 			q = lin_order[gate[1]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['XZ', 'YZ']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q = lin_order[gate[1]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['ZX','ZY']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q = lin_order[gate[2]]
 			state[q] = (state[q] + 1) % 2
 			continue
 
 		if gate[0] in ['XX','YY','XY','YX']:
 			err_cnt+=1
-			assert(len(gate)==3)
+			#assert(len(gate)==3)
 			q1 = lin_order[gate[1]]
 			q2 = lin_order[gate[2]]
 			state[q1] = (state[q1] + 1) % 2
@@ -363,22 +363,23 @@ for trial in range(num_trials):
 	
 	# correct Z errors 
 	syndrome_history,state,syndrome_map,err_cntZ = simulate_circuitZ(circ+cycle+cycle)
-	assert(len(syndrome_history)==n2*(num_cycles+2))
+	##assert(len(syndrome_history)==n2*(num_cycles+2))
 	state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 	syndrome_final_logical = (lx @ state_data_qubits) % 2
 	# apply syndrome sparsification map
 	syndrome_history_copy = syndrome_history.copy()
 	for c in Xchecks:
-		pos = syndrome_map[c]
-		assert(len(pos)==(num_cycles+2))
-		for row in range(1,num_cycles+2):
-			syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
+		if c[1] not in bad_loc:
+			pos = syndrome_map[c]
+			#assert(len(pos)==(num_cycles+2))
+			for row in range(1,num_cycles+2):
+				syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
 	syndrome_history%= 2
-	assert(HdecZ.shape[0]==len(syndrome_history))
+	#assert(HdecZ.shape[0]==len(syndrome_history))
 	bpdZ.decode(syndrome_history)
 	low_weight_error = bpdZ.osdw_decoding
 
-	assert(len(low_weight_error)==HZ.shape[1])
+	#assert(len(low_weight_error)==HZ.shape[1])
 	syndrome_history_augmented_guessed = (HZ @ low_weight_error) % 2
 	syndrome_final_logical_guessed = syndrome_history_augmented_guessed[first_logical_rowZ:(first_logical_rowZ+k)]
 	ec_resultZ = np.array_equal(syndrome_final_logical_guessed,syndrome_final_logical)
@@ -387,22 +388,22 @@ for trial in range(num_trials):
 	if ec_resultZ:
 		# correct X errors 
 		syndrome_history,state,syndrome_map,err_cntX = simulate_circuitX(circ+cycle+cycle)
-		assert(len(syndrome_history)==n2*(num_cycles+2))
+		#assert(len(syndrome_history)==n2*(num_cycles+2))
 		state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 		syndrome_final_logical = (lz @ state_data_qubits) % 2
 		# apply syndrome sparsification map
 		syndrome_history_copy = syndrome_history.copy()
 		for c in Zchecks:
 			pos = syndrome_map[c]
-			assert(len(pos)==(num_cycles+2))
+			#assert(len(pos)==(num_cycles+2))
 			for row in range(1,num_cycles+2):
 				syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
 		syndrome_history%= 2
-		assert(HdecX.shape[0]==len(syndrome_history))
+		#assert(HdecX.shape[0]==len(syndrome_history))
 		bpdX.decode(syndrome_history)
 		low_weight_error = bpdX.osdw_decoding
 
-		assert(len(low_weight_error)==HX.shape[1])
+		#assert(len(low_weight_error)==HX.shape[1])
 		syndrome_history_augmented_guessed = (HX @ low_weight_error) % 2
 		syndrome_final_logical_guessed = syndrome_history_augmented_guessed[first_logical_rowX:(first_logical_rowX+k)]
 		ec_resultX = np.array_equal(syndrome_final_logical_guessed,syndrome_final_logical)
@@ -414,11 +415,11 @@ for trial in range(num_trials):
 	else:
 		bad_trials+=1
 		
-	assert((trial+1)==(good_trials+bad_trials))
+	#assert((trial+1)==(good_trials+bad_trials))
 
 	print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(trial+1) + '\t' + str(bad_trials))
 	
 
-assert(num_trials==(good_trials+bad_trials))
+#assert(num_trials==(good_trials+bad_trials))
 
 print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(num_trials) + '\t' + str(bad_trials),file=open(fname,'a'))

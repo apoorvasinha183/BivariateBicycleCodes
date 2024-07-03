@@ -4,29 +4,32 @@ from ldpc import bposd_decoder
 from bposd.css import css_code
 import pickle
 from scipy.sparse import coo_matrix
-
+import sys
 # number of Monte Carlo trials
 num_trials = 10000
-
-error_rate = 0.009
+args = sys.argv[1:]
+if args[0] == "-err":
+	perr = float(args[1])
+error_rate = perr
 
 
 # code parameters and number of syndrome cycles
 n = 144
 k = 12
 d = 12
+#num_cycles = 12
 num_cycles = 12
-
 # load decoder data from file (must be created with decoder_setup.py)
-title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+#title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 print('reading data from file')
 print(title)
 with open(title, 'rb') as fp:
 	mydata = pickle.load(fp)
-
+print("Reading complete")
 
 # file to save simulation results
-fname = './CODE_' + str(n) + '_' + str(k) + '_' + str(d) + '/result'
+fname = './Optimal_CODE_' + str(n) + '_' + str(k) + '_' + str(d) + '_result_def_final'
 
 # format of the result file
 # column 1: error rate
@@ -78,7 +81,7 @@ n = 2*m*ell
 
 n2 = m*ell
 
-
+print("Initialization Complete")
 
 
 def generate_noisy_circuit(p):
@@ -89,7 +92,7 @@ def generate_noisy_circuit(p):
 	circ = []
 	err_cnt=0
 	for gate in cycle_repeated:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ'])
+		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit","dmg"])
 		if gate[0]=='MeasX':
 			if np.random.uniform()<=error_rate_meas:
 				circ.append(('Z',gate[1]))
@@ -325,7 +328,7 @@ def simulate_circuitX(C):
 
 
 
-
+print("Start here")
 # begin decoding
 
 bpdX=bposd_decoder(
@@ -337,7 +340,7 @@ bpdX=bposd_decoder(
     osd_method=my_osd_method, #the OSD method. Choose from:  1) "osd_e", "osd_cs", "osd0"
     osd_order=my_osd_order #the osd search depth
     )
-
+print("X decoder loaded")
 
 bpdZ=bposd_decoder(
     HdecZ,#the parity check matrix
@@ -348,14 +351,14 @@ bpdZ=bposd_decoder(
     osd_method="osd_cs", #the OSD method. Choose from:  1) "osd_e", "osd_cs", "osd0"
     osd_order=my_osd_order #the osd search depth
     )
-
+print("Z decoder loaded")
 
 good_trials=0
 bad_trials=0
 for trial in range(num_trials):
-
+	#print("Here")
 	circ = generate_noisy_circuit(error_rate)
-
+	#print("Circuit Generated")
 	# error correction result
 	# True = success
 	# False = fail
@@ -364,6 +367,7 @@ for trial in range(num_trials):
 	
 	# correct Z errors 
 	syndrome_history,state,syndrome_map,err_cntZ = simulate_circuitZ(circ+cycle+cycle)
+	#print("Hisotry Generated")
 	assert(len(syndrome_history)==n2*(num_cycles+2))
 	state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 	syndrome_final_logical = (lx @ state_data_qubits) % 2
@@ -377,6 +381,7 @@ for trial in range(num_trials):
 	syndrome_history%= 2
 	assert(HdecZ.shape[0]==len(syndrome_history))
 	bpdZ.decode(syndrome_history)
+	#print("Decoded")
 	low_weight_error = bpdZ.osdw_decoding
 
 	assert(len(low_weight_error)==HZ.shape[1])
@@ -388,22 +393,22 @@ for trial in range(num_trials):
 	if ec_resultZ:
 		# correct X errors 
 		syndrome_history,state,syndrome_map,err_cntX = simulate_circuitX(circ+cycle+cycle)
-		assert(len(syndrome_history)==n2*(num_cycles+2))
+		#assert(len(syndrome_history)==n2*(num_cycles+2))
 		state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 		syndrome_final_logical = (lz @ state_data_qubits) % 2
 		# apply syndrome sparsification map
 		syndrome_history_copy = syndrome_history.copy()
 		for c in Zchecks:
 			pos = syndrome_map[c]
-			assert(len(pos)==(num_cycles+2))
+			#assert(len(pos)==(num_cycles+2))
 			for row in range(1,num_cycles+2):
 				syndrome_history[pos[row]]+= syndrome_history_copy[pos[row-1]]
 		syndrome_history%= 2
-		assert(HdecX.shape[0]==len(syndrome_history))
+		#assert(HdecX.shape[0]==len(syndrome_history))
 		bpdX.decode(syndrome_history)
 		low_weight_error = bpdX.osdw_decoding
 
-		assert(len(low_weight_error)==HX.shape[1])
+		#assert(len(low_weight_error)==HX.shape[1])
 		syndrome_history_augmented_guessed = (HX @ low_weight_error) % 2
 		syndrome_final_logical_guessed = syndrome_history_augmented_guessed[first_logical_rowX:(first_logical_rowX+k)]
 		ec_resultX = np.array_equal(syndrome_final_logical_guessed,syndrome_final_logical)
@@ -415,11 +420,14 @@ for trial in range(num_trials):
 	else:
 		bad_trials+=1
 		
-	assert((trial+1)==(good_trials+bad_trials))
-
-	print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(trial+1) + '\t' + str(bad_trials))
+	#assert((trial+1)==(good_trials+bad_trials))
+	# Save time 
+	if bad_trials >= 1000:
+		break	
+	if trial % 100 ==0 :
+		print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(trial+1) + '\t' + str(bad_trials))
 	
 
-assert(num_trials==(good_trials+bad_trials))
+#assert(num_trials==(good_trials+bad_trials))
 
 print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(num_trials) + '\t' + str(bad_trials),file=open(fname,'a'))

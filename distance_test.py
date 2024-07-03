@@ -491,10 +491,10 @@ if EXPERIMENT:
 	# kill measurement qubit 0
 	qcode_2 = qcode_1
 	# Kill parity 0
-	qcode = damage_qubit(qcode_2,turnOffQubits=[0],type="parity")
+	qcode = damage_qubit(qcode_2,turnOffQubits=[0])
 	kmax = qcode.K +1 
 	nTrials = 10000
-	nKill = 1
+	nKill = 2
 	# Choose nKill parity to kill .The first WLOG can be 0 . For a first Order check sample randomly
 	# Small Code
 	nChoose = int(qcode.N/2) 
@@ -503,8 +503,8 @@ if EXPERIMENT:
 	bad_places = []
 	for i in tqdm(range(nTrials)):
 		signature =[]
-		turnOfflines = np.random.choice(np.arange(0,nChoose),size=nKill,replace= False)
-		#turnOfflines = np.append(turnOfflines,0)
+		turnOfflines = np.random.choice(np.arange(1,nChoose),size=nKill-1,replace= False)
+		turnOfflines = np.append(turnOfflines,0)
 		hx = qcode.hx.copy()
 		hz = qcode.hz.copy()
 		for lines in turnOfflines:
@@ -531,5 +531,5 @@ if EXPERIMENT:
 	print("code test")
 	qcode.test()
 	bad_places = np.unique(bad_places)
-	print(" Bad turn off locations are ",len(bad_places))
+	print(" Bad turn off locations are ",len(bad_places)," ,and the location is ",bad_places)
 

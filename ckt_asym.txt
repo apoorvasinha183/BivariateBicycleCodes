@@ -1,0 +1,378 @@
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.001
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.001_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.002
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.002_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.003
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.003_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.004
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.004_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.005
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.005_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.006
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.006_cycles_12
+Done
+Flip is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+<Unnamed CSS code>, (4,10)-[[143,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[143,12,nan]]
+The effective number of physical qubits including ancillas is  288
+Check affected  ('Xcheck', 4)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 5)
+Overap at  {('data_left', 0)}
+Check affected  ('Xcheck', 54)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 3)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 6)
+Overap at  {('data_left', 0)}
+Check affected  ('Zcheck', 12)
+Overap at  {('data_left', 0)}
+Bad checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Total number of bad checks are  6
+Broken Z checks are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Broken X checks are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 54)]
+error rate= 0.007
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 36240
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8953
+Done.
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 69
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8809
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 6
+max row weight= 44
+saving data to  ./TMP/asymmetric_mydata_final_144_12_p_0.007_cycles_12
+Done

@@ -9,18 +9,18 @@ import pickle
 num_trials = 100000
 
 # error rate 
-p = 0.009
+p = 0.0021
 
 
 # code parameters
 n = 144
 k = 12
 d = 12
-num_cycles = 12
+num_cycles = 1
 
 
 # load code parameters and decoding matrices
-title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
+title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
 with open(title, 'rb') as fp:
 	mydata = pickle.load(fp)
 
@@ -118,7 +118,7 @@ for trial in range(num_trials):
 	wt = np.count_nonzero(low_weight_logical)
 	if wt<wminZ and wt>0:
 		wminZ = wt
-	print('Logical Z weight =',wt,'minimum Z weight =',wminZ)
+	
 
 		
 	# correct X errors 
@@ -143,7 +143,9 @@ for trial in range(num_trials):
 	wt = np.count_nonzero(low_weight_logical)
 	if wt<wminX and wt>0:
 		wminX = wt
-	print('Logical X weight =',wt,'minimum X weight =',wminX)
+	if trial % 1 == 0:
+		print('Logical Z weight =',wt,'minimum Z weight =',wminZ)	
+		print('Logical X weight =',wt,'minimum X weight =',wminX)
 
 	
 		

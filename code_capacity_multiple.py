@@ -67,7 +67,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
         hxq = Q.hx.copy()
         hzq = Q.hz.copy()
         Q_New = css_code(hxq,hzq)
-        Flip = False
+        Flip = True
         #np.random.shuffle(turnOffQubits)
         for defects in turnOffQubits:
             #print("Defect Deteced at ",defects)
@@ -100,6 +100,8 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
             rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
             rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
             # This is importnat. To understand relative orientation
+            print("x deleted rows should be ",rows_to_be_deleted_x)
+            print("z deleted rows should be ",rows_to_be_deleted_z)
             RAND = False
             if RAND:
                 np.random.shuffle(rows_to_be_deleted_x)
@@ -261,7 +263,7 @@ if __name__ == "__main__":
         snd = 5        
     print("Simulation of type errors "+ type)
     print("Error place ",snd)
-    nTrails = 10000
+    nTrails = 1000
     damageQubits = [0]
     damageQubits.append(int(snd))
     phyError = [0.001,0.005,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11]

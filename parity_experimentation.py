@@ -98,8 +98,8 @@ def bivariate_parity_generator_bicycle(codeParams):
 if __name__ == "__main__":
     
     #codes = ["d6","d10-90","d10-108","gross","d18","d24","d34"]
-    codes =["d34"]
-    #codes = ["d6","d10-90","d10-108","gross","d18","d24"]
+    #codes =["d34"]
+    codes = ["d6","d10-90","d10-108","gross","d18","d24"]
     nKill = 3
     for code in codes:
         # Get the code
@@ -152,7 +152,7 @@ if __name__ == "__main__":
                 #print("Error signature is ",signature)
                 signature = []
                 bad_places.append(tuple(turnOfflines.tolist()))
-                kmax = k_sample
+                #kmax = k_sample
             #Check if the number of trials is that much that we actually sampled the full size 
             if check_unique_unordered_tuples(trail) >= exhaustiveTrialNum:
                 print("Every sample obtained.")
