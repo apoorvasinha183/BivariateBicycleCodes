@@ -17,8 +17,8 @@ error_rate = perr
 n = 144
 k = 12
 d = 12
-#num_cycles = 12
 num_cycles = 12
+#num_cycles = 1
 # load decoder data from file (must be created with decoder_setup.py)
 #title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
@@ -92,7 +92,7 @@ def generate_noisy_circuit(p):
 	circ = []
 	err_cnt=0
 	for gate in cycle_repeated:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit","dmg"])
+		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badMZ","badInit","dmg",'PrepIdealZ','badM'])
 		if gate[0]=='MeasX':
 			if np.random.uniform()<=error_rate_meas:
 				circ.append(('Z',gate[1]))
@@ -192,6 +192,10 @@ def generate_noisy_circuit(p):
 				err_cnt+=1
 			circ.append(gate)
 			continue
+		if gate[0] in ["badM","PrepIdealZ"]:
+			#print("New gate type ",gate[0])
+			circ.append(gate)
+			continue
 
 	return circ
 
@@ -283,7 +287,23 @@ def simulate_circuitX(C):
 			q = lin_order[gate[1]]
 			state[q]=0
 			continue
+		if gate[0]=='PrepIdealZ':
+			assert(len(gate)==2)
+			q = lin_order[gate[1]]
+			state[q]=0
+			continue
 		if gate[0]=='MeasZ':
+			assert(len(gate)==2)
+			assert(gate[1][0]=='Zcheck')
+			q = lin_order[gate[1]]
+			syndrome_history.append(state[q])
+			if gate[1] in syndrome_map:
+				syndrome_map[gate[1]].append(syn_cnt)
+			else:
+				syndrome_map[gate[1]] = [syn_cnt]
+			syn_cnt+=1
+			continue
+		if gate[0]=='badM':
 			assert(len(gate)==2)
 			assert(gate[1][0]=='Zcheck')
 			q = lin_order[gate[1]]
@@ -422,7 +442,7 @@ for trial in range(num_trials):
 		
 	#assert((trial+1)==(good_trials+bad_trials))
 	# Save time 
-	if bad_trials >= 1000:
+	if bad_trials >= 10000:
 		break	
 	if trial % 100 ==0 :
 		print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(trial+1) + '\t' + str(bad_trials))

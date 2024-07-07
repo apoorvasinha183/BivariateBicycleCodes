@@ -284,8 +284,9 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False):
 	# round 6: CNOT xchecks and data, measure Z checks
 	t=6
 	for q in Zchecks:
-		if 0:
-			cycle.append("badM",q)
+		if q in marked:
+			print("This ancill is fixed ",q)
+			cycle.append(("badM",q))
 
 		else:
 			cycle.append(('MeasZ',q))
@@ -358,7 +359,11 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False):
 		if q[1] not in check_defect_x_locations:
 			cycle.append(('MeasX',q))
 	for q in Zchecks:
-		cycle.append(('PrepZ',q))
+		if q in marked:
+			print("I have this bad ancilla ",q)
+			cycle.append(('PrepIdealZ',q))
+		else:	
+			cycle.append(('PrepZ',q))
 
 	# full syndrome measurement circuit
 	cycle_repeated = num_cycles*cycle
@@ -379,12 +384,12 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 	head = []
 	tail = fullcycle.copy()
 	for gate in fullcycle:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit","dmg"])
+		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badMZ","badInit","dmg",'PrepIdealZ','badM'])
 		if gate[0]=='MeasX':
 			assert(len(gate)==2)
 			circuitsZ.append(head + [('Z',gate[1])] + tail)
 			ProbZ.append(error_rate_meas)
-		if gate[0]=='badM':
+		if gate[0]=='badMZ':
 			#assert(len(gate)==2)
 			circuitsZ.append(head + [('Z',gate[1])] + tail)
 			ProbZ.append(0)	
@@ -430,7 +435,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 	head = []
 	tail = fullcycle.copy()
 	for gate in fullcycle:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badM","badInit","dmg"])
+		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','PrepIdealZ','MeasX','MeasZ',"badM","badInit","dmg"])
 		if gate[0]=='MeasZ':
 			assert(len(gate)==2)
 			circuitsX.append(head + [('X',gate[1])] + tail)
@@ -438,7 +443,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 		if gate[0]=='badM':
 			#assert(len(gate)==2)
 			circuitsX.append(head + [('X',gate[1])] + tail)
-			ProbX.append(0)	
+			ProbX.append(0.00)	
 		if gate[0] == 'dmg':
 			circuitsX.append(head + [('X',gate[1])] + tail)
 			#ProbX.append(0)	    
@@ -450,6 +455,10 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 			assert(len(gate)==2)
 			circuitsX.append(head + [('X',gate[1])] + tail)
 			ProbX.append(error_rate_init)
+		if gate[0]=='PrepIdealZ':
+			assert(len(gate)==2)
+			circuitsX.append(head + [('X',gate[1])] + tail)
+			ProbX.append(0.00)	
 		if gate[0]=='IDLE':
 			assert(len(gate)==2)
 			circuitsX.append(head + [('X',gate[1])] + tail)
@@ -560,7 +569,23 @@ def simulate_circuitX(C,lin_order,n=288):
 			q = lin_order[gate[1]]
 			state[q]=0
 			continue
+		if gate[0]=='PrepIdealZ':
+			assert(len(gate)==2)
+			q = lin_order[gate[1]]
+			state[q]=0
+			continue
 		if gate[0]=='MeasZ':
+			assert(len(gate)==2)
+			assert(gate[1][0]=='Zcheck')
+			q = lin_order[gate[1]]
+			syndrome_history.append(state[q])
+			if gate[1] in syndrome_map:
+				syndrome_map[gate[1]].append(syn_cnt)
+			else:
+				syndrome_map[gate[1]] = [syn_cnt]
+			syn_cnt+=1
+			continue
+		if gate[0]=='badM':
 			assert(len(gate)==2)
 			assert(gate[1][0]=='Zcheck')
 			q = lin_order[gate[1]]
@@ -747,8 +772,9 @@ if __name__ == "__main__":
 	# Parity Matrices Extracted
 	codeName = code_dict(name="gross")
 	bikeCode = bivariate_parity_generator_bicycle(codeName)
-	#ncyc = 12
-	ncyc = 1
+	ncyc = 12
+	#ncyc = 1
+	#ncyc = 11
 	sym = False
 	if repair == "sym":
 		sym = True

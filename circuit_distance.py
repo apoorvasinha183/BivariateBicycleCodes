@@ -9,7 +9,7 @@ import pickle
 num_trials = 100000
 
 # error rate 
-p = 0.0021
+p = 0.003
 
 
 # code parameters

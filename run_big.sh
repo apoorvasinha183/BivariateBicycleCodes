@@ -6,6 +6,6 @@ echo "Will Wait 30 minutes"
 #python decoder_run.py -err 0.002
 #python decoder_run.py -err 0.003
 #python decoder_run.py -err 0.004
-python decoder_run.py -err 0.005
-python decoder_run.py -err 0.006
+#python decoder_run.py -err 0.005
+#python decoder_run.py -err 0.006
 python decoder_run.py -err 0.007
