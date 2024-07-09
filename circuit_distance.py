@@ -9,7 +9,7 @@ import pickle
 num_trials = 100000
 
 # error rate 
-p = 0.003
+p = 0.0035
 
 
 # code parameters
@@ -21,6 +21,8 @@ num_cycles = 1
 
 # load code parameters and decoding matrices
 title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
+#title = './TMP/symmetric_mydata_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
+print(" I am reading from ",title)
 with open(title, 'rb') as fp:
 	mydata = pickle.load(fp)
 
@@ -88,8 +90,9 @@ HdecX = HdecX.todense()
 
 # stores the minimum weight of logical X and Z operators
 wminX = HdecX.shape[1]
+wminX = 1000
 wminZ = HdecZ.shape[1]
-
+wminZ =1000
 for trial in range(num_trials):
 
 
@@ -118,6 +121,8 @@ for trial in range(num_trials):
 	wt = np.count_nonzero(low_weight_logical)
 	if wt<wminZ and wt>0:
 		wminZ = wt
+		if wminZ < 5:
+			print(np.where(low_weight_logical==1))
 	
 
 		
@@ -127,6 +132,7 @@ for trial in range(num_trials):
 	random_logical_op = np.reshape(random_logical_op,(1,HX.shape[1]))
 	HX1 = np.vstack((HdecX,random_logical_op))
 	syndrome = np.zeros(HX1.shape[0],dtype=int)
+	#print("syndrome length is ",len(syndrome))
 	syndrome[-1]=1
 
 	bpdX=bposd_decoder(
@@ -141,8 +147,10 @@ for trial in range(num_trials):
 	bpdX.decode(syndrome)
 	low_weight_logical = bpdX.osdw_decoding
 	wt = np.count_nonzero(low_weight_logical)
-	if wt<wminX and wt>0:
+	if wt<=wminX and wt>0:
 		wminX = wt
+		if wminX < 5:
+			print(np.where(low_weight_logical==1))
 	if trial % 1 == 0:
 		print('Logical Z weight =',wt,'minimum Z weight =',wminZ)	
 		print('Logical X weight =',wt,'minimum X weight =',wminX)

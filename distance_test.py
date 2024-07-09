@@ -130,7 +130,7 @@ if Surface:
 	#hx = surface.hx
 	#hz= surface.hz
 	surface.test()
-turnOffQubits = [] # Qubits which are defective(This is RANDOM)
+turnOffQubits = [133] # Qubits which are defective(This is RANDOM)
 HIGH = 1
 LOW=0
 # TRIAL 1 : COMBINE 3 OPERATORS TO MAKE A SUPEROPERATOR ABC --> FAIL 
@@ -146,7 +146,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
         hxq = Q.hx.copy()
         hzq = Q.hz.copy()
         Q_New = css_code(hxq,hzq)
-        Flip = False
+        Flip = True
         #np.random.shuffle(turnOffQubits)
         for defects in turnOffQubits:
             #print("Defect Deteced at ",defects)
@@ -154,7 +154,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
             # X-Z syndromes
             ALL_THREE = False
             TWO_AT_A_TIME = True
-            SPELL_IT_OUT = False #Read out the defective stabilizers
+            SPELL_IT_OUT = True #Read out the defective stabilizers
             HIGH = 1
             LOW = 1
             hx = Q_New.hx
@@ -216,7 +216,8 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
                 #hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
             replace_x = rows_to_be_deleted_x[0]
             replace_z = rows_to_be_deleted_z[0]
-            print("To be deleted ",rows_to_be_deleted_x)
+            print("To be deleted x",rows_to_be_deleted_x)
+            print("To be deleted z ",rows_to_be_deleted_z)
             #hxBAD = hx[rows_to_be_deleted_x]
             #hzBAD = hz[rows_to_be_deleted_z]
             ##### GAUGE APPROACH ##########
@@ -266,10 +267,11 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
 #hz[turnOffMeasurement,:] = 0
 #Check the matrix 
 qcode_1=css_code(hx,hz)
-patchQubits = [3,60,66,76,77,126]
+patchQubits = [0]
 #patchQubits = []
 QdamageZ6_1 = damage_qubit(qcode_1,turnOffQubits=patchQubits,alterning=False)
-qcode = damage_qubit(QdamageZ6_1,turnOffQubits=[0,36],type="parity")
+#qcode = damage_qubit(QdamageZ6_1,turnOffQubits=[0,36],type="parity")
+qcode = QdamageZ6_1
 print("N is ",qcode.N)
 print("K is ",qcode.K)
 print("D is ",qcode.D)
@@ -424,7 +426,7 @@ d = n
 qubitix = []
 qubitiz = []
 
-DISABLE = True
+DISABLE = False
 if Surface:
 	qcode = surface
 	hz1 = qcode.hz
@@ -494,7 +496,7 @@ if EXPERIMENT:
 	qcode = damage_qubit(qcode_2,turnOffQubits=[0])
 	kmax = qcode.K +1 
 	nTrials = 10000
-	nKill = 2
+	nKill = 1
 	# Choose nKill parity to kill .The first WLOG can be 0 . For a first Order check sample randomly
 	# Small Code
 	nChoose = int(qcode.N/2) 

@@ -6,7 +6,7 @@ import pickle
 from scipy.sparse import coo_matrix
 import sys
 # number of Monte Carlo trials
-num_trials = 10000
+num_trials = 1000
 args = sys.argv[1:]
 if args[0] == "-err":
 	perr = float(args[1])
@@ -22,6 +22,7 @@ num_cycles = 12
 # load decoder data from file (must be created with decoder_setup.py)
 #title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+#title = './TMP/symmetric_mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 print('reading data from file')
 print(title)
 with open(title, 'rb') as fp:
@@ -64,6 +65,7 @@ b2=mydata['b2']
 b3=mydata['b3']
 sX=mydata['sX']
 sZ=mydata['sZ']
+ignore = mydata['damaged']
 assert(error_rate==mydata['error_rate'])
 cycle_repeated = num_cycles*cycle
 
@@ -92,7 +94,7 @@ def generate_noisy_circuit(p):
 	circ = []
 	err_cnt=0
 	for gate in cycle_repeated:
-		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','MeasX','MeasZ',"badMZ","badInit","dmg",'PrepIdealZ','badM'])
+		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','PrepIdealX','PrepIdealZ','MeasX','MeasZ',"badMX","badMZ","badInit","dmg"])
 		if gate[0]=='MeasX':
 			if np.random.uniform()<=error_rate_meas:
 				circ.append(('Z',gate[1]))
@@ -192,9 +194,9 @@ def generate_noisy_circuit(p):
 				err_cnt+=1
 			circ.append(gate)
 			continue
-		if gate[0] in ["badM","PrepIdealZ"]:
+		if gate[0] in ["badMZ","PrepIdealZ",'PrepIdealX','badMX']:
 			#print("New gate type ",gate[0])
-			circ.append(gate)
+			#circ.append(gate)
 			continue
 
 	return circ
@@ -218,12 +220,14 @@ def simulate_circuitZ(C):
 			target = lin_order[gate[2]]
 			state[control] = (state[target] + state[control]) % 2
 			continue
-		if gate[0]=='PrepX':
+		if (gate[0]=='PrepX') :
 			assert(len(gate)==2)
 			q = lin_order[gate[1]]
 			state[q]=0
 			continue
-		if gate[0]=='MeasX':
+		if gate[0] == 'PrepIdealX':
+			continue
+		if (gate[0]=='MeasX') :
 			assert(len(gate)==2)
 			assert(gate[1][0]=='Xcheck')
 			q = lin_order[gate[1]]
@@ -233,6 +237,18 @@ def simulate_circuitZ(C):
 			else:
 				syndrome_map[gate[1]] = [syn_cnt]
 			syn_cnt+=1
+			continue
+		if (gate[0]=='badMX') :
+			#print("badMX enountered")
+			assert(len(gate)==2)
+			assert(gate[1][0]=='Xcheck')
+			#q = lin_order[gate[1]]
+			#syndrome_history.append(state[q])
+			#if gate[1] in syndrome_map:
+			#	syndrome_map[gate[1]].append(syn_cnt)
+			#else:
+			#	syndrome_map[gate[1]] = [syn_cnt]
+			#syn_cnt+=1
 			continue
 		if gate[0] in ['Z','Y']:
 			err_cnt+=1
@@ -263,6 +279,11 @@ def simulate_circuitZ(C):
 			state[q1] = (state[q1] + 1) % 2
 			state[q2] = (state[q2] + 1) % 2
 			continue
+		else:
+			#print("Unknown gate type encountered ",gate[0])
+			x =1
+			continue
+	#print("syndrome history is of length ",len(syndrome_history))
 	return np.array(syndrome_history,dtype=int),state,syndrome_map,err_cnt
 
 
@@ -289,8 +310,8 @@ def simulate_circuitX(C):
 			continue
 		if gate[0]=='PrepIdealZ':
 			assert(len(gate)==2)
-			q = lin_order[gate[1]]
-			state[q]=0
+			#q = lin_order[gate[1]]
+			#state[q]=0
 			continue
 		if gate[0]=='MeasZ':
 			assert(len(gate)==2)
@@ -303,16 +324,17 @@ def simulate_circuitX(C):
 				syndrome_map[gate[1]] = [syn_cnt]
 			syn_cnt+=1
 			continue
-		if gate[0]=='badM':
+		if gate[0]=='badMZ':
+			#print("badMZ encountered")
 			assert(len(gate)==2)
 			assert(gate[1][0]=='Zcheck')
-			q = lin_order[gate[1]]
-			syndrome_history.append(state[q])
-			if gate[1] in syndrome_map:
-				syndrome_map[gate[1]].append(syn_cnt)
-			else:
-				syndrome_map[gate[1]] = [syn_cnt]
-			syn_cnt+=1
+			#q = lin_order[gate[1]]
+			#syndrome_history.append(state[q])
+			#if gate[1] in syndrome_map:
+			#	syndrome_map[gate[1]].append(syn_cnt)
+			#else:
+			#	syndrome_map[gate[1]] = [syn_cnt]
+			#syn_cnt+=1
 			continue
 		if gate[0] in ['X','Y']:
 			err_cnt+=1
@@ -343,6 +365,10 @@ def simulate_circuitX(C):
 			state[q1] = (state[q1] + 1) % 2
 			state[q2] = (state[q2] + 1) % 2
 			continue
+		else:
+			x =1
+			#print("Unknown gate type encountered ",gate[0])
+	#print("syndrome history is of length ",len(syndrome_history))
 	return np.array(syndrome_history,dtype=int),state,syndrome_map,err_cnt
 
 
@@ -388,12 +414,15 @@ for trial in range(num_trials):
 	# correct Z errors 
 	syndrome_history,state,syndrome_map,err_cntZ = simulate_circuitZ(circ+cycle+cycle)
 	#print("Hisotry Generated")
-	assert(len(syndrome_history)==n2*(num_cycles+2))
+	#print("syndrome history is ",len(syndrome_history), "to equal ",n2*(num_cycles+2))
+	#assert(len(syndrome_history)==n2*(num_cycles+2))
 	state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 	syndrome_final_logical = (lx @ state_data_qubits) % 2
 	# apply syndrome sparsification map
 	syndrome_history_copy = syndrome_history.copy()
 	for c in Xchecks:
+		if c in ignore:
+				continue
 		pos = syndrome_map[c]
 		assert(len(pos)==(num_cycles+2))
 		for row in range(1,num_cycles+2):
@@ -419,6 +448,8 @@ for trial in range(num_trials):
 		# apply syndrome sparsification map
 		syndrome_history_copy = syndrome_history.copy()
 		for c in Zchecks:
+			if c in ignore:
+				continue
 			pos = syndrome_map[c]
 			#assert(len(pos)==(num_cycles+2))
 			for row in range(1,num_cycles+2):
@@ -444,7 +475,7 @@ for trial in range(num_trials):
 	# Save time 
 	if bad_trials >= 10000:
 		break	
-	if trial % 100 ==0 :
+	if trial % 1 ==0 :
 		print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(trial+1) + '\t' + str(bad_trials))
 	
 

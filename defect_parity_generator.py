@@ -127,14 +127,18 @@ def connection_matrices(codeParams):
     B3 = x[b3]
 
     return A1,A2,A3,B1,B2,B3
-def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data'):
+def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data',flip = False):
     # Turns off the qubits at specified positions and recalculates the parity matrix
+    print("Attempt to delete qubit ",turnOffQubits)
     if type == 'data':
         hxq = Q.hx.copy()
         hzq = Q.hz.copy()
         Q_New = css_code(hxq,hzq)
-        Flip = False
-        print("Flip is ",False)
+        Flip = flip
+        print("Flip is ",Flip)
+        print("Parity break is ",symmetry)
+        hx = Q_New.hx
+        hz = Q_New.hz
         #np.random.shuffle(turnOffQubits)
         for defects in turnOffQubits:
             #print("Defect Deteced at ",defects)
@@ -145,8 +149,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
             SPELL_IT_OUT = False #Read out the defective stabilizers
             HIGH = 1
             LOW = 1
-            hx = Q_New.hx
-            hz = Q_New.hz
+            
             broken_rows_x = hx[hx[:,defects] == HIGH]
 
             broken_rows_x_DEBUG = broken_rows_x.copy()
