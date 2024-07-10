@@ -1,0 +1,7330 @@
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.001_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.002_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.003_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.004_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.005_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.006_cycles_12
+Done
+Attempt to delete qubit  [0, 133]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [ 4  5 54]
+z deleted rows should be  [ 3  6 12]
+To be deleted  [ 4  5 54]
+SANITY CHECK  False
+x deleted rows should be  [49 55 64]
+z deleted rows should be  [ 7 62 63]
+To be deleted  [49 55 64]
+<Unnamed CSS code>, (4,10)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[142,12,nan]]
+('data_left', 1)
+('data_left', 2)
+('data_left', 3)
+('data_left', 4)
+('data_left', 5)
+('data_left', 6)
+('data_left', 7)
+('data_left', 8)
+('data_left', 9)
+('data_left', 10)
+('data_left', 11)
+('data_left', 12)
+('data_left', 13)
+('data_left', 14)
+('data_left', 15)
+('data_left', 16)
+('data_left', 17)
+('data_left', 18)
+('data_left', 19)
+('data_left', 20)
+('data_left', 21)
+('data_left', 22)
+('data_left', 23)
+('data_left', 24)
+('data_left', 25)
+('data_left', 26)
+('data_left', 27)
+('data_left', 28)
+('data_left', 29)
+('data_left', 30)
+('data_left', 31)
+('data_left', 32)
+('data_left', 33)
+('data_left', 34)
+('data_left', 35)
+('data_left', 36)
+('data_left', 37)
+('data_left', 38)
+('data_left', 39)
+('data_left', 40)
+('data_left', 41)
+('data_left', 42)
+('data_left', 43)
+('data_left', 44)
+('data_left', 45)
+('data_left', 46)
+('data_left', 47)
+('data_left', 48)
+('data_left', 49)
+('data_left', 50)
+('data_left', 51)
+('data_left', 52)
+('data_left', 53)
+('data_left', 54)
+('data_left', 55)
+('data_left', 56)
+('data_left', 57)
+('data_left', 58)
+('data_left', 59)
+('data_left', 60)
+('data_left', 61)
+('data_left', 62)
+('data_left', 63)
+('data_left', 64)
+('data_left', 65)
+('data_left', 66)
+('data_left', 67)
+('data_left', 68)
+('data_left', 69)
+('data_left', 70)
+('data_left', 71)
+('data_right', 0)
+('data_right', 1)
+('data_right', 2)
+('data_right', 3)
+('data_right', 4)
+('data_right', 5)
+('data_right', 6)
+('data_right', 7)
+('data_right', 8)
+('data_right', 9)
+('data_right', 10)
+('data_right', 11)
+('data_right', 12)
+('data_right', 13)
+('data_right', 14)
+('data_right', 15)
+('data_right', 16)
+('data_right', 17)
+('data_right', 18)
+('data_right', 19)
+('data_right', 20)
+('data_right', 21)
+('data_right', 22)
+('data_right', 23)
+('data_right', 24)
+('data_right', 25)
+('data_right', 26)
+('data_right', 27)
+('data_right', 28)
+('data_right', 29)
+('data_right', 30)
+('data_right', 31)
+('data_right', 32)
+('data_right', 33)
+('data_right', 34)
+('data_right', 35)
+('data_right', 36)
+('data_right', 37)
+('data_right', 38)
+('data_right', 39)
+('data_right', 40)
+('data_right', 41)
+('data_right', 42)
+('data_right', 43)
+('data_right', 44)
+('data_right', 45)
+('data_right', 46)
+('data_right', 47)
+('data_right', 48)
+('data_right', 49)
+('data_right', 50)
+('data_right', 51)
+('data_right', 52)
+('data_right', 53)
+('data_right', 54)
+('data_right', 55)
+('data_right', 56)
+('data_right', 57)
+('data_right', 58)
+('data_right', 59)
+('data_right', 60)
+('data_right', 62)
+('data_right', 63)
+('data_right', 64)
+('data_right', 65)
+('data_right', 66)
+('data_right', 67)
+('data_right', 68)
+('data_right', 69)
+('data_right', 70)
+('data_right', 71)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 37896
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 37848
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 8950
+Decoding matrix HX sparseness:
+max col weight= 47
+max row weight= 353
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 8844
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 84
+max row weight= 280
+saving data to  ./TMP/multi_asymmetric_mydata_final_144_12_p_0.007_cycles_12
+Done
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.001_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.001	12	1	0
+0.001	12	2	0
+0.001	12	3	0
+0.001	12	4	0
+0.001	12	5	0
+0.001	12	6	0
+0.001	12	7	0
+0.001	12	8	0
+0.001	12	9	0
+0.001	12	10	0
+0.001	12	11	0
+0.001	12	12	0
+0.001	12	13	0
+0.001	12	14	0
+0.001	12	15	0
+0.001	12	16	0
+0.001	12	17	0
+0.001	12	18	0
+0.001	12	19	0
+0.001	12	20	0
+0.001	12	21	0
+0.001	12	22	0
+0.001	12	23	0
+0.001	12	24	0
+0.001	12	25	0
+0.001	12	26	0
+0.001	12	27	0
+0.001	12	28	0
+0.001	12	29	0
+0.001	12	30	0
+0.001	12	31	0
+0.001	12	32	0
+0.001	12	33	0
+0.001	12	34	0
+0.001	12	35	0
+0.001	12	36	0
+0.001	12	37	0
+0.001	12	38	0
+0.001	12	39	0
+0.001	12	40	0
+0.001	12	41	0
+0.001	12	42	0
+0.001	12	43	0
+0.001	12	44	0
+0.001	12	45	0
+0.001	12	46	0
+0.001	12	47	0
+0.001	12	48	0
+0.001	12	49	0
+0.001	12	50	0
+0.001	12	51	0
+0.001	12	52	0
+0.001	12	53	0
+0.001	12	54	0
+0.001	12	55	0
+0.001	12	56	0
+0.001	12	57	0
+0.001	12	58	0
+0.001	12	59	0
+0.001	12	60	0
+0.001	12	61	0
+0.001	12	62	0
+0.001	12	63	0
+0.001	12	64	0
+0.001	12	65	0
+0.001	12	66	0
+0.001	12	67	0
+0.001	12	68	0
+0.001	12	69	0
+0.001	12	70	0
+0.001	12	71	0
+0.001	12	72	0
+0.001	12	73	0
+0.001	12	74	0
+0.001	12	75	0
+0.001	12	76	0
+0.001	12	77	0
+0.001	12	78	0
+0.001	12	79	0
+0.001	12	80	0
+0.001	12	81	0
+0.001	12	82	0
+0.001	12	83	0
+0.001	12	84	0
+0.001	12	85	0
+0.001	12	86	0
+0.001	12	87	0
+0.001	12	88	0
+0.001	12	89	0
+0.001	12	90	0
+0.001	12	91	0
+0.001	12	92	0
+0.001	12	93	0
+0.001	12	94	0
+0.001	12	95	0
+0.001	12	96	0
+0.001	12	97	0
+0.001	12	98	0
+0.001	12	99	0
+0.001	12	100	0
+0.001	12	101	0
+0.001	12	102	0
+0.001	12	103	0
+0.001	12	104	0
+0.001	12	105	0
+0.001	12	106	0
+0.001	12	107	0
+0.001	12	108	0
+0.001	12	109	0
+0.001	12	110	0
+0.001	12	111	0
+0.001	12	112	0
+0.001	12	113	0
+0.001	12	114	0
+0.001	12	115	0
+0.001	12	116	0
+0.001	12	117	0
+0.001	12	118	0
+0.001	12	119	0
+0.001	12	120	0
+0.001	12	121	0
+0.001	12	122	0
+0.001	12	123	0
+0.001	12	124	0
+0.001	12	125	0
+0.001	12	126	0
+0.001	12	127	0
+0.001	12	128	0
+0.001	12	129	0
+0.001	12	130	0
+0.001	12	131	0
+0.001	12	132	0
+0.001	12	133	0
+0.001	12	134	0
+0.001	12	135	0
+0.001	12	136	0
+0.001	12	137	0
+0.001	12	138	0
+0.001	12	139	0
+0.001	12	140	0
+0.001	12	141	0
+0.001	12	142	0
+0.001	12	143	0
+0.001	12	144	0
+0.001	12	145	0
+0.001	12	146	0
+0.001	12	147	0
+0.001	12	148	0
+0.001	12	149	0
+0.001	12	150	0
+0.001	12	151	0
+0.001	12	152	0
+0.001	12	153	0
+0.001	12	154	0
+0.001	12	155	0
+0.001	12	156	0
+0.001	12	157	0
+0.001	12	158	0
+0.001	12	159	0
+0.001	12	160	0
+0.001	12	161	0
+0.001	12	162	0
+0.001	12	163	0
+0.001	12	164	0
+0.001	12	165	0
+0.001	12	166	0
+0.001	12	167	0
+0.001	12	168	0
+0.001	12	169	0
+0.001	12	170	0
+0.001	12	171	0
+0.001	12	172	0
+0.001	12	173	0
+0.001	12	174	0
+0.001	12	175	0
+0.001	12	176	0
+0.001	12	177	0
+0.001	12	178	0
+0.001	12	179	0
+0.001	12	180	0
+0.001	12	181	0
+0.001	12	182	0
+0.001	12	183	0
+0.001	12	184	0
+0.001	12	185	0
+0.001	12	186	0
+0.001	12	187	0
+0.001	12	188	0
+0.001	12	189	0
+0.001	12	190	0
+0.001	12	191	0
+0.001	12	192	0
+0.001	12	193	0
+0.001	12	194	0
+0.001	12	195	0
+0.001	12	196	0
+0.001	12	197	0
+0.001	12	198	0
+0.001	12	199	0
+0.001	12	200	0
+0.001	12	201	0
+0.001	12	202	0
+0.001	12	203	0
+0.001	12	204	0
+0.001	12	205	0
+0.001	12	206	0
+0.001	12	207	0
+0.001	12	208	0
+0.001	12	209	0
+0.001	12	210	0
+0.001	12	211	0
+0.001	12	212	0
+0.001	12	213	0
+0.001	12	214	0
+0.001	12	215	0
+0.001	12	216	0
+0.001	12	217	0
+0.001	12	218	0
+0.001	12	219	0
+0.001	12	220	0
+0.001	12	221	0
+0.001	12	222	0
+0.001	12	223	0
+0.001	12	224	0
+0.001	12	225	0
+0.001	12	226	0
+0.001	12	227	0
+0.001	12	228	0
+0.001	12	229	0
+0.001	12	230	0
+0.001	12	231	0
+0.001	12	232	0
+0.001	12	233	0
+0.001	12	234	0
+0.001	12	235	0
+0.001	12	236	0
+0.001	12	237	0
+0.001	12	238	0
+0.001	12	239	0
+0.001	12	240	0
+0.001	12	241	0
+0.001	12	242	0
+0.001	12	243	0
+0.001	12	244	0
+0.001	12	245	0
+0.001	12	246	0
+0.001	12	247	0
+0.001	12	248	0
+0.001	12	249	0
+0.001	12	250	0
+0.001	12	251	0
+0.001	12	252	0
+0.001	12	253	0
+0.001	12	254	0
+0.001	12	255	0
+0.001	12	256	0
+0.001	12	257	0
+0.001	12	258	0
+0.001	12	259	0
+0.001	12	260	0
+0.001	12	261	0
+0.001	12	262	0
+0.001	12	263	0
+0.001	12	264	0
+0.001	12	265	0
+0.001	12	266	0
+0.001	12	267	0
+0.001	12	268	0
+0.001	12	269	0
+0.001	12	270	0
+0.001	12	271	0
+0.001	12	272	0
+0.001	12	273	0
+0.001	12	274	0
+0.001	12	275	0
+0.001	12	276	0
+0.001	12	277	0
+0.001	12	278	0
+0.001	12	279	0
+0.001	12	280	0
+0.001	12	281	0
+0.001	12	282	0
+0.001	12	283	0
+0.001	12	284	0
+0.001	12	285	0
+0.001	12	286	0
+0.001	12	287	0
+0.001	12	288	0
+0.001	12	289	0
+0.001	12	290	0
+0.001	12	291	0
+0.001	12	292	0
+0.001	12	293	0
+0.001	12	294	0
+0.001	12	295	0
+0.001	12	296	0
+0.001	12	297	0
+0.001	12	298	0
+0.001	12	299	0
+0.001	12	300	0
+0.001	12	301	0
+0.001	12	302	0
+0.001	12	303	0
+0.001	12	304	0
+0.001	12	305	0
+0.001	12	306	0
+0.001	12	307	0
+0.001	12	308	0
+0.001	12	309	0
+0.001	12	310	0
+0.001	12	311	0
+0.001	12	312	0
+0.001	12	313	0
+0.001	12	314	0
+0.001	12	315	0
+0.001	12	316	0
+0.001	12	317	0
+0.001	12	318	0
+0.001	12	319	0
+0.001	12	320	0
+0.001	12	321	0
+0.001	12	322	0
+0.001	12	323	0
+0.001	12	324	0
+0.001	12	325	0
+0.001	12	326	0
+0.001	12	327	0
+0.001	12	328	0
+0.001	12	329	0
+0.001	12	330	0
+0.001	12	331	0
+0.001	12	332	0
+0.001	12	333	0
+0.001	12	334	0
+0.001	12	335	0
+0.001	12	336	0
+0.001	12	337	0
+0.001	12	338	0
+0.001	12	339	0
+0.001	12	340	0
+0.001	12	341	0
+0.001	12	342	0
+0.001	12	343	0
+0.001	12	344	0
+0.001	12	345	0
+0.001	12	346	0
+0.001	12	347	0
+0.001	12	348	0
+0.001	12	349	0
+0.001	12	350	0
+0.001	12	351	0
+0.001	12	352	0
+0.001	12	353	0
+0.001	12	354	0
+0.001	12	355	0
+0.001	12	356	0
+0.001	12	357	0
+0.001	12	358	0
+0.001	12	359	0
+0.001	12	360	0
+0.001	12	361	0
+0.001	12	362	0
+0.001	12	363	0
+0.001	12	364	0
+0.001	12	365	0
+0.001	12	366	0
+0.001	12	367	0
+0.001	12	368	0
+0.001	12	369	0
+0.001	12	370	0
+0.001	12	371	0
+0.001	12	372	0
+0.001	12	373	0
+0.001	12	374	0
+0.001	12	375	0
+0.001	12	376	0
+0.001	12	377	0
+0.001	12	378	0
+0.001	12	379	0
+0.001	12	380	0
+0.001	12	381	0
+0.001	12	382	0
+0.001	12	383	0
+0.001	12	384	0
+0.001	12	385	0
+0.001	12	386	0
+0.001	12	387	0
+0.001	12	388	0
+0.001	12	389	0
+0.001	12	390	0
+0.001	12	391	0
+0.001	12	392	0
+0.001	12	393	0
+0.001	12	394	0
+0.001	12	395	0
+0.001	12	396	0
+0.001	12	397	0
+0.001	12	398	0
+0.001	12	399	0
+0.001	12	400	0
+0.001	12	401	0
+0.001	12	402	0
+0.001	12	403	0
+0.001	12	404	0
+0.001	12	405	0
+0.001	12	406	0
+0.001	12	407	0
+0.001	12	408	0
+0.001	12	409	0
+0.001	12	410	0
+0.001	12	411	0
+0.001	12	412	0
+0.001	12	413	0
+0.001	12	414	0
+0.001	12	415	0
+0.001	12	416	0
+0.001	12	417	0
+0.001	12	418	0
+0.001	12	419	0
+0.001	12	420	0
+0.001	12	421	0
+0.001	12	422	0
+0.001	12	423	0
+0.001	12	424	0
+0.001	12	425	0
+0.001	12	426	0
+0.001	12	427	0
+0.001	12	428	0
+0.001	12	429	0
+0.001	12	430	0
+0.001	12	431	0
+0.001	12	432	0
+0.001	12	433	0
+0.001	12	434	0
+0.001	12	435	0
+0.001	12	436	0
+0.001	12	437	0
+0.001	12	438	0
+0.001	12	439	0
+0.001	12	440	0
+0.001	12	441	0
+0.001	12	442	0
+0.001	12	443	0
+0.001	12	444	0
+0.001	12	445	0
+0.001	12	446	0
+0.001	12	447	0
+0.001	12	448	0
+0.001	12	449	0
+0.001	12	450	0
+0.001	12	451	0
+0.001	12	452	0
+0.001	12	453	0
+0.001	12	454	0
+0.001	12	455	0
+0.001	12	456	0
+0.001	12	457	0
+0.001	12	458	0
+0.001	12	459	0
+0.001	12	460	0
+0.001	12	461	0
+0.001	12	462	0
+0.001	12	463	0
+0.001	12	464	0
+0.001	12	465	0
+0.001	12	466	0
+0.001	12	467	0
+0.001	12	468	0
+0.001	12	469	0
+0.001	12	470	0
+0.001	12	471	0
+0.001	12	472	0
+0.001	12	473	0
+0.001	12	474	0
+0.001	12	475	0
+0.001	12	476	0
+0.001	12	477	0
+0.001	12	478	0
+0.001	12	479	0
+0.001	12	480	0
+0.001	12	481	0
+0.001	12	482	0
+0.001	12	483	0
+0.001	12	484	0
+0.001	12	485	0
+0.001	12	486	0
+0.001	12	487	0
+0.001	12	488	0
+0.001	12	489	0
+0.001	12	490	0
+0.001	12	491	0
+0.001	12	492	0
+0.001	12	493	0
+0.001	12	494	0
+0.001	12	495	0
+0.001	12	496	0
+0.001	12	497	0
+0.001	12	498	0
+0.001	12	499	0
+0.001	12	500	0
+0.001	12	501	0
+0.001	12	502	0
+0.001	12	503	0
+0.001	12	504	0
+0.001	12	505	0
+0.001	12	506	0
+0.001	12	507	0
+0.001	12	508	0
+0.001	12	509	0
+0.001	12	510	0
+0.001	12	511	0
+0.001	12	512	0
+0.001	12	513	0
+0.001	12	514	0
+0.001	12	515	0
+0.001	12	516	0
+0.001	12	517	0
+0.001	12	518	0
+0.001	12	519	0
+0.001	12	520	0
+0.001	12	521	0
+0.001	12	522	0
+0.001	12	523	0
+0.001	12	524	0
+0.001	12	525	0
+0.001	12	526	0
+0.001	12	527	0
+0.001	12	528	0
+0.001	12	529	0
+0.001	12	530	0
+0.001	12	531	0
+0.001	12	532	0
+0.001	12	533	0
+0.001	12	534	0
+0.001	12	535	0
+0.001	12	536	0
+0.001	12	537	0
+0.001	12	538	0
+0.001	12	539	0
+0.001	12	540	0
+0.001	12	541	0
+0.001	12	542	0
+0.001	12	543	0
+0.001	12	544	0
+0.001	12	545	0
+0.001	12	546	0
+0.001	12	547	0
+0.001	12	548	0
+0.001	12	549	0
+0.001	12	550	0
+0.001	12	551	0
+0.001	12	552	0
+0.001	12	553	0
+0.001	12	554	0
+0.001	12	555	0
+0.001	12	556	0
+0.001	12	557	0
+0.001	12	558	0
+0.001	12	559	0
+0.001	12	560	0
+0.001	12	561	0
+0.001	12	562	0
+0.001	12	563	0
+0.001	12	564	0
+0.001	12	565	0
+0.001	12	566	0
+0.001	12	567	0
+0.001	12	568	0
+0.001	12	569	0
+0.001	12	570	0
+0.001	12	571	0
+0.001	12	572	0
+0.001	12	573	0
+0.001	12	574	0
+0.001	12	575	0
+0.001	12	576	0
+0.001	12	577	0
+0.001	12	578	0
+0.001	12	579	0
+0.001	12	580	0
+0.001	12	581	0
+0.001	12	582	0
+0.001	12	583	0
+0.001	12	584	0
+0.001	12	585	0
+0.001	12	586	0
+0.001	12	587	0
+0.001	12	588	0
+0.001	12	589	0
+0.001	12	590	0
+0.001	12	591	0
+0.001	12	592	0
+0.001	12	593	0
+0.001	12	594	0
+0.001	12	595	0
+0.001	12	596	0
+0.001	12	597	0
+0.001	12	598	0
+0.001	12	599	0
+0.001	12	600	0
+0.001	12	601	0
+0.001	12	602	0
+0.001	12	603	0
+0.001	12	604	0
+0.001	12	605	0
+0.001	12	606	0
+0.001	12	607	0
+0.001	12	608	0
+0.001	12	609	0
+0.001	12	610	0
+0.001	12	611	0
+0.001	12	612	0
+0.001	12	613	0
+0.001	12	614	0
+0.001	12	615	0
+0.001	12	616	0
+0.001	12	617	0
+0.001	12	618	0
+0.001	12	619	0
+0.001	12	620	0
+0.001	12	621	0
+0.001	12	622	0
+0.001	12	623	0
+0.001	12	624	0
+0.001	12	625	0
+0.001	12	626	0
+0.001	12	627	0
+0.001	12	628	0
+0.001	12	629	0
+0.001	12	630	0
+0.001	12	631	0
+0.001	12	632	0
+0.001	12	633	0
+0.001	12	634	0
+0.001	12	635	0
+0.001	12	636	0
+0.001	12	637	0
+0.001	12	638	0
+0.001	12	639	0
+0.001	12	640	0
+0.001	12	641	0
+0.001	12	642	0
+0.001	12	643	0
+0.001	12	644	0
+0.001	12	645	0
+0.001	12	646	0
+0.001	12	647	0
+0.001	12	648	0
+0.001	12	649	0
+0.001	12	650	0
+0.001	12	651	0
+0.001	12	652	0
+0.001	12	653	0
+0.001	12	654	0
+0.001	12	655	0
+0.001	12	656	0
+0.001	12	657	0
+0.001	12	658	0
+0.001	12	659	0
+0.001	12	660	0
+0.001	12	661	0
+0.001	12	662	0
+0.001	12	663	0
+0.001	12	664	0
+0.001	12	665	0
+0.001	12	666	0
+0.001	12	667	0
+0.001	12	668	0
+0.001	12	669	0
+0.001	12	670	0
+0.001	12	671	0
+0.001	12	672	0
+0.001	12	673	0
+0.001	12	674	0
+0.001	12	675	0
+0.001	12	676	0
+0.001	12	677	0
+0.001	12	678	0
+0.001	12	679	0
+0.001	12	680	0
+0.001	12	681	0
+0.001	12	682	0
+0.001	12	683	0
+0.001	12	684	0
+0.001	12	685	0
+0.001	12	686	0
+0.001	12	687	0
+0.001	12	688	0
+0.001	12	689	0
+0.001	12	690	0
+0.001	12	691	0
+0.001	12	692	0
+0.001	12	693	0
+0.001	12	694	0
+0.001	12	695	0
+0.001	12	696	0
+0.001	12	697	0
+0.001	12	698	0
+0.001	12	699	0
+0.001	12	700	0
+0.001	12	701	0
+0.001	12	702	0
+0.001	12	703	0
+0.001	12	704	0
+0.001	12	705	0
+0.001	12	706	0
+0.001	12	707	0
+0.001	12	708	0
+0.001	12	709	0
+0.001	12	710	0
+0.001	12	711	0
+0.001	12	712	0
+0.001	12	713	0
+0.001	12	714	0
+0.001	12	715	0
+0.001	12	716	0
+0.001	12	717	0
+0.001	12	718	0
+0.001	12	719	0
+0.001	12	720	0
+0.001	12	721	0
+0.001	12	722	0
+0.001	12	723	0
+0.001	12	724	0
+0.001	12	725	0
+0.001	12	726	0
+0.001	12	727	0
+0.001	12	728	0
+0.001	12	729	0
+0.001	12	730	0
+0.001	12	731	0
+0.001	12	732	0
+0.001	12	733	0
+0.001	12	734	0
+0.001	12	735	0
+0.001	12	736	0
+0.001	12	737	0
+0.001	12	738	0
+0.001	12	739	0
+0.001	12	740	0
+0.001	12	741	0
+0.001	12	742	0
+0.001	12	743	0
+0.001	12	744	0
+0.001	12	745	0
+0.001	12	746	0
+0.001	12	747	0
+0.001	12	748	0
+0.001	12	749	0
+0.001	12	750	0
+0.001	12	751	0
+0.001	12	752	0
+0.001	12	753	0
+0.001	12	754	0
+0.001	12	755	0
+0.001	12	756	0
+0.001	12	757	0
+0.001	12	758	0
+0.001	12	759	0
+0.001	12	760	0
+0.001	12	761	0
+0.001	12	762	0
+0.001	12	763	0
+0.001	12	764	0
+0.001	12	765	0
+0.001	12	766	0
+0.001	12	767	0
+0.001	12	768	0
+0.001	12	769	0
+0.001	12	770	0
+0.001	12	771	0
+0.001	12	772	0
+0.001	12	773	0
+0.001	12	774	0
+0.001	12	775	0
+0.001	12	776	0
+0.001	12	777	0
+0.001	12	778	0
+0.001	12	779	0
+0.001	12	780	0
+0.001	12	781	0
+0.001	12	782	0
+0.001	12	783	0
+0.001	12	784	0
+0.001	12	785	0
+0.001	12	786	0
+0.001	12	787	0
+0.001	12	788	0
+0.001	12	789	0
+0.001	12	790	0
+0.001	12	791	0
+0.001	12	792	0
+0.001	12	793	0
+0.001	12	794	0
+0.001	12	795	0
+0.001	12	796	0
+0.001	12	797	0
+0.001	12	798	0
+0.001	12	799	0
+0.001	12	800	0
+0.001	12	801	0
+0.001	12	802	0
+0.001	12	803	0
+0.001	12	804	0
+0.001	12	805	0
+0.001	12	806	0
+0.001	12	807	0
+0.001	12	808	0
+0.001	12	809	0
+0.001	12	810	0
+0.001	12	811	0
+0.001	12	812	0
+0.001	12	813	0
+0.001	12	814	0
+0.001	12	815	0
+0.001	12	816	0
+0.001	12	817	0
+0.001	12	818	0
+0.001	12	819	0
+0.001	12	820	0
+0.001	12	821	0
+0.001	12	822	0
+0.001	12	823	0
+0.001	12	824	0
+0.001	12	825	0
+0.001	12	826	0
+0.001	12	827	0
+0.001	12	828	0
+0.001	12	829	0
+0.001	12	830	0
+0.001	12	831	0
+0.001	12	832	0
+0.001	12	833	0
+0.001	12	834	0
+0.001	12	835	0
+0.001	12	836	0
+0.001	12	837	0
+0.001	12	838	0
+0.001	12	839	0
+0.001	12	840	0
+0.001	12	841	0
+0.001	12	842	0
+0.001	12	843	0
+0.001	12	844	0
+0.001	12	845	0
+0.001	12	846	0
+0.001	12	847	0
+0.001	12	848	0
+0.001	12	849	0
+0.001	12	850	0
+0.001	12	851	0
+0.001	12	852	0
+0.001	12	853	0
+0.001	12	854	0
+0.001	12	855	0
+0.001	12	856	0
+0.001	12	857	0
+0.001	12	858	0
+0.001	12	859	0
+0.001	12	860	0
+0.001	12	861	0
+0.001	12	862	0
+0.001	12	863	0
+0.001	12	864	0
+0.001	12	865	0
+0.001	12	866	0
+0.001	12	867	0
+0.001	12	868	0
+0.001	12	869	0
+0.001	12	870	0
+0.001	12	871	0
+0.001	12	872	0
+0.001	12	873	0
+0.001	12	874	0
+0.001	12	875	0
+0.001	12	876	0
+0.001	12	877	0
+0.001	12	878	0
+0.001	12	879	0
+0.001	12	880	0
+0.001	12	881	0
+0.001	12	882	0
+0.001	12	883	0
+0.001	12	884	0
+0.001	12	885	0
+0.001	12	886	0
+0.001	12	887	0
+0.001	12	888	0
+0.001	12	889	0
+0.001	12	890	0
+0.001	12	891	0
+0.001	12	892	0
+0.001	12	893	0
+0.001	12	894	0
+0.001	12	895	0
+0.001	12	896	0
+0.001	12	897	0
+0.001	12	898	0
+0.001	12	899	0
+0.001	12	900	0
+0.001	12	901	0
+0.001	12	902	0
+0.001	12	903	0
+0.001	12	904	0
+0.001	12	905	0
+0.001	12	906	0
+0.001	12	907	0
+0.001	12	908	0
+0.001	12	909	0
+0.001	12	910	0
+0.001	12	911	0
+0.001	12	912	0
+0.001	12	913	0
+0.001	12	914	0
+0.001	12	915	0
+0.001	12	916	0
+0.001	12	917	0
+0.001	12	918	0
+0.001	12	919	0
+0.001	12	920	0
+0.001	12	921	0
+0.001	12	922	0
+0.001	12	923	0
+0.001	12	924	0
+0.001	12	925	0
+0.001	12	926	0
+0.001	12	927	0
+0.001	12	928	0
+0.001	12	929	0
+0.001	12	930	0
+0.001	12	931	0
+0.001	12	932	0
+0.001	12	933	0
+0.001	12	934	0
+0.001	12	935	0
+0.001	12	936	0
+0.001	12	937	0
+0.001	12	938	0
+0.001	12	939	0
+0.001	12	940	0
+0.001	12	941	0
+0.001	12	942	0
+0.001	12	943	0
+0.001	12	944	0
+0.001	12	945	0
+0.001	12	946	0
+0.001	12	947	0
+0.001	12	948	0
+0.001	12	949	0
+0.001	12	950	0
+0.001	12	951	0
+0.001	12	952	0
+0.001	12	953	0
+0.001	12	954	0
+0.001	12	955	0
+0.001	12	956	0
+0.001	12	957	0
+0.001	12	958	0
+0.001	12	959	0
+0.001	12	960	0
+0.001	12	961	0
+0.001	12	962	0
+0.001	12	963	0
+0.001	12	964	0
+0.001	12	965	0
+0.001	12	966	0
+0.001	12	967	0
+0.001	12	968	0
+0.001	12	969	0
+0.001	12	970	0
+0.001	12	971	0
+0.001	12	972	0
+0.001	12	973	0
+0.001	12	974	0
+0.001	12	975	0
+0.001	12	976	0
+0.001	12	977	0
+0.001	12	978	0
+0.001	12	979	0
+0.001	12	980	0
+0.001	12	981	0
+0.001	12	982	0
+0.001	12	983	0
+0.001	12	984	0
+0.001	12	985	0
+0.001	12	986	0
+0.001	12	987	0
+0.001	12	988	0
+0.001	12	989	0
+0.001	12	990	0
+0.001	12	991	0
+0.001	12	992	0
+0.001	12	993	0
+0.001	12	994	0
+0.001	12	995	0
+0.001	12	996	0
+0.001	12	997	0
+0.001	12	998	0
+0.001	12	999	0
+0.001	12	1000	0
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.002_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.002	12	1	0
+0.002	12	2	0
+0.002	12	3	0
+0.002	12	4	0
+0.002	12	5	0
+0.002	12	6	0
+0.002	12	7	0
+0.002	12	8	0
+0.002	12	9	0
+0.002	12	10	0
+0.002	12	11	0
+0.002	12	12	0
+0.002	12	13	0
+0.002	12	14	0
+0.002	12	15	0
+0.002	12	16	0
+0.002	12	17	0
+0.002	12	18	0
+0.002	12	19	0
+0.002	12	20	0
+0.002	12	21	0
+0.002	12	22	0
+0.002	12	23	0
+0.002	12	24	0
+0.002	12	25	0
+0.002	12	26	0
+0.002	12	27	0
+0.002	12	28	0
+0.002	12	29	0
+0.002	12	30	0
+0.002	12	31	0
+0.002	12	32	0
+0.002	12	33	0
+0.002	12	34	0
+0.002	12	35	0
+0.002	12	36	0
+0.002	12	37	0
+0.002	12	38	0
+0.002	12	39	0
+0.002	12	40	0
+0.002	12	41	0
+0.002	12	42	0
+0.002	12	43	0
+0.002	12	44	0
+0.002	12	45	0
+0.002	12	46	0
+0.002	12	47	0
+0.002	12	48	0
+0.002	12	49	0
+0.002	12	50	0
+0.002	12	51	0
+0.002	12	52	0
+0.002	12	53	0
+0.002	12	54	0
+0.002	12	55	0
+0.002	12	56	0
+0.002	12	57	0
+0.002	12	58	0
+0.002	12	59	0
+0.002	12	60	0
+0.002	12	61	0
+0.002	12	62	0
+0.002	12	63	0
+0.002	12	64	0
+0.002	12	65	0
+0.002	12	66	0
+0.002	12	67	0
+0.002	12	68	0
+0.002	12	69	0
+0.002	12	70	0
+0.002	12	71	0
+0.002	12	72	0
+0.002	12	73	0
+0.002	12	74	0
+0.002	12	75	0
+0.002	12	76	0
+0.002	12	77	0
+0.002	12	78	0
+0.002	12	79	0
+0.002	12	80	0
+0.002	12	81	0
+0.002	12	82	0
+0.002	12	83	0
+0.002	12	84	0
+0.002	12	85	0
+0.002	12	86	0
+0.002	12	87	0
+0.002	12	88	0
+0.002	12	89	0
+0.002	12	90	0
+0.002	12	91	0
+0.002	12	92	0
+0.002	12	93	0
+0.002	12	94	0
+0.002	12	95	0
+0.002	12	96	0
+0.002	12	97	0
+0.002	12	98	0
+0.002	12	99	0
+0.002	12	100	0
+0.002	12	101	0
+0.002	12	102	0
+0.002	12	103	0
+0.002	12	104	0
+0.002	12	105	0
+0.002	12	106	0
+0.002	12	107	0
+0.002	12	108	0
+0.002	12	109	0
+0.002	12	110	1
+0.002	12	111	1
+0.002	12	112	1
+0.002	12	113	1
+0.002	12	114	1
+0.002	12	115	1
+0.002	12	116	1
+0.002	12	117	1
+0.002	12	118	1
+0.002	12	119	1
+0.002	12	120	1
+0.002	12	121	1
+0.002	12	122	1
+0.002	12	123	1
+0.002	12	124	1
+0.002	12	125	1
+0.002	12	126	1
+0.002	12	127	1
+0.002	12	128	1
+0.002	12	129	1
+0.002	12	130	1
+0.002	12	131	1
+0.002	12	132	1
+0.002	12	133	1
+0.002	12	134	1
+0.002	12	135	1
+0.002	12	136	1
+0.002	12	137	1
+0.002	12	138	1
+0.002	12	139	1
+0.002	12	140	1
+0.002	12	141	1
+0.002	12	142	1
+0.002	12	143	1
+0.002	12	144	1
+0.002	12	145	1
+0.002	12	146	1
+0.002	12	147	1
+0.002	12	148	1
+0.002	12	149	1
+0.002	12	150	1
+0.002	12	151	1
+0.002	12	152	1
+0.002	12	153	1
+0.002	12	154	1
+0.002	12	155	1
+0.002	12	156	1
+0.002	12	157	1
+0.002	12	158	1
+0.002	12	159	1
+0.002	12	160	1
+0.002	12	161	1
+0.002	12	162	1
+0.002	12	163	1
+0.002	12	164	1
+0.002	12	165	1
+0.002	12	166	1
+0.002	12	167	1
+0.002	12	168	1
+0.002	12	169	1
+0.002	12	170	1
+0.002	12	171	1
+0.002	12	172	1
+0.002	12	173	1
+0.002	12	174	1
+0.002	12	175	1
+0.002	12	176	1
+0.002	12	177	1
+0.002	12	178	1
+0.002	12	179	1
+0.002	12	180	1
+0.002	12	181	1
+0.002	12	182	1
+0.002	12	183	1
+0.002	12	184	1
+0.002	12	185	1
+0.002	12	186	1
+0.002	12	187	1
+0.002	12	188	1
+0.002	12	189	1
+0.002	12	190	1
+0.002	12	191	1
+0.002	12	192	1
+0.002	12	193	1
+0.002	12	194	1
+0.002	12	195	1
+0.002	12	196	1
+0.002	12	197	1
+0.002	12	198	1
+0.002	12	199	1
+0.002	12	200	1
+0.002	12	201	1
+0.002	12	202	1
+0.002	12	203	1
+0.002	12	204	1
+0.002	12	205	1
+0.002	12	206	1
+0.002	12	207	1
+0.002	12	208	1
+0.002	12	209	1
+0.002	12	210	1
+0.002	12	211	1
+0.002	12	212	1
+0.002	12	213	1
+0.002	12	214	1
+0.002	12	215	1
+0.002	12	216	1
+0.002	12	217	1
+0.002	12	218	1
+0.002	12	219	1
+0.002	12	220	1
+0.002	12	221	1
+0.002	12	222	1
+0.002	12	223	1
+0.002	12	224	1
+0.002	12	225	1
+0.002	12	226	1
+0.002	12	227	1
+0.002	12	228	1
+0.002	12	229	1
+0.002	12	230	1
+0.002	12	231	1
+0.002	12	232	1
+0.002	12	233	1
+0.002	12	234	1
+0.002	12	235	1
+0.002	12	236	1
+0.002	12	237	1
+0.002	12	238	1
+0.002	12	239	1
+0.002	12	240	1
+0.002	12	241	1
+0.002	12	242	1
+0.002	12	243	1
+0.002	12	244	1
+0.002	12	245	1
+0.002	12	246	1
+0.002	12	247	1
+0.002	12	248	1
+0.002	12	249	1
+0.002	12	250	1
+0.002	12	251	1
+0.002	12	252	1
+0.002	12	253	1
+0.002	12	254	1
+0.002	12	255	1
+0.002	12	256	1
+0.002	12	257	1
+0.002	12	258	1
+0.002	12	259	1
+0.002	12	260	1
+0.002	12	261	1
+0.002	12	262	1
+0.002	12	263	1
+0.002	12	264	1
+0.002	12	265	1
+0.002	12	266	1
+0.002	12	267	1
+0.002	12	268	1
+0.002	12	269	1
+0.002	12	270	1
+0.002	12	271	1
+0.002	12	272	1
+0.002	12	273	1
+0.002	12	274	1
+0.002	12	275	1
+0.002	12	276	1
+0.002	12	277	1
+0.002	12	278	1
+0.002	12	279	1
+0.002	12	280	1
+0.002	12	281	1
+0.002	12	282	1
+0.002	12	283	1
+0.002	12	284	1
+0.002	12	285	1
+0.002	12	286	1
+0.002	12	287	1
+0.002	12	288	2
+0.002	12	289	2
+0.002	12	290	2
+0.002	12	291	2
+0.002	12	292	2
+0.002	12	293	2
+0.002	12	294	2
+0.002	12	295	2
+0.002	12	296	2
+0.002	12	297	2
+0.002	12	298	2
+0.002	12	299	2
+0.002	12	300	2
+0.002	12	301	2
+0.002	12	302	2
+0.002	12	303	2
+0.002	12	304	2
+0.002	12	305	2
+0.002	12	306	2
+0.002	12	307	2
+0.002	12	308	2
+0.002	12	309	2
+0.002	12	310	2
+0.002	12	311	2
+0.002	12	312	2
+0.002	12	313	2
+0.002	12	314	2
+0.002	12	315	2
+0.002	12	316	2
+0.002	12	317	2
+0.002	12	318	2
+0.002	12	319	2
+0.002	12	320	2
+0.002	12	321	2
+0.002	12	322	2
+0.002	12	323	2
+0.002	12	324	2
+0.002	12	325	2
+0.002	12	326	2
+0.002	12	327	2
+0.002	12	328	2
+0.002	12	329	2
+0.002	12	330	2
+0.002	12	331	2
+0.002	12	332	2
+0.002	12	333	2
+0.002	12	334	2
+0.002	12	335	2
+0.002	12	336	2
+0.002	12	337	2
+0.002	12	338	2
+0.002	12	339	2
+0.002	12	340	2
+0.002	12	341	2
+0.002	12	342	2
+0.002	12	343	2
+0.002	12	344	2
+0.002	12	345	2
+0.002	12	346	2
+0.002	12	347	2
+0.002	12	348	2
+0.002	12	349	2
+0.002	12	350	2
+0.002	12	351	2
+0.002	12	352	2
+0.002	12	353	2
+0.002	12	354	2
+0.002	12	355	2
+0.002	12	356	2
+0.002	12	357	2
+0.002	12	358	2
+0.002	12	359	2
+0.002	12	360	2
+0.002	12	361	2
+0.002	12	362	2
+0.002	12	363	2
+0.002	12	364	2
+0.002	12	365	2
+0.002	12	366	2
+0.002	12	367	2
+0.002	12	368	2
+0.002	12	369	2
+0.002	12	370	2
+0.002	12	371	2
+0.002	12	372	2
+0.002	12	373	2
+0.002	12	374	2
+0.002	12	375	2
+0.002	12	376	2
+0.002	12	377	2
+0.002	12	378	2
+0.002	12	379	2
+0.002	12	380	2
+0.002	12	381	2
+0.002	12	382	2
+0.002	12	383	2
+0.002	12	384	2
+0.002	12	385	2
+0.002	12	386	2
+0.002	12	387	2
+0.002	12	388	2
+0.002	12	389	2
+0.002	12	390	2
+0.002	12	391	3
+0.002	12	392	3
+0.002	12	393	3
+0.002	12	394	3
+0.002	12	395	3
+0.002	12	396	3
+0.002	12	397	3
+0.002	12	398	3
+0.002	12	399	4
+0.002	12	400	4
+0.002	12	401	4
+0.002	12	402	4
+0.002	12	403	4
+0.002	12	404	4
+0.002	12	405	4
+0.002	12	406	4
+0.002	12	407	4
+0.002	12	408	4
+0.002	12	409	4
+0.002	12	410	4
+0.002	12	411	4
+0.002	12	412	4
+0.002	12	413	4
+0.002	12	414	4
+0.002	12	415	4
+0.002	12	416	4
+0.002	12	417	4
+0.002	12	418	4
+0.002	12	419	4
+0.002	12	420	4
+0.002	12	421	4
+0.002	12	422	4
+0.002	12	423	4
+0.002	12	424	4
+0.002	12	425	4
+0.002	12	426	4
+0.002	12	427	4
+0.002	12	428	4
+0.002	12	429	4
+0.002	12	430	4
+0.002	12	431	4
+0.002	12	432	4
+0.002	12	433	4
+0.002	12	434	4
+0.002	12	435	4
+0.002	12	436	4
+0.002	12	437	4
+0.002	12	438	4
+0.002	12	439	4
+0.002	12	440	4
+0.002	12	441	4
+0.002	12	442	4
+0.002	12	443	4
+0.002	12	444	4
+0.002	12	445	4
+0.002	12	446	4
+0.002	12	447	4
+0.002	12	448	4
+0.002	12	449	4
+0.002	12	450	4
+0.002	12	451	4
+0.002	12	452	4
+0.002	12	453	4
+0.002	12	454	4
+0.002	12	455	4
+0.002	12	456	4
+0.002	12	457	4
+0.002	12	458	4
+0.002	12	459	4
+0.002	12	460	4
+0.002	12	461	4
+0.002	12	462	4
+0.002	12	463	4
+0.002	12	464	4
+0.002	12	465	4
+0.002	12	466	4
+0.002	12	467	4
+0.002	12	468	4
+0.002	12	469	4
+0.002	12	470	4
+0.002	12	471	4
+0.002	12	472	4
+0.002	12	473	4
+0.002	12	474	4
+0.002	12	475	4
+0.002	12	476	4
+0.002	12	477	4
+0.002	12	478	4
+0.002	12	479	4
+0.002	12	480	4
+0.002	12	481	4
+0.002	12	482	4
+0.002	12	483	5
+0.002	12	484	5
+0.002	12	485	5
+0.002	12	486	5
+0.002	12	487	5
+0.002	12	488	5
+0.002	12	489	5
+0.002	12	490	5
+0.002	12	491	5
+0.002	12	492	5
+0.002	12	493	5
+0.002	12	494	5
+0.002	12	495	5
+0.002	12	496	5
+0.002	12	497	5
+0.002	12	498	5
+0.002	12	499	5
+0.002	12	500	5
+0.002	12	501	5
+0.002	12	502	5
+0.002	12	503	5
+0.002	12	504	5
+0.002	12	505	5
+0.002	12	506	5
+0.002	12	507	5
+0.002	12	508	5
+0.002	12	509	5
+0.002	12	510	5
+0.002	12	511	5
+0.002	12	512	5
+0.002	12	513	5
+0.002	12	514	5
+0.002	12	515	5
+0.002	12	516	5
+0.002	12	517	5
+0.002	12	518	5
+0.002	12	519	5
+0.002	12	520	5
+0.002	12	521	5
+0.002	12	522	5
+0.002	12	523	5
+0.002	12	524	5
+0.002	12	525	6
+0.002	12	526	6
+0.002	12	527	6
+0.002	12	528	6
+0.002	12	529	6
+0.002	12	530	6
+0.002	12	531	6
+0.002	12	532	7
+0.002	12	533	7
+0.002	12	534	7
+0.002	12	535	7
+0.002	12	536	7
+0.002	12	537	7
+0.002	12	538	7
+0.002	12	539	7
+0.002	12	540	7
+0.002	12	541	7
+0.002	12	542	7
+0.002	12	543	7
+0.002	12	544	7
+0.002	12	545	7
+0.002	12	546	7
+0.002	12	547	7
+0.002	12	548	7
+0.002	12	549	7
+0.002	12	550	7
+0.002	12	551	7
+0.002	12	552	7
+0.002	12	553	7
+0.002	12	554	7
+0.002	12	555	7
+0.002	12	556	7
+0.002	12	557	7
+0.002	12	558	7
+0.002	12	559	7
+0.002	12	560	7
+0.002	12	561	7
+0.002	12	562	7
+0.002	12	563	7
+0.002	12	564	7
+0.002	12	565	7
+0.002	12	566	7
+0.002	12	567	7
+0.002	12	568	7
+0.002	12	569	7
+0.002	12	570	7
+0.002	12	571	7
+0.002	12	572	7
+0.002	12	573	7
+0.002	12	574	7
+0.002	12	575	7
+0.002	12	576	7
+0.002	12	577	7
+0.002	12	578	7
+0.002	12	579	7
+0.002	12	580	7
+0.002	12	581	7
+0.002	12	582	7
+0.002	12	583	7
+0.002	12	584	7
+0.002	12	585	7
+0.002	12	586	7
+0.002	12	587	7
+0.002	12	588	7
+0.002	12	589	7
+0.002	12	590	7
+0.002	12	591	7
+0.002	12	592	7
+0.002	12	593	7
+0.002	12	594	7
+0.002	12	595	7
+0.002	12	596	7
+0.002	12	597	7
+0.002	12	598	7
+0.002	12	599	7
+0.002	12	600	7
+0.002	12	601	7
+0.002	12	602	7
+0.002	12	603	7
+0.002	12	604	7
+0.002	12	605	7
+0.002	12	606	7
+0.002	12	607	7
+0.002	12	608	7
+0.002	12	609	7
+0.002	12	610	7
+0.002	12	611	7
+0.002	12	612	7
+0.002	12	613	7
+0.002	12	614	7
+0.002	12	615	7
+0.002	12	616	7
+0.002	12	617	7
+0.002	12	618	7
+0.002	12	619	7
+0.002	12	620	7
+0.002	12	621	7
+0.002	12	622	7
+0.002	12	623	7
+0.002	12	624	7
+0.002	12	625	7
+0.002	12	626	7
+0.002	12	627	7
+0.002	12	628	7
+0.002	12	629	7
+0.002	12	630	7
+0.002	12	631	7
+0.002	12	632	7
+0.002	12	633	7
+0.002	12	634	7
+0.002	12	635	7
+0.002	12	636	7
+0.002	12	637	7
+0.002	12	638	7
+0.002	12	639	7
+0.002	12	640	7
+0.002	12	641	7
+0.002	12	642	7
+0.002	12	643	7
+0.002	12	644	7
+0.002	12	645	7
+0.002	12	646	7
+0.002	12	647	7
+0.002	12	648	7
+0.002	12	649	7
+0.002	12	650	7
+0.002	12	651	7
+0.002	12	652	7
+0.002	12	653	7
+0.002	12	654	7
+0.002	12	655	7
+0.002	12	656	7
+0.002	12	657	7
+0.002	12	658	7
+0.002	12	659	7
+0.002	12	660	7
+0.002	12	661	7
+0.002	12	662	7
+0.002	12	663	7
+0.002	12	664	7
+0.002	12	665	7
+0.002	12	666	7
+0.002	12	667	7
+0.002	12	668	7
+0.002	12	669	7
+0.002	12	670	7
+0.002	12	671	7
+0.002	12	672	7
+0.002	12	673	7
+0.002	12	674	7
+0.002	12	675	7
+0.002	12	676	7
+0.002	12	677	7
+0.002	12	678	7
+0.002	12	679	7
+0.002	12	680	7
+0.002	12	681	7
+0.002	12	682	7
+0.002	12	683	7
+0.002	12	684	7
+0.002	12	685	7
+0.002	12	686	7
+0.002	12	687	7
+0.002	12	688	7
+0.002	12	689	7
+0.002	12	690	7
+0.002	12	691	7
+0.002	12	692	7
+0.002	12	693	7
+0.002	12	694	7
+0.002	12	695	7
+0.002	12	696	7
+0.002	12	697	7
+0.002	12	698	7
+0.002	12	699	7
+0.002	12	700	7
+0.002	12	701	7
+0.002	12	702	7
+0.002	12	703	7
+0.002	12	704	7
+0.002	12	705	7
+0.002	12	706	7
+0.002	12	707	7
+0.002	12	708	7
+0.002	12	709	7
+0.002	12	710	7
+0.002	12	711	7
+0.002	12	712	7
+0.002	12	713	7
+0.002	12	714	7
+0.002	12	715	7
+0.002	12	716	7
+0.002	12	717	7
+0.002	12	718	7
+0.002	12	719	7
+0.002	12	720	7
+0.002	12	721	7
+0.002	12	722	7
+0.002	12	723	7
+0.002	12	724	7
+0.002	12	725	7
+0.002	12	726	7
+0.002	12	727	7
+0.002	12	728	7
+0.002	12	729	7
+0.002	12	730	7
+0.002	12	731	7
+0.002	12	732	7
+0.002	12	733	7
+0.002	12	734	7
+0.002	12	735	7
+0.002	12	736	7
+0.002	12	737	7
+0.002	12	738	7
+0.002	12	739	7
+0.002	12	740	7
+0.002	12	741	7
+0.002	12	742	7
+0.002	12	743	7
+0.002	12	744	7
+0.002	12	745	7
+0.002	12	746	7
+0.002	12	747	7
+0.002	12	748	7
+0.002	12	749	7
+0.002	12	750	7
+0.002	12	751	7
+0.002	12	752	7
+0.002	12	753	7
+0.002	12	754	7
+0.002	12	755	7
+0.002	12	756	7
+0.002	12	757	7
+0.002	12	758	7
+0.002	12	759	7
+0.002	12	760	7
+0.002	12	761	8
+0.002	12	762	8
+0.002	12	763	8
+0.002	12	764	8
+0.002	12	765	8
+0.002	12	766	8
+0.002	12	767	8
+0.002	12	768	8
+0.002	12	769	8
+0.002	12	770	8
+0.002	12	771	8
+0.002	12	772	8
+0.002	12	773	8
+0.002	12	774	8
+0.002	12	775	8
+0.002	12	776	8
+0.002	12	777	8
+0.002	12	778	8
+0.002	12	779	8
+0.002	12	780	8
+0.002	12	781	8
+0.002	12	782	8
+0.002	12	783	8
+0.002	12	784	8
+0.002	12	785	8
+0.002	12	786	8
+0.002	12	787	8
+0.002	12	788	8
+0.002	12	789	8
+0.002	12	790	8
+0.002	12	791	8
+0.002	12	792	8
+0.002	12	793	8
+0.002	12	794	8
+0.002	12	795	8
+0.002	12	796	8
+0.002	12	797	8
+0.002	12	798	8
+0.002	12	799	8
+0.002	12	800	8
+0.002	12	801	8
+0.002	12	802	8
+0.002	12	803	8
+0.002	12	804	8
+0.002	12	805	8
+0.002	12	806	8
+0.002	12	807	8
+0.002	12	808	8
+0.002	12	809	8
+0.002	12	810	8
+0.002	12	811	8
+0.002	12	812	8
+0.002	12	813	8
+0.002	12	814	8
+0.002	12	815	8
+0.002	12	816	8
+0.002	12	817	8
+0.002	12	818	8
+0.002	12	819	8
+0.002	12	820	8
+0.002	12	821	8
+0.002	12	822	8
+0.002	12	823	8
+0.002	12	824	8
+0.002	12	825	8
+0.002	12	826	8
+0.002	12	827	8
+0.002	12	828	8
+0.002	12	829	8
+0.002	12	830	8
+0.002	12	831	8
+0.002	12	832	8
+0.002	12	833	8
+0.002	12	834	8
+0.002	12	835	8
+0.002	12	836	8
+0.002	12	837	8
+0.002	12	838	8
+0.002	12	839	8
+0.002	12	840	8
+0.002	12	841	8
+0.002	12	842	8
+0.002	12	843	8
+0.002	12	844	8
+0.002	12	845	8
+0.002	12	846	8
+0.002	12	847	8
+0.002	12	848	8
+0.002	12	849	8
+0.002	12	850	8
+0.002	12	851	8
+0.002	12	852	8
+0.002	12	853	8
+0.002	12	854	8
+0.002	12	855	8
+0.002	12	856	8
+0.002	12	857	8
+0.002	12	858	8
+0.002	12	859	8
+0.002	12	860	8
+0.002	12	861	8
+0.002	12	862	8
+0.002	12	863	8
+0.002	12	864	8
+0.002	12	865	8
+0.002	12	866	8
+0.002	12	867	8
+0.002	12	868	8
+0.002	12	869	8
+0.002	12	870	8
+0.002	12	871	8
+0.002	12	872	8
+0.002	12	873	8
+0.002	12	874	8
+0.002	12	875	8
+0.002	12	876	8
+0.002	12	877	8
+0.002	12	878	8
+0.002	12	879	8
+0.002	12	880	8
+0.002	12	881	8
+0.002	12	882	8
+0.002	12	883	8
+0.002	12	884	8
+0.002	12	885	8
+0.002	12	886	8
+0.002	12	887	8
+0.002	12	888	8
+0.002	12	889	8
+0.002	12	890	8
+0.002	12	891	8
+0.002	12	892	8
+0.002	12	893	8
+0.002	12	894	8
+0.002	12	895	8
+0.002	12	896	8
+0.002	12	897	8
+0.002	12	898	8
+0.002	12	899	8
+0.002	12	900	8
+0.002	12	901	8
+0.002	12	902	8
+0.002	12	903	8
+0.002	12	904	8
+0.002	12	905	8
+0.002	12	906	8
+0.002	12	907	8
+0.002	12	908	8
+0.002	12	909	8
+0.002	12	910	8
+0.002	12	911	8
+0.002	12	912	8
+0.002	12	913	8
+0.002	12	914	8
+0.002	12	915	8
+0.002	12	916	8
+0.002	12	917	8
+0.002	12	918	8
+0.002	12	919	8
+0.002	12	920	8
+0.002	12	921	8
+0.002	12	922	8
+0.002	12	923	8
+0.002	12	924	8
+0.002	12	925	8
+0.002	12	926	8
+0.002	12	927	8
+0.002	12	928	8
+0.002	12	929	8
+0.002	12	930	8
+0.002	12	931	8
+0.002	12	932	8
+0.002	12	933	8
+0.002	12	934	8
+0.002	12	935	8
+0.002	12	936	8
+0.002	12	937	8
+0.002	12	938	8
+0.002	12	939	8
+0.002	12	940	8
+0.002	12	941	8
+0.002	12	942	8
+0.002	12	943	8
+0.002	12	944	8
+0.002	12	945	8
+0.002	12	946	8
+0.002	12	947	8
+0.002	12	948	8
+0.002	12	949	8
+0.002	12	950	8
+0.002	12	951	8
+0.002	12	952	8
+0.002	12	953	8
+0.002	12	954	8
+0.002	12	955	8
+0.002	12	956	8
+0.002	12	957	8
+0.002	12	958	8
+0.002	12	959	8
+0.002	12	960	8
+0.002	12	961	8
+0.002	12	962	8
+0.002	12	963	8
+0.002	12	964	8
+0.002	12	965	8
+0.002	12	966	8
+0.002	12	967	8
+0.002	12	968	8
+0.002	12	969	8
+0.002	12	970	8
+0.002	12	971	8
+0.002	12	972	8
+0.002	12	973	8
+0.002	12	974	8
+0.002	12	975	8
+0.002	12	976	8
+0.002	12	977	8
+0.002	12	978	8
+0.002	12	979	8
+0.002	12	980	8
+0.002	12	981	8
+0.002	12	982	8
+0.002	12	983	8
+0.002	12	984	8
+0.002	12	985	8
+0.002	12	986	8
+0.002	12	987	8
+0.002	12	988	8
+0.002	12	989	8
+0.002	12	990	8
+0.002	12	991	8
+0.002	12	992	8
+0.002	12	993	8
+0.002	12	994	8
+0.002	12	995	8
+0.002	12	996	8
+0.002	12	997	8
+0.002	12	998	8
+0.002	12	999	8
+0.002	12	1000	8
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.003_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.003	12	1	0
+0.003	12	2	0
+0.003	12	3	0
+0.003	12	4	0
+0.003	12	5	0
+0.003	12	6	0
+0.003	12	7	0
+0.003	12	8	0
+0.003	12	9	0
+0.003	12	10	0
+0.003	12	11	0
+0.003	12	12	0
+0.003	12	13	0
+0.003	12	14	0
+0.003	12	15	0
+0.003	12	16	0
+0.003	12	17	0
+0.003	12	18	0
+0.003	12	19	0
+0.003	12	20	0
+0.003	12	21	0
+0.003	12	22	0
+0.003	12	23	0
+0.003	12	24	0
+0.003	12	25	0
+0.003	12	26	0
+0.003	12	27	0
+0.003	12	28	0
+0.003	12	29	0
+0.003	12	30	0
+0.003	12	31	0
+0.003	12	32	0
+0.003	12	33	0
+0.003	12	34	0
+0.003	12	35	0
+0.003	12	36	0
+0.003	12	37	0
+0.003	12	38	0
+0.003	12	39	0
+0.003	12	40	0
+0.003	12	41	0
+0.003	12	42	0
+0.003	12	43	0
+0.003	12	44	0
+0.003	12	45	0
+0.003	12	46	0
+0.003	12	47	1
+0.003	12	48	1
+0.003	12	49	1
+0.003	12	50	1
+0.003	12	51	1
+0.003	12	52	1
+0.003	12	53	1
+0.003	12	54	1
+0.003	12	55	1
+0.003	12	56	1
+0.003	12	57	1
+0.003	12	58	1
+0.003	12	59	1
+0.003	12	60	1
+0.003	12	61	1
+0.003	12	62	2
+0.003	12	63	2
+0.003	12	64	2
+0.003	12	65	2
+0.003	12	66	2
+0.003	12	67	2
+0.003	12	68	2
+0.003	12	69	2
+0.003	12	70	2
+0.003	12	71	2
+0.003	12	72	2
+0.003	12	73	2
+0.003	12	74	2
+0.003	12	75	2
+0.003	12	76	2
+0.003	12	77	2
+0.003	12	78	2
+0.003	12	79	2
+0.003	12	80	2
+0.003	12	81	2
+0.003	12	82	2
+0.003	12	83	3
+0.003	12	84	3
+0.003	12	85	3
+0.003	12	86	3
+0.003	12	87	3
+0.003	12	88	3
+0.003	12	89	3
+0.003	12	90	3
+0.003	12	91	3
+0.003	12	92	3
+0.003	12	93	3
+0.003	12	94	3
+0.003	12	95	3
+0.003	12	96	3
+0.003	12	97	3
+0.003	12	98	4
+0.003	12	99	4
+0.003	12	100	4
+0.003	12	101	4
+0.003	12	102	4
+0.003	12	103	4
+0.003	12	104	4
+0.003	12	105	4
+0.003	12	106	4
+0.003	12	107	4
+0.003	12	108	4
+0.003	12	109	4
+0.003	12	110	4
+0.003	12	111	4
+0.003	12	112	4
+0.003	12	113	4
+0.003	12	114	4
+0.003	12	115	4
+0.003	12	116	4
+0.003	12	117	4
+0.003	12	118	4
+0.003	12	119	4
+0.003	12	120	4
+0.003	12	121	5
+0.003	12	122	5
+0.003	12	123	5
+0.003	12	124	5
+0.003	12	125	5
+0.003	12	126	5
+0.003	12	127	5
+0.003	12	128	5
+0.003	12	129	5
+0.003	12	130	5
+0.003	12	131	5
+0.003	12	132	5
+0.003	12	133	5
+0.003	12	134	5
+0.003	12	135	5
+0.003	12	136	5
+0.003	12	137	5
+0.003	12	138	5
+0.003	12	139	5
+0.003	12	140	5
+0.003	12	141	5
+0.003	12	142	5
+0.003	12	143	5
+0.003	12	144	5
+0.003	12	145	5
+0.003	12	146	5
+0.003	12	147	5
+0.003	12	148	5
+0.003	12	149	5
+0.003	12	150	5
+0.003	12	151	5
+0.003	12	152	5
+0.003	12	153	5
+0.003	12	154	5
+0.003	12	155	5
+0.003	12	156	5
+0.003	12	157	5
+0.003	12	158	5
+0.003	12	159	5
+0.003	12	160	5
+0.003	12	161	5
+0.003	12	162	5
+0.003	12	163	5
+0.003	12	164	5
+0.003	12	165	5
+0.003	12	166	5
+0.003	12	167	5
+0.003	12	168	5
+0.003	12	169	5
+0.003	12	170	5
+0.003	12	171	5
+0.003	12	172	5
+0.003	12	173	5
+0.003	12	174	5
+0.003	12	175	5
+0.003	12	176	5
+0.003	12	177	5
+0.003	12	178	5
+0.003	12	179	5
+0.003	12	180	5
+0.003	12	181	5
+0.003	12	182	5
+0.003	12	183	5
+0.003	12	184	5
+0.003	12	185	5
+0.003	12	186	5
+0.003	12	187	5
+0.003	12	188	5
+0.003	12	189	5
+0.003	12	190	5
+0.003	12	191	5
+0.003	12	192	5
+0.003	12	193	5
+0.003	12	194	5
+0.003	12	195	5
+0.003	12	196	5
+0.003	12	197	5
+0.003	12	198	5
+0.003	12	199	5
+0.003	12	200	5
+0.003	12	201	5
+0.003	12	202	5
+0.003	12	203	5
+0.003	12	204	5
+0.003	12	205	6
+0.003	12	206	6
+0.003	12	207	6
+0.003	12	208	6
+0.003	12	209	6
+0.003	12	210	6
+0.003	12	211	6
+0.003	12	212	6
+0.003	12	213	6
+0.003	12	214	6
+0.003	12	215	6
+0.003	12	216	6
+0.003	12	217	6
+0.003	12	218	6
+0.003	12	219	6
+0.003	12	220	6
+0.003	12	221	6
+0.003	12	222	6
+0.003	12	223	6
+0.003	12	224	6
+0.003	12	225	6
+0.003	12	226	6
+0.003	12	227	6
+0.003	12	228	6
+0.003	12	229	6
+0.003	12	230	6
+0.003	12	231	6
+0.003	12	232	6
+0.003	12	233	6
+0.003	12	234	6
+0.003	12	235	6
+0.003	12	236	6
+0.003	12	237	6
+0.003	12	238	6
+0.003	12	239	6
+0.003	12	240	6
+0.003	12	241	6
+0.003	12	242	6
+0.003	12	243	6
+0.003	12	244	6
+0.003	12	245	6
+0.003	12	246	6
+0.003	12	247	6
+0.003	12	248	6
+0.003	12	249	6
+0.003	12	250	6
+0.003	12	251	6
+0.003	12	252	6
+0.003	12	253	6
+0.003	12	254	6
+0.003	12	255	6
+0.003	12	256	6
+0.003	12	257	6
+0.003	12	258	6
+0.003	12	259	6
+0.003	12	260	6
+0.003	12	261	6
+0.003	12	262	6
+0.003	12	263	6
+0.003	12	264	6
+0.003	12	265	6
+0.003	12	266	6
+0.003	12	267	6
+0.003	12	268	6
+0.003	12	269	6
+0.003	12	270	6
+0.003	12	271	6
+0.003	12	272	6
+0.003	12	273	6
+0.003	12	274	6
+0.003	12	275	6
+0.003	12	276	6
+0.003	12	277	6
+0.003	12	278	6
+0.003	12	279	6
+0.003	12	280	7
+0.003	12	281	7
+0.003	12	282	7
+0.003	12	283	8
+0.003	12	284	8
+0.003	12	285	8
+0.003	12	286	8
+0.003	12	287	8
+0.003	12	288	8
+0.003	12	289	8
+0.003	12	290	8
+0.003	12	291	8
+0.003	12	292	9
+0.003	12	293	9
+0.003	12	294	9
+0.003	12	295	9
+0.003	12	296	9
+0.003	12	297	9
+0.003	12	298	9
+0.003	12	299	9
+0.003	12	300	9
+0.003	12	301	9
+0.003	12	302	9
+0.003	12	303	9
+0.003	12	304	9
+0.003	12	305	9
+0.003	12	306	9
+0.003	12	307	9
+0.003	12	308	9
+0.003	12	309	9
+0.003	12	310	9
+0.003	12	311	9
+0.003	12	312	9
+0.003	12	313	9
+0.003	12	314	9
+0.003	12	315	9
+0.003	12	316	9
+0.003	12	317	10
+0.003	12	318	10
+0.003	12	319	10
+0.003	12	320	11
+0.003	12	321	11
+0.003	12	322	11
+0.003	12	323	11
+0.003	12	324	12
+0.003	12	325	12
+0.003	12	326	12
+0.003	12	327	12
+0.003	12	328	12
+0.003	12	329	12
+0.003	12	330	12
+0.003	12	331	12
+0.003	12	332	13
+0.003	12	333	13
+0.003	12	334	13
+0.003	12	335	13
+0.003	12	336	13
+0.003	12	337	14
+0.003	12	338	14
+0.003	12	339	14
+0.003	12	340	14
+0.003	12	341	14
+0.003	12	342	14
+0.003	12	343	14
+0.003	12	344	14
+0.003	12	345	14
+0.003	12	346	14
+0.003	12	347	14
+0.003	12	348	14
+0.003	12	349	14
+0.003	12	350	14
+0.003	12	351	14
+0.003	12	352	15
+0.003	12	353	15
+0.003	12	354	15
+0.003	12	355	15
+0.003	12	356	16
+0.003	12	357	16
+0.003	12	358	16
+0.003	12	359	16
+0.003	12	360	16
+0.003	12	361	16
+0.003	12	362	16
+0.003	12	363	16
+0.003	12	364	16
+0.003	12	365	16
+0.003	12	366	16
+0.003	12	367	16
+0.003	12	368	16
+0.003	12	369	16
+0.003	12	370	16
+0.003	12	371	16
+0.003	12	372	16
+0.003	12	373	16
+0.003	12	374	16
+0.003	12	375	16
+0.003	12	376	16
+0.003	12	377	16
+0.003	12	378	17
+0.003	12	379	17
+0.003	12	380	17
+0.003	12	381	17
+0.003	12	382	17
+0.003	12	383	17
+0.003	12	384	17
+0.003	12	385	17
+0.003	12	386	17
+0.003	12	387	17
+0.003	12	388	17
+0.003	12	389	17
+0.003	12	390	17
+0.003	12	391	17
+0.003	12	392	17
+0.003	12	393	17
+0.003	12	394	17
+0.003	12	395	17
+0.003	12	396	17
+0.003	12	397	17
+0.003	12	398	17
+0.003	12	399	17
+0.003	12	400	17
+0.003	12	401	17
+0.003	12	402	17
+0.003	12	403	17
+0.003	12	404	17
+0.003	12	405	17
+0.003	12	406	17
+0.003	12	407	17
+0.003	12	408	17
+0.003	12	409	17
+0.003	12	410	17
+0.003	12	411	17
+0.003	12	412	17
+0.003	12	413	17
+0.003	12	414	17
+0.003	12	415	17
+0.003	12	416	17
+0.003	12	417	17
+0.003	12	418	17
+0.003	12	419	17
+0.003	12	420	17
+0.003	12	421	17
+0.003	12	422	17
+0.003	12	423	18
+0.003	12	424	18
+0.003	12	425	18
+0.003	12	426	18
+0.003	12	427	18
+0.003	12	428	18
+0.003	12	429	18
+0.003	12	430	19
+0.003	12	431	19
+0.003	12	432	19
+0.003	12	433	19
+0.003	12	434	19
+0.003	12	435	19
+0.003	12	436	19
+0.003	12	437	19
+0.003	12	438	19
+0.003	12	439	19
+0.003	12	440	19
+0.003	12	441	19
+0.003	12	442	19
+0.003	12	443	19
+0.003	12	444	19
+0.003	12	445	19
+0.003	12	446	19
+0.003	12	447	19
+0.003	12	448	19
+0.003	12	449	19
+0.003	12	450	19
+0.003	12	451	19
+0.003	12	452	19
+0.003	12	453	19
+0.003	12	454	19
+0.003	12	455	19
+0.003	12	456	19
+0.003	12	457	19
+0.003	12	458	19
+0.003	12	459	19
+0.003	12	460	19
+0.003	12	461	19
+0.003	12	462	19
+0.003	12	463	19
+0.003	12	464	19
+0.003	12	465	19
+0.003	12	466	19
+0.003	12	467	19
+0.003	12	468	19
+0.003	12	469	19
+0.003	12	470	19
+0.003	12	471	19
+0.003	12	472	19
+0.003	12	473	19
+0.003	12	474	19
+0.003	12	475	19
+0.003	12	476	19
+0.003	12	477	19
+0.003	12	478	19
+0.003	12	479	19
+0.003	12	480	19
+0.003	12	481	19
+0.003	12	482	19
+0.003	12	483	19
+0.003	12	484	19
+0.003	12	485	19
+0.003	12	486	19
+0.003	12	487	19
+0.003	12	488	19
+0.003	12	489	19
+0.003	12	490	19
+0.003	12	491	19
+0.003	12	492	19
+0.003	12	493	19
+0.003	12	494	19
+0.003	12	495	19
+0.003	12	496	19
+0.003	12	497	19
+0.003	12	498	19
+0.003	12	499	19
+0.003	12	500	20
+0.003	12	501	20
+0.003	12	502	20
+0.003	12	503	20
+0.003	12	504	20
+0.003	12	505	20
+0.003	12	506	20
+0.003	12	507	20
+0.003	12	508	20
+0.003	12	509	20
+0.003	12	510	20
+0.003	12	511	20
+0.003	12	512	20
+0.003	12	513	20
+0.003	12	514	20
+0.003	12	515	20
+0.003	12	516	20
+0.003	12	517	20
+0.003	12	518	20
+0.003	12	519	21
+0.003	12	520	21
+0.003	12	521	21
+0.003	12	522	21
+0.003	12	523	21
+0.003	12	524	21
+0.003	12	525	21
+0.003	12	526	21
+0.003	12	527	21
+0.003	12	528	21
+0.003	12	529	21
+0.003	12	530	21
+0.003	12	531	21
+0.003	12	532	21
+0.003	12	533	22
+0.003	12	534	22
+0.003	12	535	22
+0.003	12	536	22
+0.003	12	537	22
+0.003	12	538	22
+0.003	12	539	22
+0.003	12	540	22
+0.003	12	541	22
+0.003	12	542	22
+0.003	12	543	23
+0.003	12	544	23
+0.003	12	545	23
+0.003	12	546	23
+0.003	12	547	23
+0.003	12	548	23
+0.003	12	549	23
+0.003	12	550	23
+0.003	12	551	23
+0.003	12	552	23
+0.003	12	553	24
+0.003	12	554	24
+0.003	12	555	24
+0.003	12	556	24
+0.003	12	557	24
+0.003	12	558	25
+0.003	12	559	26
+0.003	12	560	26
+0.003	12	561	26
+0.003	12	562	26
+0.003	12	563	26
+0.003	12	564	26
+0.003	12	565	26
+0.003	12	566	26
+0.003	12	567	26
+0.003	12	568	26
+0.003	12	569	26
+0.003	12	570	26
+0.003	12	571	26
+0.003	12	572	26
+0.003	12	573	26
+0.003	12	574	26
+0.003	12	575	26
+0.003	12	576	26
+0.003	12	577	26
+0.003	12	578	26
+0.003	12	579	26
+0.003	12	580	26
+0.003	12	581	26
+0.003	12	582	26
+0.003	12	583	26
+0.003	12	584	26
+0.003	12	585	26
+0.003	12	586	26
+0.003	12	587	26
+0.003	12	588	26
+0.003	12	589	26
+0.003	12	590	26
+0.003	12	591	26
+0.003	12	592	26
+0.003	12	593	26
+0.003	12	594	26
+0.003	12	595	26
+0.003	12	596	26
+0.003	12	597	26
+0.003	12	598	26
+0.003	12	599	26
+0.003	12	600	26
+0.003	12	601	26
+0.003	12	602	26
+0.003	12	603	26
+0.003	12	604	26
+0.003	12	605	26
+0.003	12	606	26
+0.003	12	607	26
+0.003	12	608	26
+0.003	12	609	26
+0.003	12	610	26
+0.003	12	611	26
+0.003	12	612	26
+0.003	12	613	26
+0.003	12	614	26
+0.003	12	615	26
+0.003	12	616	26
+0.003	12	617	26
+0.003	12	618	27
+0.003	12	619	27
+0.003	12	620	27
+0.003	12	621	27
+0.003	12	622	27
+0.003	12	623	27
+0.003	12	624	27
+0.003	12	625	27
+0.003	12	626	27
+0.003	12	627	27
+0.003	12	628	27
+0.003	12	629	27
+0.003	12	630	27
+0.003	12	631	27
+0.003	12	632	27
+0.003	12	633	27
+0.003	12	634	28
+0.003	12	635	28
+0.003	12	636	28
+0.003	12	637	28
+0.003	12	638	28
+0.003	12	639	28
+0.003	12	640	28
+0.003	12	641	28
+0.003	12	642	28
+0.003	12	643	28
+0.003	12	644	28
+0.003	12	645	28
+0.003	12	646	28
+0.003	12	647	28
+0.003	12	648	28
+0.003	12	649	28
+0.003	12	650	28
+0.003	12	651	28
+0.003	12	652	28
+0.003	12	653	29
+0.003	12	654	29
+0.003	12	655	30
+0.003	12	656	30
+0.003	12	657	30
+0.003	12	658	30
+0.003	12	659	30
+0.003	12	660	30
+0.003	12	661	30
+0.003	12	662	30
+0.003	12	663	30
+0.003	12	664	31
+0.003	12	665	32
+0.003	12	666	33
+0.003	12	667	33
+0.003	12	668	33
+0.003	12	669	33
+0.003	12	670	33
+0.003	12	671	33
+0.003	12	672	33
+0.003	12	673	33
+0.003	12	674	33
+0.003	12	675	33
+0.003	12	676	33
+0.003	12	677	33
+0.003	12	678	33
+0.003	12	679	33
+0.003	12	680	33
+0.003	12	681	33
+0.003	12	682	33
+0.003	12	683	34
+0.003	12	684	34
+0.003	12	685	34
+0.003	12	686	34
+0.003	12	687	34
+0.003	12	688	34
+0.003	12	689	34
+0.003	12	690	34
+0.003	12	691	34
+0.003	12	692	34
+0.003	12	693	34
+0.003	12	694	34
+0.003	12	695	34
+0.003	12	696	34
+0.003	12	697	34
+0.003	12	698	34
+0.003	12	699	34
+0.003	12	700	34
+0.003	12	701	35
+0.003	12	702	35
+0.003	12	703	35
+0.003	12	704	35
+0.003	12	705	35
+0.003	12	706	35
+0.003	12	707	35
+0.003	12	708	35
+0.003	12	709	35
+0.003	12	710	35
+0.003	12	711	35
+0.003	12	712	35
+0.003	12	713	35
+0.003	12	714	35
+0.003	12	715	35
+0.003	12	716	35
+0.003	12	717	35
+0.003	12	718	35
+0.003	12	719	35
+0.003	12	720	35
+0.003	12	721	35
+0.003	12	722	35
+0.003	12	723	35
+0.003	12	724	35
+0.003	12	725	35
+0.003	12	726	35
+0.003	12	727	35
+0.003	12	728	35
+0.003	12	729	35
+0.003	12	730	36
+0.003	12	731	36
+0.003	12	732	36
+0.003	12	733	37
+0.003	12	734	37
+0.003	12	735	37
+0.003	12	736	37
+0.003	12	737	37
+0.003	12	738	37
+0.003	12	739	37
+0.003	12	740	37
+0.003	12	741	37
+0.003	12	742	37
+0.003	12	743	37
+0.003	12	744	37
+0.003	12	745	37
+0.003	12	746	37
+0.003	12	747	37
+0.003	12	748	37
+0.003	12	749	37
+0.003	12	750	37
+0.003	12	751	37
+0.003	12	752	37
+0.003	12	753	37
+0.003	12	754	37
+0.003	12	755	37
+0.003	12	756	37
+0.003	12	757	37
+0.003	12	758	37
+0.003	12	759	37
+0.003	12	760	37
+0.003	12	761	37
+0.003	12	762	37
+0.003	12	763	38
+0.003	12	764	38
+0.003	12	765	39
+0.003	12	766	39
+0.003	12	767	39
+0.003	12	768	39
+0.003	12	769	39
+0.003	12	770	39
+0.003	12	771	39
+0.003	12	772	40
+0.003	12	773	40
+0.003	12	774	40
+0.003	12	775	40
+0.003	12	776	40
+0.003	12	777	40
+0.003	12	778	40
+0.003	12	779	40
+0.003	12	780	40
+0.003	12	781	40
+0.003	12	782	40
+0.003	12	783	40
+0.003	12	784	40
+0.003	12	785	40
+0.003	12	786	40
+0.003	12	787	40
+0.003	12	788	40
+0.003	12	789	40
+0.003	12	790	40
+0.003	12	791	40
+0.003	12	792	40
+0.003	12	793	40
+0.003	12	794	40
+0.003	12	795	40
+0.003	12	796	40
+0.003	12	797	40
+0.003	12	798	40
+0.003	12	799	41
+0.003	12	800	41
+0.003	12	801	41
+0.003	12	802	41
+0.003	12	803	41
+0.003	12	804	41
+0.003	12	805	41
+0.003	12	806	41
+0.003	12	807	41
+0.003	12	808	41
+0.003	12	809	41
+0.003	12	810	41
+0.003	12	811	41
+0.003	12	812	41
+0.003	12	813	41
+0.003	12	814	41
+0.003	12	815	41
+0.003	12	816	41
+0.003	12	817	41
+0.003	12	818	41
+0.003	12	819	41
+0.003	12	820	41
+0.003	12	821	41
+0.003	12	822	41
+0.003	12	823	41
+0.003	12	824	41
+0.003	12	825	41
+0.003	12	826	41
+0.003	12	827	41
+0.003	12	828	41
+0.003	12	829	41
+0.003	12	830	41
+0.003	12	831	41
+0.003	12	832	41
+0.003	12	833	41
+0.003	12	834	41
+0.003	12	835	41
+0.003	12	836	41
+0.003	12	837	41
+0.003	12	838	41
+0.003	12	839	41
+0.003	12	840	41
+0.003	12	841	41
+0.003	12	842	41
+0.003	12	843	41
+0.003	12	844	41
+0.003	12	845	41
+0.003	12	846	41
+0.003	12	847	41
+0.003	12	848	41
+0.003	12	849	41
+0.003	12	850	42
+0.003	12	851	42
+0.003	12	852	42
+0.003	12	853	42
+0.003	12	854	42
+0.003	12	855	42
+0.003	12	856	42
+0.003	12	857	42
+0.003	12	858	42
+0.003	12	859	43
+0.003	12	860	43
+0.003	12	861	43
+0.003	12	862	43
+0.003	12	863	43
+0.003	12	864	43
+0.003	12	865	43
+0.003	12	866	43
+0.003	12	867	43
+0.003	12	868	43
+0.003	12	869	43
+0.003	12	870	43
+0.003	12	871	43
+0.003	12	872	43
+0.003	12	873	43
+0.003	12	874	43
+0.003	12	875	43
+0.003	12	876	43
+0.003	12	877	43
+0.003	12	878	43
+0.003	12	879	43
+0.003	12	880	43
+0.003	12	881	43
+0.003	12	882	43
+0.003	12	883	43
+0.003	12	884	43
+0.003	12	885	43
+0.003	12	886	43
+0.003	12	887	43
+0.003	12	888	43
+0.003	12	889	43
+0.003	12	890	43
+0.003	12	891	43
+0.003	12	892	43
+0.003	12	893	43
+0.003	12	894	44
+0.003	12	895	44
+0.003	12	896	44
+0.003	12	897	44
+0.003	12	898	44
+0.003	12	899	44
+0.003	12	900	44
+0.003	12	901	44
+0.003	12	902	44
+0.003	12	903	44
+0.003	12	904	44
+0.003	12	905	44
+0.003	12	906	44
+0.003	12	907	44
+0.003	12	908	44
+0.003	12	909	44
+0.003	12	910	44
+0.003	12	911	44
+0.003	12	912	44
+0.003	12	913	44
+0.003	12	914	44
+0.003	12	915	44
+0.003	12	916	44
+0.003	12	917	44
+0.003	12	918	44
+0.003	12	919	44
+0.003	12	920	44
+0.003	12	921	44
+0.003	12	922	44
+0.003	12	923	44
+0.003	12	924	44
+0.003	12	925	44
+0.003	12	926	44
+0.003	12	927	44
+0.003	12	928	44
+0.003	12	929	44
+0.003	12	930	44
+0.003	12	931	44
+0.003	12	932	44
+0.003	12	933	44
+0.003	12	934	44
+0.003	12	935	44
+0.003	12	936	44
+0.003	12	937	44
+0.003	12	938	44
+0.003	12	939	44
+0.003	12	940	44
+0.003	12	941	44
+0.003	12	942	44
+0.003	12	943	44
+0.003	12	944	44
+0.003	12	945	44
+0.003	12	946	44
+0.003	12	947	44
+0.003	12	948	44
+0.003	12	949	44
+0.003	12	950	44
+0.003	12	951	44
+0.003	12	952	45
+0.003	12	953	45
+0.003	12	954	45
+0.003	12	955	45
+0.003	12	956	45
+0.003	12	957	45
+0.003	12	958	45
+0.003	12	959	45
+0.003	12	960	45
+0.003	12	961	45
+0.003	12	962	45
+0.003	12	963	45
+0.003	12	964	45
+0.003	12	965	45
+0.003	12	966	45
+0.003	12	967	46
+0.003	12	968	46
+0.003	12	969	46
+0.003	12	970	46
+0.003	12	971	46
+0.003	12	972	46
+0.003	12	973	46
+0.003	12	974	46
+0.003	12	975	46
+0.003	12	976	46
+0.003	12	977	46
+0.003	12	978	46
+0.003	12	979	47
+0.003	12	980	47
+0.003	12	981	47
+0.003	12	982	47
+0.003	12	983	47
+0.003	12	984	47
+0.003	12	985	47
+0.003	12	986	47
+0.003	12	987	47
+0.003	12	988	47
+0.003	12	989	47
+0.003	12	990	47
+0.003	12	991	47
+0.003	12	992	47
+0.003	12	993	47
+0.003	12	994	47
+0.003	12	995	47
+0.003	12	996	47
+0.003	12	997	47
+0.003	12	998	47
+0.003	12	999	47
+0.003	12	1000	47
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.004_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.004	12	1	0
+0.004	12	2	0
+0.004	12	3	0
+0.004	12	4	0
+0.004	12	5	1
+0.004	12	6	1
+0.004	12	7	2
+0.004	12	8	3
+0.004	12	9	3
+0.004	12	10	3
+0.004	12	11	3
+0.004	12	12	3
+0.004	12	13	3
+0.004	12	14	3
+0.004	12	15	3
+0.004	12	16	3
+0.004	12	17	3
+0.004	12	18	3
+0.004	12	19	3
+0.004	12	20	3
+0.004	12	21	3
+0.004	12	22	3
+0.004	12	23	3
+0.004	12	24	3
+0.004	12	25	3
+0.004	12	26	3
+0.004	12	27	3
+0.004	12	28	3
+0.004	12	29	4
+0.004	12	30	4
+0.004	12	31	4
+0.004	12	32	4
+0.004	12	33	4
+0.004	12	34	4
+0.004	12	35	4
+0.004	12	36	4
+0.004	12	37	4
+0.004	12	38	5
+0.004	12	39	5
+0.004	12	40	6
+0.004	12	41	7
+0.004	12	42	7
+0.004	12	43	7
+0.004	12	44	7
+0.004	12	45	8
+0.004	12	46	8
+0.004	12	47	8
+0.004	12	48	8
+0.004	12	49	8
+0.004	12	50	8
+0.004	12	51	8
+0.004	12	52	9
+0.004	12	53	9
+0.004	12	54	10
+0.004	12	55	10
+0.004	12	56	10
+0.004	12	57	10
+0.004	12	58	10
+0.004	12	59	10
+0.004	12	60	10
+0.004	12	61	10
+0.004	12	62	10
+0.004	12	63	10
+0.004	12	64	10
+0.004	12	65	10
+0.004	12	66	10
+0.004	12	67	10
+0.004	12	68	11
+0.004	12	69	11
+0.004	12	70	11
+0.004	12	71	11
+0.004	12	72	11
+0.004	12	73	12
+0.004	12	74	12
+0.004	12	75	13
+0.004	12	76	13
+0.004	12	77	14
+0.004	12	78	14
+0.004	12	79	14
+0.004	12	80	14
+0.004	12	81	14
+0.004	12	82	14
+0.004	12	83	14
+0.004	12	84	14
+0.004	12	85	14
+0.004	12	86	14
+0.004	12	87	14
+0.004	12	88	14
+0.004	12	89	14
+0.004	12	90	14
+0.004	12	91	14
+0.004	12	92	14
+0.004	12	93	14
+0.004	12	94	14
+0.004	12	95	15
+0.004	12	96	15
+0.004	12	97	15
+0.004	12	98	15
+0.004	12	99	15
+0.004	12	100	16
+0.004	12	101	16
+0.004	12	102	17
+0.004	12	103	17
+0.004	12	104	18
+0.004	12	105	19
+0.004	12	106	19
+0.004	12	107	20
+0.004	12	108	20
+0.004	12	109	20
+0.004	12	110	20
+0.004	12	111	20
+0.004	12	112	20
+0.004	12	113	20
+0.004	12	114	20
+0.004	12	115	20
+0.004	12	116	20
+0.004	12	117	21
+0.004	12	118	21
+0.004	12	119	22
+0.004	12	120	22
+0.004	12	121	23
+0.004	12	122	23
+0.004	12	123	23
+0.004	12	124	23
+0.004	12	125	23
+0.004	12	126	23
+0.004	12	127	23
+0.004	12	128	23
+0.004	12	129	23
+0.004	12	130	23
+0.004	12	131	24
+0.004	12	132	25
+0.004	12	133	25
+0.004	12	134	25
+0.004	12	135	25
+0.004	12	136	25
+0.004	12	137	25
+0.004	12	138	26
+0.004	12	139	26
+0.004	12	140	26
+0.004	12	141	27
+0.004	12	142	28
+0.004	12	143	28
+0.004	12	144	29
+0.004	12	145	30
+0.004	12	146	31
+0.004	12	147	31
+0.004	12	148	32
+0.004	12	149	32
+0.004	12	150	33
+0.004	12	151	34
+0.004	12	152	34
+0.004	12	153	34
+0.004	12	154	34
+0.004	12	155	34
+0.004	12	156	34
+0.004	12	157	34
+0.004	12	158	35
+0.004	12	159	36
+0.004	12	160	36
+0.004	12	161	36
+0.004	12	162	36
+0.004	12	163	36
+0.004	12	164	36
+0.004	12	165	37
+0.004	12	166	38
+0.004	12	167	38
+0.004	12	168	38
+0.004	12	169	38
+0.004	12	170	38
+0.004	12	171	38
+0.004	12	172	38
+0.004	12	173	38
+0.004	12	174	38
+0.004	12	175	38
+0.004	12	176	39
+0.004	12	177	39
+0.004	12	178	39
+0.004	12	179	39
+0.004	12	180	40
+0.004	12	181	41
+0.004	12	182	41
+0.004	12	183	41
+0.004	12	184	41
+0.004	12	185	41
+0.004	12	186	41
+0.004	12	187	42
+0.004	12	188	42
+0.004	12	189	42
+0.004	12	190	42
+0.004	12	191	42
+0.004	12	192	43
+0.004	12	193	43
+0.004	12	194	43
+0.004	12	195	44
+0.004	12	196	45
+0.004	12	197	46
+0.004	12	198	46
+0.004	12	199	46
+0.004	12	200	47
+0.004	12	201	47
+0.004	12	202	47
+0.004	12	203	47
+0.004	12	204	47
+0.004	12	205	47
+0.004	12	206	47
+0.004	12	207	47
+0.004	12	208	47
+0.004	12	209	47
+0.004	12	210	47
+0.004	12	211	47
+0.004	12	212	47
+0.004	12	213	47
+0.004	12	214	47
+0.004	12	215	47
+0.004	12	216	47
+0.004	12	217	47
+0.004	12	218	47
+0.004	12	219	47
+0.004	12	220	47
+0.004	12	221	47
+0.004	12	222	47
+0.004	12	223	47
+0.004	12	224	48
+0.004	12	225	48
+0.004	12	226	49
+0.004	12	227	50
+0.004	12	228	51
+0.004	12	229	52
+0.004	12	230	52
+0.004	12	231	53
+0.004	12	232	54
+0.004	12	233	54
+0.004	12	234	54
+0.004	12	235	54
+0.004	12	236	54
+0.004	12	237	54
+0.004	12	238	54
+0.004	12	239	54
+0.004	12	240	54
+0.004	12	241	54
+0.004	12	242	54
+0.004	12	243	54
+0.004	12	244	54
+0.004	12	245	54
+0.004	12	246	55
+0.004	12	247	55
+0.004	12	248	55
+0.004	12	249	56
+0.004	12	250	57
+0.004	12	251	58
+0.004	12	252	59
+0.004	12	253	59
+0.004	12	254	59
+0.004	12	255	59
+0.004	12	256	59
+0.004	12	257	59
+0.004	12	258	59
+0.004	12	259	59
+0.004	12	260	59
+0.004	12	261	59
+0.004	12	262	59
+0.004	12	263	60
+0.004	12	264	60
+0.004	12	265	60
+0.004	12	266	60
+0.004	12	267	60
+0.004	12	268	60
+0.004	12	269	60
+0.004	12	270	60
+0.004	12	271	60
+0.004	12	272	60
+0.004	12	273	60
+0.004	12	274	60
+0.004	12	275	60
+0.004	12	276	60
+0.004	12	277	60
+0.004	12	278	60
+0.004	12	279	60
+0.004	12	280	60
+0.004	12	281	60
+0.004	12	282	60
+0.004	12	283	60
+0.004	12	284	60
+0.004	12	285	60
+0.004	12	286	60
+0.004	12	287	60
+0.004	12	288	60
+0.004	12	289	60
+0.004	12	290	61
+0.004	12	291	61
+0.004	12	292	62
+0.004	12	293	62
+0.004	12	294	62
+0.004	12	295	62
+0.004	12	296	62
+0.004	12	297	62
+0.004	12	298	62
+0.004	12	299	62
+0.004	12	300	63
+0.004	12	301	63
+0.004	12	302	63
+0.004	12	303	63
+0.004	12	304	64
+0.004	12	305	65
+0.004	12	306	66
+0.004	12	307	66
+0.004	12	308	67
+0.004	12	309	67
+0.004	12	310	68
+0.004	12	311	68
+0.004	12	312	68
+0.004	12	313	69
+0.004	12	314	69
+0.004	12	315	69
+0.004	12	316	69
+0.004	12	317	69
+0.004	12	318	69
+0.004	12	319	69
+0.004	12	320	69
+0.004	12	321	69
+0.004	12	322	69
+0.004	12	323	70
+0.004	12	324	70
+0.004	12	325	70
+0.004	12	326	70
+0.004	12	327	70
+0.004	12	328	71
+0.004	12	329	71
+0.004	12	330	72
+0.004	12	331	72
+0.004	12	332	72
+0.004	12	333	72
+0.004	12	334	72
+0.004	12	335	72
+0.004	12	336	72
+0.004	12	337	72
+0.004	12	338	72
+0.004	12	339	73
+0.004	12	340	73
+0.004	12	341	74
+0.004	12	342	74
+0.004	12	343	75
+0.004	12	344	75
+0.004	12	345	75
+0.004	12	346	75
+0.004	12	347	75
+0.004	12	348	75
+0.004	12	349	75
+0.004	12	350	75
+0.004	12	351	75
+0.004	12	352	75
+0.004	12	353	75
+0.004	12	354	75
+0.004	12	355	76
+0.004	12	356	76
+0.004	12	357	77
+0.004	12	358	77
+0.004	12	359	77
+0.004	12	360	77
+0.004	12	361	77
+0.004	12	362	77
+0.004	12	363	77
+0.004	12	364	77
+0.004	12	365	77
+0.004	12	366	77
+0.004	12	367	77
+0.004	12	368	77
+0.004	12	369	77
+0.004	12	370	77
+0.004	12	371	77
+0.004	12	372	77
+0.004	12	373	78
+0.004	12	374	78
+0.004	12	375	78
+0.004	12	376	78
+0.004	12	377	78
+0.004	12	378	78
+0.004	12	379	78
+0.004	12	380	78
+0.004	12	381	78
+0.004	12	382	78
+0.004	12	383	78
+0.004	12	384	78
+0.004	12	385	78
+0.004	12	386	78
+0.004	12	387	78
+0.004	12	388	78
+0.004	12	389	78
+0.004	12	390	78
+0.004	12	391	79
+0.004	12	392	79
+0.004	12	393	79
+0.004	12	394	79
+0.004	12	395	79
+0.004	12	396	79
+0.004	12	397	79
+0.004	12	398	80
+0.004	12	399	80
+0.004	12	400	80
+0.004	12	401	80
+0.004	12	402	80
+0.004	12	403	80
+0.004	12	404	80
+0.004	12	405	80
+0.004	12	406	80
+0.004	12	407	80
+0.004	12	408	81
+0.004	12	409	81
+0.004	12	410	82
+0.004	12	411	82
+0.004	12	412	82
+0.004	12	413	83
+0.004	12	414	84
+0.004	12	415	84
+0.004	12	416	84
+0.004	12	417	84
+0.004	12	418	84
+0.004	12	419	84
+0.004	12	420	84
+0.004	12	421	84
+0.004	12	422	84
+0.004	12	423	84
+0.004	12	424	84
+0.004	12	425	84
+0.004	12	426	85
+0.004	12	427	85
+0.004	12	428	85
+0.004	12	429	86
+0.004	12	430	87
+0.004	12	431	88
+0.004	12	432	88
+0.004	12	433	88
+0.004	12	434	89
+0.004	12	435	89
+0.004	12	436	89
+0.004	12	437	90
+0.004	12	438	91
+0.004	12	439	91
+0.004	12	440	91
+0.004	12	441	91
+0.004	12	442	91
+0.004	12	443	91
+0.004	12	444	92
+0.004	12	445	93
+0.004	12	446	93
+0.004	12	447	93
+0.004	12	448	94
+0.004	12	449	94
+0.004	12	450	95
+0.004	12	451	95
+0.004	12	452	95
+0.004	12	453	95
+0.004	12	454	95
+0.004	12	455	95
+0.004	12	456	95
+0.004	12	457	95
+0.004	12	458	95
+0.004	12	459	95
+0.004	12	460	95
+0.004	12	461	95
+0.004	12	462	95
+0.004	12	463	95
+0.004	12	464	95
+0.004	12	465	96
+0.004	12	466	96
+0.004	12	467	96
+0.004	12	468	96
+0.004	12	469	96
+0.004	12	470	97
+0.004	12	471	98
+0.004	12	472	98
+0.004	12	473	98
+0.004	12	474	98
+0.004	12	475	98
+0.004	12	476	98
+0.004	12	477	98
+0.004	12	478	99
+0.004	12	479	99
+0.004	12	480	99
+0.004	12	481	99
+0.004	12	482	99
+0.004	12	483	99
+0.004	12	484	100
+0.004	12	485	100
+0.004	12	486	100
+0.004	12	487	100
+0.004	12	488	100
+0.004	12	489	100
+0.004	12	490	100
+0.004	12	491	100
+0.004	12	492	101
+0.004	12	493	101
+0.004	12	494	101
+0.004	12	495	102
+0.004	12	496	102
+0.004	12	497	102
+0.004	12	498	102
+0.004	12	499	102
+0.004	12	500	103
+0.004	12	501	103
+0.004	12	502	103
+0.004	12	503	103
+0.004	12	504	103
+0.004	12	505	103
+0.004	12	506	103
+0.004	12	507	103
+0.004	12	508	103
+0.004	12	509	103
+0.004	12	510	103
+0.004	12	511	103
+0.004	12	512	103
+0.004	12	513	103
+0.004	12	514	103
+0.004	12	515	104
+0.004	12	516	104
+0.004	12	517	104
+0.004	12	518	104
+0.004	12	519	104
+0.004	12	520	104
+0.004	12	521	104
+0.004	12	522	104
+0.004	12	523	104
+0.004	12	524	104
+0.004	12	525	104
+0.004	12	526	105
+0.004	12	527	106
+0.004	12	528	106
+0.004	12	529	106
+0.004	12	530	106
+0.004	12	531	106
+0.004	12	532	106
+0.004	12	533	106
+0.004	12	534	106
+0.004	12	535	107
+0.004	12	536	107
+0.004	12	537	107
+0.004	12	538	107
+0.004	12	539	107
+0.004	12	540	107
+0.004	12	541	107
+0.004	12	542	107
+0.004	12	543	107
+0.004	12	544	107
+0.004	12	545	108
+0.004	12	546	109
+0.004	12	547	110
+0.004	12	548	110
+0.004	12	549	111
+0.004	12	550	112
+0.004	12	551	112
+0.004	12	552	112
+0.004	12	553	112
+0.004	12	554	112
+0.004	12	555	112
+0.004	12	556	112
+0.004	12	557	112
+0.004	12	558	112
+0.004	12	559	112
+0.004	12	560	112
+0.004	12	561	112
+0.004	12	562	112
+0.004	12	563	112
+0.004	12	564	113
+0.004	12	565	113
+0.004	12	566	113
+0.004	12	567	113
+0.004	12	568	113
+0.004	12	569	114
+0.004	12	570	114
+0.004	12	571	114
+0.004	12	572	114
+0.004	12	573	114
+0.004	12	574	114
+0.004	12	575	114
+0.004	12	576	115
+0.004	12	577	115
+0.004	12	578	116
+0.004	12	579	116
+0.004	12	580	117
+0.004	12	581	117
+0.004	12	582	117
+0.004	12	583	117
+0.004	12	584	117
+0.004	12	585	117
+0.004	12	586	117
+0.004	12	587	117
+0.004	12	588	118
+0.004	12	589	118
+0.004	12	590	118
+0.004	12	591	118
+0.004	12	592	118
+0.004	12	593	118
+0.004	12	594	118
+0.004	12	595	118
+0.004	12	596	118
+0.004	12	597	118
+0.004	12	598	118
+0.004	12	599	118
+0.004	12	600	118
+0.004	12	601	119
+0.004	12	602	119
+0.004	12	603	119
+0.004	12	604	120
+0.004	12	605	120
+0.004	12	606	121
+0.004	12	607	121
+0.004	12	608	121
+0.004	12	609	121
+0.004	12	610	121
+0.004	12	611	121
+0.004	12	612	122
+0.004	12	613	122
+0.004	12	614	122
+0.004	12	615	122
+0.004	12	616	122
+0.004	12	617	122
+0.004	12	618	122
+0.004	12	619	122
+0.004	12	620	122
+0.004	12	621	122
+0.004	12	622	122
+0.004	12	623	123
+0.004	12	624	123
+0.004	12	625	123
+0.004	12	626	124
+0.004	12	627	124
+0.004	12	628	125
+0.004	12	629	125
+0.004	12	630	125
+0.004	12	631	125
+0.004	12	632	125
+0.004	12	633	125
+0.004	12	634	125
+0.004	12	635	126
+0.004	12	636	126
+0.004	12	637	126
+0.004	12	638	126
+0.004	12	639	127
+0.004	12	640	127
+0.004	12	641	128
+0.004	12	642	129
+0.004	12	643	129
+0.004	12	644	129
+0.004	12	645	129
+0.004	12	646	129
+0.004	12	647	129
+0.004	12	648	129
+0.004	12	649	130
+0.004	12	650	130
+0.004	12	651	131
+0.004	12	652	131
+0.004	12	653	131
+0.004	12	654	131
+0.004	12	655	131
+0.004	12	656	131
+0.004	12	657	131
+0.004	12	658	131
+0.004	12	659	131
+0.004	12	660	132
+0.004	12	661	132
+0.004	12	662	132
+0.004	12	663	132
+0.004	12	664	132
+0.004	12	665	132
+0.004	12	666	132
+0.004	12	667	132
+0.004	12	668	132
+0.004	12	669	132
+0.004	12	670	132
+0.004	12	671	132
+0.004	12	672	132
+0.004	12	673	132
+0.004	12	674	132
+0.004	12	675	133
+0.004	12	676	133
+0.004	12	677	133
+0.004	12	678	133
+0.004	12	679	133
+0.004	12	680	133
+0.004	12	681	133
+0.004	12	682	133
+0.004	12	683	133
+0.004	12	684	133
+0.004	12	685	133
+0.004	12	686	133
+0.004	12	687	133
+0.004	12	688	133
+0.004	12	689	133
+0.004	12	690	133
+0.004	12	691	133
+0.004	12	692	133
+0.004	12	693	133
+0.004	12	694	133
+0.004	12	695	133
+0.004	12	696	133
+0.004	12	697	133
+0.004	12	698	133
+0.004	12	699	133
+0.004	12	700	133
+0.004	12	701	133
+0.004	12	702	134
+0.004	12	703	134
+0.004	12	704	134
+0.004	12	705	134
+0.004	12	706	134
+0.004	12	707	135
+0.004	12	708	136
+0.004	12	709	136
+0.004	12	710	136
+0.004	12	711	137
+0.004	12	712	137
+0.004	12	713	137
+0.004	12	714	137
+0.004	12	715	137
+0.004	12	716	137
+0.004	12	717	137
+0.004	12	718	138
+0.004	12	719	138
+0.004	12	720	139
+0.004	12	721	139
+0.004	12	722	139
+0.004	12	723	139
+0.004	12	724	139
+0.004	12	725	139
+0.004	12	726	139
+0.004	12	727	139
+0.004	12	728	139
+0.004	12	729	139
+0.004	12	730	140
+0.004	12	731	140
+0.004	12	732	140
+0.004	12	733	140
+0.004	12	734	140
+0.004	12	735	140
+0.004	12	736	141
+0.004	12	737	141
+0.004	12	738	141
+0.004	12	739	142
+0.004	12	740	142
+0.004	12	741	142
+0.004	12	742	142
+0.004	12	743	142
+0.004	12	744	142
+0.004	12	745	142
+0.004	12	746	142
+0.004	12	747	142
+0.004	12	748	142
+0.004	12	749	142
+0.004	12	750	142
+0.004	12	751	142
+0.004	12	752	142
+0.004	12	753	142
+0.004	12	754	142
+0.004	12	755	142
+0.004	12	756	142
+0.004	12	757	142
+0.004	12	758	142
+0.004	12	759	142
+0.004	12	760	142
+0.004	12	761	142
+0.004	12	762	142
+0.004	12	763	142
+0.004	12	764	142
+0.004	12	765	143
+0.004	12	766	143
+0.004	12	767	143
+0.004	12	768	143
+0.004	12	769	143
+0.004	12	770	143
+0.004	12	771	143
+0.004	12	772	143
+0.004	12	773	143
+0.004	12	774	144
+0.004	12	775	144
+0.004	12	776	144
+0.004	12	777	145
+0.004	12	778	145
+0.004	12	779	145
+0.004	12	780	145
+0.004	12	781	145
+0.004	12	782	145
+0.004	12	783	145
+0.004	12	784	145
+0.004	12	785	146
+0.004	12	786	147
+0.004	12	787	147
+0.004	12	788	147
+0.004	12	789	147
+0.004	12	790	147
+0.004	12	791	147
+0.004	12	792	147
+0.004	12	793	147
+0.004	12	794	148
+0.004	12	795	148
+0.004	12	796	148
+0.004	12	797	148
+0.004	12	798	148
+0.004	12	799	148
+0.004	12	800	148
+0.004	12	801	148
+0.004	12	802	148
+0.004	12	803	148
+0.004	12	804	148
+0.004	12	805	148
+0.004	12	806	148
+0.004	12	807	149
+0.004	12	808	150
+0.004	12	809	150
+0.004	12	810	150
+0.004	12	811	151
+0.004	12	812	151
+0.004	12	813	151
+0.004	12	814	152
+0.004	12	815	152
+0.004	12	816	152
+0.004	12	817	152
+0.004	12	818	152
+0.004	12	819	153
+0.004	12	820	153
+0.004	12	821	154
+0.004	12	822	154
+0.004	12	823	154
+0.004	12	824	154
+0.004	12	825	154
+0.004	12	826	154
+0.004	12	827	154
+0.004	12	828	154
+0.004	12	829	154
+0.004	12	830	154
+0.004	12	831	154
+0.004	12	832	154
+0.004	12	833	154
+0.004	12	834	154
+0.004	12	835	154
+0.004	12	836	154
+0.004	12	837	154
+0.004	12	838	154
+0.004	12	839	154
+0.004	12	840	155
+0.004	12	841	155
+0.004	12	842	155
+0.004	12	843	155
+0.004	12	844	155
+0.004	12	845	155
+0.004	12	846	155
+0.004	12	847	155
+0.004	12	848	155
+0.004	12	849	155
+0.004	12	850	155
+0.004	12	851	155
+0.004	12	852	156
+0.004	12	853	156
+0.004	12	854	156
+0.004	12	855	156
+0.004	12	856	157
+0.004	12	857	157
+0.004	12	858	157
+0.004	12	859	157
+0.004	12	860	158
+0.004	12	861	158
+0.004	12	862	159
+0.004	12	863	159
+0.004	12	864	159
+0.004	12	865	159
+0.004	12	866	159
+0.004	12	867	159
+0.004	12	868	159
+0.004	12	869	160
+0.004	12	870	161
+0.004	12	871	161
+0.004	12	872	161
+0.004	12	873	161
+0.004	12	874	161
+0.004	12	875	162
+0.004	12	876	162
+0.004	12	877	163
+0.004	12	878	163
+0.004	12	879	163
+0.004	12	880	163
+0.004	12	881	163
+0.004	12	882	164
+0.004	12	883	164
+0.004	12	884	165
+0.004	12	885	165
+0.004	12	886	165
+0.004	12	887	165
+0.004	12	888	166
+0.004	12	889	167
+0.004	12	890	167
+0.004	12	891	167
+0.004	12	892	167
+0.004	12	893	167
+0.004	12	894	167
+0.004	12	895	167
+0.004	12	896	167
+0.004	12	897	167
+0.004	12	898	167
+0.004	12	899	167
+0.004	12	900	167
+0.004	12	901	167
+0.004	12	902	167
+0.004	12	903	167
+0.004	12	904	167
+0.004	12	905	168
+0.004	12	906	168
+0.004	12	907	168
+0.004	12	908	168
+0.004	12	909	169
+0.004	12	910	169
+0.004	12	911	169
+0.004	12	912	169
+0.004	12	913	170
+0.004	12	914	170
+0.004	12	915	171
+0.004	12	916	172
+0.004	12	917	172
+0.004	12	918	172
+0.004	12	919	172
+0.004	12	920	172
+0.004	12	921	172
+0.004	12	922	172
+0.004	12	923	172
+0.004	12	924	173
+0.004	12	925	174
+0.004	12	926	174
+0.004	12	927	175
+0.004	12	928	175
+0.004	12	929	175
+0.004	12	930	176
+0.004	12	931	176
+0.004	12	932	177
+0.004	12	933	177
+0.004	12	934	177
+0.004	12	935	177
+0.004	12	936	177
+0.004	12	937	177
+0.004	12	938	177
+0.004	12	939	177
+0.004	12	940	178
+0.004	12	941	178
+0.004	12	942	179
+0.004	12	943	179
+0.004	12	944	179
+0.004	12	945	179
+0.004	12	946	179
+0.004	12	947	179
+0.004	12	948	179
+0.004	12	949	179
+0.004	12	950	179
+0.004	12	951	180
+0.004	12	952	180
+0.004	12	953	180
+0.004	12	954	180
+0.004	12	955	181
+0.004	12	956	181
+0.004	12	957	181
+0.004	12	958	181
+0.004	12	959	181
+0.004	12	960	181
+0.004	12	961	182
+0.004	12	962	182
+0.004	12	963	182
+0.004	12	964	183
+0.004	12	965	183
+0.004	12	966	183
+0.004	12	967	183
+0.004	12	968	183
+0.004	12	969	183
+0.004	12	970	183
+0.004	12	971	184
+0.004	12	972	185
+0.004	12	973	185
+0.004	12	974	185
+0.004	12	975	185
+0.004	12	976	186
+0.004	12	977	186
+0.004	12	978	186
+0.004	12	979	186
+0.004	12	980	186
+0.004	12	981	186
+0.004	12	982	186
+0.004	12	983	186
+0.004	12	984	186
+0.004	12	985	186
+0.004	12	986	186
+0.004	12	987	186
+0.004	12	988	187
+0.004	12	989	187
+0.004	12	990	187
+0.004	12	991	187
+0.004	12	992	187
+0.004	12	993	187
+0.004	12	994	187
+0.004	12	995	188
+0.004	12	996	188
+0.004	12	997	189
+0.004	12	998	189
+0.004	12	999	189
+0.004	12	1000	189
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.005_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.005	12	1	1
+0.005	12	2	1
+0.005	12	3	2
+0.005	12	4	3
+0.005	12	5	4
+0.005	12	6	5
+0.005	12	7	5
+0.005	12	8	5
+0.005	12	9	5
+0.005	12	10	5
+0.005	12	11	5
+0.005	12	12	6
+0.005	12	13	7
+0.005	12	14	8
+0.005	12	15	8
+0.005	12	16	9
+0.005	12	17	9
+0.005	12	18	10
+0.005	12	19	11
+0.005	12	20	11
+0.005	12	21	11
+0.005	12	22	12
+0.005	12	23	13
+0.005	12	24	14
+0.005	12	25	15
+0.005	12	26	15
+0.005	12	27	15
+0.005	12	28	16
+0.005	12	29	17
+0.005	12	30	18
+0.005	12	31	18
+0.005	12	32	19
+0.005	12	33	20
+0.005	12	34	20
+0.005	12	35	21
+0.005	12	36	22
+0.005	12	37	23
+0.005	12	38	24
+0.005	12	39	24
+0.005	12	40	24
+0.005	12	41	24
+0.005	12	42	24
+0.005	12	43	25
+0.005	12	44	25
+0.005	12	45	26
+0.005	12	46	26
+0.005	12	47	27
+0.005	12	48	27
+0.005	12	49	28
+0.005	12	50	28
+0.005	12	51	28
+0.005	12	52	29
+0.005	12	53	30
+0.005	12	54	31
+0.005	12	55	32
+0.005	12	56	32
+0.005	12	57	32
+0.005	12	58	32
+0.005	12	59	32
+0.005	12	60	33
+0.005	12	61	34
+0.005	12	62	34
+0.005	12	63	35
+0.005	12	64	35
+0.005	12	65	35
+0.005	12	66	35
+0.005	12	67	35
+0.005	12	68	35
+0.005	12	69	35
+0.005	12	70	36
+0.005	12	71	37
+0.005	12	72	37
+0.005	12	73	38
+0.005	12	74	39
+0.005	12	75	40
+0.005	12	76	41
+0.005	12	77	42
+0.005	12	78	43
+0.005	12	79	44
+0.005	12	80	45
+0.005	12	81	46
+0.005	12	82	46
+0.005	12	83	47
+0.005	12	84	48
+0.005	12	85	49
+0.005	12	86	49
+0.005	12	87	49
+0.005	12	88	49
+0.005	12	89	50
+0.005	12	90	50
+0.005	12	91	50
+0.005	12	92	50
+0.005	12	93	51
+0.005	12	94	52
+0.005	12	95	53
+0.005	12	96	53
+0.005	12	97	53
+0.005	12	98	54
+0.005	12	99	55
+0.005	12	100	56
+0.005	12	101	56
+0.005	12	102	57
+0.005	12	103	57
+0.005	12	104	57
+0.005	12	105	57
+0.005	12	106	58
+0.005	12	107	58
+0.005	12	108	58
+0.005	12	109	58
+0.005	12	110	59
+0.005	12	111	60
+0.005	12	112	61
+0.005	12	113	62
+0.005	12	114	62
+0.005	12	115	62
+0.005	12	116	63
+0.005	12	117	63
+0.005	12	118	64
+0.005	12	119	64
+0.005	12	120	64
+0.005	12	121	64
+0.005	12	122	64
+0.005	12	123	65
+0.005	12	124	66
+0.005	12	125	67
+0.005	12	126	68
+0.005	12	127	69
+0.005	12	128	69
+0.005	12	129	70
+0.005	12	130	71
+0.005	12	131	71
+0.005	12	132	72
+0.005	12	133	73
+0.005	12	134	74
+0.005	12	135	74
+0.005	12	136	75
+0.005	12	137	75
+0.005	12	138	76
+0.005	12	139	76
+0.005	12	140	77
+0.005	12	141	77
+0.005	12	142	78
+0.005	12	143	78
+0.005	12	144	79
+0.005	12	145	80
+0.005	12	146	81
+0.005	12	147	82
+0.005	12	148	83
+0.005	12	149	83
+0.005	12	150	83
+0.005	12	151	83
+0.005	12	152	84
+0.005	12	153	85
+0.005	12	154	85
+0.005	12	155	85
+0.005	12	156	86
+0.005	12	157	86
+0.005	12	158	87
+0.005	12	159	87
+0.005	12	160	87
+0.005	12	161	88
+0.005	12	162	89
+0.005	12	163	90
+0.005	12	164	91
+0.005	12	165	92
+0.005	12	166	93
+0.005	12	167	93
+0.005	12	168	93
+0.005	12	169	94
+0.005	12	170	95
+0.005	12	171	96
+0.005	12	172	96
+0.005	12	173	96
+0.005	12	174	97
+0.005	12	175	97
+0.005	12	176	98
+0.005	12	177	99
+0.005	12	178	100
+0.005	12	179	101
+0.005	12	180	102
+0.005	12	181	102
+0.005	12	182	102
+0.005	12	183	102
+0.005	12	184	103
+0.005	12	185	103
+0.005	12	186	104
+0.005	12	187	105
+0.005	12	188	106
+0.005	12	189	107
+0.005	12	190	107
+0.005	12	191	108
+0.005	12	192	108
+0.005	12	193	108
+0.005	12	194	108
+0.005	12	195	108
+0.005	12	196	109
+0.005	12	197	110
+0.005	12	198	110
+0.005	12	199	111
+0.005	12	200	111
+0.005	12	201	112
+0.005	12	202	113
+0.005	12	203	113
+0.005	12	204	113
+0.005	12	205	114
+0.005	12	206	114
+0.005	12	207	114
+0.005	12	208	114
+0.005	12	209	115
+0.005	12	210	115
+0.005	12	211	115
+0.005	12	212	116
+0.005	12	213	117
+0.005	12	214	117
+0.005	12	215	118
+0.005	12	216	118
+0.005	12	217	119
+0.005	12	218	120
+0.005	12	219	120
+0.005	12	220	120
+0.005	12	221	121
+0.005	12	222	121
+0.005	12	223	122
+0.005	12	224	122
+0.005	12	225	123
+0.005	12	226	123
+0.005	12	227	123
+0.005	12	228	124
+0.005	12	229	124
+0.005	12	230	124
+0.005	12	231	125
+0.005	12	232	125
+0.005	12	233	126
+0.005	12	234	127
+0.005	12	235	127
+0.005	12	236	128
+0.005	12	237	128
+0.005	12	238	129
+0.005	12	239	129
+0.005	12	240	129
+0.005	12	241	130
+0.005	12	242	131
+0.005	12	243	131
+0.005	12	244	131
+0.005	12	245	132
+0.005	12	246	133
+0.005	12	247	134
+0.005	12	248	134
+0.005	12	249	135
+0.005	12	250	135
+0.005	12	251	135
+0.005	12	252	136
+0.005	12	253	137
+0.005	12	254	137
+0.005	12	255	137
+0.005	12	256	137
+0.005	12	257	137
+0.005	12	258	137
+0.005	12	259	138
+0.005	12	260	139
+0.005	12	261	140
+0.005	12	262	141
+0.005	12	263	141
+0.005	12	264	142
+0.005	12	265	143
+0.005	12	266	143
+0.005	12	267	144
+0.005	12	268	144
+0.005	12	269	144
+0.005	12	270	144
+0.005	12	271	145
+0.005	12	272	145
+0.005	12	273	146
+0.005	12	274	147
+0.005	12	275	148
+0.005	12	276	149
+0.005	12	277	149
+0.005	12	278	150
+0.005	12	279	150
+0.005	12	280	151
+0.005	12	281	152
+0.005	12	282	153
+0.005	12	283	153
+0.005	12	284	153
+0.005	12	285	154
+0.005	12	286	155
+0.005	12	287	156
+0.005	12	288	156
+0.005	12	289	157
+0.005	12	290	157
+0.005	12	291	157
+0.005	12	292	158
+0.005	12	293	159
+0.005	12	294	159
+0.005	12	295	159
+0.005	12	296	159
+0.005	12	297	160
+0.005	12	298	161
+0.005	12	299	162
+0.005	12	300	162
+0.005	12	301	163
+0.005	12	302	164
+0.005	12	303	165
+0.005	12	304	165
+0.005	12	305	166
+0.005	12	306	167
+0.005	12	307	168
+0.005	12	308	168
+0.005	12	309	168
+0.005	12	310	168
+0.005	12	311	168
+0.005	12	312	168
+0.005	12	313	168
+0.005	12	314	168
+0.005	12	315	169
+0.005	12	316	169
+0.005	12	317	170
+0.005	12	318	170
+0.005	12	319	170
+0.005	12	320	171
+0.005	12	321	172
+0.005	12	322	172
+0.005	12	323	173
+0.005	12	324	174
+0.005	12	325	174
+0.005	12	326	174
+0.005	12	327	174
+0.005	12	328	175
+0.005	12	329	176
+0.005	12	330	176
+0.005	12	331	177
+0.005	12	332	178
+0.005	12	333	179
+0.005	12	334	179
+0.005	12	335	179
+0.005	12	336	179
+0.005	12	337	179
+0.005	12	338	180
+0.005	12	339	181
+0.005	12	340	181
+0.005	12	341	181
+0.005	12	342	182
+0.005	12	343	183
+0.005	12	344	184
+0.005	12	345	184
+0.005	12	346	184
+0.005	12	347	184
+0.005	12	348	185
+0.005	12	349	186
+0.005	12	350	186
+0.005	12	351	186
+0.005	12	352	186
+0.005	12	353	187
+0.005	12	354	187
+0.005	12	355	188
+0.005	12	356	188
+0.005	12	357	188
+0.005	12	358	189
+0.005	12	359	189
+0.005	12	360	190
+0.005	12	361	190
+0.005	12	362	191
+0.005	12	363	192
+0.005	12	364	193
+0.005	12	365	194
+0.005	12	366	195
+0.005	12	367	196
+0.005	12	368	196
+0.005	12	369	197
+0.005	12	370	198
+0.005	12	371	198
+0.005	12	372	199
+0.005	12	373	199
+0.005	12	374	199
+0.005	12	375	200
+0.005	12	376	200
+0.005	12	377	200
+0.005	12	378	200
+0.005	12	379	200
+0.005	12	380	201
+0.005	12	381	201
+0.005	12	382	201
+0.005	12	383	201
+0.005	12	384	202
+0.005	12	385	203
+0.005	12	386	204
+0.005	12	387	205
+0.005	12	388	205
+0.005	12	389	206
+0.005	12	390	206
+0.005	12	391	206
+0.005	12	392	206
+0.005	12	393	206
+0.005	12	394	207
+0.005	12	395	208
+0.005	12	396	208
+0.005	12	397	208
+0.005	12	398	209
+0.005	12	399	210
+0.005	12	400	211
+0.005	12	401	211
+0.005	12	402	211
+0.005	12	403	212
+0.005	12	404	213
+0.005	12	405	214
+0.005	12	406	214
+0.005	12	407	214
+0.005	12	408	214
+0.005	12	409	215
+0.005	12	410	216
+0.005	12	411	216
+0.005	12	412	216
+0.005	12	413	217
+0.005	12	414	218
+0.005	12	415	218
+0.005	12	416	219
+0.005	12	417	219
+0.005	12	418	219
+0.005	12	419	220
+0.005	12	420	221
+0.005	12	421	222
+0.005	12	422	222
+0.005	12	423	223
+0.005	12	424	224
+0.005	12	425	224
+0.005	12	426	225
+0.005	12	427	225
+0.005	12	428	226
+0.005	12	429	226
+0.005	12	430	226
+0.005	12	431	226
+0.005	12	432	226
+0.005	12	433	227
+0.005	12	434	228
+0.005	12	435	229
+0.005	12	436	229
+0.005	12	437	230
+0.005	12	438	231
+0.005	12	439	232
+0.005	12	440	232
+0.005	12	441	233
+0.005	12	442	234
+0.005	12	443	235
+0.005	12	444	235
+0.005	12	445	236
+0.005	12	446	236
+0.005	12	447	237
+0.005	12	448	238
+0.005	12	449	238
+0.005	12	450	238
+0.005	12	451	239
+0.005	12	452	239
+0.005	12	453	240
+0.005	12	454	241
+0.005	12	455	242
+0.005	12	456	242
+0.005	12	457	243
+0.005	12	458	244
+0.005	12	459	244
+0.005	12	460	244
+0.005	12	461	244
+0.005	12	462	244
+0.005	12	463	244
+0.005	12	464	244
+0.005	12	465	244
+0.005	12	466	244
+0.005	12	467	244
+0.005	12	468	244
+0.005	12	469	245
+0.005	12	470	246
+0.005	12	471	246
+0.005	12	472	247
+0.005	12	473	248
+0.005	12	474	248
+0.005	12	475	249
+0.005	12	476	250
+0.005	12	477	250
+0.005	12	478	250
+0.005	12	479	251
+0.005	12	480	251
+0.005	12	481	252
+0.005	12	482	252
+0.005	12	483	252
+0.005	12	484	252
+0.005	12	485	252
+0.005	12	486	252
+0.005	12	487	252
+0.005	12	488	252
+0.005	12	489	252
+0.005	12	490	253
+0.005	12	491	254
+0.005	12	492	254
+0.005	12	493	255
+0.005	12	494	255
+0.005	12	495	256
+0.005	12	496	256
+0.005	12	497	256
+0.005	12	498	257
+0.005	12	499	257
+0.005	12	500	258
+0.005	12	501	258
+0.005	12	502	259
+0.005	12	503	260
+0.005	12	504	260
+0.005	12	505	261
+0.005	12	506	261
+0.005	12	507	261
+0.005	12	508	261
+0.005	12	509	261
+0.005	12	510	262
+0.005	12	511	263
+0.005	12	512	263
+0.005	12	513	263
+0.005	12	514	264
+0.005	12	515	265
+0.005	12	516	265
+0.005	12	517	265
+0.005	12	518	266
+0.005	12	519	266
+0.005	12	520	266
+0.005	12	521	267
+0.005	12	522	268
+0.005	12	523	269
+0.005	12	524	270
+0.005	12	525	270
+0.005	12	526	270
+0.005	12	527	270
+0.005	12	528	270
+0.005	12	529	271
+0.005	12	530	271
+0.005	12	531	271
+0.005	12	532	271
+0.005	12	533	271
+0.005	12	534	272
+0.005	12	535	272
+0.005	12	536	273
+0.005	12	537	273
+0.005	12	538	273
+0.005	12	539	274
+0.005	12	540	274
+0.005	12	541	275
+0.005	12	542	275
+0.005	12	543	276
+0.005	12	544	277
+0.005	12	545	277
+0.005	12	546	278
+0.005	12	547	279
+0.005	12	548	279
+0.005	12	549	280
+0.005	12	550	281
+0.005	12	551	281
+0.005	12	552	281
+0.005	12	553	282
+0.005	12	554	283
+0.005	12	555	284
+0.005	12	556	284
+0.005	12	557	285
+0.005	12	558	285
+0.005	12	559	286
+0.005	12	560	286
+0.005	12	561	287
+0.005	12	562	288
+0.005	12	563	288
+0.005	12	564	288
+0.005	12	565	288
+0.005	12	566	289
+0.005	12	567	289
+0.005	12	568	289
+0.005	12	569	289
+0.005	12	570	290
+0.005	12	571	291
+0.005	12	572	292
+0.005	12	573	292
+0.005	12	574	292
+0.005	12	575	292
+0.005	12	576	293
+0.005	12	577	294
+0.005	12	578	294
+0.005	12	579	294
+0.005	12	580	294
+0.005	12	581	295
+0.005	12	582	296
+0.005	12	583	296
+0.005	12	584	297
+0.005	12	585	298
+0.005	12	586	299
+0.005	12	587	300
+0.005	12	588	300
+0.005	12	589	301
+0.005	12	590	302
+0.005	12	591	303
+0.005	12	592	304
+0.005	12	593	305
+0.005	12	594	306
+0.005	12	595	307
+0.005	12	596	307
+0.005	12	597	307
+0.005	12	598	308
+0.005	12	599	308
+0.005	12	600	309
+0.005	12	601	310
+0.005	12	602	310
+0.005	12	603	310
+0.005	12	604	311
+0.005	12	605	312
+0.005	12	606	312
+0.005	12	607	313
+0.005	12	608	314
+0.005	12	609	314
+0.005	12	610	315
+0.005	12	611	315
+0.005	12	612	316
+0.005	12	613	316
+0.005	12	614	317
+0.005	12	615	318
+0.005	12	616	319
+0.005	12	617	320
+0.005	12	618	321
+0.005	12	619	321
+0.005	12	620	322
+0.005	12	621	323
+0.005	12	622	324
+0.005	12	623	325
+0.005	12	624	326
+0.005	12	625	327
+0.005	12	626	327
+0.005	12	627	327
+0.005	12	628	328
+0.005	12	629	328
+0.005	12	630	329
+0.005	12	631	330
+0.005	12	632	331
+0.005	12	633	332
+0.005	12	634	333
+0.005	12	635	334
+0.005	12	636	334
+0.005	12	637	335
+0.005	12	638	336
+0.005	12	639	337
+0.005	12	640	338
+0.005	12	641	339
+0.005	12	642	340
+0.005	12	643	341
+0.005	12	644	342
+0.005	12	645	342
+0.005	12	646	343
+0.005	12	647	344
+0.005	12	648	345
+0.005	12	649	346
+0.005	12	650	347
+0.005	12	651	347
+0.005	12	652	347
+0.005	12	653	348
+0.005	12	654	349
+0.005	12	655	350
+0.005	12	656	351
+0.005	12	657	352
+0.005	12	658	352
+0.005	12	659	353
+0.005	12	660	354
+0.005	12	661	355
+0.005	12	662	356
+0.005	12	663	357
+0.005	12	664	357
+0.005	12	665	358
+0.005	12	666	359
+0.005	12	667	359
+0.005	12	668	360
+0.005	12	669	360
+0.005	12	670	360
+0.005	12	671	361
+0.005	12	672	362
+0.005	12	673	362
+0.005	12	674	363
+0.005	12	675	364
+0.005	12	676	365
+0.005	12	677	366
+0.005	12	678	367
+0.005	12	679	367
+0.005	12	680	367
+0.005	12	681	368
+0.005	12	682	368
+0.005	12	683	368
+0.005	12	684	369
+0.005	12	685	370
+0.005	12	686	370
+0.005	12	687	370
+0.005	12	688	371
+0.005	12	689	371
+0.005	12	690	371
+0.005	12	691	372
+0.005	12	692	373
+0.005	12	693	373
+0.005	12	694	374
+0.005	12	695	375
+0.005	12	696	376
+0.005	12	697	377
+0.005	12	698	378
+0.005	12	699	379
+0.005	12	700	380
+0.005	12	701	381
+0.005	12	702	381
+0.005	12	703	381
+0.005	12	704	381
+0.005	12	705	381
+0.005	12	706	381
+0.005	12	707	382
+0.005	12	708	383
+0.005	12	709	384
+0.005	12	710	384
+0.005	12	711	385
+0.005	12	712	385
+0.005	12	713	385
+0.005	12	714	386
+0.005	12	715	387
+0.005	12	716	388
+0.005	12	717	389
+0.005	12	718	389
+0.005	12	719	390
+0.005	12	720	391
+0.005	12	721	392
+0.005	12	722	392
+0.005	12	723	393
+0.005	12	724	394
+0.005	12	725	394
+0.005	12	726	394
+0.005	12	727	394
+0.005	12	728	395
+0.005	12	729	395
+0.005	12	730	395
+0.005	12	731	395
+0.005	12	732	395
+0.005	12	733	395
+0.005	12	734	396
+0.005	12	735	397
+0.005	12	736	398
+0.005	12	737	399
+0.005	12	738	399
+0.005	12	739	400
+0.005	12	740	401
+0.005	12	741	402
+0.005	12	742	403
+0.005	12	743	403
+0.005	12	744	403
+0.005	12	745	404
+0.005	12	746	404
+0.005	12	747	405
+0.005	12	748	405
+0.005	12	749	405
+0.005	12	750	406
+0.005	12	751	406
+0.005	12	752	406
+0.005	12	753	407
+0.005	12	754	407
+0.005	12	755	408
+0.005	12	756	409
+0.005	12	757	410
+0.005	12	758	411
+0.005	12	759	412
+0.005	12	760	412
+0.005	12	761	413
+0.005	12	762	413
+0.005	12	763	413
+0.005	12	764	413
+0.005	12	765	414
+0.005	12	766	414
+0.005	12	767	414
+0.005	12	768	414
+0.005	12	769	414
+0.005	12	770	414
+0.005	12	771	415
+0.005	12	772	415
+0.005	12	773	415
+0.005	12	774	415
+0.005	12	775	416
+0.005	12	776	416
+0.005	12	777	416
+0.005	12	778	417
+0.005	12	779	417
+0.005	12	780	418
+0.005	12	781	418
+0.005	12	782	419
+0.005	12	783	420
+0.005	12	784	421
+0.005	12	785	422
+0.005	12	786	422
+0.005	12	787	422
+0.005	12	788	422
+0.005	12	789	422
+0.005	12	790	422
+0.005	12	791	422
+0.005	12	792	423
+0.005	12	793	424
+0.005	12	794	425
+0.005	12	795	426
+0.005	12	796	427
+0.005	12	797	427
+0.005	12	798	427
+0.005	12	799	427
+0.005	12	800	428
+0.005	12	801	429
+0.005	12	802	429
+0.005	12	803	430
+0.005	12	804	431
+0.005	12	805	432
+0.005	12	806	433
+0.005	12	807	433
+0.005	12	808	434
+0.005	12	809	434
+0.005	12	810	435
+0.005	12	811	435
+0.005	12	812	436
+0.005	12	813	436
+0.005	12	814	436
+0.005	12	815	437
+0.005	12	816	437
+0.005	12	817	438
+0.005	12	818	439
+0.005	12	819	440
+0.005	12	820	441
+0.005	12	821	442
+0.005	12	822	443
+0.005	12	823	443
+0.005	12	824	444
+0.005	12	825	444
+0.005	12	826	444
+0.005	12	827	444
+0.005	12	828	444
+0.005	12	829	445
+0.005	12	830	446
+0.005	12	831	446
+0.005	12	832	446
+0.005	12	833	447
+0.005	12	834	448
+0.005	12	835	449
+0.005	12	836	449
+0.005	12	837	449
+0.005	12	838	449
+0.005	12	839	450
+0.005	12	840	451
+0.005	12	841	452
+0.005	12	842	453
+0.005	12	843	453
+0.005	12	844	454
+0.005	12	845	455
+0.005	12	846	456
+0.005	12	847	456
+0.005	12	848	457
+0.005	12	849	457
+0.005	12	850	458
+0.005	12	851	459
+0.005	12	852	460
+0.005	12	853	460
+0.005	12	854	460
+0.005	12	855	460
+0.005	12	856	460
+0.005	12	857	461
+0.005	12	858	461
+0.005	12	859	462
+0.005	12	860	462
+0.005	12	861	462
+0.005	12	862	463
+0.005	12	863	463
+0.005	12	864	463
+0.005	12	865	463
+0.005	12	866	464
+0.005	12	867	465
+0.005	12	868	466
+0.005	12	869	466
+0.005	12	870	467
+0.005	12	871	467
+0.005	12	872	467
+0.005	12	873	467
+0.005	12	874	468
+0.005	12	875	468
+0.005	12	876	469
+0.005	12	877	470
+0.005	12	878	471
+0.005	12	879	472
+0.005	12	880	473
+0.005	12	881	474
+0.005	12	882	474
+0.005	12	883	475
+0.005	12	884	475
+0.005	12	885	475
+0.005	12	886	475
+0.005	12	887	476
+0.005	12	888	477
+0.005	12	889	478
+0.005	12	890	479
+0.005	12	891	480
+0.005	12	892	480
+0.005	12	893	481
+0.005	12	894	481
+0.005	12	895	482
+0.005	12	896	482
+0.005	12	897	483
+0.005	12	898	483
+0.005	12	899	483
+0.005	12	900	483
+0.005	12	901	483
+0.005	12	902	483
+0.005	12	903	484
+0.005	12	904	484
+0.005	12	905	485
+0.005	12	906	486
+0.005	12	907	487
+0.005	12	908	487
+0.005	12	909	487
+0.005	12	910	488
+0.005	12	911	488
+0.005	12	912	489
+0.005	12	913	490
+0.005	12	914	491
+0.005	12	915	491
+0.005	12	916	491
+0.005	12	917	491
+0.005	12	918	491
+0.005	12	919	492
+0.005	12	920	492
+0.005	12	921	493
+0.005	12	922	494
+0.005	12	923	495
+0.005	12	924	495
+0.005	12	925	496
+0.005	12	926	496
+0.005	12	927	496
+0.005	12	928	497
+0.005	12	929	498
+0.005	12	930	498
+0.005	12	931	499
+0.005	12	932	500
+0.005	12	933	500
+0.005	12	934	501
+0.005	12	935	501
+0.005	12	936	501
+0.005	12	937	501
+0.005	12	938	502
+0.005	12	939	502
+0.005	12	940	503
+0.005	12	941	503
+0.005	12	942	504
+0.005	12	943	505
+0.005	12	944	505
+0.005	12	945	505
+0.005	12	946	505
+0.005	12	947	505
+0.005	12	948	506
+0.005	12	949	507
+0.005	12	950	508
+0.005	12	951	509
+0.005	12	952	510
+0.005	12	953	510
+0.005	12	954	511
+0.005	12	955	511
+0.005	12	956	511
+0.005	12	957	511
+0.005	12	958	512
+0.005	12	959	513
+0.005	12	960	514
+0.005	12	961	514
+0.005	12	962	514
+0.005	12	963	515
+0.005	12	964	516
+0.005	12	965	516
+0.005	12	966	516
+0.005	12	967	517
+0.005	12	968	517
+0.005	12	969	517
+0.005	12	970	517
+0.005	12	971	517
+0.005	12	972	517
+0.005	12	973	517
+0.005	12	974	517
+0.005	12	975	518
+0.005	12	976	519
+0.005	12	977	519
+0.005	12	978	520
+0.005	12	979	520
+0.005	12	980	521
+0.005	12	981	522
+0.005	12	982	522
+0.005	12	983	522
+0.005	12	984	523
+0.005	12	985	524
+0.005	12	986	525
+0.005	12	987	525
+0.005	12	988	525
+0.005	12	989	526
+0.005	12	990	527
+0.005	12	991	527
+0.005	12	992	528
+0.005	12	993	528
+0.005	12	994	529
+0.005	12	995	529
+0.005	12	996	530
+0.005	12	997	530
+0.005	12	998	531
+0.005	12	999	531
+0.005	12	1000	532
+reading data from file
+./TMP/multi_asymmetric_mydata_final_144_12_p_0.006_cycles_12
+Reading complete
+Initialization Complete
+Start here
+X decoder loaded
+Z decoder loaded
+0.006	12	1	1
+0.006	12	2	2
+0.006	12	3	3
+0.006	12	4	4
+0.006	12	5	5
+0.006	12	6	6
+0.006	12	7	7
+0.006	12	8	8
+0.006	12	9	9
+0.006	12	10	10
+0.006	12	11	10
+0.006	12	12	11
+0.006	12	13	12
+0.006	12	14	13
+0.006	12	15	14
+0.006	12	16	15
+0.006	12	17	16
+0.006	12	18	17
+0.006	12	19	18
+0.006	12	20	19
+0.006	12	21	20
+0.006	12	22	21
+0.006	12	23	22
+0.006	12	24	23
+0.006	12	25	24
+0.006	12	26	25
+0.006	12	27	26
+0.006	12	28	27
+0.006	12	29	28
+0.006	12	30	28
+0.006	12	31	29
+0.006	12	32	30
+0.006	12	33	30
+0.006	12	34	31
+0.006	12	35	31
+0.006	12	36	32
+0.006	12	37	33
+0.006	12	38	34
+0.006	12	39	35
+0.006	12	40	36
+0.006	12	41	36
+0.006	12	42	37
+0.006	12	43	38
+0.006	12	44	39
+0.006	12	45	40
+0.006	12	46	41
+0.006	12	47	41
+0.006	12	48	42
+0.006	12	49	43
+0.006	12	50	44
+0.006	12	51	45
+0.006	12	52	46
+0.006	12	53	47
+0.006	12	54	47
+0.006	12	55	48
+0.006	12	56	49
+0.006	12	57	50
+0.006	12	58	51
+0.006	12	59	52
+0.006	12	60	53
+0.006	12	61	54
+0.006	12	62	55
+0.006	12	63	56
+0.006	12	64	57
+0.006	12	65	58
+0.006	12	66	59
+0.006	12	67	60
+0.006	12	68	61
+0.006	12	69	62
+0.006	12	70	63
+0.006	12	71	64
+0.006	12	72	64
+0.006	12	73	64
+0.006	12	74	65
+0.006	12	75	65
+0.006	12	76	66
+0.006	12	77	67
+0.006	12	78	68
+0.006	12	79	69
+0.006	12	80	70
+0.006	12	81	71
+0.006	12	82	72
+0.006	12	83	73
+0.006	12	84	74
+0.006	12	85	75
+0.006	12	86	76
+0.006	12	87	76
+0.006	12	88	77
+0.006	12	89	77
+0.006	12	90	78
+0.006	12	91	79
+0.006	12	92	80
+0.006	12	93	81
+0.006	12	94	82
+0.006	12	95	83
+0.006	12	96	84
+0.006	12	97	85
+0.006	12	98	86
+0.006	12	99	86
+0.006	12	100	87
+0.006	12	101	88
+0.006	12	102	89
+0.006	12	103	90
+0.006	12	104	91
+0.006	12	105	92
+0.006	12	106	93
+0.006	12	107	94
+0.006	12	108	95
+0.006	12	109	96
+0.006	12	110	97
+0.006	12	111	98
+0.006	12	112	99
+0.006	12	113	100
+0.006	12	114	101
+0.006	12	115	101
+0.006	12	116	102
+0.006	12	117	103
+0.006	12	118	104
+0.006	12	119	105
+0.006	12	120	106
+0.006	12	121	107
+0.006	12	122	108
+0.006	12	123	109
+0.006	12	124	109
+0.006	12	125	110
+0.006	12	126	111
+0.006	12	127	112
+0.006	12	128	112
+0.006	12	129	113
+0.006	12	130	114
+0.006	12	131	115
+0.006	12	132	116
+0.006	12	133	117
+0.006	12	134	118
+0.006	12	135	119
+0.006	12	136	120
+0.006	12	137	121
+0.006	12	138	122
+0.006	12	139	123
+0.006	12	140	124
+0.006	12	141	125
+0.006	12	142	126
+0.006	12	143	127
+0.006	12	144	128
+0.006	12	145	129
+0.006	12	146	129
+0.006	12	147	130
+0.006	12	148	130
+0.006	12	149	130
+0.006	12	150	131
+0.006	12	151	132
+0.006	12	152	133
+0.006	12	153	133
+0.006	12	154	134
+0.006	12	155	135
+0.006	12	156	135
+0.006	12	157	136
+0.006	12	158	137
+0.006	12	159	138
+0.006	12	160	139
+0.006	12	161	139
+0.006	12	162	140
+0.006	12	163	141
+0.006	12	164	142
+0.006	12	165	143
+0.006	12	166	144
+0.006	12	167	145
+0.006	12	168	145
+0.006	12	169	146
+0.006	12	170	147
+0.006	12	171	147
+0.006	12	172	148
+0.006	12	173	149
+0.006	12	174	150
+0.006	12	175	151
+0.006	12	176	152
+0.006	12	177	153
+0.006	12	178	154
+0.006	12	179	154
+0.006	12	180	154
+0.006	12	181	154
+0.006	12	182	155
+0.006	12	183	156
+0.006	12	184	157
+0.006	12	185	158
+0.006	12	186	159
+0.006	12	187	160
+0.006	12	188	161
+0.006	12	189	162
+0.006	12	190	163
+0.006	12	191	164
+0.006	12	192	165
+0.006	12	193	166
+0.006	12	194	167
+0.006	12	195	168
+0.006	12	196	169
+0.006	12	197	170
+0.006	12	198	171
+0.006	12	199	172
+0.006	12	200	173
+0.006	12	201	174
+0.006	12	202	175
+0.006	12	203	176
+0.006	12	204	177
+0.006	12	205	177
+0.006	12	206	178
+0.006	12	207	179
+0.006	12	208	180
+0.006	12	209	181
+0.006	12	210	181
+0.006	12	211	182
+0.006	12	212	183
+0.006	12	213	184
+0.006	12	214	185
+0.006	12	215	186
+0.006	12	216	187
+0.006	12	217	188
+0.006	12	218	189
+0.006	12	219	190
+0.006	12	220	190
+0.006	12	221	191
+0.006	12	222	192
+0.006	12	223	193
+0.006	12	224	194
+0.006	12	225	195
+0.006	12	226	196
+0.006	12	227	197
+0.006	12	228	198
+0.006	12	229	199
+0.006	12	230	200
+0.006	12	231	200
+0.006	12	232	201
+0.006	12	233	202
+0.006	12	234	203
+0.006	12	235	204
+0.006	12	236	205
+0.006	12	237	206
+0.006	12	238	207
+0.006	12	239	208
+0.006	12	240	209
+0.006	12	241	210
+0.006	12	242	211
+0.006	12	243	212
+0.006	12	244	213
+0.006	12	245	214
+0.006	12	246	215
+0.006	12	247	215
+0.006	12	248	215
+0.006	12	249	216
+0.006	12	250	217
+0.006	12	251	218
+0.006	12	252	219
+0.006	12	253	220
+0.006	12	254	220
+0.006	12	255	221
+0.006	12	256	222
+0.006	12	257	223
+0.006	12	258	224
+0.006	12	259	225
+0.006	12	260	226
+0.006	12	261	227
+0.006	12	262	228
+0.006	12	263	229
+0.006	12	264	230
+0.006	12	265	231
+0.006	12	266	232
+0.006	12	267	233
+0.006	12	268	233
+0.006	12	269	233
+0.006	12	270	234
+0.006	12	271	235
+0.006	12	272	236
+0.006	12	273	237
+0.006	12	274	238
+0.006	12	275	239
+0.006	12	276	240
+0.006	12	277	241
+0.006	12	278	242
+0.006	12	279	243
+0.006	12	280	244
+0.006	12	281	245
+0.006	12	282	246
+0.006	12	283	246
+0.006	12	284	247
+0.006	12	285	248
+0.006	12	286	249
+0.006	12	287	250
+0.006	12	288	251
+0.006	12	289	251
+0.006	12	290	252
+0.006	12	291	253
+0.006	12	292	253
+0.006	12	293	254
+0.006	12	294	255
+0.006	12	295	256
+0.006	12	296	257
+0.006	12	297	258
+0.006	12	298	259
+0.006	12	299	260
+0.006	12	300	261
+0.006	12	301	262
+0.006	12	302	263
+0.006	12	303	264
+0.006	12	304	265
+0.006	12	305	266
+0.006	12	306	267
+0.006	12	307	268
+0.006	12	308	269
+0.006	12	309	269
+0.006	12	310	269
+0.006	12	311	270
+0.006	12	312	271
+0.006	12	313	272
+0.006	12	314	273
+0.006	12	315	274
+0.006	12	316	275
+0.006	12	317	276
+0.006	12	318	276
+0.006	12	319	277
+0.006	12	320	278
+0.006	12	321	279
+0.006	12	322	280
+0.006	12	323	281
+0.006	12	324	282
+0.006	12	325	283
+0.006	12	326	284
+0.006	12	327	285
+0.006	12	328	286
+0.006	12	329	287
+0.006	12	330	287
+0.006	12	331	288
+0.006	12	332	289
+0.006	12	333	289
+0.006	12	334	289
+0.006	12	335	290
+0.006	12	336	290
+0.006	12	337	290
+0.006	12	338	290
+0.006	12	339	291
+0.006	12	340	292
+0.006	12	341	293
+0.006	12	342	294
+0.006	12	343	295
+0.006	12	344	296
+0.006	12	345	297
+0.006	12	346	298
+0.006	12	347	299
+0.006	12	348	300
+0.006	12	349	300
+0.006	12	350	301
+0.006	12	351	302
+0.006	12	352	303
+0.006	12	353	304
+0.006	12	354	305
+0.006	12	355	306
+0.006	12	356	307
+0.006	12	357	308
+0.006	12	358	308
+0.006	12	359	308
+0.006	12	360	309
+0.006	12	361	310
+0.006	12	362	310
+0.006	12	363	311
+0.006	12	364	312
+0.006	12	365	313
+0.006	12	366	313
+0.006	12	367	314
+0.006	12	368	315
+0.006	12	369	316
+0.006	12	370	317
+0.006	12	371	318
+0.006	12	372	319
+0.006	12	373	320
+0.006	12	374	321
+0.006	12	375	322
+0.006	12	376	323
+0.006	12	377	323
+0.006	12	378	324
+0.006	12	379	325
+0.006	12	380	326
+0.006	12	381	327
+0.006	12	382	328
+0.006	12	383	329
+0.006	12	384	330
+0.006	12	385	331
+0.006	12	386	332
+0.006	12	387	333
+0.006	12	388	334
+0.006	12	389	335
+0.006	12	390	336
+0.006	12	391	337
+0.006	12	392	337
+0.006	12	393	337
+0.006	12	394	338
+0.006	12	395	339
+0.006	12	396	340
+0.006	12	397	341
+0.006	12	398	342
+0.006	12	399	342
+0.006	12	400	343
+0.006	12	401	344
+0.006	12	402	344
+0.006	12	403	345
+0.006	12	404	346
+0.006	12	405	347
+0.006	12	406	348
+0.006	12	407	349
+0.006	12	408	350
+0.006	12	409	351
+0.006	12	410	352
+0.006	12	411	353
+0.006	12	412	354
+0.006	12	413	355
+0.006	12	414	356
+0.006	12	415	357
+0.006	12	416	357
+0.006	12	417	358
+0.006	12	418	359
+0.006	12	419	360
+0.006	12	420	361
+0.006	12	421	362
+0.006	12	422	363
+0.006	12	423	364
+0.006	12	424	365
+0.006	12	425	366
+0.006	12	426	367
+0.006	12	427	368
+0.006	12	428	368
+0.006	12	429	369
+0.006	12	430	370
+0.006	12	431	371
+0.006	12	432	372
+0.006	12	433	373
+0.006	12	434	373
+0.006	12	435	374
+0.006	12	436	375
+0.006	12	437	376
+0.006	12	438	377
+0.006	12	439	377
+0.006	12	440	378
+0.006	12	441	379
+0.006	12	442	380
+0.006	12	443	381
+0.006	12	444	381
+0.006	12	445	382
+0.006	12	446	382
+0.006	12	447	383
+0.006	12	448	383
+0.006	12	449	383
+0.006	12	450	384
+0.006	12	451	385
+0.006	12	452	386
+0.006	12	453	387
+0.006	12	454	388
+0.006	12	455	389
+0.006	12	456	390
+0.006	12	457	391
+0.006	12	458	392
+0.006	12	459	393
+0.006	12	460	393
+0.006	12	461	394
+0.006	12	462	395
+0.006	12	463	396
+0.006	12	464	397
+0.006	12	465	398
+0.006	12	466	399
+0.006	12	467	399
+0.006	12	468	400
+0.006	12	469	401
+0.006	12	470	402
+0.006	12	471	403
+0.006	12	472	404
+0.006	12	473	405
+0.006	12	474	406
+0.006	12	475	407
+0.006	12	476	407
+0.006	12	477	408
+0.006	12	478	409
+0.006	12	479	410
+0.006	12	480	411
+0.006	12	481	412
+0.006	12	482	413
+0.006	12	483	414
+0.006	12	484	415
+0.006	12	485	416
+0.006	12	486	417
+0.006	12	487	418
+0.006	12	488	419
+0.006	12	489	420
+0.006	12	490	421
+0.006	12	491	422
+0.006	12	492	423
+0.006	12	493	424
+0.006	12	494	424
+0.006	12	495	425
+0.006	12	496	426
+0.006	12	497	427
+0.006	12	498	428
+0.006	12	499	428
+0.006	12	500	429
+0.006	12	501	429
+0.006	12	502	429
+0.006	12	503	430
+0.006	12	504	431
+0.006	12	505	432
+0.006	12	506	433
+0.006	12	507	433
+0.006	12	508	434
+0.006	12	509	435
+0.006	12	510	436
+0.006	12	511	436
+0.006	12	512	437
+0.006	12	513	438
+0.006	12	514	439
+0.006	12	515	439
+0.006	12	516	439
+0.006	12	517	440
+0.006	12	518	441
+0.006	12	519	442
+0.006	12	520	443
+0.006	12	521	444
+0.006	12	522	445
+0.006	12	523	446
+0.006	12	524	447
+0.006	12	525	448
+0.006	12	526	449
+0.006	12	527	450
+0.006	12	528	451
+0.006	12	529	452
+0.006	12	530	452
+0.006	12	531	453
+0.006	12	532	454
+0.006	12	533	455
+0.006	12	534	456
+0.006	12	535	457
+0.006	12	536	458
+0.006	12	537	459
+0.006	12	538	460
+0.006	12	539	460
+0.006	12	540	461
+0.006	12	541	461
+0.006	12	542	462
+0.006	12	543	463
+0.006	12	544	464
+0.006	12	545	465
+0.006	12	546	466
+0.006	12	547	466
+0.006	12	548	466
+0.006	12	549	467
+0.006	12	550	468
+0.006	12	551	469
+0.006	12	552	470
+0.006	12	553	471
+0.006	12	554	472
+0.006	12	555	472
+0.006	12	556	473
+0.006	12	557	474
+0.006	12	558	475
+0.006	12	559	476
+0.006	12	560	477
+0.006	12	561	478
+0.006	12	562	479
+0.006	12	563	479
+0.006	12	564	480
+0.006	12	565	481
+0.006	12	566	481
+0.006	12	567	482
+0.006	12	568	483
+0.006	12	569	484
+0.006	12	570	485
+0.006	12	571	485
+0.006	12	572	486
+0.006	12	573	487
+0.006	12	574	488
+0.006	12	575	489
+0.006	12	576	490
+0.006	12	577	490
+0.006	12	578	491
+0.006	12	579	492
+0.006	12	580	493
+0.006	12	581	494
+0.006	12	582	495
+0.006	12	583	496
+0.006	12	584	496
+0.006	12	585	496
+0.006	12	586	497
+0.006	12	587	498
+0.006	12	588	498
+0.006	12	589	499
+0.006	12	590	500
+0.006	12	591	501
+0.006	12	592	501
+0.006	12	593	501
+0.006	12	594	502
+0.006	12	595	503
+0.006	12	596	504
+0.006	12	597	505
+0.006	12	598	506
+0.006	12	599	506
+0.006	12	600	507
+0.006	12	601	508
+0.006	12	602	509
+0.006	12	603	510
+0.006	12	604	510
+0.006	12	605	510
+0.006	12	606	510
+0.006	12	607	511
+0.006	12	608	512
+0.006	12	609	513
+0.006	12	610	514
+0.006	12	611	515
+0.006	12	612	516
+0.006	12	613	517
+0.006	12	614	518
+0.006	12	615	519
+0.006	12	616	520
+0.006	12	617	521
+0.006	12	618	522
+0.006	12	619	523
+0.006	12	620	523
+0.006	12	621	524
+0.006	12	622	525
+0.006	12	623	526
+0.006	12	624	527
+0.006	12	625	528
+0.006	12	626	529
+0.006	12	627	530
+0.006	12	628	531
+0.006	12	629	532
+0.006	12	630	533
+0.006	12	631	534
+0.006	12	632	535
+0.006	12	633	536
+0.006	12	634	537
+0.006	12	635	538
+0.006	12	636	539
+0.006	12	637	540
+0.006	12	638	541
+0.006	12	639	542
+0.006	12	640	543
+0.006	12	641	544
+0.006	12	642	545
+0.006	12	643	546
+0.006	12	644	547
+0.006	12	645	548
+0.006	12	646	548
+0.006	12	647	549
+0.006	12	648	549
+0.006	12	649	550
+0.006	12	650	551
+0.006	12	651	552
+0.006	12	652	553
+0.006	12	653	553
+0.006	12	654	554
+0.006	12	655	555
+0.006	12	656	556
+0.006	12	657	557
+0.006	12	658	557
+0.006	12	659	558
+0.006	12	660	559
+0.006	12	661	560
+0.006	12	662	561
+0.006	12	663	562
+0.006	12	664	563
+0.006	12	665	564
+0.006	12	666	565
+0.006	12	667	566
+0.006	12	668	567
+0.006	12	669	568
+0.006	12	670	569
+0.006	12	671	570
+0.006	12	672	571
+0.006	12	673	572
+0.006	12	674	573
+0.006	12	675	573
+0.006	12	676	574
+0.006	12	677	574
+0.006	12	678	574
+0.006	12	679	575
+0.006	12	680	576
+0.006	12	681	577
+0.006	12	682	577
+0.006	12	683	578
+0.006	12	684	579
+0.006	12	685	580
+0.006	12	686	581
+0.006	12	687	581
+0.006	12	688	582
+0.006	12	689	583
+0.006	12	690	584
+0.006	12	691	585
+0.006	12	692	585
+0.006	12	693	586
+0.006	12	694	587
+0.006	12	695	588
+0.006	12	696	589
+0.006	12	697	590
+0.006	12	698	590
+0.006	12	699	591
+0.006	12	700	592
+0.006	12	701	593
+0.006	12	702	594
+0.006	12	703	595
+0.006	12	704	596
+0.006	12	705	597
+0.006	12	706	597
+0.006	12	707	598
+0.006	12	708	599
+0.006	12	709	599
+0.006	12	710	600
+0.006	12	711	601
+0.006	12	712	601
+0.006	12	713	602
+0.006	12	714	602
+0.006	12	715	603
+0.006	12	716	604
+0.006	12	717	605
+0.006	12	718	606
+0.006	12	719	606
+0.006	12	720	607
+0.006	12	721	608
+0.006	12	722	609
+0.006	12	723	610
+0.006	12	724	610
+0.006	12	725	611
+0.006	12	726	612
+0.006	12	727	613
+0.006	12	728	613
+0.006	12	729	614
+0.006	12	730	615
+0.006	12	731	616
+0.006	12	732	617
+0.006	12	733	618
+0.006	12	734	619
+0.006	12	735	620
+0.006	12	736	621
+0.006	12	737	622
+0.006	12	738	622
+0.006	12	739	623
+0.006	12	740	624
+0.006	12	741	625
+0.006	12	742	626
+0.006	12	743	627
+0.006	12	744	628
+0.006	12	745	629
+0.006	12	746	630
+0.006	12	747	631
+0.006	12	748	632
+0.006	12	749	633
+0.006	12	750	634
+0.006	12	751	635
+0.006	12	752	636
+0.006	12	753	637
+0.006	12	754	638
+0.006	12	755	639
+0.006	12	756	639
+0.006	12	757	640
+0.006	12	758	641
+0.006	12	759	642
+0.006	12	760	643
+0.006	12	761	644
+0.006	12	762	645
+0.006	12	763	645
+0.006	12	764	646
+0.006	12	765	647
+0.006	12	766	648
+0.006	12	767	649
+0.006	12	768	650
+0.006	12	769	651
+0.006	12	770	652
+0.006	12	771	653
+0.006	12	772	654
+0.006	12	773	655
+0.006	12	774	656
+0.006	12	775	657
+0.006	12	776	657
+0.006	12	777	658
+0.006	12	778	659
+0.006	12	779	660
+0.006	12	780	661
+0.006	12	781	662
+0.006	12	782	662
+0.006	12	783	662
+0.006	12	784	662
+0.006	12	785	663
+0.006	12	786	664
+0.006	12	787	665
+0.006	12	788	666
+0.006	12	789	667
+0.006	12	790	668
+0.006	12	791	669
+0.006	12	792	670
+0.006	12	793	671
+0.006	12	794	672
+0.006	12	795	673
+0.006	12	796	673
+0.006	12	797	673
+0.006	12	798	674
+0.006	12	799	675
+0.006	12	800	676
+0.006	12	801	677
+0.006	12	802	677
+0.006	12	803	677
+0.006	12	804	677
+0.006	12	805	678
+0.006	12	806	679
+0.006	12	807	680
+0.006	12	808	681
+0.006	12	809	682
+0.006	12	810	683
+0.006	12	811	684
+0.006	12	812	685
+0.006	12	813	686
+0.006	12	814	686
+0.006	12	815	687
+0.006	12	816	688
+0.006	12	817	689
+0.006	12	818	690
+0.006	12	819	691
+0.006	12	820	692
+0.006	12	821	693
+0.006	12	822	694
+0.006	12	823	694
+0.006	12	824	694
+0.006	12	825	695
+0.006	12	826	695
+0.006	12	827	696
+0.006	12	828	697
+0.006	12	829	698
+0.006	12	830	699
+0.006	12	831	700
+0.006	12	832	701
+0.006	12	833	702
+0.006	12	834	703
+0.006	12	835	704
+0.006	12	836	705
+0.006	12	837	706
+0.006	12	838	706
+0.006	12	839	707
+0.006	12	840	708
+0.006	12	841	709
+0.006	12	842	710
+0.006	12	843	710
+0.006	12	844	710
+0.006	12	845	711
+0.006	12	846	712
+0.006	12	847	713
+0.006	12	848	714
+0.006	12	849	714
+0.006	12	850	715
+0.006	12	851	716
+0.006	12	852	717
+0.006	12	853	717
+0.006	12	854	718
+0.006	12	855	719
+0.006	12	856	719
+0.006	12	857	720
+0.006	12	858	721
+0.006	12	859	722
+0.006	12	860	723
+0.006	12	861	723
+0.006	12	862	724
+0.006	12	863	725
+0.006	12	864	725
+0.006	12	865	726
+0.006	12	866	727
+0.006	12	867	728
+0.006	12	868	728
+0.006	12	869	729
+0.006	12	870	730
+0.006	12	871	730
+0.006	12	872	731
+0.006	12	873	731
+0.006	12	874	732
+0.006	12	875	733
+0.006	12	876	734
+0.006	12	877	735
+0.006	12	878	735
+0.006	12	879	736
+0.006	12	880	737
+0.006	12	881	738
+0.006	12	882	739
+0.006	12	883	740
+0.006	12	884	741
+0.006	12	885	741
+0.006	12	886	742
+0.006	12	887	743
+0.006	12	888	744
+0.006	12	889	745
+0.006	12	890	746
+0.006	12	891	747
+0.006	12	892	748
+0.006	12	893	749
+0.006	12	894	750
+0.006	12	895	751
+0.006	12	896	752
+0.006	12	897	752
+0.006	12	898	753
+0.006	12	899	753
+0.006	12	900	754
+0.006	12	901	755
+0.006	12	902	756
+0.006	12	903	757
+0.006	12	904	758
+0.006	12	905	758
+0.006	12	906	759
+0.006	12	907	760
+0.006	12	908	761
+0.006	12	909	762
+0.006	12	910	763
+0.006	12	911	764
+0.006	12	912	765
+0.006	12	913	766
+0.006	12	914	767
+0.006	12	915	767
+0.006	12	916	768
+0.006	12	917	768
+0.006	12	918	769
+0.006	12	919	770
+0.006	12	920	771
+0.006	12	921	772
+0.006	12	922	773
+0.006	12	923	774
+0.006	12	924	775
+0.006	12	925	776
+0.006	12	926	777
+0.006	12	927	778
+0.006	12	928	779
+0.006	12	929	780
+0.006	12	930	781
+0.006	12	931	782
+0.006	12	932	783
+0.006	12	933	784
+0.006	12	934	785
+0.006	12	935	786
+0.006	12	936	787
+0.006	12	937	788
+0.006	12	938	789
+0.006	12	939	790
+0.006	12	940	791
+0.006	12	941	791
+0.006	12	942	792
+0.006	12	943	793
+0.006	12	944	794
+0.006	12	945	795
+0.006	12	946	796
+0.006	12	947	797
+0.006	12	948	798
+0.006	12	949	799
+0.006	12	950	800
+0.006	12	951	801
+0.006	12	952	802
+0.006	12	953	803
+0.006	12	954	804
+0.006	12	955	805
+0.006	12	956	806
+0.006	12	957	807
+0.006	12	958	808
+0.006	12	959	808
+0.006	12	960	809
+0.006	12	961	810
+0.006	12	962	811
+0.006	12	963	812
+0.006	12	964	813
+0.006	12	965	814
+0.006	12	966	814
+0.006	12	967	815
+0.006	12	968	816
+0.006	12	969	817
+0.006	12	970	818
+0.006	12	971	819
+0.006	12	972	820
+0.006	12	973	821
+0.006	12	974	822
+0.006	12	975	823
+0.006	12	976	824
+0.006	12	977	824
+0.006	12	978	825
+0.006	12	979	826
+0.006	12	980	827
+0.006	12	981	828
+0.006	12	982	829
+0.006	12	983	830
+0.006	12	984	831
+0.006	12	985	832
+0.006	12	986	833
+0.006	12	987	834
+0.006	12	988	835
+0.006	12	989	836
+0.006	12	990	837
+0.006	12	991	837
+0.006	12	992	838
+0.006	12	993	838
+0.006	12	994	838
+0.006	12	995	839
+0.006	12	996	840
+0.006	12	997	840
+0.006	12	998	841
+0.006	12	999	842
+0.006	12	1000	843

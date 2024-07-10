@@ -33,16 +33,16 @@ from defect_parity_generator import *
 SANITY_BIN = []
 def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 	# Annotate the dead data qubit
-	print("Defects I see are ",defects)
+	#print("Defects I see are ",defects)
 	dead_data_loc = []
 	dead_data_loc_all = []
 	for locations in defects:
 		loc_flag = locations // n2
 		if loc_flag:
-			print("RIGHT ",locations%n2)
+			#print("RIGHT ",locations%n2)
 			dead_data_loc_all.append(('data_right',locations % n2))
 		else:
-			print("LEFT",locations%n2)
+			#print("LEFT",locations%n2)
 			dead_data_loc_all.append(('data_left',locations % n2))    
 	lin_order = {}
 	data_qubits = []
@@ -64,7 +64,8 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 			lin_order[node_name] = cnt
 			cnt += 1
 		else:
-			print("Dead data qubit skipped ",node_name)    
+			#print("Dead data qubit skipped ",node_name)    
+			x = 1
 	for i in range(n2):
 		node_name = ('data_right', i)
 		if 1:
@@ -72,7 +73,8 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 			lin_order[node_name] = cnt
 			cnt += 1
 		else:
-			print("Dead data qubit skipped ",node_name)  
+			#print("Dead data qubit skipped ",node_name)  
+			x = 1
 
 
 
@@ -82,7 +84,7 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 		lin_order[node_name] = cnt
 		cnt += 1
 
-	print("The effective number of physical qubits including ancillas is ",cnt)
+	#print("The effective number of physical qubits including ancillas is ",cnt)
 	# compute the list of neighbors of each check qubit in the Tanner graph
 	nbs = {}
 	# iterate over X checks
@@ -92,11 +94,12 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 	ignore  = 0
 	if len(dead_data_loc_all) == 0:
 		dead_data_loc_all = [-1]
-	for defective_qubits in dead_data_loc_all:
+	tom  = ['Tom']	
+	for defective_qubits in tom:
 		if dead_data_loc_all[0] == -1:
 			dead_data_loc_all = []
 		else:	
-			dead_data_loc = [defective_qubits]
+			dead_data_loc = dead_data_loc_all.copy()
 		ignore = 0
 		for i in range(n2):
 			check_name = ('Xcheck',i)
@@ -117,20 +120,20 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 				all_conn_x = [X1,X2,X3,X4,X5,X6]
 				if len(set(all_conn_x).intersection(dead_data_loc)):
 					flags.append(check_name)
-					print("Check affected ",check_name)
-					print("Overap at ",set(all_conn_x).intersection(dead_data_loc))
+					#print("Check affected ",check_name)
+					#print("Overap at ",set(all_conn_x).intersection(dead_data_loc))
 				####
 				if X1 in dead_data_loc:
 					X1 = None
-					print("here")
+					#print("here")
 					ignore +=1
 				if X2 in dead_data_loc:
 					X2 = None
-					print("here")
+					#print("here")
 					ignore +=1
 				if X3 in dead_data_loc:
 					X3 = None
-					print("here")
+					#print("here")
 					ignore +=1
 				if X4 in dead_data_loc:
 					X4 = None
@@ -168,19 +171,19 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 			all_conn_z = [Z1,Z2,Z3,Z4,Z5,Z6]
 			if len(set(all_conn_z).intersection(dead_data_loc)):
 				flags.append(check_name)
-				print("Check affected ",check_name)
-				print("Overap at ",set(all_conn_z).intersection(dead_data_loc))
+				#print("Check affected ",check_name)
+				#print("Overap at ",set(all_conn_z).intersection(dead_data_loc))
 			if Z1 in dead_data_loc:
 					Z1 = None
-					print("here")
+					#print("here")
 					ignore +=1
 			if Z2 in dead_data_loc:
 					Z2 = None
-					print("here")
+					#print("here")
 					ignore +=1
 			if Z3 in dead_data_loc:
 					Z3 = None
-					print("here")
+					#print("here")
 					ignore +=1
 			if Z4 in dead_data_loc:
 					Z4 = None 
@@ -202,10 +205,10 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[]):
 	for i in range(len(dead_data_loc_all)):
 		data_qubits.remove(dead_data_loc_all[i])
 	#TODO : Flag the affected qubits    
-	print("itgnored are ",ignore)
-	print("Bad checks are ",flags)
-	print("Total number of bad checks are ",len(flags))
-	print("Remaining data qubits are ",len(data_qubits))
+	#print("itgnored are ",ignore)
+	#print("Bad checks are ",flags)
+	#print("Total number of bad checks are ",len(flags))
+	#print("Remaining data qubits are ",len(data_qubits))
 	return (Xchecks,Zchecks,data_qubits,nbs,flags,lin_order,dead_data_loc_all)
 
 def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
@@ -240,19 +243,21 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 				if symmetry or flipped:
 					marked.append(Xbad[i])
 					SANITY_BIN.append(Xbad[i])
-				print("marked is ",marked)
+				#print("marked is ",marked)
 		#marked = [Zbad[2],Zbad[5]]		 
 	# syndrome measurement cycle as a list of operations
 	cycle = [] 
 	U = np.identity(n,dtype=int)
-	print("Sanity Check")
+	#print("Sanity Check")
 	temp = 0
 	for syn in Zbad:
 		for dir in range(6):
-			print(syn ," direction ",dir," neighbor ", nbs[(syn,dir)])
+			x = 1
+			#print(syn ," direction ",dir," neighbor ", nbs[(syn,dir)])
 	for syn in Xbad:
 		for dir in range(6):
-			print(syn ," direction ",dir," neighbor ", nbs[(syn,dir)])	
+			x = 1
+			#print(syn ," direction ",dir," neighbor ", nbs[(syn,dir)])	
 	xop_c = 0
 	zop_c = 0
 	ign = 0
@@ -263,13 +268,26 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 	prepz = 0
 	idd = 0
 	#idz = 0
+	data_X = {}
+	data_Z = {}
+	chk_X = {}
+	chk_Z = {}
+	for checks in Xchecks:
+		chk_X[checks] = 0 
+	for checks in Zchecks:
+		chk_Z[checks] = 0
+	for databits in data_qubits:
+		print(databits)
+		data_X[databits] = 0
+		data_Z[databits] = 0
+
 	# round 0: prep xchecks, CNOT zchecks and data
 	t=0
 	for q in Xchecks:
 		if q[1] not in check_defect_x_locations:
 			if symmetry or flipped:
 				if q in marked:
-					print("I have this bad ancilla ",q)
+					#print("I have this bad ancilla ",q)
 					continue
 					#cycle.append(('PrepIdealX',q))
 					#prepx +=1
@@ -283,78 +301,82 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 	assert(not(sZ[t]=='idle'))
 	for target in Zchecks:
 		if (target in Zbad) and not flipped:
-				print("bROKE")
+				#print("bROKE")
 				continue
 		if target in marked:
-				print("IGn turn off skip at round 0 ",target)
+				#print("IGn turn off skip at round 0 ",target)
 				direction = sZ[t]
 				control = nbs[(target,direction)]
-				print("IGn this qubit did not get CNOTed ",control)
+				#print("IGn this qubit did not get CNOTed ",control)
 				
 				continue
 		else:
 			direction = sZ[t]
 			control = nbs[(target,direction)]
 			if control is None:
-				print("IGn Zcheck first round lacking support ",target," direction ",direction)
+				#print("IGn Zcheck first round lacking support ",target," direction ",direction)
 				continue
 			else:
 				U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 				data_qubits_cnoted_in_this_round.append(control)
 				cycle.append(('CNOT',control,target))
+				data_Z[control] += 1
+				chk_Z[target] += 1
 				if 1:
 					zop_c +=1
 					x = 1
 	for q in data_qubits:
 		if q in damaged:
-			print("DAMAGE")
+			#print("DAMAGE")
 			cycle.append(('dmg',q))
 		else:
 			if not(q in data_qubits_cnoted_in_this_round):
 				cycle.append(('IDLE',q))
 				idd += 1
 
-	print("Cycle length after round 0 ", len(cycle))
-	print("Gates added ",len(cycle)-temp)
-	print("Idle data qubits this round  is ",len(data_qubits_cnoted_in_this_round))
+	#print("Cycle length after round 0 ", len(cycle))
+	#print("Gates added ",len(cycle)-temp)
+	#print("Idle data qubits this round  is ",len(data_qubits_cnoted_in_this_round))
 	temp = len(cycle)
 	# round 1-5: CNOT xchecks and data, CNOT zchecks and data
 	
-	print("I have Xchecks ",len(Xchecks))
+	#print("I have Xchecks ",len(Xchecks))
 	for t in range(1,6):
 		data_qubits_cnoted_in_this_round = []
-		print("t is ",t, "sX is",sX[t], " sZ is ",sZ[t])
+		#print("t is ",t, "sX is",sX[t], " sZ is ",sZ[t])
 		assert(not(sX[t]=='idle'))
 		for control in Xchecks:
 			if flipped and (control in Xbad):
-				print("Skipping incomplete qubit")
+				#print("Skipping incomplete qubit")
 				continue
 			if symmetry or flipped:
-				#print("Uhoh")
+				##print("Uhoh")
 				#das
 				if control in marked:
-					print("SKIPPING ",control)
+					#print("SKIPPING ",control)
 					continue
 			if control[1] not in check_defect_x_locations:
-				#print("Index processing ",index)
+				##print("Index processing ",index)
 				direction = sX[t]
 				target = nbs[(control,direction)]
 				if target is None:
 					ign +=1
-					print(ign)
-					print("IGn data qubit missing at check ",control ," direction ",direction)
-					print("Index processed with Skip ",index)
+					#print(ign)
+					#print("IGn data qubit missing at check ",control ," direction ",direction)
+					#print("Index processed with Skip ",index)
 					index +=1
 					continue
 				else:
 					cycle.append(('CNOT',control,target))
+					data_X[target] +=1
+					chk_X[control] +=1
 					U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 					xop_c +=1
-					#print("Index processed with Tailor ",index)
+					##print("Index processed with Tailor ",index)
 					index +=1
 					data_qubits_cnoted_in_this_round.append(target)
 					continue
-			print("Unknown situtation")
+			#print("Unknown situtation")
 		assert(not(sZ[t]=='idle'))
 		for target in Zchecks:
 			if target in marked:
@@ -362,21 +384,23 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 			direction = sZ[t]
 			control = nbs[(target,direction)]
 			if (target in Zbad) and not flipped:
-				print("bROKE")
+				#print("bROKE")
 				continue
 			if control is None:
-				print("IGn Zcheck missing support ",target," direction ",direction)
+				#print("IGn Zcheck missing support ",target," direction ",direction)
 				continue
 			else:
 				#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 				cycle.append(('CNOT',control,target))
+				data_Z[control] += 1
+				chk_Z[target] +=1 
 				U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 				data_qubits_cnoted_in_this_round.append(control)
 				if 1:
 					zop_c +=1
 		for q in data_qubits:
 			if q in damaged:
-				print("DAMAGE")
+				#print("DAMAGE")
 				cycle.append(('dmg',q))
 			else:
 				if not(q in data_qubits_cnoted_in_this_round):
@@ -386,11 +410,11 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 	#TODO: Superstabilizers are measured here
 	#round 6(repair)- Zchecks are ready to bec checked - Xhcehcks end at round 7 
 	# Look at broken X checks 
-	print("Xops added ",xop_c," Zops added ",zop_c)
-	print("Cycle length after round 5 (pre-repair)", len(cycle))
-	print("Gates added 5(pre) ",len(cycle)-temp)
+	#print("Xops added ",xop_c," Zops added ",zop_c)
+	#print("Cycle length after round 5 (pre-repair)", len(cycle))
+	#print("Gates added 5(pre) ",len(cycle)-temp)
 	temp = len(cycle)
-	#print("Broken Z checks are ",Zbad)
+	##print("Broken Z checks are ",Zbad)
 	collisions = 0
 	
 	# round 6: CNOT xchecks and data, measure Z checks
@@ -401,19 +425,21 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 	for control in Xchecks:
 		if control[1] not in check_defect_x_locations:
 			if flipped and (control in Xbad):
-				print("Bad X skip")
+				#print("Bad X skip")
 				continue
 			if symmetry or flipped:
 				if control in marked:
-					print("Xsyndrome tied ",control)
+					#print("Xsyndrome tied ",control)
 					continue
 			direction = sX[t]
 			target = nbs[(control,direction)]
 			if target is None:
-				print("IGn last round Xcheck lacking ",control, " direction ",direction)
+				#print("IGn last round Xcheck lacking ",control, " direction ",direction)
 				continue
 			else:
 				U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
+				data_X[target] += 1
+				chk_X[control] +=1
 				cycle.append(('CNOT',control,target))
 				xop_c += 1
 			data_qubits_cnoted_in_this_round.append(target)
@@ -425,11 +451,11 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 				cycle.append(('IDLE',q))
 				idd += 1
 	# X are repaired
-	#print("Broken X checks are ",Xbad)
-	print("Idle data qubits this round  is ",len(data_qubits_cnoted_in_this_round))
+	##print("Broken X checks are ",Xbad)
+	#print("Idle data qubits this round  is ",len(data_qubits_cnoted_in_this_round))
 	# Repairs start before measurement
 	if (len(Zbad)!=0):
-		print("REPAIR")
+		#print("REPAIR")
 		# First Run Keep the Check dimensionality the same i.e. AB,BC,CA
 		if not flipped:
 			data_qubits_cnoted_in_this_round = []
@@ -439,7 +465,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 				ZB = Zbad[3*k+1]
 				ZC = Zbad[3*k+2]
 				assert(ZC == marked[k])
-				print("syndromes are ", ZA,ZB,ZC)
+				#print("syndromes are ", ZA,ZB,ZC)
 				# By default fix Z only 
 				#Sweep direction from 0 to 5
 				#ZAC 
@@ -450,7 +476,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 						direction = ti
 						control = nbs[(conn,direction)]
 						if control is None:
-							print("Skip")
+							#print("Skip")
 							continue
 						#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						else:
@@ -459,6 +485,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 							else:
 								Ztake2[target] = [control]	
 							cycle.append(('CNOT',control,target))
+							data_Z[control] +=1
+							chk_Z[target] +=1
 							U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 							zop_c += 1
 							if control in data_qubits_cnoted_in_this_round:
@@ -474,7 +502,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 						direction = ti
 						control = nbs[(conn,direction)]
 						if control is None:
-							print("Skip")
+							#print("Skip")
 							continue
 						#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						else:
@@ -483,6 +511,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 							else:
 								Ztake2[target] = [control]	
 							cycle.append(('CNOT',control,target))
+							data_Z[control] +=1
+							chk_Z[target] +=1
 							U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 							zop_c += 1
 							if control in data_qubits_cnoted_in_this_round:
@@ -491,7 +521,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 								data_qubits_cnoted_in_this_round.append(control)
 				# ZCA
 				if not SKIP_ONE:
-					print("hopefullt not")
+					#print("hopefullt not")
 					target = ZC
 					#fixed = [ZA,ZC]
 					#target = ZB
@@ -501,7 +531,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 							direction = ti
 							control = nbs[(conn,direction)]
 							if control is None:
-								print("Skip")
+								#print("Skip")
 								continue
 							#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 							else:
@@ -510,6 +540,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 								else:
 									Ztake2[target] = [control]	
 								cycle.append(('CNOT',control,target))
+								data_Z[control] +=1
+								chk_Z[target] +=1
 								U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 								zop_c += 1
 								if control in data_qubits_cnoted_in_this_round:
@@ -519,28 +551,29 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 			
 	for q in data_qubits:
 			if q in damaged:
-				print("DAMAGE")
+				#print("DAMAGE")
 				cycle.append(('dmg',q))
 			else:
 				if not(q in data_qubits_cnoted_in_this_round):
 					cycle.append(('IDLE',q))
 					idd += 1			
 	
-	print(" Z measurement repaired")
+	#print(" Z measurement repaired")
 	for q in Zchecks:
 		if q in marked:
-			print("This ancill is fixed ",q)
+			x = 1
+			#print("This ancill is fixed ",q)
 			#cycle.append(("badMZ",q))
 
 
 		else:
 			cycle.append(('MeasZ',q))
 			mz += 1
-	print("Cycle length after round repair ", len(cycle))
-	print("Gates added ",len(cycle)-temp)
+	#print("Cycle length after round repair ", len(cycle))
+	#print("Gates added ",len(cycle)-temp)
 	temp = len(cycle)
 	if len(Xbad)!=0:
-		print("REPAIR")
+		#print("REPAIR")
 		if symmetry or flipped :
 			for k in range(len(marked)):
 				XA = Xbad[3*k+0]
@@ -560,6 +593,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 						#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						else:
 							cycle.append(('CNOT',control,target))
+							chk_X[control] +=1
+							data_X[target] +=1
 							U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 							xop_c += 1
 				#XBC
@@ -573,6 +608,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 							continue
 						#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						cycle.append(('CNOT',control,target))
+						chk_X[control] +=1
+						data_X[target] +=1
 						U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						xop_c += 1
 				#XCA
@@ -586,14 +623,16 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 							continue
 						#U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2
 						else:
-							cycle.append(('CNOT',control,target))   
+							cycle.append(('CNOT',control,target)) 
+							chk_X[control] +=1
+							data_X[target] +=1  
 							U[lin_order[target],:] = (U[lin_order[target],:] + U[lin_order[control],:]) % 2 
 							xop_c +=1
 				
 
 
-	print("Cycle length after round 6 ", len(cycle))
-	print("Gates added ",len(cycle)-temp)
+	#print("Cycle length after round 6 ", len(cycle))
+	#print("Gates added ",len(cycle)-temp)
 	temp = len(cycle)
 	# round 7: all data qubits are idle, Prep Z checks, Meas X checks
 	for q in data_qubits:
@@ -607,7 +646,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 		if q[1] not in check_defect_x_locations:
 			if symmetry or flipped:
 				if q in marked:
-					print("This ancill is fixed ",q)
+					x = 1
+					#print("This ancill is fixed ",q)
 					#cycle.append(("badMX",q))
 				else:	
 					cycle.append(('MeasX',q))
@@ -618,26 +658,27 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 				mx += 1
 	for q in Zchecks:
 		if (q in marked) and not flipped:
-			print("I have this bad ancilla ",q)
+			x = 1
+			#print("I have this bad ancilla ",q)
 			#cycle.append(('PrepIdealZ',q))
 		else:	
 			cycle.append(('PrepZ',q))
 			prepz += 1
 
 	# full syndrome measurement circuit
-	print("Cycle length after a full round of syndrome xtraction si ", len(cycle))
-	print("Gates added ",len(cycle)-temp)
+	#print("Cycle length after a full round of syndrome xtraction si ", len(cycle))
+	#print("Gates added ",len(cycle)-temp)
 	temp = len(cycle)
-	#print("debug ",cycle[0])
+	##print("debug ",cycle[0])
 	cycle_repeated = num_cycles*cycle
-	print("Cycle length complete is ", len(cycle_repeated))
-	print("TOTAL XCONTS ",xop_c, " ZCNOTS ",zop_c," initz ",prepz," initx ",prepx, " measureX ",mx, " measureZ ",mz," IDle ",idd)
-	print("Patching collisions ",collisions)
-	#print("debug ",cycle_repeated[0])
-	#print(cycle_repeated)
-	DEBIG = False
+	#print("Cycle length complete is ", len(cycle_repeated))
+	#print("TOTAL XCONTS ",xop_c, " ZCNOTS ",zop_c," initz ",prepz," initx ",prepx, " measureX ",mx, " measureZ ",mz," IDle ",idd)
+	#print("Patching collisions ",collisions)
+	##print("debug ",cycle_repeated[0])
+	##print(cycle_repeated)
+	DEBIG = True
 	if DEBIG:
-		print("Checking commutation of the circuit")
+		#print("Checking commutation of the circuit")
 		# implement syndrome measurements using the sequential depth-12 circuit
 		V = np.identity(n,dtype=int)
 		# first measure all X checks
@@ -655,7 +696,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 		for t in range(7):
 			if not(sZ[t]=='idle'):
 				for target in Zchecks:
-					if target in marked:
+					if (target in marked) or (target in Zbad):
 						continue
 					direction = sZ[t]
 					control = nbs[(target,direction)]
@@ -676,8 +717,8 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 			print("Rows where matrices are not equal:", diff_rows)
 			print("Zeroing on the location")
 			for badrow in diff_rows:
-				#print("Circuit row ",U[badrow])
-				#print("Debug Row ",V[badrow])
+				##print("Circuit row ",U[badrow])
+				##print("Debug Row ",V[badrow])
 				diff_qubits = np.where(U[badrow] != V[badrow])[0]
 				for badplaces in diff_qubits:
 					label = badplaces // 72
@@ -689,9 +730,9 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 					neighbors = []
 					for time in range(6):
 						neighbors.append(nbs[(qbit,time)])
-					print("This is connected to ",neighbors)	
+					#print("This is connected to ",neighbors)	
 
-				print("List of badly organised qubits is ",diff_qubits)
+				#print("List of badly organised qubits is ",diff_qubits)
 				found_key = None
 				for key, value in lin_order.items():
 					if value == badrow:
@@ -702,14 +743,24 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False):
 					print(f"The key for the value '{badrow}' is '{found_key}'.")
 				else:
 					print(f"The value '{badrow}' does not exist in the dictionary.")
-			#print("First row U" , U[0])
-			#print("First row V" , V[0])
+			##print("First row U" , U[0])
+			##print("First row V" , V[0])
 			#for keys in lin_order:
-			#	print("keys are ",lin_order[keys])
-			#print("Data print")
+			#	#print("keys are ",lin_order[keys])
+			##print("Data #print")
 			#for q in data_qubits:
-			#	print(q)
+			#	#print(q)
 			exit()
+	for qbits in data_qubits:
+		x = 1
+		#print(data_X[qbits])
+		#print(data_Z[qbits])
+	for ck in Xchecks:
+		x = 1
+		#print(chk_X[ck])
+	for ck in Zchecks:	
+		x = 1
+		#print(chk_Z[ck])
 	return cycle_repeated,cycle
 
 def noisy_history_creator(fullcycle,err_rate= 0.001):
@@ -719,7 +770,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 	error_rate_cnot = error_rate
 	error_rate_meas = error_rate
 	error_damage = 0
-	print('error rate=',error_rate)
+	#print('error rate=',error_rate)
 	print('Generating noisy circuits with a singe Z-type faulty operation...')
 	ProbZ = []
 	circuitsZ = []
@@ -727,9 +778,9 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 	tail = fullcycle.copy()
 	skipped_m = 0
 	skipped_init = 0
-	print("fullycle is of length ",len(fullcycle))
+	#print("fullycle is of length ",len(fullcycle))
 	for gate in fullcycle:
-		#print("Gate is ",gate[0])
+		##print("Gate is ",gate[0])
 		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','PrepIdealX','PrepIdealZ','MeasX','MeasZ',"badMX","badMZ","badInit","dmg"])
 		if gate[0]=='MeasX':
 			assert(len(gate)==2)
@@ -737,7 +788,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 			ProbZ.append(error_rate_meas)
 		if gate[0]=='badMX':
 			skipped_m+=1
-			#print("badMX seen")
+			##print("badMX seen")
 			assert(len(gate)==2)
 			#circuitsZ.append(head + [('Z',gate[1])] + tail)
 			#ProbZ.append(0.00)	
@@ -784,7 +835,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 	head = []
 	tail = fullcycle.copy()
 	for gate in fullcycle:
-		#print("gate is ",gate[0])
+		##print("gate is ",gate[0])
 		assert(gate[0] in ['CNOT','IDLE','PrepX','PrepZ','PrepIdealX','PrepIdealZ','MeasX','MeasZ',"badMX","badMZ","badInit","dmg"])
 		if gate[0]=='MeasZ':
 			assert(len(gate)==2)
@@ -792,7 +843,7 @@ def noisy_history_creator(fullcycle,err_rate= 0.001):
 			ProbX.append(error_rate_meas)
 		if gate[0]=='badMZ':
 			skipped_m+=1
-			#print("BadMZ seen")
+			##print("BadMZ seen")
 			assert(len(gate)==2)
 			#circuitsX.append(head + [('X',gate[1])] + tail)
 			#ProbX.append(0.00)	
@@ -900,7 +951,7 @@ def simulate_circuitZ(C,lin_order,n=288):
 			state[q1] = (state[q1] + 1) % 2
 			state[q2] = (state[q2] + 1) % 2
 			continue
-	#print("syndrome history is of length ",len(syndrome_history))
+	##print("syndrome history is of length ",len(syndrome_history))
 	return np.array(syndrome_history,dtype=int),state,syndrome_map,err_cnt
 # we only look at the action of the circuit on X errors; 0 means no error, 1 means error
 def simulate_circuitX(C,lin_order,n=288):
@@ -912,15 +963,15 @@ def simulate_circuitX(C,lin_order,n=288):
 	err_cnt = 0
 	syn_cnt = 0
 	for gate in C:
-		#print(gate)
+		##print(gate)
 		if gate[0]=='CNOT':
 			assert(len(gate)==3)
-			#print("Gate name is ",gate)
+			##print("Gate name is ",gate)
 			control = lin_order[gate[1]]
 			#control = lin_order[gate[1]]
 			target = lin_order[gate[2]]
-			#print("Control is ",control)
-			#print("")
+			##print("Control is ",control)
+			##print("")
 			state[target] = (state[target] + state[control]) % 2
 			continue
 		if gate[0]=='PrepZ':
@@ -984,7 +1035,7 @@ def simulate_circuitX(C,lin_order,n=288):
 			state[q1] = (state[q1] + 1) % 2
 			state[q2] = (state[q2] + 1) % 2
 			continue
-	#print("syndrome history is of length ",len(syndrome_history))	
+	##print("syndrome history is of length ",len(syndrome_history))	
 	return np.array(syndrome_history,dtype=int),state,syndrome_map,err_cnt
 
 def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,Xchecks,LZ,LX,n2=72,num_cycles=12,k=12):
@@ -1006,16 +1057,16 @@ def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,X
 		for ignored in SANITY_BIN:
 			assert(state[lin_order[ignored]] == 0)
 		#Disable pesky asserts
-		#print("syndrome history length is ",len(syndrome_history))
-		#print("to equal ",n2*(num_cycles+2))
+		##print("syndrome history length is ",len(syndrome_history))
+		##print("to equal ",n2*(num_cycles+2))
 		assert(err_cnt==1)
-		#print("n2 is ",n2*(num_cycles+2))
-		#print("Syndrome Historu is ",len(syndrome_history))
+		##print("n2 is ",n2*(num_cycles+2))
+		##print("Syndrome Historu is ",len(syndrome_history))
 		#assert(len(syndrome_history)==n2*(num_cycles+2))
 
 		state_data_qubits = [state[lin_order[q]] for q in data_qubits]
-		#print("data qubiyts are ",data_qubits)
-		#print("state data qubits weight ",state_data_qubits)
+		##print("data qubiyts are ",data_qubits)
+		##print("state data qubits weight ",state_data_qubits)
 		#x = state_data_qubits.shape
 		syndrome_final_logical = (lz1 @ state_data_qubits) % 2
 		# apply syndrome sparsification map
@@ -1059,7 +1110,7 @@ def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,X
 		HX.append(coo_matrix(new_column))
 		HdecX.append(coo_matrix(new_column_short))
 		channel_probsX.append(np.sum([ProbX[i] for i in HXdict[supp]]))
-	print('Done.')
+	#print('Done.')
 	HX = hstack(HX)
 	HdecX = hstack(HdecX)
 
@@ -1080,19 +1131,19 @@ def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,X
 		assert(err_cnt==1)
 		#assert(len(syndrome_history)==n2*(num_cycles+2))
 		if not Flake:
-			#print("Printing data qubits")
-			#print(data_qubits)
-			#print("Printing linear order ")
-			#print(lin_order)
+			##print("#printing data qubits")
+			##print(data_qubits)
+			##print("#printing linear order ")
+			##print(lin_order)
+			##print("Debug")
 			#print("Debug")
-			print("Debug")
 			Flake= True
-			#print([lin_order[q]-72 for q in data_qubits])
+			##print([lin_order[q]-72 for q in data_qubits])
 		state_data_qubits = [state[lin_order[q]] for q in data_qubits]
 		state_data_list = [lin_order[q] for q in data_qubits]
-		#print(" Qubit order shape is ",np.shape(state_data_qubits))
+		##print(" Qubit order shape is ",np.shape(state_data_qubits))
 		syndrome_final_logical = (lx1 @ state_data_qubits) % 2
-		#print("Shape of this is ",syndrome_final_logical.shape)
+		##print("Shape of this is ",syndrome_final_logical.shape)
 		# apply syndrome sparsification map
 		syndrome_history_copy = syndrome_history.copy()
 		for c in Xchecks:
@@ -1153,6 +1204,8 @@ def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,X
 
 if __name__ == "__main__":
 	num_trials = 10000
+	style = 'zz'
+	multi_type = False
 	args = sys.argv[1:]
 	if args[0] == "-err":
 		perr = float(args[1])
@@ -1161,12 +1214,14 @@ if __name__ == "__main__":
 	if args[4] == "-arg":
 		repair = int(args[5])	
 	qubitdamage = [repair]
-	fliper =True # Toggle between x and z
+	fliper =False # Toggle between x and z
 	#qubitdamage = [2]
 	for qbits in qubitdamage:
-		print("Damaging ",qbits)
+		#print("Damaging ",qbits)
 		damageQubits = [qbits] # Hard-Code
-		#damageQubits = [133]
+		damageQubits = [0,133]
+		if len(damageQubits) >1:
+			multi_type = True
 		# Parity Matrices Extracted
 		codeName = code_dict(name="gross")
 		bikeCode = bivariate_parity_generator_bicycle(codeName)
@@ -1183,12 +1238,12 @@ if __name__ == "__main__":
 		
 		lx = bikeCode_damaged.lx.copy()
 		lz = bikeCode_damaged.lz.copy()
-		for rows in lz:
-			print("this zrow weights ",sum(rows))
-		for rows in lx:
-			print("this zrow weights ",sum(rows))	
-		print("lx has shape ",lx.shape)
-		print("lz has shape ",lz.shape)
+		#for rows in lz:
+			#print("this zrow weights ",sum(rows))
+		#for rows in lx:
+			#print("this zrow weights ",sum(rows))	
+		#print("lx has shape ",lx.shape)
+		#print("lz has shape ",lz.shape)
 		# When there are additional logicals choose the first 12(Sanity check)
 		#lx = lx[:12]
 		#lz = lz[:12]
@@ -1237,6 +1292,7 @@ if __name__ == "__main__":
 		mydata['sX']=sX
 		mydata['sZ']=sZ
 		mydata['damaged'] = SANITY_BIN
+		mydata['style'] = style
 		n = 144
 		k =12
 		error_rate = perr
@@ -1244,7 +1300,10 @@ if __name__ == "__main__":
 		if sym:
 			title='./TMP/symmetric_mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 		else:
-			title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+			if multi_type:
+				title = './TMP/multi_asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+			else:	
+				title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 
 		print('saving data to ',title)
 		with open(title, 'wb') as fp:

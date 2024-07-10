@@ -4,13 +4,17 @@ import numpy as np
 from ldpc import bposd_decoder
 from bposd.css import css_code
 import pickle
-
+import sys
 # number of Monte Carlo trials
 num_trials = 100000
 
 # error rate 
-p = 0.0035
-
+p = 0.004
+args = sys.argv[1:]
+if args[0] == "-sit":
+	situation = args[1]
+if args[2] == "-style":
+	style = args[3]
 
 # code parameters
 n = 144
@@ -20,7 +24,8 @@ num_cycles = 1
 
 
 # load code parameters and decoding matrices
-title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
+#title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
+title = './TMP/multi_asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)+situation+style
 #title = './TMP/symmetric_mydata_' + str(n) + '_' + str(k) + '_p_' + str(p) + '_cycles_' + str(num_cycles)
 print(" I am reading from ",title)
 with open(title, 'rb') as fp:
@@ -151,7 +156,7 @@ for trial in range(num_trials):
 		wminX = wt
 		if wminX < 5:
 			print(np.where(low_weight_logical==1))
-	if trial % 1 == 0:
+	if trial % 10 == 0:
 		print('Logical Z weight =',wt,'minimum Z weight =',wminZ)	
 		print('Logical X weight =',wt,'minimum X weight =',wminX)
 

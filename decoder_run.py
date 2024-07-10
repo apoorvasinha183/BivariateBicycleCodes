@@ -21,7 +21,7 @@ num_cycles = 12
 #num_cycles = 1
 # load decoder data from file (must be created with decoder_setup.py)
 #title = './TMP/mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
-title = './TMP/asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
+title = './TMP/multi_asymmetric_mydata_final_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 #title = './TMP/symmetric_mydata_' + str(n) + '_' + str(k) + '_p_' + str(error_rate) + '_cycles_' + str(num_cycles)
 print('reading data from file')
 print(title)
@@ -30,14 +30,14 @@ with open(title, 'rb') as fp:
 print("Reading complete")
 
 # file to save simulation results
-fname = './Optimal_CODE_' + str(n) + '_' + str(k) + '_' + str(d) + '_result_def_final'
-
+fname = './Multi_Optimal_CODE_' + str(n) + '_' + str(k) + '_' + str(d) + '_result_def_final'
+style_recived = 'zz'
 # format of the result file
 # column 1: error rate
 # column 2: number of syndrome cycles
 # column 3: number of Monte Carlo trials 
 # column 4: number of Monte Carlo trials that resulted in a logical error
-
+# column 5 : style of repair if multiple qubits were repaired
 
 HdecX = mydata['HdecX']
 HdecZ = mydata['HdecZ']
@@ -66,6 +66,7 @@ b3=mydata['b3']
 sX=mydata['sX']
 sZ=mydata['sZ']
 ignore = mydata['damaged']
+style = mydata['style'] 
 assert(error_rate==mydata['error_rate'])
 cycle_repeated = num_cycles*cycle
 
@@ -481,4 +482,4 @@ for trial in range(num_trials):
 
 #assert(num_trials==(good_trials+bad_trials))
 
-print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(num_trials) + '\t' + str(bad_trials),file=open(fname,'a'))
+print(str(error_rate) + '\t' + str(num_cycles) + '\t' + str(num_trials) + '\t' + str(bad_trials)+"\t"+style,file=open(fname,'a'))
