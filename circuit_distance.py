@@ -17,7 +17,7 @@ if args[2] == "-style":
 	style = args[3]
 
 # code parameters
-n = 144
+n = 288
 k = 12
 d = 12
 num_cycles = 1
@@ -157,8 +157,8 @@ for trial in range(num_trials):
 		if wminX < 5:
 			print(np.where(low_weight_logical==1))
 	if trial % 10 == 0:
-		print('Logical Z weight =',wt,'minimum Z weight =',wminZ)	
-		print('Logical X weight =',wt,'minimum X weight =',wminX)
+		print('Logical Z weight =',wt,'minimum Z weight =',wminZ," trials done ",trial)	
+		print('Logical X weight =',wt,'minimum X weight =',wminX," trials done ",trial)
 
 	
 		

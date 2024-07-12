@@ -1,0 +1,450 @@
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Attempt to delete qubit  [0]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+<Unnamed CSS code>, (4,10)-[[287,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[287,12,nan]]
+Attempt to delete qubit  [0, 12]
+Flip is  False
+Parity break is  False
+SANITY CHECK  False
+x deleted rows should be  [  5  10 108]
+z deleted rows should be  [ 3 12 24]
+To be deleted  [  5  10 108]
+SANITY CHECK  False
+x deleted rows should be  [ 17  22 120]
+z deleted rows should be  [ 3 12 15 36]
+To be deleted  [ 17  22 120]
+<Unnamed CSS code>, (4,14)-[[286,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Normal Code
+1 data defect Code
+2 data defects Code
+Normal Code
+1 data defect Code
