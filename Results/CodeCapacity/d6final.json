@@ -15,3 +15,4 @@
 {"N": 72, "K": 12, "nTrials": 100000, "nBad": 13652, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0, 35], "ler": 0.012157537904132876, "perr": 0.05, "d": 6, "type": "x", "time": "2024-07-12T12:46:17.652586"}
 {"N": 72, "K": 12, "nTrials": 100000, "nBad": 22034, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0, 35], "ler": 0.02052782169791978, "perr": 0.06, "d": 6, "type": "x", "time": "2024-07-12T12:46:17.652586"}
 {"N": 72, "K": 12, "nTrials": 100000, "nBad": 31813, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0, 35], "ler": 0.031405946135452, "perr": 0.07, "d": 6, "type": "x", "time": "2024-07-12T12:46:17.652586"}
+{"N": 72, "K": 12, "nTrials": 100000, "nBad": 42340, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0, 35], "ler": 0.04484712662653889, "perr": 0.08, "d": 6, "type": "x", "time": "2024-07-12T12:46:17.652586"}
