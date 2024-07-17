@@ -1,0 +1,2 @@
+{"N": 72, "K": 12, "nTrials": 10000, "nBad": 19, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0], "ler": 0.0, "perr": 0.001, "time": "2024-07-14T09:20:55.652415"}
+{"N": 72, "K": 12, "nTrials": 10000, "nBad": 163, "repairType": "ZZ", "defectType": "distant", "defectLocation": [0], "ler": 0.0, "perr": 0.002, "time": "2024-07-14T09:20:55.652415"}

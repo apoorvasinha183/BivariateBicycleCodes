@@ -45,14 +45,16 @@ class code_capacity_simulation():
             'logging':True,
             'progressTrack':True,
             'defectModes':None,
-            'repairModes':None
+            'repairModes':None,
+            'R_mode':False,
+            'perrors':[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]
         }
         for key in input_dict.keys():
             self.__dict__[key] = input_dict[key]
         for key in default_input.keys():
             if key not in input_dict:
                 self.__dict__[key] = default_input[key]
-        self.perrors = [0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]
+        #self.perrors = [0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]
         self.output_file = self.__dict__['fileName']
         self.output = {}
         self.verbose = True
@@ -85,6 +87,7 @@ class code_capacity_simulation():
         self.output["d"] = 50
         self.output["type"] = 'z'
         self.output['time'] = self.starttime.isoformat()
+        self.output['repair_version'] = 'v2' if self.R_mode else 'v1'
         return
 
     def _undamaged_code(self):
@@ -110,19 +113,34 @@ class code_capacity_simulation():
         if repair is None:
             return
         if repair == 'A-Z':
-            self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'])]
+            if self.R_mode:
+                self.qcode = [damage_qubit_v2(qcode,turnOffQubits=self.__dict__['defectLocation'])]
+            else:
+                self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'])]
             return
         if repair == 'A-X':
-            self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'],flip=True)]
+            if not self.R_mode:
+                self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'],flip=True)]
+            else:
+                self.qcode = [damage_qubit_v2(qcode,turnOffQubits=self.__dict__['defectLocation'],flip=True)]
             return
         if repair == 'symmetry':
-            self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'],symmetry=True)]
+            if not self.R_mode:
+                self.qcode = [damage_qubit(qcode,turnOffQubits=self.__dict__['defectLocation'],symmetry=True)]
+            else:
+                self.qcode = [damage_qubit_v2(qcode,turnOffQubits=self.__dict__['defectLocation'],symmetry=True)]
             return
         if repair == 'ZZ':
-            self.qcode = [damage_qubit(qcode,turnOffQubits=self.deadQubits,test=self.verbose)]
+            if not self. R_mode:
+                self.qcode = [damage_qubit(qcode,turnOffQubits=self.deadQubits,test=self.verbose)]
+            else:
+                self.qcode = [damage_qubit_v2(qcode,turnOffQubits=self.deadQubits,test=self.verbose)]
             return
         if repair == 'ZX':
-            self.qcode = [damage_qubit(qcode,turnOffQubits=self.deadQubits,alterning=True,test=self.verbose)]
+            if not self. R_mode:
+                self.qcode = [damage_qubit(qcode,turnOffQubits=self.deadQubits,alterning=True,test=self.verbose)]
+            else:
+                self.qcode = [damage_qubit_v2(qcode,turnOffQubits=self.deadQubits,alterning=True,test=self.verbose)]
             return
         return
     def _processdefectMode(self,mode=None):

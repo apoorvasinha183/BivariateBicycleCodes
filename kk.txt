@@ -1,0 +1,24 @@
+Turn off qubits  [0, 5]
+Weird distant qubits  (array([ 24,  30,  39,  90, 112, 113]),)
+Rows-z to be deleted are  [ 4  5 54]
+zbroken :[  0  63  69  73  74 129]
+zbroken :[  0   9  66  82  83 132]
+zbroken :[  0   6  15  88  89 138]
+Xconn :[5, 22, 73, 82, 88, 1, 23, 74, 83, 89, 55, 56, 129, 132, 138];Zconn:[63, 69, 73, 74, 129, 9, 66, 82, 83, 132, 6, 15, 88, 89, 138]
+Common Data qubit Connections :[129, 132, 73, 74, 138, 82, 83, 88, 89]
+Rows-z to be deleted are  [ 3  4 59]
+zbroken :[  5  62  68  72  73 128]
+zbroken :[  5   8  71  81  82 137]
+zbroken :[  5  11  14  87  88 143]
+Xconn :[4, 21, 72, 81, 87, 0, 22, 73, 82, 88, 54, 55, 128, 137, 143];Zconn:[62, 68, 72, 73, 128, 8, 71, 81, 82, 137, 11, 14, 87, 88, 143]
+Common Data qubit Connections :[128, 72, 73, 137, 143, 81, 82, 87, 88]
+Minimum weight is 0
+Distinct weights-Z are  [6, 0]
+Distinct weights-X are  [6, 5, 4]
+<Unnamed CSS code>, (3,6)-[[142,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (3,6)-[[142,12,nan]]

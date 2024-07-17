@@ -30,10 +30,10 @@ from defect_parity_generator import *
 # Step 3: Simulate
 
 #######
-SANITY_BIN = []
+
 def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[],alternating = False):
 	# Annotate the dead data qubit
-	#print("Defects I see are ",defects)
+	print("Defects I see are ",defects)
 	dead_data_loc = []
 	dead_data_loc_all = []
 	for locations in defects:
@@ -218,7 +218,8 @@ def node_gen(A1,A2,A3,B1,B2,B3,n2=72,defects=[],alternating = False):
 	#print("Remaining data qubits are ",len(data_qubits))
 	return (Xchecks,Zchecks,data_qubits,nbs,flags,lin_order,dead_data_loc_all)
 
-def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternating = False):
+def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternating = False,anchors=[],Xbad = [],Zbad = []):
+	SANITY_BIN = []
 	Ztake2 = {}
 	Xtake2 = {}
 	flipped = flip
@@ -227,14 +228,20 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternati
 	sX= ['idle', 1, 4, 3, 5, 0, 2]
 	sZ= [3, 5, 0, 1, 2, 4, 'idle']
 	check_defect_x_locations = []
-	Xbad = []
-	Zbad = []
+	#Xbad = []
+	#Zbad = []
 	print("flags are ",flags)
-	for broken_checks in flags:
-		if broken_checks[0] == 'Xcheck':
-			Xbad.append(broken_checks)
-		else:
-			Zbad.append(broken_checks)   
+	DISABLE = True
+	if not DISABLE:
+		for broken_checks in flags:
+			if broken_checks[0] == 'Xcheck':
+				Xbad.append(broken_checks)
+			else:
+				Zbad.append(broken_checks)   
+	print("Organized Xbad are ",Xbad)
+	print("Organized Zbad are ",Zbad)
+	# Some repairs require a specific anchor
+	
 	# If a ZX fix is applied we have to take the first with Z repair and second three with X repair
 	if alternating:
 		x=1
@@ -250,20 +257,24 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternati
 	#Zbad[1] = swap
 	# Order Check
 	if SKIP_ONE:
-		flip = False
-		for i in range(len(Zbad)):
-			if (i+1)%3 ==0:
-				if not flipped:
-					marked.append(Zbad[i])
-					SANITY_BIN.append(Zbad[i])
-					if alternating:
+		#flip = False
+		if len(anchors) == 0:
+			for i in range(len(Zbad)):
+				if (i+1)%3 ==0:
+					if not flipped:
+						marked.append(Zbad[i])
+						SANITY_BIN.append(Zbad[i])
+						if alternating:
+							marked.append(Xbad[i])
+							SANITY_BIN.append(Xbad[i])
+
+					if symmetry or flipped:
 						marked.append(Xbad[i])
 						SANITY_BIN.append(Xbad[i])
-
-				if symmetry or flipped:
-					marked.append(Xbad[i])
-					SANITY_BIN.append(Xbad[i])
-				#print("marked is ",marked)
+					#print("marked is ",marked)
+		else:
+			marked = anchors.copy()
+			SANITY_BIN = anchors.copy()
 		#marked = [Zbad[2],Zbad[5]]		 
 	# syndrome measurement cycle as a list of operations
 	print("marked qubits are ",SANITY_BIN)
@@ -493,8 +504,10 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternati
 				ZA = Zbad[3*k]
 				ZB = Zbad[3*k+1]
 				ZC = Zbad[3*k+2]
-				assert(ZC == marked[k])
+				
 				print("syndromes are ", ZA,ZB,ZC)
+				print("marked is ",marked[k])
+				assert(ZC == marked[k])
 				# By default fix Z only 
 				#Sweep direction from 0 to 5
 				#ZAC 
@@ -731,35 +744,38 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternati
 		for t in range(7):
 			if not(sX[t]=='idle'):
 				for control in Xchecks:
-					if (control in marked) or (control in Xbad):
-						continue
+					if symmetry or flipped or alternating:
+						if (control in marked) or (control in Xbad):
+							continue
 					direction = sX[t]
 					target = nbs[(control,direction)]
 					if target is None: 
 						continue
 					V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
 		# Repair the Xchecks
-		for control in Xchecks:
-			if control in Xtake2:
-				targets = Xtake2[control]
-				for target in targets:
-					V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
+		if symmetry or flipped or alternating:
+			for control in Xchecks:
+				if control in Xtake2:
+					targets = Xtake2[control]
+					for target in targets:
+						V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
 		# next measure all Z checks
 		for t in range(7):
 			if not(sZ[t]=='idle'):
 				for target in Zchecks:
-					if (target in marked) or (target in Zbad):
+					if (not flipped) and ((target in marked) or (target in Zbad)):
 						continue
 					direction = sZ[t]
 					control = nbs[(target,direction)]
 					if control is None:
 						continue
 					V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
-		for target in Zchecks:
-			if target in Ztake2:
-				controls  = Ztake2[target]
-				for control in controls:
-					V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
+		if not flipped:
+			for target in Zchecks:
+				if target in Ztake2:
+					controls  = Ztake2[target]
+					for control in controls:
+						V[lin_order[target],:] = (V[lin_order[target],:] + V[lin_order[control],:]) % 2
 		if np.array_equal(U,V):
 			print('circuit test: OK')
 		else:
@@ -813,7 +829,7 @@ def circuit_gen(args,n=288,num_cycles=12,symmetry = False,flip = False,alternati
 	for ck in Zchecks:	
 		x = 1
 		#print(chk_Z[ck])
-	return cycle_repeated,cycle
+	return cycle_repeated,cycle,SANITY_BIN
 
 def noisy_history_creator(fullcycle,err_rate= 0.001):
 	error_rate = err_rate
@@ -1090,7 +1106,7 @@ def simulate_circuitX(C,lin_order,n=288):
 	##print("syndrome history is of length ",len(syndrome_history))	
 	return np.array(syndrome_history,dtype=int),state,syndrome_map,err_cnt
 
-def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,Xchecks,LZ,LX,n2=72,num_cycles=12,k=12):
+def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,Xchecks,LZ,LX,n2=72,num_cycles=12,k=12,SANITY_BIN=[]):
 	HXdict  = {}
 	circuitsX = CX.copy()
 	ProbX = PX.copy()
@@ -1107,7 +1123,9 @@ def simplified_parity_matrices(CX,PX,CZ,PZ,lin_order,cycle,data_qubits,Zchecks,X
 		syndrome_history,state,syndrome_map,err_cnt = simulate_circuitX(circ+cycle+cycle,lin_order,n=4*n2)
 		# Do a sanity check
 		for ignored in SANITY_BIN:
-			assert(state[lin_order[ignored]] == 0)
+			if state[lin_order[ignored]] !=0:
+				print("Checking the state ",ignored)
+				assert(state[lin_order[ignored]] == 0)
 		#Disable pesky asserts
 		##print("syndrome history length is ",len(syndrome_history))
 		##print("to equal ",n2*(num_cycles+2))
@@ -1318,14 +1336,14 @@ if __name__ == "__main__":
 		# Extract the connection matrices
 		A1,A2,A3,B1,B2,B3 = connection_matrices(codeName)
 		parameters = node_gen(A1,A2,A3,B1,B2,B3,defects=damageQubits,alternating=alternate,n2=n//2)
-		circuit,cycle = circuit_gen(parameters,num_cycles=ncyc,symmetry=sym,flip=fliper,alternating=alternate,n=2*n) # With defect-reapir added
+		circuit,cycle,SANITY_BIN = circuit_gen(parameters,num_cycles=ncyc,symmetry=sym,flip=fliper,alternating=alternate,n=2*n) # With defect-reapir added
 		# Generate noisy circuits
 		circuitX,pX,circuitZ,pZ = noisy_history_creator(circuit,err_rate=perr)
 		linearorder = parameters[-2]
 		Xcheck1 = parameters[0]
 		Zcheck1 = parameters[1]
 		data = parameters[2]
-		Hx,Hdx,Hz,HdZ,fX,fZ,channel_probsX,channel_probsZ = simplified_parity_matrices(circuitX,pX,circuitZ,pZ,linearorder,cycle,data,Zcheck1,Xcheck1,LZ=lz,LX=lx,num_cycles=ncyc,n2=n//2)
+		Hx,Hdx,Hz,HdZ,fX,fZ,channel_probsX,channel_probsZ = simplified_parity_matrices(circuitX,pX,circuitZ,pZ,linearorder,cycle,data,Zcheck1,Xcheck1,LZ=lz,LX=lx,num_cycles=ncyc,n2=n//2,SANITY_BIN=SANITY_BIN)
 		# Save Stuff
 		# save decoding matrices 
 		(ell,m,a1,a2,a3,b1,b2,b3) = codeName

@@ -107,12 +107,12 @@ def Calculate_Distance(qcode):
 	shuffled_indices = np.random.permutation(k)
 	lx_shuffled = lx[shuffled_indices]
 	lz_shuffled = lz[shuffled_indices]
-	k =1
+	#k =1
 	pbar = tqdm(range(k),ncols=0)
 	#Randomize the order of the lx and lz matrices
 	for i in pbar:
-		
-
+		dx = 1000
+		dz = 1000
 		w1,hxSmalli = distance_test(hx,lx_shuffled[i,:])
 		w2,hzSmalli = distance_test(hz,lz_shuffled[i,:])
 		#print('Logical qubitX=',i,'Distance=',w1)
@@ -122,8 +122,10 @@ def Calculate_Distance(qcode):
 		hxSmall[i] = hxSmalli
 		hzSmall[i] =  hzSmalli
 		#w1 = 10000
+		dx = min(dx,w1)
+		dz = min(dz,w2)
 		d = min(d,w1,w2)
-		pbar.set_description(f"d_min: {d};")
+		pbar.set_description(f"d_min: {d};dz:{dz};dx:{dx}")
 	pbar.close()
 	print("X distances ",qubitix)
 	print("Z distances ",qubitiz)
@@ -190,52 +192,10 @@ def Sample_Distance(qCode,type='z',perr=0.01,nTrials = 100,disable= False):
 if __name__ == "__main__":
 	codeName = code_dict(name="gross")
 	bikeCode = bivariate_parity_generator_bicycle(codeName)
-	damagedBikeCode_One = damage_qubit(bikeCode)
-	bikeCode = bivariate_parity_generator_bicycle(codeName)
-	damagedBikeCode_Two = damage_qubit(bikeCode,turnOffQubits=[0,12])
-	errors = [0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]
-	trials = 1000
-	dn = 50
-	d1x = 50
-	d1z = 50
-	d2x = 50
-	d2z = 50
-	for p in errors:
-		#Calculate_Distance(bikeCode)
-		print("Normal Code")
-		faultRate,minWt,_=Sample_Distance(bikeCode,perr=p,nTrials=trials)
-		dn = min(dn,minWt)
-		#Cause a data damage(default is 0)
-		
-		#Calculate_Distance(damagedBikeCode)
-		print("1 data defect Code-AZ")
-		damagedBikeCode_One = damage_qubit(bikeCode)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='z')
-		d1z = min(d1z,minWt)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='x')
-		d1x = min(d1x,minWt)
-		#--
-		print("1 data defect Code-AX")
-		damagedBikeCode_One = damage_qubit(bikeCode,flip=True)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='z')
-		d1z = min(d1z,minWt)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='x')
-		d1x = min(d1x,minWt)
-		print("1 data defect Code-Symmetric")
-		damagedBikeCode_One = damage_qubit(bikeCode,symmetry=True)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='z')
-		d1z = min(d1z,minWt)
-		faultRate,minWt,_=Sample_Distance(damagedBikeCode_One,perr=p,nTrials=trials,type='x')
-		d1x = min(d1x,minWt)
-		# Cause double data damage(0,12)
-		#print("2 data defects Code")
-		#faultRate,minWt,_=Sample_Distance(damagedBikeCode_Two,perr=p,nTrials=trials,type='z')
-		#d2z = min(d2z,minWt)
-		#faultRate,minWt,_=Sample_Distance(damagedBikeCode_Two,perr=p,nTrials=trials,type='x')
-		#d2x = min(d2x,minWt)
-	print(f"Normal dn:{dn}")	
-	print(f"1Qubit x:{d1x} z:{d1z}")
-	print(f"2Qubit x:{d2x} z:{d2z}")
+	damagedBikeCode_One = damage_qubit_v2(bikeCode,turnOffQubits=[3,24],flip=True)
+	#bikeCode = bivariate_parity_generator_bicycle(codeName)
+	#damagedBikeCode_Two = damage_qubit(bikeCode,turnOffQubits=[0,1,22])
+	Calculate_Distance(damagedBikeCode_One)
 
 
 

@@ -1,0 +1,3179 @@
+These sims were fired on  2024-07-14 01:08:59.181286
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x100c57dc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x100c57dc0>
+Input:starttime;Value:2024-07-14 01:08:59.181286
+Simulation Checkpoint. Time of  0:00:00.000029 has elpased since the beginning
+These sims were fired on  2024-07-14 01:08:59.181324
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x100c57dc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{'HdecX': None, 'HdecZ': None, 'probX': None, 'probZ': None, 'cycle': None, 'lin_order': None, 'num_cycles': None, 'data_qubits': None, 'Xchecks': None, 'Zchecks': None, 'HX': None, 'HZ': None, 'lx': None, 'lz': None, 'first_logical_rowZ': None, 'first_logical_rowX': None, 'ell': None, 'm': None, 'a1': None, 'a2': None, 'a3': None, 'b1': None, 'b2': None, 'b3': None, 'error_rate': None, 'sX': None, 'sZ': None, 'damaged': None, 'style': None}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x100c57dc0>
+Input:starttime;Value:2024-07-14 01:08:59.181324
+Simulation Checkpoint. Time of  0:00:00.000026 has elpased since the beginning
+Defect Modes are  None
+Repair Modes are  None
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 14]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 13 32]
+z deleted rows should be  [17 20 26]
+x deleted rows cumulative should be  [12 13 32]
+z deleted rows cumulative should be  [17 20 26]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 26)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 32)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 17), ('Zcheck', 20), ('Zcheck', 26)]
+Trying mode:distant and repairs:ZZ
+codes is  72
+deadQubits are  [0, 14]
+Defects I see are  [0, 14]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 18), ('Xcheck', 32), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 17), ('Zcheck', 20), ('Zcheck', 26)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 32)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 17), ('Zcheck', 20), ('Zcheck', 26)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 26)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 17) ('Zcheck', 20) ('Zcheck', 26)
+marked is  ('Zcheck', 26)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 60
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3distantZZ1
+Simulation Checkpoint. Time of  0:00:02.754695 has elpased since the beginning
+Turn off qubits  [0, 14]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 13 32]
+z deleted rows should be  [17 20 26]
+x deleted rows cumulative should be  [12 13 32]
+z deleted rows cumulative should be  [17 20 26]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 32)]
+Xbad:[('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 32)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:distant and repairs:ZX
+codes is  72
+deadQubits are  [0, 14]
+Defects I see are  [0, 14]
+n2 is  36
+flags are  [('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 32), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 12), ('Xcheck', 13), ('Xcheck', 32)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 32)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 12) ('Xcheck', 13) ('Xcheck', 32)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 58
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 66
+saving data to  ./Results//CircuitSims//d6err3distantZX1
+Simulation Checkpoint. Time of  0:00:05.478123 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 60]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 18 27]
+z deleted rows should be  [ 6 25 26]
+x deleted rows cumulative should be  [12 18 27]
+z deleted rows cumulative should be  [ 6 25 26]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 26)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 25), ('Zcheck', 26)]
+Trying mode:common and repairs:ZZ
+codes is  72
+deadQubits are  [0, 60]
+Defects I see are  [0, 60]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 25), ('Zcheck', 26)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 25), ('Zcheck', 26)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 26)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 3) ('Zcheck', 25) ('Zcheck', 26)
+marked is  ('Zcheck', 26)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1587
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1583
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 475
+Decoding matrix HX sparseness:
+max col weight= 11
+max row weight= 70
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 14
+max row weight= 34
+saving data to  ./Results//CircuitSims//d6err3commonZZ1
+Simulation Checkpoint. Time of  0:00:08.266216 has elpased since the beginning
+Turn off qubits  [0, 60]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 18 27]
+z deleted rows should be  [ 6 25 26]
+x deleted rows cumulative should be  [12 18 27]
+z deleted rows cumulative should be  [ 6 25 26]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 27)]
+Xbad:[('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:common and repairs:ZX
+codes is  72
+deadQubits are  [0, 60]
+Defects I see are  [0, 60]
+n2 is  36
+flags are  [('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 27)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 12) ('Xcheck', 18) ('Xcheck', 27)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 54
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 59
+saving data to  ./Results//CircuitSims//d6err3commonZX1
+Simulation Checkpoint. Time of  0:00:11.080479 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 5]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 3  4 23]
+z deleted rows should be  [ 2 11 17]
+x deleted rows cumulative should be  [ 3  4 23]
+z deleted rows cumulative should be  [ 2 11 17]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 17)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 23)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 2), ('Zcheck', 11), ('Zcheck', 17)]
+Trying mode:onlyx and repairs:ZZ
+codes is  72
+deadQubits are  [0, 5]
+Defects I see are  [0, 5]
+n2 is  36
+flags are  [('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 23), ('Zcheck', 2), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 11), ('Zcheck', 12), ('Zcheck', 17)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 23)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 2), ('Zcheck', 11), ('Zcheck', 17)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 17)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 2) ('Zcheck', 11) ('Zcheck', 17)
+marked is  ('Zcheck', 17)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 62
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3onlyxZZ1
+Simulation Checkpoint. Time of  0:00:13.830632 has elpased since the beginning
+Turn off qubits  [0, 5]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 3  4 23]
+z deleted rows should be  [ 2 11 17]
+x deleted rows cumulative should be  [ 3  4 23]
+z deleted rows cumulative should be  [ 2 11 17]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 23)]
+Xbad:[('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 23)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyx and repairs:ZX
+codes is  72
+deadQubits are  [0, 5]
+Defects I see are  [0, 5]
+n2 is  36
+flags are  [('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 23), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 3), ('Xcheck', 4), ('Xcheck', 23)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 23)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 3) ('Xcheck', 4) ('Xcheck', 23)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 59
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 58
+saving data to  ./Results//CircuitSims//d6err3onlyxZX1
+Simulation Checkpoint. Time of  0:00:16.650566 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 6]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+<Unnamed CSS code>, (4,14)-[[70,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Discard.Retry.DeadParityLocations:[0, 6]
+Turn off qubits  [0, 6]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 5  4 18]
+shuffled rowz  [12  6  3]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+shuffled rowx  [10 24 11]
+shuffled rowz  [ 6  9 18]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 3), ('Zcheck', 18)]
+Xbad:[('Xcheck', 5), ('Xcheck', 4), ('Xcheck', 18), ('Xcheck', 10), ('Xcheck', 24), ('Xcheck', 11)]Zbad:[('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 18)]
+Trying mode:onlyz and repairs:ZZ
+codes is  72
+deadQubits are  [0, 6]
+Defects I see are  [0, 6]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 18), ('Xcheck', 24), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 12), ('Zcheck', 18)]
+Organized Xbad are  [('Xcheck', 5), ('Xcheck', 4), ('Xcheck', 18), ('Xcheck', 10), ('Xcheck', 24), ('Xcheck', 11)]
+Organized Zbad are  [('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 18)]
+marked qubits are  [('Zcheck', 3), ('Zcheck', 18)]
+syndromes are  ('Zcheck', 12) ('Zcheck', 6) ('Zcheck', 3)
+marked is  ('Zcheck', 3)
+syndromes are  ('Zcheck', 6) ('Zcheck', 9) ('Zcheck', 18)
+marked is  ('Zcheck', 18)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1588
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 476
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 76
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 18
+max row weight= 37
+saving data to  ./Results//CircuitSims//d6err3onlyzZZ1
+Simulation Checkpoint. Time of  0:00:19.519804 has elpased since the beginning
+Turn off qubits  [0, 6]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 24)]
+Xbad:[('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyz and repairs:ZX
+codes is  72
+deadQubits are  [0, 6]
+Defects I see are  [0, 6]
+n2 is  36
+flags are  [('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 24)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 10) ('Xcheck', 11) ('Xcheck', 24)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1582
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1582
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 51
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 7
+max row weight= 62
+saving data to  ./Results//CircuitSims//d6err3onlyzZX1
+Simulation Checkpoint. Time of  0:00:22.321234 has elpased since the beginning
+Simulation finished. Took 0:00:22.321250
+These sims were fired on  2024-07-14 01:09:35.889339
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x102f97dc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x102f97dc0>
+Input:starttime;Value:2024-07-14 01:09:35.889339
+Simulation Checkpoint. Time of  0:00:00.000032 has elpased since the beginning
+These sims were fired on  2024-07-14 01:09:35.889380
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x102f97dc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{'HdecX': None, 'HdecZ': None, 'probX': None, 'probZ': None, 'cycle': None, 'lin_order': None, 'num_cycles': None, 'data_qubits': None, 'Xchecks': None, 'Zchecks': None, 'HX': None, 'HZ': None, 'lx': None, 'lz': None, 'first_logical_rowZ': None, 'first_logical_rowX': None, 'ell': None, 'm': None, 'a1': None, 'a2': None, 'a3': None, 'b1': None, 'b2': None, 'b3': None, 'error_rate': None, 'sX': None, 'sZ': None, 'damaged': None, 'style': None}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x102f97dc0>
+Input:starttime;Value:2024-07-14 01:09:35.889380
+Simulation Checkpoint. Time of  0:00:00.000025 has elpased since the beginning
+Defect Modes are  None
+Repair Modes are  None
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 2]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 0  1 20]
+z deleted rows should be  [ 5  8 14]
+x deleted rows cumulative should be  [ 0  1 20]
+z deleted rows cumulative should be  [ 5  8 14]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 14)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 20)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 5), ('Zcheck', 8), ('Zcheck', 14)]
+Trying mode:distant and repairs:ZZ
+codes is  72
+deadQubits are  [0, 2]
+Defects I see are  [0, 2]
+n2 is  36
+flags are  [('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 20), ('Zcheck', 3), ('Zcheck', 5), ('Zcheck', 6), ('Zcheck', 8), ('Zcheck', 12), ('Zcheck', 14)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 20)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 5), ('Zcheck', 8), ('Zcheck', 14)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 14)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 5) ('Zcheck', 8) ('Zcheck', 14)
+marked is  ('Zcheck', 14)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1572
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1568
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3distantZZ1
+Simulation Checkpoint. Time of  0:00:02.763850 has elpased since the beginning
+Turn off qubits  [0, 2]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 0  1 20]
+z deleted rows should be  [ 5  8 14]
+x deleted rows cumulative should be  [ 0  1 20]
+z deleted rows cumulative should be  [ 5  8 14]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 20)]
+Xbad:[('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 20)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:distant and repairs:ZX
+codes is  72
+deadQubits are  [0, 2]
+Defects I see are  [0, 2]
+n2 is  36
+flags are  [('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 20), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 0), ('Xcheck', 1), ('Xcheck', 20)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 20)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 0) ('Xcheck', 1) ('Xcheck', 20)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 63
+saving data to  ./Results//CircuitSims//d6err3distantZX1
+Simulation Checkpoint. Time of  0:00:05.598222 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 60]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 18 27]
+z deleted rows should be  [ 6 25 26]
+x deleted rows cumulative should be  [12 18 27]
+z deleted rows cumulative should be  [ 6 25 26]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 26)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 25), ('Zcheck', 26)]
+Trying mode:common and repairs:ZZ
+codes is  72
+deadQubits are  [0, 60]
+Defects I see are  [0, 60]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 25), ('Zcheck', 26)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 25), ('Zcheck', 26)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 26)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 3) ('Zcheck', 25) ('Zcheck', 26)
+marked is  ('Zcheck', 26)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1587
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1583
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 475
+Decoding matrix HX sparseness:
+max col weight= 11
+max row weight= 70
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 14
+max row weight= 34
+saving data to  ./Results//CircuitSims//d6err3commonZZ1
+Simulation Checkpoint. Time of  0:00:08.386346 has elpased since the beginning
+Turn off qubits  [0, 60]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 18 27]
+z deleted rows should be  [ 6 25 26]
+x deleted rows cumulative should be  [12 18 27]
+z deleted rows cumulative should be  [ 6 25 26]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 27)]
+Xbad:[('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:common and repairs:ZX
+codes is  72
+deadQubits are  [0, 60]
+Defects I see are  [0, 60]
+n2 is  36
+flags are  [('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 27)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 12) ('Xcheck', 18) ('Xcheck', 27)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 54
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 59
+saving data to  ./Results//CircuitSims//d6err3commonZX1
+Simulation Checkpoint. Time of  0:00:11.229934 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 20]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 2 18 19]
+z deleted rows should be  [23 26 32]
+x deleted rows cumulative should be  [ 2 18 19]
+z deleted rows cumulative should be  [23 26 32]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 32)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+Trying mode:onlyx and repairs:ZZ
+codes is  72
+deadQubits are  [0, 20]
+Defects I see are  [0, 20]
+n2 is  36
+flags are  [('Xcheck', 2), ('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 32)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 23) ('Zcheck', 26) ('Zcheck', 32)
+marked is  ('Zcheck', 32)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 8
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3onlyxZZ1
+Simulation Checkpoint. Time of  0:00:14.008083 has elpased since the beginning
+Turn off qubits  [0, 20]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 2 18 19]
+z deleted rows should be  [23 26 32]
+x deleted rows cumulative should be  [ 2 18 19]
+z deleted rows cumulative should be  [23 26 32]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 19)]
+Xbad:[('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyx and repairs:ZX
+codes is  72
+deadQubits are  [0, 20]
+Defects I see are  [0, 20]
+n2 is  36
+flags are  [('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 19)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 2) ('Xcheck', 18) ('Xcheck', 19)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 59
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 61
+saving data to  ./Results//CircuitSims//d6err3onlyxZX1
+Simulation Checkpoint. Time of  0:00:16.877024 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 9]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 7  8 27]
+z deleted rows should be  [ 6 15 21]
+x deleted rows cumulative should be  [ 7  8 27]
+z deleted rows cumulative should be  [ 6 15 21]
+<Unnamed CSS code>, (4,12)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,12)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 21)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 15), ('Zcheck', 21)]
+Trying mode:onlyz and repairs:ZZ
+codes is  72
+deadQubits are  [0, 9]
+Defects I see are  [0, 9]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 18), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 15), ('Zcheck', 21)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 15), ('Zcheck', 21)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 21)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 3) ('Zcheck', 15) ('Zcheck', 21)
+marked is  ('Zcheck', 21)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1588
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 476
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 64
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 18
+max row weight= 37
+saving data to  ./Results//CircuitSims//d6err3onlyzZZ1
+Simulation Checkpoint. Time of  0:00:19.723297 has elpased since the beginning
+Turn off qubits  [0, 9]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 7  8 27]
+z deleted rows should be  [ 6 15 21]
+x deleted rows cumulative should be  [ 7  8 27]
+z deleted rows cumulative should be  [ 6 15 21]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 27)]
+Xbad:[('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyz and repairs:ZX
+codes is  72
+deadQubits are  [0, 9]
+Defects I see are  [0, 9]
+n2 is  36
+flags are  [('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 7), ('Xcheck', 8), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 27)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 7) ('Xcheck', 8) ('Xcheck', 27)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 55
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 62
+saving data to  ./Results//CircuitSims//d6err3onlyzZX1
+Simulation Checkpoint. Time of  0:00:22.603422 has elpased since the beginning
+Simulation finished. Took 0:00:22.603432
+These sims were fired on  2024-07-14 01:10:11.404249
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x104bbfdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x104bbfdc0>
+Input:starttime;Value:2024-07-14 01:10:11.404249
+Simulation Checkpoint. Time of  0:00:00.000030 has elpased since the beginning
+These sims were fired on  2024-07-14 01:10:11.404287
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x104bbfdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{'HdecX': None, 'HdecZ': None, 'probX': None, 'probZ': None, 'cycle': None, 'lin_order': None, 'num_cycles': None, 'data_qubits': None, 'Xchecks': None, 'Zchecks': None, 'HX': None, 'HZ': None, 'lx': None, 'lz': None, 'first_logical_rowZ': None, 'first_logical_rowX': None, 'ell': None, 'm': None, 'a1': None, 'a2': None, 'a3': None, 'b1': None, 'b2': None, 'b3': None, 'error_rate': None, 'sX': None, 'sZ': None, 'damaged': None, 'style': None}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x104bbfdc0>
+Input:starttime;Value:2024-07-14 01:10:11.404287
+Simulation Checkpoint. Time of  0:00:00.000024 has elpased since the beginning
+Defect Modes are  None
+Repair Modes are  None
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 67]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [19 25 34]
+z deleted rows should be  [13 32 33]
+x deleted rows cumulative should be  [19 25 34]
+z deleted rows cumulative should be  [13 32 33]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 33)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 13), ('Zcheck', 32), ('Zcheck', 33)]
+Trying mode:distant and repairs:ZZ
+codes is  72
+deadQubits are  [0, 67]
+Defects I see are  [0, 67]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 13), ('Zcheck', 32), ('Zcheck', 33)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 13), ('Zcheck', 32), ('Zcheck', 33)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 33)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 13) ('Zcheck', 32) ('Zcheck', 33)
+marked is  ('Zcheck', 33)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1576
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1572
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 63
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3distantZZ1
+Simulation Checkpoint. Time of  0:00:02.813753 has elpased since the beginning
+Turn off qubits  [0, 67]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [19 25 34]
+z deleted rows should be  [13 32 33]
+x deleted rows cumulative should be  [19 25 34]
+z deleted rows cumulative should be  [13 32 33]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 34)]
+Xbad:[('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:distant and repairs:ZX
+codes is  72
+deadQubits are  [0, 67]
+Defects I see are  [0, 67]
+n2 is  36
+flags are  [('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 19), ('Xcheck', 25), ('Xcheck', 34)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 34)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 19) ('Xcheck', 25) ('Xcheck', 34)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 60
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 60
+saving data to  ./Results//CircuitSims//d6err3distantZX1
+Simulation Checkpoint. Time of  0:00:05.665650 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 37]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 4 25 31]
+z deleted rows should be  [ 2  3 19]
+x deleted rows cumulative should be  [ 4 25 31]
+z deleted rows cumulative should be  [ 2  3 19]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 19)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 4), ('Xcheck', 25), ('Xcheck', 31)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 2), ('Zcheck', 6), ('Zcheck', 19)]
+Trying mode:common and repairs:ZZ
+codes is  72
+deadQubits are  [0, 37]
+Defects I see are  [0, 37]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 25), ('Xcheck', 31), ('Zcheck', 2), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 19)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 4), ('Xcheck', 25), ('Xcheck', 31)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 2), ('Zcheck', 6), ('Zcheck', 19)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 19)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 2) ('Zcheck', 6) ('Zcheck', 19)
+marked is  ('Zcheck', 19)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1587
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1583
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 475
+Decoding matrix HX sparseness:
+max col weight= 11
+max row weight= 80
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 14
+max row weight= 34
+saving data to  ./Results//CircuitSims//d6err3commonZZ1
+Simulation Checkpoint. Time of  0:00:08.467728 has elpased since the beginning
+Turn off qubits  [0, 37]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 4 25 31]
+z deleted rows should be  [ 2  3 19]
+x deleted rows cumulative should be  [ 4 25 31]
+z deleted rows cumulative should be  [ 2  3 19]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 31)]
+Xbad:[('Xcheck', 4), ('Xcheck', 25), ('Xcheck', 31)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:common and repairs:ZX
+codes is  72
+deadQubits are  [0, 37]
+Defects I see are  [0, 37]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 25), ('Xcheck', 31), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 25), ('Xcheck', 31)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 31)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 4) ('Xcheck', 25) ('Xcheck', 31)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 59
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 56
+saving data to  ./Results//CircuitSims//d6err3commonZX1
+Simulation Checkpoint. Time of  0:00:11.330595 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 1]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 0  5 19]
+z deleted rows should be  [ 4  7 13]
+x deleted rows cumulative should be  [ 0  5 19]
+z deleted rows cumulative should be  [ 4  7 13]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 13)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 0), ('Xcheck', 5), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 4), ('Zcheck', 7), ('Zcheck', 13)]
+Trying mode:onlyx and repairs:ZZ
+codes is  72
+deadQubits are  [0, 1]
+Defects I see are  [0, 1]
+n2 is  36
+flags are  [('Xcheck', 0), ('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 4), ('Zcheck', 6), ('Zcheck', 7), ('Zcheck', 12), ('Zcheck', 13)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 0), ('Xcheck', 5), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 4), ('Zcheck', 7), ('Zcheck', 13)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 13)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 4) ('Zcheck', 7) ('Zcheck', 13)
+marked is  ('Zcheck', 13)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3onlyxZZ1
+Simulation Checkpoint. Time of  0:00:14.122814 has elpased since the beginning
+Turn off qubits  [0, 1]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 0  5 19]
+z deleted rows should be  [ 4  7 13]
+x deleted rows cumulative should be  [ 0  5 19]
+z deleted rows cumulative should be  [ 4  7 13]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 19)]
+Xbad:[('Xcheck', 0), ('Xcheck', 5), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyx and repairs:ZX
+codes is  72
+deadQubits are  [0, 1]
+Defects I see are  [0, 1]
+n2 is  36
+flags are  [('Xcheck', 0), ('Xcheck', 5), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 0), ('Xcheck', 5), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 19)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 0) ('Xcheck', 5) ('Xcheck', 19)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 60
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 58
+saving data to  ./Results//CircuitSims//d6err3onlyxZX1
+Simulation Checkpoint. Time of  0:00:17.005838 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 6]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+<Unnamed CSS code>, (4,14)-[[70,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Discard.Retry.DeadParityLocations:[0, 6]
+Turn off qubits  [0, 6]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 4  5 18]
+shuffled rowz  [12  6  3]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+shuffled rowx  [24 10 11]
+shuffled rowz  [18  6  9]
+<Unnamed CSS code>, (4,12)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,12)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 3), ('Zcheck', 9)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 10), ('Xcheck', 11)]Zbad:[('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 3), ('Zcheck', 18), ('Zcheck', 6), ('Zcheck', 9)]
+Trying mode:onlyz and repairs:ZZ
+codes is  72
+deadQubits are  [0, 6]
+Defects I see are  [0, 6]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 18), ('Xcheck', 24), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 12), ('Zcheck', 18)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 10), ('Xcheck', 11)]
+Organized Zbad are  [('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 3), ('Zcheck', 18), ('Zcheck', 6), ('Zcheck', 9)]
+marked qubits are  [('Zcheck', 3), ('Zcheck', 9)]
+syndromes are  ('Zcheck', 12) ('Zcheck', 6) ('Zcheck', 3)
+marked is  ('Zcheck', 3)
+syndromes are  ('Zcheck', 18) ('Zcheck', 6) ('Zcheck', 9)
+marked is  ('Zcheck', 9)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1588
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 476
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 68
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 18
+max row weight= 37
+saving data to  ./Results//CircuitSims//d6err3onlyzZZ1
+Simulation Checkpoint. Time of  0:00:19.828004 has elpased since the beginning
+Turn off qubits  [0, 6]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 11 24]
+z deleted rows should be  [ 9 12 18]
+x deleted rows cumulative should be  [10 11 24]
+z deleted rows cumulative should be  [ 9 12 18]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 24)]
+Xbad:[('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyz and repairs:ZX
+codes is  72
+deadQubits are  [0, 6]
+Defects I see are  [0, 6]
+n2 is  36
+flags are  [('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 10), ('Xcheck', 11), ('Xcheck', 24)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 24)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 10) ('Xcheck', 11) ('Xcheck', 24)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1582
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1582
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 51
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 7
+max row weight= 62
+saving data to  ./Results//CircuitSims//d6err3onlyzZX1
+Simulation Checkpoint. Time of  0:00:22.651973 has elpased since the beginning
+Simulation finished. Took 0:00:22.651985
+These sims were fired on  2024-07-14 01:11:16.629096
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x102e1fdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x102e1fdc0>
+Input:starttime;Value:2024-07-14 01:11:16.629096
+Simulation Checkpoint. Time of  0:00:00.000029 has elpased since the beginning
+These sims were fired on  2024-07-14 01:11:16.629133
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x102e1fdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{'HdecX': None, 'HdecZ': None, 'probX': None, 'probZ': None, 'cycle': None, 'lin_order': None, 'num_cycles': None, 'data_qubits': None, 'Xchecks': None, 'Zchecks': None, 'HX': None, 'HZ': None, 'lx': None, 'lz': None, 'first_logical_rowZ': None, 'first_logical_rowX': None, 'ell': None, 'm': None, 'a1': None, 'a2': None, 'a3': None, 'b1': None, 'b2': None, 'b3': None, 'error_rate': None, 'sX': None, 'sZ': None, 'damaged': None, 'style': None}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x102e1fdc0>
+Input:starttime;Value:2024-07-14 01:11:16.629133
+Simulation Checkpoint. Time of  0:00:00.000079 has elpased since the beginning
+Defect Modes are  None
+Repair Modes are  None
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 28]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 26 27]
+z deleted rows should be  [ 4 25 34]
+x deleted rows cumulative should be  [10 26 27]
+z deleted rows cumulative should be  [ 4 25 34]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 34)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 10), ('Xcheck', 26), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 4), ('Zcheck', 25), ('Zcheck', 34)]
+Trying mode:distant and repairs:ZZ
+codes is  72
+deadQubits are  [0, 28]
+Defects I see are  [0, 28]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 10), ('Xcheck', 18), ('Xcheck', 26), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 4), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 25), ('Zcheck', 34)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 10), ('Xcheck', 26), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 4), ('Zcheck', 25), ('Zcheck', 34)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 34)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 4) ('Zcheck', 25) ('Zcheck', 34)
+marked is  ('Zcheck', 34)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 8
+max row weight= 58
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3distantZZ1
+Simulation Checkpoint. Time of  0:00:02.712407 has elpased since the beginning
+Turn off qubits  [0, 28]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [10 26 27]
+z deleted rows should be  [ 4 25 34]
+x deleted rows cumulative should be  [10 26 27]
+z deleted rows cumulative should be  [ 4 25 34]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 27)]
+Xbad:[('Xcheck', 10), ('Xcheck', 26), ('Xcheck', 27)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:distant and repairs:ZX
+codes is  72
+deadQubits are  [0, 28]
+Defects I see are  [0, 28]
+n2 is  36
+flags are  [('Xcheck', 10), ('Xcheck', 26), ('Xcheck', 27), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 10), ('Xcheck', 26), ('Xcheck', 27)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 27)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 10) ('Xcheck', 26) ('Xcheck', 27)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 56
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 65
+saving data to  ./Results//CircuitSims//d6err3distantZX1
+Simulation Checkpoint. Time of  0:00:05.509613 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 47]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 5  8 35]
+z deleted rows should be  [ 6  7 29]
+x deleted rows cumulative should be  [ 5  8 35]
+z deleted rows cumulative should be  [ 6  7 29]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 29)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 7), ('Zcheck', 29)]
+Trying mode:common and repairs:ZZ
+codes is  72
+deadQubits are  [0, 47]
+Defects I see are  [0, 47]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 18), ('Xcheck', 35), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 7), ('Zcheck', 12), ('Zcheck', 29)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 3), ('Zcheck', 7), ('Zcheck', 29)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 29)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 3) ('Zcheck', 7) ('Zcheck', 29)
+marked is  ('Zcheck', 29)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1587
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1583
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 475
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 67
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 14
+max row weight= 34
+saving data to  ./Results//CircuitSims//d6err3commonZZ1
+Simulation Checkpoint. Time of  0:00:08.217142 has elpased since the beginning
+Turn off qubits  [0, 47]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 5  8 35]
+z deleted rows should be  [ 6  7 29]
+x deleted rows cumulative should be  [ 5  8 35]
+z deleted rows cumulative should be  [ 6  7 29]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 35)]
+Xbad:[('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:common and repairs:ZX
+codes is  72
+deadQubits are  [0, 47]
+Defects I see are  [0, 47]
+n2 is  36
+flags are  [('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 35), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 5), ('Xcheck', 8), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 35)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 5) ('Xcheck', 8) ('Xcheck', 35)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 54
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 60
+saving data to  ./Results//CircuitSims//d6err3commonZX1
+Simulation Checkpoint. Time of  0:00:11.018253 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 23]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 5 21 22]
+z deleted rows should be  [20 29 35]
+x deleted rows cumulative should be  [ 5 21 22]
+z deleted rows cumulative should be  [20 29 35]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 35)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 21), ('Xcheck', 22)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 20), ('Zcheck', 29), ('Zcheck', 35)]
+Trying mode:onlyx and repairs:ZZ
+codes is  72
+deadQubits are  [0, 23]
+Defects I see are  [0, 23]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 21), ('Xcheck', 22), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 20), ('Zcheck', 29), ('Zcheck', 35)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 21), ('Xcheck', 22)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 20), ('Zcheck', 29), ('Zcheck', 35)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 35)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 20) ('Zcheck', 29) ('Zcheck', 35)
+marked is  ('Zcheck', 35)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 7
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3onlyxZZ1
+Simulation Checkpoint. Time of  0:00:13.738529 has elpased since the beginning
+Turn off qubits  [0, 23]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 5 21 22]
+z deleted rows should be  [20 29 35]
+x deleted rows cumulative should be  [ 5 21 22]
+z deleted rows cumulative should be  [20 29 35]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 22)]
+Xbad:[('Xcheck', 5), ('Xcheck', 21), ('Xcheck', 22)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyx and repairs:ZX
+codes is  72
+deadQubits are  [0, 23]
+Defects I see are  [0, 23]
+n2 is  36
+flags are  [('Xcheck', 5), ('Xcheck', 21), ('Xcheck', 22), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 5), ('Xcheck', 21), ('Xcheck', 22)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 22)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 5) ('Xcheck', 21) ('Xcheck', 22)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 60
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 63
+saving data to  ./Results//CircuitSims//d6err3onlyxZX1
+Simulation Checkpoint. Time of  0:00:16.496323 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 33]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [15 31 32]
+z deleted rows should be  [ 3  9 30]
+x deleted rows cumulative should be  [15 31 32]
+z deleted rows cumulative should be  [ 3  9 30]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 30)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 15), ('Xcheck', 31), ('Xcheck', 32)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 30)]
+Trying mode:onlyz and repairs:ZZ
+codes is  72
+deadQubits are  [0, 33]
+Defects I see are  [0, 33]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 15), ('Xcheck', 18), ('Xcheck', 31), ('Xcheck', 32), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 12), ('Zcheck', 30)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 15), ('Xcheck', 31), ('Xcheck', 32)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 9), ('Zcheck', 30)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 30)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 6) ('Zcheck', 9) ('Zcheck', 30)
+marked is  ('Zcheck', 30)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1588
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 476
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 76
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 18
+max row weight= 37
+saving data to  ./Results//CircuitSims//d6err3onlyzZZ1
+Simulation Checkpoint. Time of  0:00:19.242531 has elpased since the beginning
+Turn off qubits  [0, 33]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [15 31 32]
+z deleted rows should be  [ 3  9 30]
+x deleted rows cumulative should be  [15 31 32]
+z deleted rows cumulative should be  [ 3  9 30]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 32)]
+Xbad:[('Xcheck', 15), ('Xcheck', 31), ('Xcheck', 32)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyz and repairs:ZX
+codes is  72
+deadQubits are  [0, 33]
+Defects I see are  [0, 33]
+n2 is  36
+flags are  [('Xcheck', 15), ('Xcheck', 31), ('Xcheck', 32), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 15), ('Xcheck', 31), ('Xcheck', 32)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 32)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 15) ('Xcheck', 31) ('Xcheck', 32)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 62
+saving data to  ./Results//CircuitSims//d6err3onlyzZX1
+Simulation Checkpoint. Time of  0:00:22.035191 has elpased since the beginning
+Simulation finished. Took 0:00:22.035202
+These sims were fired on  2024-07-14 01:11:43.952717
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x10463fdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x10463fdc0>
+Input:starttime;Value:2024-07-14 01:11:43.952717
+Simulation Checkpoint. Time of  0:00:00.000032 has elpased since the beginning
+These sims were fired on  2024-07-14 01:11:43.952757
+Printing the simulation settings below for you to debug 
+
+Input:qcode;Value:[<bposd.css.css_code object at 0x10463fdc0>]
+Input:N;Value:72
+Input:DEBUG;Value:False
+Input:DEBUG_Title;Value:None
+Input:defectType;Value:doubleDefect
+Input:codeName;Value:d6
+Input:nTrials;Value:1000
+Input:fileName;Value:./Results//CircuitSims//
+Input:progressTrack;Value:True
+Input:ncyc;Value:1
+Input:perrors;Value:[0.003]
+Input:repairType;Value:A-Z
+Input:defectLocation;Value:[0]
+Input:logging;Value:True
+Input:defectModes;Value:None
+Input:repairModes;Value:None
+Input:decode;Value:False
+Input:sample;Value:True
+Input:output;Value:{'HdecX': None, 'HdecZ': None, 'probX': None, 'probZ': None, 'cycle': None, 'lin_order': None, 'num_cycles': None, 'data_qubits': None, 'Xchecks': None, 'Zchecks': None, 'HX': None, 'HZ': None, 'lx': None, 'lz': None, 'first_logical_rowZ': None, 'first_logical_rowX': None, 'ell': None, 'm': None, 'a1': None, 'a2': None, 'a3': None, 'b1': None, 'b2': None, 'b3': None, 'error_rate': None, 'sX': None, 'sZ': None, 'damaged': None, 'style': None}
+Input:error_dict;Value:{}
+Input:verbose;Value:True
+Input:repair;Value:None
+Input:situation;Value:None
+Input:e;Value:0
+Input:orderx;Value:[]
+Input:orderz;Value:[]
+Input:anchors;Value:[]
+Input:Xbad;Value:[]
+Input:Zbad;Value:[]
+Input:K;Value:12
+Input:qcode_undamaged;Value:<bposd.css.css_code object at 0x10463fdc0>
+Input:starttime;Value:2024-07-14 01:11:43.952757
+Simulation Checkpoint. Time of  0:00:00.000021 has elpased since the beginning
+Defect Modes are  None
+Repair Modes are  None
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 68]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [20 26 35]
+z deleted rows should be  [14 33 34]
+x deleted rows cumulative should be  [20 26 35]
+z deleted rows cumulative should be  [14 33 34]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 34)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 14), ('Zcheck', 33), ('Zcheck', 34)]
+Trying mode:distant and repairs:ZZ
+codes is  72
+deadQubits are  [0, 68]
+Defects I see are  [0, 68]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 14), ('Zcheck', 33), ('Zcheck', 34)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 14), ('Zcheck', 33), ('Zcheck', 34)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 34)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 14) ('Zcheck', 33) ('Zcheck', 34)
+marked is  ('Zcheck', 34)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 8
+max row weight= 63
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3distantZZ1
+Simulation Checkpoint. Time of  0:00:02.743894 has elpased since the beginning
+Turn off qubits  [0, 68]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [20 26 35]
+z deleted rows should be  [14 33 34]
+x deleted rows cumulative should be  [20 26 35]
+z deleted rows cumulative should be  [14 33 34]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 35)]
+Xbad:[('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:distant and repairs:ZX
+codes is  72
+deadQubits are  [0, 68]
+Defects I see are  [0, 68]
+n2 is  36
+flags are  [('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 20), ('Xcheck', 26), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 35)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 20) ('Xcheck', 26) ('Xcheck', 35)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 59
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 64
+saving data to  ./Results//CircuitSims//d6err3distantZX1
+Simulation Checkpoint. Time of  0:00:05.578485 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+<Unnamed CSS code>, (4,14)-[[70,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Discard.Retry.DeadParityLocations:[0, 66]
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [18  5  4]
+shuffled rowz  [ 6  3 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [18 24 33]
+shuffled rowz  [32  6 31  3]
+<Unnamed CSS code>, (4,14)-[[70,11,nan]]
+ -Block dimensions incorrect
+ -PCMs commute hz@hx.T==0: Fail
+ -PCMs commute hx@hz.T==0: Fail
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anitcommute: Fail
+Discard.Retry.DeadParityLocations:[0, 66]
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 5 18  4]
+shuffled rowz  [ 3  6 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [24 33 18]
+shuffled rowz  [ 6  3 31 32]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 4  5 18]
+shuffled rowz  [ 6 12  3]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [33 18 24]
+shuffled rowz  [32 31  6]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 5 18  4]
+shuffled rowz  [ 6 12  3]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [18 24 33]
+shuffled rowz  [31 32  6]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [18  4  5]
+shuffled rowz  [12  6  3]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [18 33 24]
+shuffled rowz  [32 31  6]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 4 18  5]
+shuffled rowz  [ 6  3 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [18 24 33]
+shuffled rowz  [32  3  6 31]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 5 18  4]
+shuffled rowz  [ 3  6 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [24 18 33]
+shuffled rowz  [ 3 31  6 32]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 5 18  4]
+shuffled rowz  [12  3  6]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [33 24 18]
+shuffled rowz  [32  3 31]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [ 4  5 18]
+shuffled rowz  [ 6  3 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [24 33 18]
+shuffled rowz  [32  6  3 31]
+Unsilenced line
+Turn off qubits  [0, 66]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+shuffled rowx  [18  5  4]
+shuffled rowz  [ 3 12  6]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+shuffled rowx  [33 18 24]
+shuffled rowz  [32  3 31]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 6), ('Zcheck', 31)]
+Xbad:[('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 4), ('Xcheck', 33), ('Xcheck', 18), ('Xcheck', 24)]Zbad:[('Zcheck', 3), ('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 32), ('Zcheck', 3), ('Zcheck', 31)]
+Trying mode:common and repairs:ZZ
+codes is  72
+deadQubits are  [0, 66]
+Defects I see are  [0, 66]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 33), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 31), ('Zcheck', 32)]
+Organized Xbad are  [('Xcheck', 18), ('Xcheck', 5), ('Xcheck', 4), ('Xcheck', 33), ('Xcheck', 18), ('Xcheck', 24)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 12), ('Zcheck', 6), ('Zcheck', 32), ('Zcheck', 3), ('Zcheck', 31)]
+marked qubits are  [('Zcheck', 6), ('Zcheck', 31)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 12) ('Zcheck', 6)
+marked is  ('Zcheck', 6)
+syndromes are  ('Zcheck', 32) ('Zcheck', 3) ('Zcheck', 31)
+marked is  ('Zcheck', 31)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1587
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1583
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 475
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 63
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 14
+max row weight= 32
+saving data to  ./Results//CircuitSims//d6err3commonZZ1
+Simulation Checkpoint. Time of  0:00:08.515228 has elpased since the beginning
+Turn off qubits  [0, 66]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [18 24 33]
+z deleted rows should be  [12 31 32]
+x deleted rows cumulative should be  [18 24 33]
+z deleted rows cumulative should be  [12 31 32]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 33)]
+Xbad:[('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 33)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:common and repairs:ZX
+codes is  72
+deadQubits are  [0, 66]
+Defects I see are  [0, 66]
+n2 is  36
+flags are  [('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 33), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 18), ('Xcheck', 24), ('Xcheck', 33)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 33)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 18) ('Xcheck', 24) ('Xcheck', 33)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1581
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1581
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 50
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 7
+max row weight= 60
+saving data to  ./Results//CircuitSims//d6err3commonZX1
+Simulation Checkpoint. Time of  0:00:11.305537 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 20]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 2 18 19]
+z deleted rows should be  [23 26 32]
+x deleted rows cumulative should be  [ 2 18 19]
+z deleted rows cumulative should be  [23 26 32]
+<Unnamed CSS code>, (5,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (5,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 32)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+Trying mode:onlyx and repairs:ZZ
+codes is  72
+deadQubits are  [0, 20]
+Defects I see are  [0, 20]
+n2 is  36
+flags are  [('Xcheck', 2), ('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 23), ('Zcheck', 26), ('Zcheck', 32)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 32)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 23) ('Zcheck', 26) ('Zcheck', 32)
+marked is  ('Zcheck', 32)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1575
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1571
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 461
+Decoding matrix HX sparseness:
+max col weight= 8
+max row weight= 61
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 25
+saving data to  ./Results//CircuitSims//d6err3onlyxZZ1
+Simulation Checkpoint. Time of  0:00:14.056979 has elpased since the beginning
+Turn off qubits  [0, 20]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [ 2 18 19]
+z deleted rows should be  [23 26 32]
+x deleted rows cumulative should be  [ 2 18 19]
+z deleted rows cumulative should be  [23 26 32]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 19)]
+Xbad:[('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyx and repairs:ZX
+codes is  72
+deadQubits are  [0, 20]
+Defects I see are  [0, 20]
+n2 is  36
+flags are  [('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 2), ('Xcheck', 18), ('Xcheck', 19)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 19)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 2) ('Xcheck', 18) ('Xcheck', 19)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 59
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 61
+saving data to  ./Results//CircuitSims//d6err3onlyxZX1
+Simulation Checkpoint. Time of  0:00:16.854115 has elpased since the beginning
+Defective Positions in X/Z
+StabX is  [ 0  5 22 37 46 52]
+StabZ is  [ 0 27 33 37 38 57]
+StabX is  [ 0  1 23 38 47 53]
+StabZ is  [ 0  9 30 46 47 60]
+StabX is  [ 0 19 20 57 60 66]
+StabZ is  [ 0  6 15 52 53 66]
+qubitx  [0, 5, 22, 37, 46, 52, 0, 1, 23, 38, 47, 53, 0, 19, 20, 57, 60, 66]
+qubitz  [0, 27, 33, 37, 38, 57, 0, 9, 30, 46, 47, 60, 0, 6, 15, 52, 53, 66]
+Distant qubits  [2, 3, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 21, 24, 25, 26, 28, 29, 31, 32, 34, 35, 36, 39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 54, 55, 56, 58, 59, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71]
+Common qubits  [66, 37, 38, 46, 47, 52, 53, 57, 60]
+OnlyX qubits  [1, 5, 19, 20, 22, 23]
+OnlyZ qubits  [33, 6, 9, 15, 27, 30]
+Turn off qubits  [0, 30]
+ZX repair is  False
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 34 35]
+z deleted rows should be  [ 0  6 33]
+x deleted rows cumulative should be  [12 34 35]
+z deleted rows cumulative should be  [ 0  6 33]
+<Unnamed CSS code>, (4,14)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,14)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Zcheck', 33)]
+Xbad:[('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 34), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 0), ('Zcheck', 3), ('Zcheck', 33)]
+Trying mode:onlyz and repairs:ZZ
+codes is  72
+deadQubits are  [0, 30]
+Defects I see are  [0, 30]
+n2 is  36
+flags are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 12), ('Xcheck', 18), ('Xcheck', 34), ('Xcheck', 35), ('Zcheck', 0), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 33)]
+Organized Xbad are  [('Xcheck', 4), ('Xcheck', 5), ('Xcheck', 18), ('Xcheck', 12), ('Xcheck', 34), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12), ('Zcheck', 0), ('Zcheck', 3), ('Zcheck', 33)]
+marked qubits are  [('Zcheck', 12), ('Zcheck', 33)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+syndromes are  ('Zcheck', 0) ('Zcheck', 3) ('Zcheck', 33)
+marked is  ('Zcheck', 33)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1588
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1584
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 476
+Decoding matrix HX sparseness:
+max col weight= 10
+max row weight= 75
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 442
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 18
+max row weight= 37
+saving data to  ./Results//CircuitSims//d6err3onlyzZZ1
+Simulation Checkpoint. Time of  0:00:19.626630 has elpased since the beginning
+Turn off qubits  [0, 30]
+ZX repair is  True
+x deleted rows should be  [ 4  5 18]
+z deleted rows should be  [ 3  6 12]
+x deleted rows cumulative should be  [ 4  5 18]
+z deleted rows cumulative should be  [ 3  6 12]
+x deleted rows should be  [12 34 35]
+z deleted rows should be  [ 0  6 33]
+x deleted rows cumulative should be  [12 34 35]
+z deleted rows cumulative should be  [ 0  6 33]
+<Unnamed CSS code>, (4,10)-[[70,12,nan]]
+ -Block dimensions: Pass
+ -PCMs commute hz@hx.T==0: Pass
+ -PCMs commute hx@hz.T==0: Pass
+ -lx \in ker{hz} AND lz \in ker{hx}: Pass
+ -lx and lz anticommute: Pass
+ -<Unnamed CSS code> is a valid CSS code w/ params (4,10)-[[70,12,nan]]
+THIS CODE IS VALID
+Shuffled Order-x is [0, 1, 2, 0, 1, 2]
+Shuffled Order-z is [0, 1, 2, 0, 1, 2]
+anchors are [('Zcheck', 12), ('Xcheck', 35)]
+Xbad:[('Xcheck', 12), ('Xcheck', 34), ('Xcheck', 35)]Zbad:[('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Trying mode:onlyz and repairs:ZX
+codes is  72
+deadQubits are  [0, 30]
+Defects I see are  [0, 30]
+n2 is  36
+flags are  [('Xcheck', 12), ('Xcheck', 34), ('Xcheck', 35), ('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+Organized Xbad are  [('Xcheck', 12), ('Xcheck', 34), ('Xcheck', 35)]
+Organized Zbad are  [('Zcheck', 3), ('Zcheck', 6), ('Zcheck', 12)]
+marked qubits are  [('Zcheck', 12), ('Xcheck', 35)]
+syndromes are  ('Zcheck', 3) ('Zcheck', 6) ('Zcheck', 12)
+marked is  ('Zcheck', 12)
+Xfix syndromes are  ('Xcheck', 12) ('Xcheck', 34) ('Xcheck', 35)
+circuit test: OK
+Generating noisy circuits with a singe Z-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Generating noisy circuits with a singe X-type faulty operation...
+Number of noisy circuits= 1585
+Done.
+Computing syndrome histories for single-X-type-fault circuits...
+Done.
+Computing effective noise model for the X-decoder...
+Number of distinct X-syndrome histories= 462
+Decoding matrix HX sparseness:
+max col weight= 9
+max row weight= 55
+Computing syndrome histories for single-Z-type-fault circuits...
+Done.
+Computing effective noise model for the Z-decoder...
+Number of distinct Z-syndrome histories= 427
+Done.
+Decoding matrix HZ sparseness:
+max col weight= 9
+max row weight= 62
+saving data to  ./Results//CircuitSims//d6err3onlyzZX1
+Simulation Checkpoint. Time of  0:00:22.432268 has elpased since the beginning
+Simulation finished. Took 0:00:22.432279
