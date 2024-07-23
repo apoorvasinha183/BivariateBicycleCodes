@@ -8,6 +8,9 @@ from tqdm import tqdm
 from defect_parity_generator import *
 import logging
 from tqdm import tqdm
+from bposd.css_decode_sim import css_decode_sim
+from ldpc.codes import rep_code
+from ldpc.codes import ring_code
 def generateError(pError,Q):
 	# Q is expected to be a CSS Code object as created by Roffee's Code
 	# Returns X and Z syndromes
@@ -104,9 +107,9 @@ def Calculate_Distance(qcode):
 	d = 10000
 	target_runs = k
 	# Shuffle the rows of lx and lz
-	shuffled_indices = np.random.permutation(k)
-	lx_shuffled = lx[shuffled_indices]
-	lz_shuffled = lz[shuffled_indices]
+	#shuffled_indices = np.random.permutation(k)
+	lx_shuffled = lx.copy()
+	lz_shuffled = lz.copy()
 	#k =1
 	pbar = tqdm(range(k),ncols=0)
 	#Randomize the order of the lx and lz matrices
@@ -114,6 +117,7 @@ def Calculate_Distance(qcode):
 		dx = 1000
 		dz = 1000
 		w1,hxSmalli = distance_test(hx,lx_shuffled[i,:])
+		#w1,hxSmalli = (2,3)
 		w2,hzSmalli = distance_test(hz,lz_shuffled[i,:])
 		#print('Logical qubitX=',i,'Distance=',w1)
 		#print('Logical qubitZ=',i,'Distance=',w2)
@@ -125,11 +129,20 @@ def Calculate_Distance(qcode):
 		dx = min(dx,w1)
 		dz = min(dz,w2)
 		d = min(d,w1,w2)
-		pbar.set_description(f"d_min: {d};dz:{dz};dx:{dx}")
+		pbar.set_description(f"d_min: {d};dx:{dz};dz:{dx}")
 	pbar.close()
-	print("X distances ",qubitix)
-	print("Z distances ",qubitiz)
+	print("Z distances ",qubitix)
+	print("X distances ",qubitiz)
 	print("Minimum distance is ",d)
+	#Print the erroneous syndromes these are logical operators
+	for i in range(k):
+		#Print the z- syndrome
+		print(f'Ztype error{i} is {np.where(hxSmall[i]==1)[0]}')
+	for i in range(k):
+		# Print the x-syndrome
+		print(f'Xtype error{i} is {np.where(hzSmall[i]==1)[0]}')
+
+	
 
 def Sample_Distance(qCode,type='z',perr=0.01,nTrials = 100,disable= False):
 	#Runs Roffee's BP-OSD Decoder to infer the syndrome
@@ -145,6 +158,7 @@ def Sample_Distance(qCode,type='z',perr=0.01,nTrials = 100,disable= False):
 	channel_probsX = perr
 	#channel_probsX = 0.09
 	K = qCode.K
+	print('The number of logical qubits is ',K)
 	# Declare the Decoder(Re-using what the Gross Code uses)
 	my_bp_method = "ms"
 	my_max_iter = 10000
@@ -190,12 +204,172 @@ def Sample_Distance(qCode,type='z',perr=0.01,nTrials = 100,disable= False):
 
 
 if __name__ == "__main__":
-	codeName = code_dict(name="gross")
+	codeName = code_dict(name="d10-90")
 	bikeCode = bivariate_parity_generator_bicycle(codeName)
-	damagedBikeCode_One = damage_qubit_v2(bikeCode,turnOffQubits=[3,24],flip=True)
+	damagedBikeCode_One = bikeCode
+	DEFECT = [0,1,2,3]
+	damagedBikeCode_One = damage_qubit(bikeCode,turnOffQubits=DEFECT,symmetry=False,flip=True,test=True)
+	print("hx rank",mod2.rank(damagedBikeCode_One.hx))
+	print("hz rank",mod2.rank(damagedBikeCode_One.hz))
+	# Find the logical operators of the code
+	lx1 = damagedBikeCode_One.lx.copy()
+	lz1 = damagedBikeCode_One.lz.copy()
+	bikeCode = bivariate_parity_generator_bicycle(codeName)
+	damagedBikeCode_Two = damage_qubit(bikeCode,turnOffQubits=DEFECT,symmetry=False,test=True)
+	# Find the logical operators of the code
+	lx2 = damagedBikeCode_Two.lx.copy()
+	lz2 = damagedBikeCode_Two.lz.copy()
+	#experiment with number of qubits
+	print(f'Number of qubits combination 1 :{mod2.rank(lx1@lz2.T%2)};Number of qubits in combination 2:{mod2.rank(lx2@lz1.T%2)}')
+	bikeCode_2 = bivariate_parity_generator_bicycle(codeName)
+	damagedBikeCode_Three = damage_qubit(bikeCode_2,turnOffQubits=DEFECT,symmetry=True)
+	damagedBikeCode_Three.test()
+	print("Passing logicals")
+	damagedBikeCode_Three.lx = lx1
+	damagedBikeCode_Three.lz = lz2
+	damagedBikeCode_Three.K = damagedBikeCode_One.K
+	damagedBikeCode_Three.test()
+	print("hx rank",mod2.rank(damagedBikeCode_Three.hx))
+	print("hz rank",mod2.rank(damagedBikeCode_Three.hz))
+	distinctz = []
+	distinctx = []
+	for rows in damagedBikeCode_Three.hx:
+		if np.sum(rows) not in distinctx:
+			distinctx.append(np.sum(rows))
+	for rows in damagedBikeCode_Three.hz:
+		if np.sum(rows) not in distinctz:
+			distinctz.append(np.sum(rows))
+	print(f"distinctxweights :{distinctx}")
+	print(f"distinctzweights :{distinctz}")
 	#bikeCode = bivariate_parity_generator_bicycle(codeName)
 	#damagedBikeCode_Two = damage_qubit(bikeCode,turnOffQubits=[0,1,22])
-	Calculate_Distance(damagedBikeCode_One)
+	Calculate_Distance(damagedBikeCode_Three)
+	bikeCode_3 = bivariate_parity_generator_bicycle(codeName)
+	damagedBikeCode_Four = damage_qubit(bikeCode_3,turnOffQubits=DEFECT,alterning=True)
+	damagedBikeCode_Four.test()
+	Calculate_Distance(damagedBikeCode_Four)
+	# Try Roffee's Routine Check
+	osd_options={
+		'error_rate': 0.05,
+		'target_runs': 1000000,
+		'xyz_error_bias': [1, 0, 0],
+		'output_file': 'test.json',
+		'bp_method': "ms",
+		'ms_scaling_factor': 0,
+		'osd_method': "osd_cs",
+		'osd_order': 42,
+		'channel_update': None,
+		'seed': 42,
+		'max_iter': 0,
+		'output_file': "test.json"
+		}
+	surf = False
+	if surf:
+		h=ring_code(9)
+		surface_code=hgp(h1=h,h2=h,compute_distance=True) #nb. set compute_distance=False for larger codes
+		surface_code.test()
+		# Cause defect randomly
+		print(surface_code.N)
+		defects = np.random.randint(0,surface_code.N)
+		defects = 0
+		#print(random_integer)
+		# Find the defecgtive qubits in X/Z and disable them
+		rows_to_be_deleted_x = np.where(surface_code.hx[:,defects]==1)[0]
+		rows_to_be_deleted_z = np.where(surface_code.hz[:,defects] == 1)[0]
+		print(f'rows to deleted x is {rows_to_be_deleted_x}')
+		print(f'rows to deleted z is {rows_to_be_deleted_z}')
+		#Only Z (lz)
+		saved_x = []
+		saved_z = []
+		for i in range(2):
+			if i%2 :
+				#surface_code.hx[rows_to_be_deleted_x[i]] = (surface_code.hx[rows_to_be_deleted_x[i]] + saved_x) %2
+				#surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				#surface_code.hz[rows_to_be_deleted_z[i]] = (surface_code.hz[rows_to_be_deleted_z[i]] + saved_z) %2
+				surface_code.hz[rows_to_be_deleted_z[i]] = 0
+			else:
+				saved_x = surface_code.hx[rows_to_be_deleted_x[i]].copy()
+				#surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				saved_z = surface_code.hz[rows_to_be_deleted_z[i]].copy()
+				surface_code.hz[rows_to_be_deleted_z[i]] = 0
+		#Delte the qubit
+		surface_code.hx = np.delete(surface_code.hx,defects,axis=1)	
+		surface_code.hz = np.delete(surface_code.hz,defects,axis=1)			   
+		surface_code=css_code(surface_code.hx,surface_code.hz)
+
+		#surface_code.hx[surface_code.hx[:,random_integer]== 1] = 0
+		#surface_code.hz[surface_code.hz[:,random_integer]== 1] = 0
+		print("This broken surface code has these properties")
+		if surface_code.test():
+			Calculate_Distance(surface_code)
+		lz_0 = surface_code.lz.copy()
+		#Only X(lx)
+		surface_code=hgp(h1=h,h2=h,compute_distance=True) #nb. set compute_distance=False for larger codes
+		surface_code.test()
+		saved_x = []
+		saved_z = []
+		for i in range(2):
+			if i%2 :
+				#surface_code.hx[rows_to_be_deleted_x[i]] = (surface_code.hx[rows_to_be_deleted_x[i]] + saved_x) %2
+				surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				#surface_code.hz[rows_to_be_deleted_z[i]] = (surface_code.hz[rows_to_be_deleted_z[i]] + saved_z) %2
+				#surface_code.hz[rows_to_be_deleted_z[i]] = 0
+			else:
+				saved_x = surface_code.hx[rows_to_be_deleted_x[i]].copy()
+				surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				saved_z = surface_code.hz[rows_to_be_deleted_z[i]].copy()
+				#surface_code.hz[rows_to_be_deleted_z[i]] = 0
+		#Delte the qubit
+		surface_code.hx = np.delete(surface_code.hx,defects,axis=1)	
+		surface_code.hz = np.delete(surface_code.hz,defects,axis=1)			   
+		surface_code=css_code(surface_code.hx,surface_code.hz)
+
+		#surface_code.hx[surface_code.hx[:,random_integer]== 1] = 0
+		#surface_code.hz[surface_code.hz[:,random_integer]== 1] = 0
+		print("This broken surface code has these properties")
+		if surface_code.test():
+			Calculate_Distance(surface_code)
+		lx_0 = surface_code.lx.copy()
+		#Extract logicals
+		#Both
+		#Exchange logicals
+		surface_code=hgp(h1=h,h2=h,compute_distance=True) #nb. set compute_distance=False for larger codes
+		surface_code.test()
+		saved_x = []
+		saved_z = []
+		for i in range(2):
+			if i%2 :
+				#surface_code.hx[rows_to_be_deleted_x[i]] = (surface_code.hx[rows_to_be_deleted_x[i]] + saved_x) %2
+				surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				#surface_code.hz[rows_to_be_deleted_z[i]] = (surface_code.hz[rows_to_be_deleted_z[i]] + saved_z) %2
+				surface_code.hz[rows_to_be_deleted_z[i]] = 0
+			else:
+				saved_x = surface_code.hx[rows_to_be_deleted_x[i]].copy()
+				surface_code.hx[rows_to_be_deleted_x[i]] = 0
+				saved_z = surface_code.hz[rows_to_be_deleted_z[i]].copy()
+				surface_code.hz[rows_to_be_deleted_z[i]] = 0
+		#Delte the qubit
+		surface_code.hx = np.delete(surface_code.hx,defects,axis=1)	
+		surface_code.hz = np.delete(surface_code.hz,defects,axis=1)			   
+		surface_code=css_code(surface_code.hx,surface_code.hz)
+
+		#surface_code.hx[surface_code.hx[:,random_integer]== 1] = 0
+		#surface_code.hz[surface_code.hz[:,random_integer]== 1] = 0
+		print("This broken surface code has these properties")
+		if surface_code.test():
+			Calculate_Distance(surface_code)
+		print("My gauge fix")
+		surface_code.lx = lx_0
+		surface_code.lz = lz_0
+		surface_code.K = 2
+		# Block check 
+		if surface_code.test():
+			Calculate_Distance(surface_code)
+		else:
+			print("Check your numbers")
+		#lk = css_decode_sim(hx=damagedBikeCode_One.hx, hz=damagedBikeCode_One.hz, **osd_options)
+		# Surface Code test
+
 
 
 

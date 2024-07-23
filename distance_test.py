@@ -117,10 +117,10 @@ A = (x[a1] + y[a2] + y[a3]) % 2
 B = (y[b1] + x[b2] + x[b3]) % 2
 AT = np.transpose(A)
 BT = np.transpose(B)
-hx = np.hstack((A,B))
-hz = np.hstack((BT,AT))
-print("hx rank is ",mod2.rank(hx))
-print("hz rank is ",mod2.rank(hz))
+hxA = np.hstack((A,B))
+hzA = np.hstack((BT,AT))
+print("hx rank is ",mod2.rank(hxA))
+print("hz rank is ",mod2.rank(hzA))
 # Killing Qubits (Delete Columns)
 Surface = False
 if Surface:
@@ -130,7 +130,7 @@ if Surface:
 	#hx = surface.hx
 	#hz= surface.hz
 	surface.test()
-turnOffQubits = [133] # Qubits which are defective(This is RANDOM)
+turnOffQubits = [0] # Qubits which are defective(This is RANDOM)
 HIGH = 1
 LOW=0
 # TRIAL 1 : COMBINE 3 OPERATORS TO MAKE A SUPEROPERATOR ABC --> FAIL 
@@ -140,133 +140,133 @@ ALL_THREE = False
 TWO_AT_A_TIME = False
 SPELL_IT_OUT = True #Read out the defective stabilizers
 def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data'):
-    # Turns off the qubits at specified positions and recalculates the parity matrix
-    # TODO: Extend it to multpile qubits
-    if type == 'data':
-        hxq = Q.hx.copy()
-        hzq = Q.hz.copy()
-        Q_New = css_code(hxq,hzq)
-        Flip = True
-        #np.random.shuffle(turnOffQubits)
-        for defects in turnOffQubits:
-            #print("Defect Deteced at ",defects)
-            # Find all rows where the turnOffQubits are high.To figure out the connectivity
-            # X-Z syndromes
-            ALL_THREE = False
-            TWO_AT_A_TIME = True
-            SPELL_IT_OUT = True #Read out the defective stabilizers
-            HIGH = 1
-            LOW = 1
-            hx = Q_New.hx
-            hz = Q_New.hz
-            broken_rows_x = hx[hx[:,defects] == HIGH]
+	# Turns off the qubits at specified positions and recalculates the parity matrix
+	# TODO: Extend it to multpile qubits
+	if type == 'data':
+		hxq = Q.hx.copy()
+		hzq = Q.hz.copy()
+		Q_New = css_code(hxq,hzq)
+		Flip = False
+		#np.random.shuffle(turnOffQubits)
+		for defects in turnOffQubits:
+			#print("Defect Deteced at ",defects)
+			# Find all rows where the turnOffQubits are high.To figure out the connectivity
+			# X-Z syndromes
+			ALL_THREE = False
+			TWO_AT_A_TIME = True
+			SPELL_IT_OUT = True #Read out the defective stabilizers
+			HIGH = 1
+			LOW = 1
+			hx = Q_New.hx
+			hz = Q_New.hz
+			broken_rows_x = hx[hx[:,defects] == HIGH]
 
-            broken_rows_x_DEBUG = broken_rows_x.copy()
-            broken_rows_z = hz[hz[:,defects] == HIGH]
-            broken_rows_z_DEBUG = broken_rows_z.copy()
-            print("SANITY CHECK ",np.array_equal(broken_rows_x_DEBUG,broken_rows_z_DEBUG))
-            if SPELL_IT_OUT:
-                # Read out the browen_rows
-                defectNum,_ = broken_rows_x_DEBUG.shape
-                print("Defective Positions in X/Z")
-                for i in range(defectNum):
-                    affectedRowx = broken_rows_x_DEBUG[i]
-                    affectedRowz = broken_rows_z_DEBUG[i]
-                    stab_X_read = np.where(affectedRowx == HIGH)
-                    stab_Z_read = np.where(affectedRowz == HIGH)
-                    print("StabX is ",stab_X_read)
-                    print("StabZ is ",stab_Z_read)
-            rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
-            rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
-            # This is importnat. To understand relative orientation
-            RAND = False
-            if RAND:
-                np.random.shuffle(rows_to_be_deleted_x)
-                np.random.shuffle(rows_to_be_deleted_z)
-            # Save the first column because we will replace it with the superstabilizer
-            hx_old = hx.copy()
-            hz_old = hz.copy()
-            if TWO_AT_A_TIME:
-                # HARD CODE RN [0,1,2]
-                # AB
-                if symmetry:
-                    hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
-                if Flip:
-                    hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
-                else:    
-                    hz[rows_to_be_deleted_z[0]] = (hz_old[rows_to_be_deleted_z[1]]+hz_old[rows_to_be_deleted_z[2]])%2
-                # BC
-                if symmetry:
-                    hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
-                if Flip:
-                    hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
-                else:
-                    hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
-                # CA
-                #hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
-                #hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
-                if Flip:
-                    hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
-                else:
-                    hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
-                if symmetry:
-                    hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
-                # Delete the extra row
-                #hx = np.delete(hx,rows_to_be_deleted_x[2],axis=0)
-                #hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
-            replace_x = rows_to_be_deleted_x[0]
-            replace_z = rows_to_be_deleted_z[0]
-            print("To be deleted x",rows_to_be_deleted_x)
-            print("To be deleted z ",rows_to_be_deleted_z)
-            #hxBAD = hx[rows_to_be_deleted_x]
-            #hzBAD = hz[rows_to_be_deleted_z]
-            ##### GAUGE APPROACH ##########
-            #hx = np.delete(hx,rows_to_be_deleted_x,axis=0)
-            #hz = np.delete(hz,rows_to_be_deleted_z,axis=0)
+			broken_rows_x_DEBUG = broken_rows_x.copy()
+			broken_rows_z = hz[hz[:,defects] == HIGH]
+			broken_rows_z_DEBUG = broken_rows_z.copy()
+			print("SANITY CHECK ",np.array_equal(broken_rows_x_DEBUG,broken_rows_z_DEBUG))
+			if SPELL_IT_OUT:
+				# Read out the browen_rows
+				defectNum,_ = broken_rows_x_DEBUG.shape
+				print("Defective Positions in X/Z")
+				for i in range(defectNum):
+					affectedRowx = broken_rows_x_DEBUG[i]
+					affectedRowz = broken_rows_z_DEBUG[i]
+					stab_X_read = np.where(affectedRowx == HIGH)
+					stab_Z_read = np.where(affectedRowz == HIGH)
+					print("StabX is ",stab_X_read)
+					print("StabZ is ",stab_Z_read)
+			rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
+			rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
+			# This is importnat. To understand relative orientation
+			RAND = False
+			if RAND:
+				np.random.shuffle(rows_to_be_deleted_x)
+				np.random.shuffle(rows_to_be_deleted_z)
+			# Save the first column because we will replace it with the superstabilizer
+			hx_old = hx.copy()
+			hz_old = hz.copy()
+			if TWO_AT_A_TIME:
+				# HARD CODE RN [0,1,2]
+				# AB
+				if symmetry:
+					hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
+				if Flip:
+					hx[rows_to_be_deleted_x[0]] = (hx_old[rows_to_be_deleted_x[1]]+hx_old[rows_to_be_deleted_x[2]])%2
+				else:    
+					hz[rows_to_be_deleted_z[0]] = (hz_old[rows_to_be_deleted_z[1]]+hz_old[rows_to_be_deleted_z[2]])%2
+				# BC
+				if symmetry:
+					hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
+				if Flip:
+					hx[rows_to_be_deleted_x[1]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[2]])%2
+				else:
+					hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
+				# CA
+				#hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
+				#hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
+				if Flip:
+					hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
+				else:
+					hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
+				if symmetry:
+					hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
+				# Delete the extra row
+				#hx = np.delete(hx,rows_to_be_deleted_x[2],axis=0)
+				#hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
+			replace_x = rows_to_be_deleted_x[0]
+			replace_z = rows_to_be_deleted_z[0]
+			print("To be deleted x",rows_to_be_deleted_x)
+			print("To be deleted z ",rows_to_be_deleted_z)
+			#hxBAD = hx[rows_to_be_deleted_x]
+			#hzBAD = hz[rows_to_be_deleted_z]
+			##### GAUGE APPROACH ##########
+			#hx = np.delete(hx,rows_to_be_deleted_x,axis=0)
+			#hz = np.delete(hz,rows_to_be_deleted_z,axis=0)
+			print("Flip is ",Flip," symmetry is ",symmetry)
+			##### GAUGE APPROACH ##########
+			
+			#for rows in rows_to_be_deleted_x:
+			#		hx = np.delete(hx,rows,axis = 0 )
+			#hx = np.delete(hx,rows_to_be_deleted_x[1:],axis = 0 )
+			#hz = np.delete(hz,rows_to_be_deleted_z[1:],axis = 0 )
+			#hx[:,defects] =LOW
+			#hz[:,defects] = LOW
+			#hx[replace_x] = np.sum(broken_rows_x,axis=0) %2
+			#hz[replace_z] = np.sum(broken_rows_z,axis=0) %2
+			# Now kill the qubit
+			#hx = np.delete(hx,defects,axis=1)
+			#hz = np.delete(hz,defects,axis=1)
+			#hxBAD = np.delete(hxBAD,defects,axis=1)
+			#hzBAD = np.delete(hzBAD,defects,axis=1)
+			#hx[:,defects] = LOW
+			#hz[:,defects] = LOW
 
-            ##### GAUGE APPROACH ##########
-            
-            #for rows in rows_to_be_deleted_x:
-            #		hx = np.delete(hx,rows,axis = 0 )
-            #hx = np.delete(hx,rows_to_be_deleted_x[1:],axis = 0 )
-            #hz = np.delete(hz,rows_to_be_deleted_z[1:],axis = 0 )
-            #hx[:,defects] =LOW
-            #hz[:,defects] = LOW
-            #hx[replace_x] = np.sum(broken_rows_x,axis=0) %2
-            #hz[replace_z] = np.sum(broken_rows_z,axis=0) %2
-            # Now kill the qubit
-            #hx = np.delete(hx,defects,axis=1)
-            #hz = np.delete(hz,defects,axis=1)
-            #hxBAD = np.delete(hxBAD,defects,axis=1)
-            #hzBAD = np.delete(hzBAD,defects,axis=1)
-            #hx[:,defects] = LOW
-            #hz[:,defects] = LOW
-
-            #hx = hx[:,1:] 
-            #hz = hz[:,1:]
-            if alterning:
-                Flip = not Flip
-        # Deleted at the end because the numbering goes out of sync
-        hx = np.delete(hx,turnOffQubits,axis=1)
-        hz = np.delete(hz,turnOffQubits,axis=1)
-        Q_New = css_code(hx,hz)
-        Q_New.test()
-        return Q_New
-    else:
-        # Destroy Parity Measurement Qubits
-        #By default kill z qubits ,thats what we want
-        hz = Q.hz.copy()
-        hx = Q.hx.copy()
-        #Delete bad columns in z 
-        #hz = np.delete(hz,turnOffQubits,axis=0)
-        
-        for badlines in turnOffQubits:
-            hz[badlines] = 0*hz[badlines]
-        Q_New = css_code(hx,hz)
-        return Q_New
+			#hx = hx[:,1:] 
+			#hz = hz[:,1:]
+			if alterning:
+				Flip = not Flip
+		# Deleted at the end because the numbering goes out of sync
+		hx = np.delete(hx,turnOffQubits,axis=1)
+		hz = np.delete(hz,turnOffQubits,axis=1)
+		Q_New = css_code(hx,hz)
+		Q_New.test()
+		return Q_New
+	else:
+		# Destroy Parity Measurement Qubits
+		#By default kill z qubits ,thats what we want
+		hz = Q.hz.copy()
+		hx = Q.hx.copy()
+		#Delete bad columns in z 
+		#hz = np.delete(hz,turnOffQubits,axis=0)
+		
+		for badlines in turnOffQubits:
+			hz[badlines] = 0*hz[badlines]
+		Q_New = css_code(hx,hz)
+		return Q_New
 #hz[turnOffMeasurement,:] = 0
 #Check the matrix 
-qcode_1=css_code(hx,hz)
+qcode_1=css_code(hxA,hzA)
 patchQubits = [0]
 #patchQubits = []
 QdamageZ6_1 = damage_qubit(qcode_1,turnOffQubits=patchQubits,alterning=False)
@@ -437,6 +437,10 @@ if Surface:
 	qcode.test()
 	# Kill 1 parity qubit here
 if not DISABLE:
+	qcodeU  = css_code(hxA,hzA)
+	qcode = damage_qubit(qcodeU,turnOffQubits=[0],symmetry=True)
+	print("Code test")
+	qcode.test()
 	k = qcode.K
 	N = qcode.N
 	dim = (k,N)
@@ -446,6 +450,14 @@ if not DISABLE:
 	hz = qcode.hz.copy()
 	lx = qcode.lx.copy()
 	lz = qcode.lz.copy()
+	print("Check weights of parity checks")
+	hx_sum = []
+	hz_sum = []
+	for rows in hx:
+		hx_sum.append(np.sum(rows))
+	for rows in hz:
+		hz_sum.append(np.sum(rows))
+	print(f'hxweights:{hx_sum};hzweights:{hz_sum}')
 	for i in range(k):
 		w2,hzSmalli = distance_test(hz,lz[i,:])
 		w1,hxSmalli = distance_test(hx,lx[i,:])
@@ -478,7 +490,7 @@ if GAUGE:
 	print("Z weights ",np.sum(broken_rows_z_DEBUG))
 	print(" Sanity Checks")
 #print(mod2.rank(hxSmall@hzSmall.T%2))
-EXPERIMENT = True
+EXPERIMENT = False
 if EXPERIMENT:
 	print("Simulating killing parity qubits on  Code")
 	Surface = False
@@ -493,7 +505,9 @@ if EXPERIMENT:
 	# kill measurement qubit 0
 	qcode_2 = qcode_1
 	# Kill parity 0
-	qcode = damage_qubit(qcode_2,turnOffQubits=[0])
+	qcode = damage_qubit(qcode_2,turnOffQubits=[0],symmetry=True)
+	print("Test")
+	qcode.test()
 	kmax = qcode.K +1 
 	nTrials = 10000
 	nKill = 1

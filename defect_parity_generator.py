@@ -164,7 +164,7 @@ def order_extract(array_original,array_new):
     return order_correct
 
 
-def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data',flip = False,test=False,order=False):
+def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data',flip = False,test=False,order=False,gauge=False):
     # Turns off the qubits at specified positions and recalculates the parity matrix
     ##print("Attempt to delete qubit ",turnOffQubits)
     fixed = False
@@ -185,8 +185,8 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
             Flip = flip
             ##print("Flip is ",Flip)
             ##print("Parity break is ",symmetry)
-            hx = Q_New.hx
-            hz = Q_New.hz
+            hx = Q_New.hx.copy()
+            hz = Q_New.hz.copy()
             #np.random.shuffle(turnOffQubits)
             order_x = []
             order_z = []
@@ -210,7 +210,7 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
                 # X-Z syndromes
                 ALL_THREE = False
                 TWO_AT_A_TIME = True
-                SPELL_IT_OUT = False #Read out the defective stabilizers
+                SPELL_IT_OUT = True #Read out the defective stabilizers
                 HIGH = 1
                 LOW = 1
                 
@@ -229,8 +229,12 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
                         affectedRowz = broken_rows_z_DEBUG[i]
                         stab_X_read = np.where(affectedRowx == HIGH)
                         stab_Z_read = np.where(affectedRowz == HIGH)
-                        #print("StabX is ",stab_X_read)
-                        #print("StabZ is ",stab_Z_read)
+                        print("StabX is ",stab_X_read)
+                        print("StabZ is ",stab_Z_read)
+                    # How many qubits do these logicals hide?
+                    broken_rows_x_DEBUG[:,defects] = 0
+                    broken_rows_z_DEBUG[:,defects] = 0
+                    print("Hidden qubits is ",mod2.rank(broken_rows_x_DEBUG @ broken_rows_x_DEBUG.T %2))
                 rows_to_be_deleted_x = np.where(hx[:,defects]==HIGH)[0]
                 rows_to_be_deleted_z = np.where(hz[:,defects] == HIGH)[0]
                 # This is importnat. To understand relative orientation
@@ -320,20 +324,21 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
                     if not Flip:
                         hz[rows_to_be_deleted_z[1]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[2]])%2
                     # CA
-                    if symmetry or Flip:
-                        hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
-                    if not Flip:
-                        hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
+                    debug = True
+                    if debug:
+                        if symmetry or Flip:
+                            hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
+                        if not Flip:
+                            hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
                     #hx[rows_to_be_deleted_x[2]] = (hx_old[rows_to_be_deleted_x[0]]+hx_old[rows_to_be_deleted_x[1]])%2
                     #hz[rows_to_be_deleted_z[2]] = (hz_old[rows_to_be_deleted_z[0]]+hz_old[rows_to_be_deleted_z[1]])%2
-                    DB = True
+                    DB = False
                     if  DB :
-                        if Flip:
+                        if symmetry or Flip:
                             hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
-                        else:
+                        if not Flip:
                             hz[rows_to_be_deleted_z[2]] = 0* hz[rows_to_be_deleted_z[2]]
-                        if symmetry:
-                            hx[rows_to_be_deleted_x[2]] = 0* hx[rows_to_be_deleted_x[2]]
+                    print("Flip is ",Flip," symmetry is ",symmetry)  
                     # Delete the extra row
                     #hx = np.delete(hx,rows_to_be_deleted_x[2],axis=0)
                     #hz = np.delete(hz,rows_to_be_deleted_z[2],axis=0)
@@ -350,9 +355,14 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
             if cont:
                 print("Unsilenced line")
                 RAND = True
-                continue
+                #continue
             hx = np.delete(hx,turnOffQubits,axis=1)
             hz = np.delete(hz,turnOffQubits,axis=1)
+            seed = np.random.randint(0, 2**32)
+            np.random.seed(seed)
+            #np.random.shuffle(hx)
+            #np.random.shuffle(hz)
+            print("The random seed used is ",seed)
             Q_New = css_code(hx,hz)
             if test:
                 valid = Q_New.test()
@@ -390,7 +400,11 @@ def damage_qubit(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='data
                         max_wt = wt
                 print(f"Minimum weight is {min_wtt}:Maximum weight:{max_wt}")
                 Q_New.test()
-                return Q_New
+                if not gauge:
+                    return Q_New
+                else:
+                    return Q_New
+
         else:
             # Destroy Parity Measurement Qubits
             #By default kill z qubits ,thats what we want
@@ -423,8 +437,8 @@ def damage_qubit_v2(Q,turnOffQubits=[0],symmetry=False,alterning = False,type='d
     ##print("Parity break is ",symmetry)
     hx = Q_New.hx
     hz = Q_New.hz
-    print("Weird distant qubits ",np.where(hz[0]==HIGH))
-    print("Weird distant qubits ",np.where(hz[36]==HIGH))
+    #print("Weird distant qubits ",np.where(hz[0]==HIGH))
+    #print("Weird distant qubits ",np.where(hz[36]==HIGH))
     #np.random.shuffle(turnOffQubits)
     order_x = []
     order_z = []

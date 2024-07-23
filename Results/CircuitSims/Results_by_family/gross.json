@@ -62,3 +62,9 @@
 {"N": 144, "K": 12, "nTrials": 10000, "nBad": 993, "repairType": "ZX", "defectType": "onlyx", "defectLocation": [0], "ler": 0.0, "perr": 0.004, "time": "2024-07-14T23:40:10.066294"}
 {"N": 144, "K": 12, "nTrials": 10000, "nBad": 0, "repairType": "ZZ", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.001, "time": "2024-07-14T23:40:10.066294"}
 {"N": 144, "K": 12, "nTrials": 10000, "nBad": 39, "repairType": "ZZ", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.002, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 290, "repairType": "ZZ", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.003, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 1427, "repairType": "ZZ", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.004, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 0, "repairType": "ZX", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.001, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 5, "repairType": "ZX", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.002, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 102, "repairType": "ZX", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.003, "time": "2024-07-14T23:40:10.066294"}
+{"N": 144, "K": 12, "nTrials": 10000, "nBad": 926, "repairType": "ZX", "defectType": "onlyz", "defectLocation": [0], "ler": 0.0, "perr": 0.004, "time": "2024-07-14T23:40:10.066294"}
